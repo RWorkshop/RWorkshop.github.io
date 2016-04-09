@@ -1,0 +1,59 @@
+\documentclass{beamer}
+
+\usepackage{graphics}
+
+\begin{document}
+
+\begin{frame}
+
+{\Large
+\\
+\begin{center}
+\vspace{1.3cm}
+Constructing Boxplots with \texttt{R}.\\
+\vspace{1.3cm}
+{\large kobriendublin.wordpress.com}
+\end{center}
+}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Boxplots}
+{
+\Large
+\vspace{-0.7cm}
+\textbf{Components of a boxplot}\\
+\vspace{0.4cm}
+The location and shape of the central component (i.e. the ``Box") is determined by the following values:
+\begin{itemize}
+\item First Quartile $Q_1$
+\item Median $\tilde{x}$
+\item Third Quartile $Q_3$
+\end{itemize}
+}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Boxplots}
+{
+\Large
+\textbf{Components of a boxplot}\\
+\vspace{0.4cm}
+The rest of the plot, including the ``Whiskers", are determined by the following:
+\vspace{0.6cm}
+\begin{itemize}
+\item The presence of outliers
+\begin{itemize}
+\item Any value greater than $Q_3 + 1.5 \times IQR $
+\item Any value less than $Q_1 - 1.5 \times IQR $
+\end{itemize}
+\item Largest Value (that is not an outlier).
+\item Smallest Value (that is not an outlier).
+\end{itemize}
+}
+\end{frame}
+
+\end{document}

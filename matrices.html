@@ -8,7 +8,7 @@ Note that the following commands are useful for Experimental Design.
 \item \texttt{colSums()} Returns vector of column means.
 \end{description}
 
-%----------------------------------------------------------------------%
+<pre><code>
 # Linear Algebra
 # construct a three-by-three matrix. Values entered by column.
 Mat1 = matrix(c(1,2,2,0,5,0,1,2,3),ncol=3)
@@ -21,14 +21,13 @@ solve(Mat1) 			#calculate the inverse.
 eigen(Mat1)			#compute eigenvalues and eigenvectors .
 names(eigen(Mat1))		# determine the name.
 eigen(Mat1)$values 		#access the eigenvalues.
-\end{verbatim}
-
-\end{document}
+</code></pre>
 
 
 
 
-\section{Matrices}
+<h5>Matrices</h5>
+
 \subsection{Creating a matrix}
 Matrices can be created using the \texttt{matrix()} command. The arguments to be supplied are
 1. vector of values to be entered.
@@ -36,10 +35,17 @@ Matrices can be created using the \texttt{matrix()} command. The arguments to be
 Additionally you can specify if the values are to be allocated by row or column. 
 By default they are allocated by column.
 Vec1 = c(1,4,5,6,4,5,5,7,9) # 9 elements A = matrix(Vec1,nrow=3) #3 by 3 matrix, assigned by column. A # [,1] [,2] [,3] # [1,] 1 6 5 # [2,] 4 4 7 # [3,] 5 5 9
+
 Notice how the rows and column are preceded with row and column indexes. 
 To assign by row, we must specify it by setting the appropriate argument accordingly.
 
-#3 by 3 matrix. Values assigned by row. C= matrix( c(1,6,7,0.6,0.5,0.3,1,2,1), ncol=3 , byrow =TRUE) C [,1] [,2] [,3] [1,] 1.0 6.0 7.0 [2,] 0.6 0.5 0.3 [3,] 1.0 2.0 1.0
+<pre><code>#3 by 3 matrix. Values assigned by row. C= matrix( c(1,6,7,0.6,0.5,0.3,1,2,1), ncol=3 , byrow =TRUE) 
+C 
+     [,1] [,2] [,3] 
+[1,] 1.0 6.0 7.0 
+[2,] 0.6 0.5 0.3 
+[3,] 1.0 2.0 1.0
+</code></pre>
 
 \subsection{Accessing Rows and Columns}
 
@@ -50,12 +56,13 @@ Naturally - particular elements may be accessed by specifying the row number and
 
 # It is for all suitable data objects. iris[,1] iris[,1:3] iris[2,] iris[2,3] mtcars[2:5,4:6]
 
-\subsection{Addition and subtractions}
+<h5>Addition and Subtractions</h5>
 
 For matrices, addition and subtraction works on an element-wise basis. 
 The first elements of the respective matrices are added, and so on.
 A+C # [,1] [,2] [,3] #[1,] 2.0 12.0 12.0 #[2,] 4.6 4.5 7.3 #[3,] 6.0 7.0 10.0 A-C # [,1] [,2] [,3] #[1,] 0.0 0.0 -2.0 #[2,] 3.4 3.5 6.7 #[3,] 4.0 3.0 8.0
-Matrix Multiplication To multiply matrices, we require a special operator for matrices; “$\%*\%$”. 
+
+<h5>Matrix Multiplication</h5> To multiply matrices, we require a special operator for matrices; “$\%*\%$”. 
 If we just used the normal multiplication, we would get an element-wise multiplication.
 This type of operation is very useful as a substitute for \textbf{\texttt{for}} loops on many occasions. A %*% C # [,1] [,2] [,3] #[1,] 9.6 19.0 13.8 #[2,] 13.4 40.0 36.2 #[3,] 17.0 50.5 45.5 A*C # [,1] [,2] [,3] #[1,] 1.0 36 35.0 #[2,] 2.4 2 2.1 #[3,] 5.0 10 9.0
 Basic Matrix Calculations 1) Inverting a matrix To invert a matrix we use the command solve() with no additional argument. Remember - Not all matrices are invertible. It the determinant of a matrix is zero, then no inverse exists.
@@ -68,11 +75,13 @@ We can use this same command to solve a system of linear equations Ax=b. We woul
 The diag() command is a very versatile function for using matrices. It can be used to create a diagonal matrix with elements of a vector in the principal diagonal. 
 
 For an existing matrix, it can be used to return a vector containing the elements of the principal diagonal. Most importantly, if k is a scalar (i.e. single number such as 3) , diag() will create a $k \times k$ identity matrix.
-Vec2=c(1,2,3) diag(Vec2) # Constructs a diag. matrix based on Vec2 diag(A) 
+<pre><code>Vec2=c(1,2,3) diag(Vec2) # Constructs a diag. matrix based on Vec2 diag(A) 
 # Returns diagonal elements of A as a vector diag(3) 
 # Creates a 3 x 3 identity matrix diag(diag(A)) 
 # Creates the diagonal matrix D of matrix A
-\subsection{Linear Algebra Functions}
+</code></pre>
+
+<h4>Linear Algebra Functions</h4>
 R supports many import linear algebra functions such as cholesky decomposition, trace, rank, eigenvalues etc. The required results may be determinable from the output of a command that pertains to an overall approach.
 The eigenvalues and eigenvectors can be computed using the eigen() function. 
 
@@ -93,13 +102,11 @@ Note that the following commands are useful for Experimental Design.
 <li>\texttt{colSums()} Returns vector of column means.</li> 
 </ol>
 
-%----------------------------------------------------------------------%
-
-
-\subsection{Using rbind() and cbind()}
+<h4>Using rbind() and cbind()</h4>
 Another methods of creating a matrix is to “bind” a number of vectors together, either by row or by column. The commands are rbind() and cbind() respectively.
 > x1 =c(1,2) ; x2 = c(3,8) > D= rbind(x1,x2) > E = cbind(x1,x2) > det(D) [1] 2 > det(E) [1] 2
-Solving a System of Linear Equations
+
+<h6>Solving a System of Linear Equations</h6>
 To solve a system of linear equations in the form Ax=b , where A is a square matrix, and b is a column vector of known values, we use the solve() command to determine the values of the unknown vector x.
 b=vec2 # from before solve(A, b
 

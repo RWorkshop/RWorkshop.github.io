@@ -1,0 +1,56 @@
+
+
+<h5>Data Frames</h5>
+
+A data frame
+
+<ul>
+<li> can be thought of as a data matrix or data set;
+<li>
+ is a generalization of a matrix;
+<li>
+ is a list of vectors and/or factors of the same length;
+<li>
+ has a unique set of row names
+</ul>
+
+
+Data in the same position across columns come from the same experimental unit.
+
+
+We can create data frames from pre-existing variables:
+
+<pre><code>
+> d <- data.frame(mean_weight, Gender)
+</code></pre>
+
+
+Data set : mtcars
+
+
+R contains several embedded data sets. One that is commonly used is mtcars
+
+<pre><code>
+>mtcars
+</code></pre>
+
+(for some background on mtcars, type ?mtcars)
+
+
+Each of the columns has a name. Use the commands <code>names()</code> and <code>dim()</code> to find more information about mtcars.
+
+
+Another useful command is <code>summary()</code>.  It will give revelant information on the data object.
+
+
+
+We can use the command rownames() to access the names of each row.
+
+
+To access a particular column, use the dollar sign to specify it
+<pre><code>
+>mtcars$mpg
+</code></pre>
+
+We can now perform calculations on this column.
+

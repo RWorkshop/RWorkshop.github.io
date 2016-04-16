@@ -1,6 +1,7 @@
 R Statistical Programming - Simple Linear Regression
  
-\section{Simple Linear Regression}
+<h5>Simple Linear Regression</h5>
+
 We use the method of least squares
 A Scatterplot is created and can initially be used to get an idea
 about the nature of the relationship between the variables, e.g. if the
@@ -23,7 +24,6 @@ A QQplot checks the assumption of normality.
 \subsection{Correlation Structure Example}
 
 
-\newpage
 \section{Correlation and Simple Regression Models}
 
 \subsection{Correlation}
@@ -38,14 +38,9 @@ To get a more complete statistical analysis, with formal tests, we can use the c
 The interpretation of the output from the cor.test()procedure is very similar to procedures we have already encountered. The null hypothesis is that the correlation coefficient is equal to zero. This is equivalent to saying that there is no linear relationship between variables.
 
 
-\begin{framed}
-\begin{verbatim}
-C=c(0,2,4,6,8,10,12) 
+<pre><code>C=c(0,2,4,6,8,10,12) 
 F=c(2.1,5.0,9.0,12.6,17.3,21.0,24.7)
 cor.test(C,F)
-\end{verbatim}
-\end{framed}
-\begin{verbatim}
 
         Pearson's product-moment correlation
 
@@ -57,7 +52,9 @@ alternative hypothesis: true correlation is not equal to 0
 sample estimates:
       cor 
 0.9988796 
-\end{verbatim}
+</code></pre>
+
+
 
 
 \subsection{Spearman and Kendall Correlation}
@@ -80,13 +77,11 @@ The interpretation is very similar, but there are no confidence intervals for th
 A regression model is fitted using the \texttt{lm()} command.
 
 Consider the response variable $F$ and predictor variable $C$.
-\begin{framed}
-\begin{verbatim}
-C=c(0,2,4,6,8,10,12) 
+<pre><code>C=c(0,2,4,6,8,10,12) 
 F=c(2.1,5.0,9.0,12.6,17.3,21.0,24.7)
-Fit1=lm(F~C)
-\end{verbatim}
-\end{framed}
+Fit1=lm(F~C)</code></pre>
+
+
 
 
 \subsection{Confidence and Prediction Intervals for Fitted Values} 
@@ -99,35 +94,19 @@ The residual standard error is often called the root mean square error (RMSE), a
 
 Since the residual standard error is a good measure of accuracy, it is ideal if it is small.
 
-\subsubsection{Prediction Intervals}
+<h5>Prediction Intervals</h5>
 In contrast to a confidence interval, which is concerned with estimating a population parameter, a prediction interval is concerned with estimating an individual value and is therefore a type of probability interval. 
 
 The complete standard error for a prediction interval is called the standard error of forecast, and it includes the uncertainty associated with the vertical “scatter” about the regression line plus the uncertainty associated with the position of the regression line value itself.
-%===============================================================%
-
-
-
-
-Part 2 Strategies for Data project
-\begin{itemize}
-\item Exploratory Data Analysis
-
-The first part of your report should contain some descriptive statistics and summary values. Also include some tests for normality.
-
-\item{Regression}
-You should have a data set with multiple columns, suitable for regression analysis.
-Familiarize yourself with the data, and decide which variable is the dependent variable.
-
-Also determine the independent variables that you will use as part of your analysis.
 
 \item{Correlation Analysis}
 Compute the Pearson correlation for the dependent variable with the respective independent variables.  As part of your report, mention the confidence interval for the correlation estimate
 Choose the independent variables with the highest correlation as your candidate variables.
 For these independent variables, perform a series of simple linear regression procedures.
-\begin{verbatim}
-lm(y~x1)
+<pre><code>lm(y~x1)
 lm(y~x2)
-\end{verbatim}
+</code></pre>
+
 Comment on the slope and intercept estimates and their respective p-values. Also comment on the coefficient of determination (multiple R squared). Remember to write the regression equations.
 Perform a series of multiple linear regressions, using pairs of candidate independent variables.
 \begin{verbatim}
@@ -136,15 +115,15 @@ lm(y~x2 +x3)
 \end{verbatim}
 Again, comment on the slope and intercept estimates, and their respective p-values.
 In this instance, compare each of the models using the coefficient of determinations. Which model explains the data best?
-\subsection{Analysis of residuals}
+<h5>Analysis of residuals</h5>
 Perform an analysis of regression residuals ( you can pick the best regression model from last section).
 Are the residuals normally distributed?
 	Histogram /  Boxplot / QQ plot / Shapiro Wilk Test
 Also you can plot the residuals to check that there is constant variance.
-\begin{verbatim}
-y=rnorm(10)
+<pre><code>y=rnorm(10)
 x=rnorm(10)
 fit1=lm(y~x)
 res.fit1 = resid(fit1)
 plot(res.fit1)
-\end{verbatim}
+</code></pre>
+

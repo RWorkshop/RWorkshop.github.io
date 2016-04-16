@@ -1,14 +1,19 @@
-<<<<<<< HEAD
-\section*{8. Writing functions}
+
+
+<h5>Writing functions</h5> 
 
 
 The last thing we're going to look at is what really makes R powerful: writing your own functions. If you do something once it's not a problem to type in each command as we've done here. But if you frequently do some particular task, it would be nice to automate it so that it could be done with a single command. In calculating the y-values for the polynomial lines for our graph, we used the cbind() function with a term for each column. If you were going to do this a lot with large order polynomials, you might want to automate the task of creating this matrix. Open a text editor, such as Notepad, where you will write your function. Here is a listing of one way to write this function: 
+<pre><code>
 polymat <- function(x, deg) {
 	out <- numeric(0)
 	for(i in 0:deg) out <- cbind(out, x^i)
 	return(out)
-}
+}	
+</code></pre>
+
 Type this into the script window exactly. Save the file in your working directory with a name like polymat.R. Now from the File menu in R, select Source R Code. Look at the command line window to see the function call and to check for any errors here. If there are errors, it's most likely that you typed something in wrong. Double check the syntax and try again. When it sources OK, use the function objects() to see that your function polymat() was really created. Here's how the function works. Give it a vector for x and the polynomial degree you want. It will return a matrix with all ones in the the first column, the second column equal to x, the third column equal to x2, etc. Try it out with a simple vector: 
+<pre><code>
 > polymat(1:5, 3)
 [,1] [,2] [,3] [,4] 
 [1,]    1    1    1    1
@@ -16,9 +21,13 @@ Type this into the script window exactly. Save the file in your working director
 [3,]    1    3    9   27
 [4,]    1    4   16   64
 [5,]    1    5   25  125
+</code></pre>
 Note the 1:5 used here. This is just a shorthand way of getting a vector of integers between two numbers. Now you can use this function when you want to create a vector of y-values to plot. This is how you would use it as an alternative to how you created y4 previously: 
-> y4 <- polymat(x, 6) %*% coef6
+<pre><code>
+	> y4 <- polymat(x, 6) %*% coef6
+</code></pre>
 Now if you really want to automate the process, let's write a function that will fit whatever order polynomial you want and plot the graph all with one command. Open another text editor window and type in this function. 
+<pre><code>
 poly.fit <- function(deg=2, data=df) {
 	pfit <- lm(data$vel~polymat(data$conc,deg)[, -1])
 	pcoef <- coef(pfit)
@@ -29,6 +38,7 @@ poly.fit <- function(deg=2, data=df) {
 	lines(x,y)
 	invisible()
 }
+</code></pre>
 You should recognize most of the lines in this function The call to lm uses the polymat function we just wrote. However, we don't want the first column of 1's in the matrix here. We can remove it with polymat(data$conc,deg)[, -1]. Remember that within square brackets like this the first number references the rows and the second number references the columns. We don't identify any rows so by default we get them all. Instead of specifying which columns we want, we specify which we don't want by using the minus sign. The invisible() function is used because nothing is being returned from poly.fit() other than a graph. 
 It's important to note that you don't have to put everything in a single function. Here we wrote a smaller function to create the polynomial matrix and then we called it from within another function. It's usually more efficient to build a library of smaller functions that do specific tasks and then pull them together as needed. Notice also that the data frame is an argument to this function. This way the function is not specific to just one data set, although from the way the function is written, it must have columns labeled vel and conc. 
 Remember to source the function in order to use it. Notice that both arguments have defaults so you could use the function with no arguments within the parentheses. To try a 4th order polynomial and see the fit, use the function like this: 
@@ -72,40 +82,25 @@ is legal, but calling f(5) would cause an error. The argument a would be assigne
 
 
 \subsection*{\texttt{sapply()}}
-\begin{framed}
-\begin{verbatim}
+<pre><code>
 > sapply(2:5,log)
 [1] 0.6931472 1.0986123 1.3862944 1.6094379
 >
 > sapply(2:5,log,2)
-[1] 1.000000 1.584963 2.000000 2.321928
-\end{verbatim}
-\end{framed}
+[1] 1.000000 1.584963 2.000000 2.321928	
+	
+</code></pre>
 
-
-
-
-
-
-%---------------------------%
 %=========================================================================================== %
-Functions
-•	We have already encountered quite a functions in R, e.g. mean(x), sd(x), matrix(x,…), sort(x).
-•	Functions have a name and a list of arguments or input objects. 
-•	For example, the argument to the function mean() is usually a vector x.
-•	Functions also have a list of output objects, i.e. objects that are returned once the function has been run.
-•	A function must be written and loaded into R before it can be used.
+<h5>Functions</h5>
+<ul>
+<li>	We have already encountered quite a functions in R, e.g. mean(x), sd(x), matrix(x,…), sort(x).
+<li>	Functions have a name and a list of arguments or input objects. 
+<li>	For example, the argument to the function mean() is usually a vector x.
+<li>	Functions also have a list of output objects, i.e. objects that are returned once the function has been run.
+<li>	A function must be written and loaded into R before it can be used.
+</ul>
 
-=======
-\section{Functions}
-
-\begin{itemize}
-\item	We have already encountered quite a functions in R, e.g. mean(x), sd(x), matrix(x,…), sort(x).
-\item	Functions have a name and a list of arguments or input objects. 
-\item	For example, the argument to the function mean() is usually a vector x.
-\item	Functions also have a list of output objects, i.e. objects that are returned once the function has been run.
-\item	A function must be written and loaded into R before it can be used.
-\end{itemize}
 >>>>>>> origin/master
 Functions are typically written if we need to compute the same thing for several data sets and what we want to calculate is not already implemented in the commercial software yet, as would be the case in many areas of research.
 Argument Matching ( Named arguments and defaults)
@@ -179,17 +174,6 @@ powfunc(4,3)
 
 A set of such functions can be constructed as a package, and submitted to CRAN.
 
-<<<<<<< HEAD
-%========================================================================================================= %
-
-
-
-
-R Workshop
-
-Writing Basic Functions
-
-
 
 Writing Basic Functions
 
@@ -230,14 +214,6 @@ Comments lines (usually a description of what the function does is placed at the
 Example
 
 
-
-
-
-
-
-
-
-
 sqr <- function(x){
 	
 	
@@ -245,8 +221,6 @@ sqr <- function(x){
 	
 	
 }
-
-
 
 
 This function is called sqr. 
@@ -258,14 +232,7 @@ Whatever value is inputted for x will be squared and the result outputted to the
 This function must be loaded into R and can then be called.
 
 We can call the function using:
-
-
-
-
-
-
-
-
+<pre><code>
 sqr(x = 4)
 
 
@@ -273,6 +240,7 @@ sqr(x = 4)
 
 
 [1] 16
+</code></pre>
 
 
 
@@ -280,14 +248,7 @@ sqr(x = 4)
 
 To store the result into a variable x.sq
 
-
-
-
-
-
-
-
-x.sq = sqr(x = 4)
+<pre><code>x.sq = sqr(x = 4)
 
 
 # x.sq = sqr(4)
@@ -297,6 +258,7 @@ x.sq = sqr(x = 4)
 
 
 [1] 16
+</code></pre>
 
 
 
@@ -304,13 +266,7 @@ x.sq = sqr(x = 4)
 
 More Complicated Example
 
-
-
-
-
-
-
-
+<pre><code>
 sf2 <- function(a1, a2, a3){
 	
 	
@@ -320,7 +276,15 @@ sf2 <- function(a1, a2, a3){
 	return(x)
 	
 	
-}
+}	
+</code></pre>
+
+
+
+
+
+
+
 
 
 
@@ -344,9 +308,7 @@ We will not be able to view the result of the function unless we store it.
 
 
 
-
-
-
+<pre><code>
 sf2(a1=2, a2=3, a3=4)
 
 
@@ -362,7 +324,9 @@ res = sf2(2, 3, 4)                                        # Need to use this.
 res
 
 
-[1] 5.385165
+[1] 5.385165</code></pre>
+
+
 
 
 
@@ -375,30 +339,17 @@ We can also give some/all arguments default values.
 
 
 
-
-
-
+<pre><code>
 mypower <- function(x, pow=2){
 	
 	x^pow
 	
 }
-
-
-
-
-
+</code></pre>
 
 If a value for the argument pow is not specified in the function call, a value of 2 is used. If a value for “pow” is specified, that value is used.
 
-
-
-
-
-
-
-
-
+<pre><code>
 mypower(4)
 
 [1] 16
@@ -409,20 +360,11 @@ mypower(4, 3)
 
 mypower(pow=5, x=2)                                                         
 
-[1] 32
+[1] 32	
+</code></pre>
 
 
-
-
-
-
-
-
-
---------------------------------------------------------------------------------
-
-
-\subsection{More Complex Functions}
+<h5>More Complex Functions</h5>
 
 The following function returns several values in the form of a list:
 
@@ -450,7 +392,7 @@ myfunc <- function(x)
 }
 
 
-Creating New Functions
+<h6>Creating New Functions</6>
 
 A simple function can be constructed as follows:
 

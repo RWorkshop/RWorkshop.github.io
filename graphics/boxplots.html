@@ -1,8 +1,11 @@
-%-----------------------------------------------------------------------------------------%
-A box plot provides an excellent visual summary of many important aspects of a distribution. 
-The box stretches from the lower hinge (defined as the 25th percentile) to the upper hinge (the 75th percentile) and therefore contains the middle half of the scores in the distribution.
-A boxplot, or box and whisker diagram, provides a simple graphical summary of a set of data. It shows a measure of central location (the median), two measures of dispersion (the range and inter-quartile range), the skewness (from the orientation of the median relative to the quartiles) and potential outliers (marked individually). 
-Boxplots are especially useful when comparing two or more sets of data. 
+<h5>Boxplots</h5>
+<ul>
+<li> A box plot provides an excellent visual summary of many important aspects of a distribution. 
+<li> The box stretches from the lower hinge (defined as the 25th percentile) to the upper hinge (the 75th percentile) and therefore contains the middle half of the scores in the distribution.
+<li> A boxplot, or box and whisker diagram, provides a simple graphical summary of a set of data. It shows a measure of central location (the median), two measures of dispersion (the range and inter-quartile range), the skewness (from the orientation of the median relative to the quartiles) and potential outliers (marked individually). 
+<li> Boxplots are especially useful when comparing two or more sets of data. 
+</ul>
+
 <pre><code>
 # boxplot on a formula:
 boxplot.stats(count ~ spray, data = InsectSprays, col = "lightgray")
@@ -14,16 +17,16 @@ boxplot(count ~ spray, data = InsectSprays,        notch = TRUE, add = TRUE, col
 <h5>Components of a boxplot</h5>
 
 The location and shape of the central component (i.e. the ``Box") is determined by the following values:
-\begin{itemize}
-\item First Quartile $Q_1$
-\item Median $\tilde{x}$
-\item Third Quartile $Q_3$
-\end{itemize}
+<ul>
+<li> First Quartile $Q_1$
+<li> Median $\tilde{x}$
+<li> Third Quartile $Q_3$
+</ul>
 
 
-
+<h6>Interpretation</h6>
 The rest of the plot, including the ``Whiskers", are determined by the following:
-\vspace{0.6cm}
+
 \begin{itemize}
 \item The presence of outliers
 \begin{itemize}

@@ -1,0 +1,45 @@
+ 
+ 
+ 
+<h5> Base packages </h5>
+ Base packages are considered part of the R source code. These packages contain the basic functions that allow <code>R</code> to 
+ work, and include many commonly used datasets and standard statistical and graphical functions. They should be automatically 
+ available in any <code>R</code> installation.
+ To see which packages are installed on your computer, use the <code>library()</code> command, with no arguments.
+ 
+<h5> Contributed packages </h5>
+ Hundreds of contributed packages covering a wide array of modern statistical methods are available from the 
+ Comprehensive R Archive Network (CRAN; http: //cran.r-project.org).
+ 
+ To access all of the functions and data sets in a particular package, it must be loaded into the workspace. 
+ For example, to load the lattice package:
+ <pre><code>
+ > library(lattice) 
+ </code></pre>
+ 
+ To remove a package from a session, use the detach command
+ >detach(package:lattice)
+ 
+ Packages must be reloaded at the start of each new session.
+ 
+ 
+<pre><code>
+ library(MASS)							  #loads the MASS package
+ 
+ install.packages("evir")			#install the "evir" package (select the Irish CRAN Mirror)
+ library(evir)
+</code></pre>
+
+ 
+<h5>Packages</h5>
+
+Type \texttt{library()} onto the command line to find out what packages were installed on your computer
+when you put in \texttt{R}. Now type <code>search()</code> to get a list of the packages from that list that are
+already loaded in (installed packages are not necessarily loaded in). 
+
+<h5>Packages</h5>
+
+<pre><code>
+install.package("packagename")
+download.package("packagename")
+</code></pre>

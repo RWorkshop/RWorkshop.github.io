@@ -1,18 +1,15 @@
-Contents
-Using the “Apply” family of functions	1
-Complex Simulation Program	2
-Cumulative Frequency Chart	3
-The Birthday function	4
+<h5>Using the “Apply” family of functions</h5>
 
-Using the “Apply” family of functions
+
 
 The "apply" family of functions keep you from having to write loops to perform some operation on every row or every column of a matrix or data frame, or on every element in a list.
 
-The “apply()” function
-The apply() function is a powerful device that operates on arrays and, in particular, matrices.
-The apply() function returns a vector (or array or list of values) obtained by applying a specified function to either the row or columns of an array or matrix.
+<h6>The <code>apply()</code> function</h6>
+The <code>apply()</code> function is a powerful device that operates on arrays and, in particular, matrices.
+The <code>apply()</code> function returns a vector (or array or list of values) obtained by applying a specified function to either the row or columns of an array or matrix.
 To specify use for rows or columns, use the additional argument of 1 for rows, and 2 for columns.
 
+<pre><code>
 # create a matrix of 10 rows x 2 columns
 m <- matrix(c(1:10, 11:20), nrow = 10, ncol = 2)
 
@@ -24,15 +21,17 @@ apply(m, 1, mean)
 # mean of the columns
 apply(m, 2, mean)
 #[1]  5.5 15.5
+</code></pre>
+The local version of <code>apply()</code> is <code>lapply()</code>, which computes a function for each argument of a list., 
+provided each argument is compatible with the function argument (e.g. that is numeric). 
 
-The local version of apply()is lapply(), which computes a function for each argument of a list., provided each argument is compatible with the function argument (e.g. that is numeric). 
-
-The lapply() command returns a list of the same length as a list “X”, each element of which is the result of applying a specified function to the corresponding element of X.
+The <code>lapply()</code> command returns a list of the same length as a list “X”, each element of which is the result of applying a specified function to the corresponding element of X.
 
 A user friendly version of lapply() is sapply().
 
-The sapply() command  is a variant of lapply() – returning a matrix instead of a list - again of the same length as a list X, each element of which is the result of applying a specified function to the corresponding element of X.
-
+The <code>sapply()</code> command  is a variant of <code>lapply()</code> – returning a matrix instead of a list - again of the same length as a list X, 
+each element of which is the result of applying a specified function to the corresponding element of X.
+<pre><code>
 > x <- list(a=1:10, b=exp(-3:3), logic=c(T,F,F,T))
 >
 > # compute the list mean for each list element
@@ -51,12 +50,15 @@ $logic
        a        b    logic 
 5.500000 4.535125 0.500000
 >
+</code></pre>
+
 Complex Simulation Program
 
 1)	Create a function called SumDice().
 2)	Apply SumDice() n times to an initial value x
 3)	Graph the data
 
+<pre><code>
 SumDice = function(x){
 	Temp1=sum(sample(1:6,x,replace=TRUE))
 	return(Temp1)
@@ -64,7 +66,10 @@ SumDice = function(x){
 
 X=sapply(rep(100,100),SumDice)
 
-DF1=data.frame(Index=1:1000,Sum=X)
+DF1=data.frame(Index=1:1000,Sum=X)	
+	
+</code></pre>
+
 
 
 Histogram and Cumulative Frequency Chart
@@ -72,9 +77,7 @@ Range of values quite interesting!!
 Palette = c("blue","yellow","red","green")
 hist(X,breaks=60:80*5,col=Palette)
 
-\end{document}
 
- 
 
  
 

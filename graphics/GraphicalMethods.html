@@ -99,13 +99,36 @@ $plot(x, type = "b")$
 
 
 
+\section{Histograms}
+Histograms can be created using the \texttt{hist()} command.
+To create a histogram of the car weights from the Cars93 data set
+
+<pre><code>
+hist(mtcars$mpg, main="Histogram of MPG (Data: MTCARS) ")
+\end{verbatim}
+\end{myindentpar}\normalsize
+\texttt{R} automatically chooses the number and width of the bars. We can
+change this by specifying the location of the break points.
+\footnotesize
+\begin{myindentpar}{1cm}
+\begin{verbatim}hist(Cars93$Weight, breaks=c(1500, 2050, 2300, 2350, 2400,
+2500, 3000, 3500, 3570, 4000, 4500), xlab="Weight",
+main="Histogram of Weight")
+</code></pre>
 
 
 
+<h4>Boxplot</h4>
+Boxplots can be used to identify outliers.
+
+By default, the \texttt{boxplot()} command sets the orientation as vertical. By adding the argument \texttt{horizontal=TRUE}, the orientation can be changed to horizontal.
+
+<pre><code>
+boxplot(mtcars$mpg, horizontal=TRUE, xlab="Miles Per Gallon",
+main="Boxplot of MPG")
+</code></pre>
 
 
-%----------------------------------------------------------------------------Graphical Methods--%
-\newpage
 \chapter{Graphical methods}
 
 \section{Scatterplots}

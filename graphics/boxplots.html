@@ -1,24 +1,102 @@
-%-----------------------------------------------------------------------------------------%
-A box plot provides an excellent visual summary of many important aspects of a distribution. 
-The box stretches from the lower hinge (defined as the 25th percentile) to the upper hinge (the 75th percentile) and therefore contains the middle half of the scores in the distribution.
-A boxplot, or box and whisker diagram, provides a simple graphical summary of a set of data. It shows a measure of central location (the median), two measures of dispersion (the range and inter-quartile range), the skewness (from the orientation of the median relative to the quartiles) and potential outliers (marked individually). 
-Boxplots are especially useful when comparing two or more sets of data. 
-<pre><code>
-# boxplot on a formula:
-boxplot.stats(count ~ spray, data = InsectSprays, col = "lightgray")
-# *add* notches (somewhat funny here):
-boxplot(count ~ spray, data = InsectSprays,        notch = TRUE, add = TRUE, col = "blue")
-</code></pre>
+<html>
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>Boxplots</title>
+</head>
+
+<body>
+<a href="index.html">Back to Graphical Methods</a> | 
+<a href="histograms.html"> Histograms</a> 
+
+<p>
+<h3>Boxplots</h3>
+
+<p>A box plot provides an excellent visual summary of many important aspects of a distribution. 
+The box stretches from the lower hinge (defined as the 25th percentile) to the upper hinge (the 75th percentile) and therefore contains the middle half of the scores in the distribution.</p>
+
+<p>A boxplot, or box and whisker diagram, provides a simple graphical summary of a set of data. It shows a measure of central location (the median), two measures of dispersion (the range and inter-quartile range), the skewness (from the orientation of the median relative to the quartiles) and potential outliers (marked individually). 
+Boxplots are especially useful when comparing two or more sets of data.</p> 
+</p>
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">library</span><span class="hl std">(MASS)</span>
+<span class="hl com"># boxplot on a formula:</span>
+<span class="hl kwd">boxplot</span><span class="hl std">(count</span> <span class="hl opt">~</span> <span class="hl std">spray,</span> <span class="hl kwc">data</span> <span class="hl std">= InsectSprays,</span> <span class="hl kwc">col</span> <span class="hl std">=</span> <span class="hl str">&quot;lightgray&quot;</span><span class="hl std">)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" class="plot" /></div></div>
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com"># *add* notches (somewhat funny here):</span>
+<span class="hl com"># boxplot(count ~ spray, data = InsectSprays, notch = TRUE, add = TRUE, col = &quot;blue&quot;)</span>
+</pre></div>
+</div></div>
+
 
 
 <h5>Components of a boxplot</h5>
 
 The location and shape of the central component (i.e. the ``Box") is determined by the following values:
-\begin{itemize}
-\item First Quartile $Q_1$
-\item Median $\tilde{x}$
-\item Third Quartile $Q_3$
-\end{itemize}
+First Quartile,  Median, Third Quartile.
+
 
 
 
@@ -34,3 +112,21 @@ The rest of the plot, including the ``Whiskers", are determined by the following
 \item Smallest Value (that is not an outlier).
 \end{itemize}
 
+
+
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">summary</span><span class="hl std">(cars)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+</pre></div>
+</div></div>
+
+
+
+</body>
+</html>

@@ -1,6 +1,47 @@
-MS4024 Week 9 Class Notes
-Relational and Logical Operators
+﻿<!DOCTYPE html>
+<html>
 
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<h4>
+Set Theory
+</h4>
+
+
+
+
+
+
+
+
+
+
+<font = 4>
+Previous Section | Back to <a href="index.html"> Main Page </a> | Next Section
+</font>
+Relational and Logical Operators
+<core><code>
 Relational operators allow for the comparison of values in vectors. 
 greater than	>
 less than	<
@@ -8,7 +49,7 @@ equal to	==
 less than or equal to	<=
 greater than or equal to	>=
 not equal to	!=
-
+</code></pre>
 Note the difference of the equality operator “==” with assignment operator ”=”.
 
 “&” and “&&” indicate logical AND and “|” and “||” indicate logical OR. 
@@ -16,25 +57,29 @@ The shorter form performs element-wise comparisons in much the same way as arith
 We can use relational operators to subset vectors (as well as more complex data objects such as data frames, which we will meet later). 
 We specify the  relational condition in square brackets.
 We can construct compound relational conditions too, using logical operators
-
+<pre><code>
 > vec=1:19
 > vec[vec<5]
 [1] 1 2 3 4
 > vec[(vec<6)|(vec>16)]
 [1]  1  2  3  4  5 17 18 19
-Lists
+</code></pre>
+<h5>Lists</h5>
 Many data objects returned as output are structured as lists. 
 (Recall the output from the eigen() function.)
 An  R list is an object consisting of an ordered collection of objects known as its components. 
 There is no particular need for the components to be of the same mode or type, and, for example, a list could consist of a numeric vector, a logical value, a matrix, a complex vector, a character array, a function, and so on. 
 Here is a simple example of how to make a list: 
-> Lst <- list(name="Fred", wife="Mary", no.children=3,                   child.ages=c(4,7,9))
+<pre><code>
+> Lst <- list(name="Fred", wife="Mary", no.children=3,                   
+         child.ages=c(4,7,9))
 
+</code></pre>
      
 Components are always numbered and may always be referred to as such. 
 Thus if Lst is the name of a list with 4 components, these may be individually referred to as Lst[[1]], Lst[[2]], Lst[[3]] and Lst[[4]]. 
 If Lst[[4]] is a vector, then Lst[[4]][1] is its first entry. 
-
+<pre><code>
 > Lst
 $name
 [1] "Fred"
@@ -51,8 +96,9 @@ $child.ages
 > Lst[[4]][1]
 [1] 4
 
+</code></pre>
 
-The function length(Lst) gives the number of (top level) components that the list has. 
+The function <code>length(Lst)</code> gives the number of (top level) components that the list has. 
 
 Components of lists may also be named, and in this case the component may be referred to either by giving the component name as a character string in place of the number in double square brackets, or, more conveniently, by giving an expression of the form 
 
@@ -65,8 +111,13 @@ This is a very useful convention as it makes it easier to get the right componen
 This dollar sign operator is very useful , particularly when looking at the output of a complex statistical function.
 To find out the names assigned to a list use the command names().
 
+<pre><code>
 > names(Lst)
 [1] "name"        "wife"        "no.children" "child.ages" 
 > Lst$name
 [1] "Fred"
+</code></pre>
  
+
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<html>
+
+<head>
+<title>Inspecting Data</title>
+</head>
+
+<body>
+<a href="index.html">Back to Basics of Data Analysis</a> | 
+<a href="mathsstats.html"> Maths and Statistics Functions</a> 
+
+<h4>Inspecting Data</h4>
+
+<!--begin.rcode
+#inspecting the iris data set
+
+summary(iris)
+
+end.rcode-->
+
+<!--begin.rcode
+#Structure and Storage
+
+class(iris)
+mode(iris)
+str(iris)
+end.rcode-->
+
+<!--begin.rcode
+###########################################
+# Dimensions of the iris data frame.
+
+dim(iris)
+nrow(iris)
+ncol(iris)
+end.rcode-->
+
+<!--begin.rcode
+###########################################
+# Row and Column names
+
+names(iris)
+rownames(iris)
+ # also try : rownames(mtcars)
+colnames(iris)
+end.rcode-->
+
+<!--begin.rcode
+#############################################
+# The head() and tail() functions
+
+head(iris)
+tail(iris)
+head(iris,5)
+tail(iris,3)
+end.rcode-->
+
+<!--begin.rcode
+#############################################
+#Accessing particular rows and columns
+
+iris[47,] # 47th row
+iris[,2]  #second column
+iris[(1:4), ]#first four rows
+end.rcode-->
+
+<!--begin.rcode
+
+mean(iris$Sepal.Length)
+median(iris$Sepal.Width)
+ levels(iris$Species)
+
+end.rcode-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>Matrices</title>
+</head>
+
+<body>
+<h1> More on Matrices</h1>
+<a href="RWorkshop.github.io">Main Page</a> | <a href="RWorkshop.github.io/Maths">Mathematical Operations</a> | <a href="index">Matrices Index</a>
+
+
+<h3>Using <code>rbind()</code> and <code>cbind()</code></h3>
+<ul>
+<li> Another methods of creating a matrix is to "bind" a number of vectors together, either by row or by column. 
+<li> The commands are <code>rbind()</code> and <code>cbind()</code> respectively.
+</ul>
+<!--begin.rcode
+x1 <- c(1,2,4)  
+x2 <- c(3,8,4)
+x3 <- c(1,4,3)
+
+A <- rbind(x1,x2,x3) 
+B <- cbind(x1,x2,x3)
+
+A
+B
+end.rcode-->
+
+<h3>Row and Column Statistics</h3>
+Statistic on the rows and columns can easily be computed if required.
+<ul>
+<li> <code> rowMeans()  </code> : Returns vector of row means.
+<li> <code> rowSums()  </code> : Returns vector of row sums.
+<li> <code> colMeans()  </code> : Returns vector of column means.
+<li> <code> colSums()  </code> : Returns vector of coumn means.
+</ul>
+.
+<!--begin.rcode
+rowMeans(A)  # Returns vector of row means.
+rowSums(A)  # Returns vector of row sums.
+colMeans(B)  # Returns vector of column means.
+colSums(B)  # Returns vector of coumn means.
+end.rcode-->
+
+<h4>Diagonals</h4>
+<ul>
+<li> The <code>diag()</code> command is a very versatile function for using matrices.
+<li> It can be used to create a diagonal matrix with elements of a vector in the principal diagonal. 
+<li> For an existing matrix, it can be used to return a vector containing the elements of the principal diagonal.
+<li>			
+Most importantly, if k is a scalar, <code>diag()</code> will create a k x k identity matrix.
+</ul>
+
+<!--begin.rcode
+Vec2=c(1,2,3)
+diag(Vec2)	#	Constructs a diagonal matrix based on values of Vec2
+diag(A)	#        Returns diagonal elements of A as a vector
+end.rcode-->
+
+<!--begin.rcode
+diag(3)	#	creates a 3 x 3 identity matrix
+diag(diag(A)) #  	Diagonal matrix D of matrix A ( Jacobi Method)
+end.rcode-->
+
+
+</body>
+</html>

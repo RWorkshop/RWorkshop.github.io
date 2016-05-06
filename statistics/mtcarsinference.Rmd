@@ -1,0 +1,28 @@
+Inference Procedures
+========================================================
+
+
+### Exercise 1 - Bartlett Test for Homogenity of Variance
+
+**Two Sample Case**
+- this is equivalent to a test of equal variance for two samples.
+- the null hypothesis is that both groups have the same variance for a particular numeric variable. 
+- A boxplot is added to assist in interpretation.
+- In this example, we fail reject the null hypothesis. The p-value is greater than 0.05.
+```{r fig.width=7, fig.height=6}
+boxplot(mpg~am,data=mtcars,horizontal=TRUE,col=c("lightblue","lightgreen"))
+bartlett.test(mpg ~ am,data=mtcars)
+```
+
+### Exercise 2 - Bartlett Test for Homogenity of Variance
+
+**Three Sample Case**
+- The null hypothesis is that there is no significant difference in variance for a particular numeric variable between any of the groups.
+- A boxplot is added to assist in interpretation.
+- In this example, we reject the null hypothesis on account of the low p-value.
+```{r fig.width=7, fig.height=6}
+boxplot(mpg~cyl,data=mtcars,horizontal=TRUE,col=c("lightblue","lightgreen","lightpink"))
+bartlett.test(mpg ~ cyl,data=mtcars)
+```
+
+

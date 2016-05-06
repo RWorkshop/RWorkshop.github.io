@@ -1,0 +1,43 @@
+Using the quantile function
+========================================================
+The `quantile` function  produces sample quantiles corresponding to the given probabilities. The smallest observation corresponds to a probability of 0 and the largest to a probability of 1.
+
+### Creating a vector 
+
+First we will create two vectors that we will use later.
+The semi-colon operator is used to create a sequence of integers.
+
+```{r}
+deciles = 0:10/10
+quintiles = 0:5/5
+deciles
+quintiles
+
+```
+
+
+```{r}
+attach(iris)
+quantile(Sepal.Length,0.10)
+quantile(Sepal.Length,0.90)
+quantile(Sepal.Length,c(0.10,0.90))
+quantile(Sepal.Length,deciles)
+quantile(Sepal.Length,quintiles)
+detach(iris)
+```
+<!------------------------------------------>
+
+### Tukey Five Number Summary
+
+```{r}
+attach(iris)
+quantile(Sepal.Length,c(0.25,0.50,0.75))
+fivenum(Sepal.Length)
+detach(iris)
+```
+There are several different methods of determining a quantile. You can specify an alternative approach to the default method using the `type=` argument. Often the resulting value will still be the same.
+```{r}
+attach(iris)
+quantile(Sepal.Length, 0.5 , type=1:3)
+detach(iris)
+```

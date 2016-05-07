@@ -1,0 +1,27 @@
+Apply functions
+
+A group of functions useful for avoiding loops:
+lapply, sapply, apply, tapply
+
+lapply and sapply are used to iterate along a list or a vector.
+
+lapply( listname , length)will return a list with components the length of the components of the list.
+
+sapply( listname , length) will return a vector with elements the lengths of the components of the list.
+
+apply and tapply operate in a similar way on parts of arrays or
+vectors.
+
+apply and tapply have extra parameters, to indicate which part
+of the array or vector to use. 
+
+For apply it is the dimension(s) of the array over which to iterate. e.g.
+apply(matrixname,2,sum,na.rm=TRUE)
+will produce the sum of each column of the matrix, after missing
+values have been removed.
+
+Note how to pass extra arguments to the function to be applied.
+
+Can be used on data frames, but will turn them into matrices first.
+If there are factor variables, all the variables will end up as
+character. 

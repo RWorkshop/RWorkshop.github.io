@@ -1,0 +1,151 @@
+<html>
+
+<head>
+<style type="text/css">
+.knitr .inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+}
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage .left {
+  text-align: left;
+}
+.rimage .right {
+  text-align: right;
+}
+.rimage .center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>Correlation</title>
+</head>
+
+<body>
+
+<h1>Correlation</h1>
+
+A correlation coefficient is a number between -1 and 1 which measures the degree to which two variables are linearly related. If there is perfect linear relationship with positive slope between the two variables, we have a correlation coefficient of 1; if there is positive correlation, whenever one variable has a high (low) value, so does the other.
+
+If there is a perfect linear relationship with negative slope between the two variables, we have a correlation coefficient of -1; if there is negative correlation, whenever one variable has a high (low) value, the other has a low (high) value.
+A correlation coefficient of 0 means that there is no linear relationship between the variables.
+
+We can determine the Pearson Correlation coefficient in R using the \texttt{cor()} command.
+To get a more complete statistical analysis, with formal tests, we can use the command \texttt{cor.test()}
+The interpretation of the output from the cor.test()procedure is very similar to procedures we have already encountered. The null hypothesis is that the correlation coefficient is equal to zero. This is equivalent to saying that there is no linear relationship between variables.
+
+
+\begin{framed}
+\begin{verbatim}
+C=c(0,2,4,6,8,10,12) 
+F=c(2.1,5.0,9.0,12.6,17.3,21.0,24.7)
+cor.test(C,F)
+\end{verbatim}
+\end{framed}
+\begin{verbatim}
+
+        Pearson's product-moment correlation
+
+data:  C and F 
+t = 47.1967, df = 5, p-value = 8.066e-08
+alternative hypothesis: true correlation is not equal to 0 
+95 percent confidence interval:
+ 0.9920730 0.9998421 
+sample estimates:
+      cor 
+0.9988796 
+\end{verbatim}
+
+
+
+
+ R code to demonstrate simple bivariate techniques
+ 1) Constructing a simple scatterplot
+ 2) Computing Correlation Coefficients
+ 3) Fitting a sinmple linear regression model
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">X</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">rnorm</span><span class="hl std">(</span><span class="hl num">14</span><span class="hl std">,</span> <span class="hl kwc">mean</span> <span class="hl std">=</span><span class="hl num">10</span><span class="hl std">,</span> <span class="hl kwc">sd</span> <span class="hl std">=</span> <span class="hl num">2</span><span class="hl std">)</span>
+<span class="hl std">Y</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">rnorm</span><span class="hl std">(</span><span class="hl num">14</span><span class="hl std">,</span> <span class="hl kwc">mean</span> <span class="hl std">=</span><span class="hl num">100</span><span class="hl std">,</span> <span class="hl kwc">sd</span> <span class="hl std">=</span> <span class="hl num">2</span><span class="hl std">)</span>
+
+<span class="hl kwd">cor</span><span class="hl std">(X,Y)</span>
+</pre></div>
+<div class="output"><pre class="knitr r">## [1] 0.02426323
+</pre></div>
+</div></div>
+
+<p>You can also embed plots, for example:</p>
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot</span><span class="hl std">(X,Y)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl kwd">plot</span><span class="hl std">(X,Y,</span><span class="hl kwc">pch</span><span class="hl std">=</span><span class="hl num">16</span><span class="hl std">,</span><span class="hl kwc">col</span><span class="hl std">=</span><span class="hl str">&quot;red&quot;</span><span class="hl std">)</span>
+<span class="hl kwd">title</span><span class="hl std">(</span><span class="hl str">&quot;Scatterplot&quot;</span><span class="hl std">)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-2-2.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" class="plot" /></div></div>
+
+
+
+<h1>Spearman and Kendall Correlation</h1>
+Spearman and Kendall correlations are both <b><i>rank correlations</b></i>. 
+To implement Spearman and Kendall correlation, simply specify the type in the 
+<code>method=" "</code> argument.
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">cor</span><span class="hl std">(G,D)</span>
+</pre></div>
+<div class="error"><pre class="knitr r">## Error in is.data.frame(x): object 'G' not found
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">cor</span><span class="hl std">(G,D,</span><span class="hl kwc">method</span><span class="hl std">=</span><span class="hl str">&quot;spearman&quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="error"><pre class="knitr r">## Error in is.data.frame(x): object 'G' not found
+</pre></div>
+<div class="source"><pre class="knitr r"><span class="hl kwd">cor</span><span class="hl std">(G,D,</span><span class="hl kwc">method</span><span class="hl std">=</span><span class="hl str">&quot;kendall&quot;</span><span class="hl std">)</span>
+</pre></div>
+<div class="error"><pre class="knitr r">## Error in is.data.frame(x): object 'G' not found
+</pre></div>
+</div></div>
+The interpretation is very similar, but there are no confidence intervals for the estimates.
+</body>
+</html>

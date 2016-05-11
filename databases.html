@@ -1,0 +1,88 @@
+DMR Section 3: Databases
+Contents
+DMR Section 3: Databases	1
+SQL  Basics (3.1)	1
+ODBC (3.2)	1
+Using RODBC Package (3.3)	1
+
+Connecting to a database
+There are two principal ways to connect with databases in R. 
+•	The first uses the ODBC (Open DataBase Connectivity) facility available on many computers.
+•	The second uses the DBI package of R along with a specialized packagefor the particular database needed to be accessed.
+SQL  Basics (3.1)
+1.	Navigation Commands
+2.	Basics of SQL
+3.	Aggregation
+4.	Joining two data bases
+5.	Subqueries
+6.	Modifying Database records
+3.1.2 Basics of SQL
+SELECT
+The most important SQL command is SELECT. Since queries are performed using single statements, the syntax of the SELECT command can be quite daunting:
+
+SELECT columns or computations
+FROM table
+WHERE condition
+GROUP BY columns
+HAVING condition
+ORDER BY column [ASC | DESC]
+LIMIT offset,count;
+
+
+WHERE
+
+To limit the rows which are returned, the WHERE clause can be used. Most common operators can be used to define expressions for the WHERE clause, along with the keywords AND and OR.
+
+3.1.2 Joining Two Databases
+One of the strengths of database servers is that they can effectively join together multiple database tables, based on common values of columns within the tables. Of course, the same capability is available within R through the merge() function.
+
+The most common way of joining two tables is through an inner join; only those observations that have common values of the variable used for the merge will be retained in the output table.
+
+ODBC (3.2)
+
+Open Database Connectivity facility that allows access to a variety of databases through a common interface.
+In R, the RODBC package , which is available through CRAN, is used to access this capability.
+Data Source Name (DSN)
+The first step in using RODBC is to set up a DSN or data source name. In order to do this, you need to know the name that your computer uses for a particular data source.
+Using RODBC Package (3.3)	
+
+library(RODBC)
+con=odbcConnect(‘myODBC;password=xxxxxx’)
+
+MySQL: server, users, password, port and database
+PostgreSQL : substitute username for user
+Once you have a connection from an ODBC source, the sqlQuery function allows any valid SQL query to be sent to the connection. This will be the case even if SQL is not the native language of the database.
+The DBI package(3.4)
+
+One of the most popular databases used with R is MySQL (http://mysql.com). This freely available database runs on a variety of platforms and is relatively easy to configure and operate.
+
+Accessing a MySQL database(3.5)
+
+library(RMySQL)
+drv=dbDriver(“MySQL”)
+
+Performing Queries (3.6)
+
+SQL queries make requests for some or all of the variables in one or more database table, so a natural way to look at these results within R is in a data frame.
+A single call to dbGetQuery can be used to send a query to the database.
+Mydata = dbGetQuery(com,)
+
+Any valid SQL query can be passed to a database by this method.
+ 
+
+Normalized Tables (3.7)
+The principle of normalization is central to database design. The goal is to eliminate redundancy in the information stored.in the database tables. To achieve this goal, what might be a single data frame in R might be broken into several tables in a database.
+Getting Data into MySQL (3.8)
+We can generate “CREATE TABLE” statements in R as follows:
+CREATE TABLE mydata
+( row_names text, 
+           name text,
+           number double
+)   
+
+CREATE TABLE newtable LIKE oldtable;
+
+
+More Complex Aggregation (3.9)
+dbApply():  The dbApply() function can be used to apply a user-specified R function to
+groups of data extracted from a database.

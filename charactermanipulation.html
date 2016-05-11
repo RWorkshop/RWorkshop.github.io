@@ -1,0 +1,79 @@
+DMR Section 7 Character Manipulation
+Basics of Character Data (7.1)
+The names of the fifty states are found in the data set state.name, which is embedded in R base installation.
+nchar(state.name)
+
+Displaying and concatenating Character strings (7.2)
+
+paste(‘one’,2,’three’,4,’five’)
+
+
+Working with Parts of Character Values (7.3)
+The substring function can be used either to extract parts of character strings, or to change the values of parts of character strings.
+
+Modifier Meaning
+^              anchors expression to beginning of target
+$              anchors expression to end of target
+.               matches any single character except newline
+|              separates alternative patterns
+()             groups patterns together
+*             matches 0 or more occurrences of preceding entity
+?             matches 0 or 1 occurrences of preceding entity
++             matches 1 or more occurrences of preceding entity
+{n}          matches exactly n occurrences of preceding entity
+{n,}         matches at least n occurrences of preceding entity
+{n,m}      matches between n and m occurrences
+
+
+Regular Expression in R (7.4)
+Regular expressions are a method of expressing patterns in character values which can then be used to extract parts of strings or to modify those strings in some way.
+R uses a basic set of regular expressions similar to those used by UNIX utilities like grep.
+
+Regular expressions are supported in the R function strsplit, grep, sub,gsub, regexpr and gregexpr.
+The backslash operator is used in regular expressions to signal that certain characters with special meaning in regular expressions should be treated as normal characters.
+By default
+You can use the readline() function to enter regular expressions into R.
+
+To create a regular expression that would match file names with an extension “.txt”
+
+expr=readline()
+
+Regular Expressions in R (7.5)
+
+strs = c(‘chicken’,’dog’,’cat’)
+expr =paste(strs,collapse=’|’)
+expr
+
+The variable expr could now be used as a regular expression to match any of the words in the original vector.
+Breaking apart Character Values (7.6)
+
+The strsplit() function can use a character string or regular expression to divide up a character string into smaller pieces. 
+
+The first argument to strsplit() is the character string to break up, and the second argument is the character value or regular expression which should be used to break up the string into parts.
+
+sentence=‘R is a free software environment for statistical computing’
+parts = strsplit(sentence,’ ’)
+length(parts)
+length(parts[[1]])
+
+
+Using Regular expressions in R (7.7)
+The grep() function accepts a regular expression and a character string or vector of character strings, and returns the indices of those elements if the string that are matched by regular expression
+
+
+head(LifeCycleSavings[,greg(‘^pop’,names(LifeCycleSavings))])
+
+
+Substituting and Tagging (7.8)
+
+R provides two functions sub() and gsub().
+Each of these functions accepts a regular expression, a string containing what will be substituted for the regular expressions, and the string or strings to operate on.
+
+values =c('$11,317.35' , '$11,234.51', '$11,275.89',
+          '$11,278.93', '$11,294.94')
+
+
+To use these values as numbers , the commas and dollar signs need to be removed before as.numeric() can be used.
+values = c('75.99','(20.30)','55.20')
+
+

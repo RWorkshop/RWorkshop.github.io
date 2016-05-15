@@ -1,0 +1,39 @@
+<h3>Regular Expression in R (7.4)</h3>
+Regular expressions are a method of expressing patterns in character values which can then be used to extract parts of strings or to modify those strings in some way.
+R uses a basic set of regular expressions similar to those used by UNIX utilities like grep.
+
+Regular expressions are supported in the R function strsplit, grep, sub,gsub, regexpr and gregexpr.
+The backslash operator is used in regular expressions to signal that certain characters with special meaning in regular expressions should be treated as normal characters.
+By default
+You can use the readline() function to enter regular expressions into R.
+
+To create a regular expression that would match file names with an extension “.txt”
+
+expr=readline()
+
+<h3>Regular Expressions in R (7.5)</h3>
+<pre><code>
+strs = c(‘chicken’,’dog’,’cat’)
+expr =paste(strs,collapse=’’)
+expr
+</code></pre>
+The variable expr could now be used as a regular expression to match any of the words in the original vector.
+<h3>Breaking apart Character Values (7.6)</h3>
+
+The strsplit() function can use a character string or regular expression to divide up a character string into smaller pieces. 
+
+The first argument to strsplit() is the character string to break up, and the second argument is the character value or regular expression which should be used to break up the string into parts.
+
+<pre><code>
+sentence=‘R is a free software environment for statistical computing’
+parts = strsplit(sentence,’ ’)
+length(parts)
+length(parts[[1]])
+</code></pre>
+
+<h3>Using Regular expressions in R (7.7)</h3>
+The grep() function accepts a regular expression and a character string or vector of character strings, and returns the indices of those elements if the string that are matched by regular expression
+
+<pre><code>
+head(LifeCycleSavings[,greg(‘^pop’,names(LifeCycleSavings))])
+</code></pre>

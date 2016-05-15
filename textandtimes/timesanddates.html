@@ -1,28 +1,32 @@
-Section 4: Dates
+﻿<h2>Section 4: Dates</h2>
 As.Date Function (4.1)
 The as.Date function allows a variety of input formats through the format=argument. The default format is a four-digit year, followed by a month, then a day, separated by either dashes or slashes.
 
 table(mons)
 
-The Chron Package (4.2)
+<h3>The Chron Package (4.2)</h3>
 
 The chron function converts dates and times to chron objects. The dates and times are provided to the chron function as separate values, so some preprocessing may be necessary to prepare input date/times for the chron function.
 
 The chron package converts dates and times to chron objects.
-
+<pre><code>
 library(chron)
 dtimes=c(“2002-06-09 12:45:40”)
 dtparts=t(as.data.frame(strsplit(dtimes,’ ‘)))
 rownames(dtparts=NULL
+</code></pre>
 
 Chron values are stored internally as the fractional number of days from January 1 1970. The as.numeric function can be used to access interal values
 Posix Classes (4.3)
 Portable Operating System Interface, primarily for Unix Systems, but available on other systemsas well.
 Working with Dates (4.4)
+
+<pre><code>
 mydate=as.POSIXlt(‘2005-4-19 7:01:00’)
 names(mydate)
+</code></pre>
 
-Time Intervals (4.5)
+<h3>Time Intervals (4.5)</h3>
 The difference between two time or date values are known as difftime objects.
 Time Sequences (4.6)
  

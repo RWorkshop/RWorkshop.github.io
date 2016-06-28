@@ -36,6 +36,78 @@ Data Manipulations with <tt>dplyr</tt>
 
 
 
+<h1 class="entry-title">Shiny Web Applications</h1>
+<blockquote>
+<div class="entry-content">
+
+<strong>About Shiny</strong>
+<ul>
+	<li>The <code><span style="font-family: Courier New;">shiny</span></code> package is a powerful tool for statisticians and data analysts who wish to share their work in an interactive fashion.</li>
+	<li>The <code><span style="font-family: Courier New;">shiny</span></code> package, developed by RStudio, allows R programmers to develop web applications entirely in R, without requiring any HTML, Javascript, or CSS (although those can all be used to extend features of apps).</li>
+	<li>An <strong>R</strong> Shiny app consists of two scripts, <code><span style="font-family: Courier New;">ui.R</span></code> and <code><span style="font-family: Courier New;">server.R</span></code>, the user-interface and server-side scripts, respectively, as well as any data or other files that may be needed by the app, depending on its complexity.</li>
+</ul>
+<strong>Workshop Materials </strong>
+
+<strong>Part 0 – Preliminaries </strong>
+<ul>
+	<li>Shiny R Web Application – Sigmoid Curve Example – <a href="http://spark.rstudio.com/genentech/generic-response-prediction-tool-web-application-demonstration-v2/" target="_blank">Here</a></li>
+	<li>Working Directories – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/Shiny-WorkingDirectories.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Download RStudio <a href="https://www.rstudio.com/‎" target="_blank"><span style="color: #0066cc;">HERE</span></a> | RStudio – Orientation Guide – <a href="http://dss.princeton.edu/training/RStudio101.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>SHINY – CRAN manual file – H<a href="http://stats-lab.com/rstats/shiny/cran.r-project.org/web/packages/shiny/shiny.pdf" target="_blank"><span style="color: #0066cc;">ERE</span></a></li>
+	<li><em>Remark March/April 2014 – version changes in several key areas – E.g “fluidpage”</em></li>
+	<li>Some Simple Examples – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyExamples.zip" target="_blank"><span style="color: #0066cc;">HERE</span></a> (Zip File)</li>
+	<li>New Tutorial Site – <a href="http://shiny.rstudio.com/tutorial/" target="_blank"><span style="color: #0066cc;">HERE</span></a> – R Code for Examples <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyTutorialExamples.zip" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Code For Lessons (Not Complete) – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/LESSONS.zip" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Some examples use the <em><strong>eeptools</strong></em> package – so that must be loaded beforehand</li>
+</ul>
+<strong>Part 1 – About Shiny </strong>
+<ul>
+	<li>Part 1a – Introduction to SHINY – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyMaster1.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Part 1b – Introduction to SHINY – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyMaster2.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Reactivity in SHINY Apps – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyReactivity.pdf" target="_blank"><span style="color: #0066cc;">HERE </span></a> | Example – <em><strong>EX03</strong></em></li>
+	<li>Reactivity and Rendering Functions – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/SHINY-Reactive%20and%20Rendering%20Functions.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Shiny Layout – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/Shiny-oldlayout.pdf" target="_blank"><span style="color: #0066cc;">OLD </span></a>|<a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/Shiny-newlayout.pdf" target="_blank"><span style="color: #0066cc;">NEW</span></a></li>
+	<li>New Examples – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/NewShinyExamples.zip" target="_blank"><span style="color: #0066cc;">HERE</span></a> (Zip File) – Listing of New Examples – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/SHINY%20-%20New%20Shiny%20Examples.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Old Examples – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/OLDSHINY.zip" target="_blank"><span style="color: #0066cc;">HERE</span></a> ( Zip File ) – Listing of Old Examples – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/SHINY%20-%20Old%20Shiny%20Examples.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+</ul>
+<strong>Part 2 Simple Examples</strong>
+<ul>
+	<li>Chris Beeley’s Book ( Shiny – Old Version )</li>
+	<li>Some Minimal Examples – R Code <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/CBexamples.zip" target="_blank"><span style="color: #0066cc;">Here</span></a> ( Zip File )</li>
+	<li>CB1 <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/MinimalExample-CB1.pdf" target="_blank"><span style="color: #0066cc;">notes</span></a> | CB2 <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/MinimalExample-CB2.pdf" target="_blank"><span style="color: #0066cc;">notes</span></a></li>
+</ul>
+<strong>Other Chapters</strong>
+<ul>
+	<li>Part 3 – Widgets <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/03%20ChrisBeeleyWidgets.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a> <em>(Sample Chapter of Chris Beeleys’s Book – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/01%20Web-Application-Development-with-R-Using-Shiny-Sample-Chapter.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a>)</em></li>
+	<li>Using HTML – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/SHINY%20HTML.pdf"><span style="color: #0066cc;">HERE</span></a> (See some of SNAP examples)</li>
+	<li>Part 4 – Dynamic UI with SHINY – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/04%20Shiny-DynamicUI.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Formatted Text – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/Shiny%20-%20Formatted%20Text.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Part 5 – Uploading and Downloading Data with SHINY – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/05%20Uploading%20and%20Downloading%20Data%20with%20Shiny.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+	<li>Census Example ( Shiny Lesson 5) – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/Census.zip" target="_blank"><span style="color: #0066cc;">HERE </span></a>(Zip File)</li>
+</ul>
+<strong>Part 6 – RV examples (<em>Matthew Leonawicz</em>)</strong>
+<ul>
+	<li>Conditional Panels – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/ShinyConditionalPanels.pdf" target="_blank"><span style="color: #0066cc;">Here</span></a></li>
+	<li>R code for Shiny R Apps <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/SNAP.zip" target="_blank"><span style="color: #0066cc;">Here</span></a></li>
+	<li><a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/RV1Code.pdf"><span style="color: #0066cc;">RV1 notes </span></a>| <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/RV2Code.docx" target="_blank"><span style="color: #0066cc;">RV2 notes</span></a>| <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/RV3Code.pdf" target="_blank"><span style="color: #0066cc;">RV3 notes|</span></a> <del>RV4 notes</del></li>
+	<li>GITHUB – <a href="https://github.com/ua-snap/shiny-apps"><span style="color: #0066cc;">Here</span></a></li>
+	<li>Main Website <a href="http://www.snap.uaf.edu/analysis_tools.php" target="_blank"><span style="color: #0066cc;">SNAP.UAF.EDU</span></a></li>
+</ul>
+<strong>Part 7 – Deploying Shiny </strong>
+<ul>
+	<li>Notes <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/07%20Shiny-Deployment.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a></li>
+</ul>
+<strong>List of Examples</strong>
+
+Examples and Exercises – <a href="https://dl.dropboxusercontent.com/u/6044937/RSTATS/Shiny/List%20of%20Shiny%20Examples.pdf" target="_blank"><span style="color: #0066cc;">HERE</span></a>
+
+<strong>Learning how to build Shiny Apps</strong>
+<ul>
+	<li>RStudio have a dedicated site – <a href="http://rstudio.github.io/shiny/tutorial/" target="_blank"><span style="color: #0066cc;">here</span></a> – that provides a step-by-step tutorial for learning shiny.</li>
+	<li><a href="http://www.showmeshiny.com/" target="_blank"><span style="color: #0066cc;">Showmeshiny.com</span></a> is a gallery of web apps created using R and Shiny. Browse the gallery for ideas and examples, or to see app code and documentation (links are included when available).</li>
+</ul>
+</div></blockquote>
+
 
 <font = 4>
 Previous Section | Back to <a href="http://RWorkshop.github.io""> Main Page </a> | Next Section

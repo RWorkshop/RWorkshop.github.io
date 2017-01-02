@@ -1,10 +1,56 @@
-%-------------------------------------------------------------------------------------------------------%
-%--------------------------------------------------------------------------------------VECTORS----------%
-\newpage
-\section{Vectors and Sequences}
-\subsection{Vectors}
 
-%The primary data type in R is the vector. Before describing how vectors work in R, it is helpful to distinguish two ideas of vectors in order to set the correct expectations.
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h5>
+
+
+
+      </section>
+    
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:11px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:11px 15px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-b44r{background-color:#cbcefb;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+.tg .tg-76so{font-size:15px;background-color:#cbcefb;vertical-align:top}
+</style>
+<center>
+<table class="tg" style="undefined;table-layout: fixed; width: 900px">
+<colgroup>
+<col style="width: 900px">
+
+</colgroup>
+
+  <tr>
+    <td class="tg-76so"><strong><a href="caret/index.html">The caret Package</a></strong><br><br>
+<h4>Vectors<h4>
+
+The primary data type in R is the vector. Before describing how vectors work in R, it is helpful to distinguish two ideas of vectors in order to set the correct expectations.
 
 
 
@@ -17,7 +63,7 @@ Adding a vector of length 22 and a vector of length 45 in most languages would r
 
 The \texttt{R}  language has no provision for scalars, nothing like a double in C-family languages. The only way to represent a single number in a variable is to use a vector of length one. And while it is possible to iterate through vectors as one might do in a for loop in C, it is usually clearer and more efficient in \texttt{R} to operate on vectors as a whole.
 
-\subsection{Creating Vectors}
+<h4>Creating Vectors</h4>
 Vectors are created using the c function. For example, \texttt{p <- c(2,3,5,7)} sets p to the vector containing the first four prime numbers.
 \begin{framed}
 \begin{verbatim}
@@ -26,13 +72,11 @@ p <- c(2,3,5,7)
 \end{framed}
 %Vectors in R are indexed starting with 1 and matrices in are stored in column-major order. In both of these ways R resembles FORTRAN.
 
-\begin{itemize}
-\item Elements of a vector can be accessed using the square bracket operators []. So in the above example, \texttt{p[3]} is 5.
-
-\item Vectors automatically expand when assigning to an index past the end of the vector.
-
-\item Negative indices are legal, but they have a very different meaning than in some other languages. If x is an array in Python or Perl, x[-n] returns the nth element from the end of the vector. In \texttt{R}, x[-n] returns a copy of x with the nth element removed.
-\end{itemize}
+<ul>
+<li> Elements of a vector can be accessed using the square bracket operators []. So in the above example, \texttt{p[3]} is 5.
+<li>  Vectors automatically expand when assigning to an index past the end of the vector.
+<li>  Negative indices are legal, but they have a very different meaning than in some other languages. If x is an array in Python or Perl, x[-n] returns the nth element from the end of the vector. In \texttt{R}, x[-n] returns a copy of x with the nth element removed.
+ </ul>
 
 \begin{framed}
 \begin{verbatim}
@@ -52,15 +96,13 @@ p[-2]
 [1] 2 5 7
 \end{verbatim}
 
-
-\newpage
-\section{Vectors}
+ <h4>Vectors</h4>
  Vectors are the simplest type of object in R. There are 3 main types of vectors:
-\begin{itemize}
-\item  Numeric vectors
-\item Character vectors
-\item Logical vectors
-\end{itemize}
+<ul>
+<li> Numeric vectors
+<li> Character vectors
+<li> Logical vectors
+</ul>
 To set up a numeric vector x consisting of 7 numbers; {10, 5, 3, 6, 21,11,41}, we use the \texttt{c()} command to “concatenate” them –i.e create a vector of individual values.
 To print the contents of x, simply type “x”
 
@@ -79,8 +121,7 @@ The [1] in front of the result is the index of the first element in the vector x
 To access a particular element of a vector, and the position of the element enclosed in square brackets.
 
 \textbf{(End of Edit - Move to Reserve - Vectors)}
-%------------------------------------------%
-\subsection{Useful Commands For Vectors}
+<h4>Useful Commands For Vectors</h4>
 
 \begin{verbatim}
 Newvec = c(13,16,36,55,23,11)
@@ -120,8 +161,7 @@ Newvec = c(13,16,36,55,23,11)
 [1] 2 3 5 6 4 1
 \end{verbatim}
 
-%------------------------------------------------------%
-\subsection{Sequences}
+     <h4>Sequences</h4>
 \subsubsection{Using the colon operator}
 A `count-up' or a `count-down' sequence of integers will be determined automatically. This operator is very useful and we will make use of it frequently.
 \begin{framed}
@@ -137,5 +177,42 @@ Firstly we will mimic the sequences that we have created using the colon operato
 seq(1,20)
 seq(20,1)
 \end{verbatim}
+
+
+
+    </tr>
+
+</table>
+</center>
+
+
+
+
+    </div>
+    
+    
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+
+    </div>
+
+    
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

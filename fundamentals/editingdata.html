@@ -29,43 +29,40 @@
       <section id="main_content" class="inner">
         <h3>
 
-\subsubsection{CSV File}
+          <h4>CSV File</h4>
 The sample data can be in \textit{\textbf{comma separated values}} (CSV) format. Each cell inside such data file is separated by a special character, which usually is a comma, although other characters can be used as well. ( As it is vendor neutral, CSV is more versatile).
 The first row of the data file should contain the column names instead of the actual data. Here is a sample of the expected format.
-\begin{verbatim}
+<code>
 Col1,Col2,Col3
 100,a1,b1
 200,a2,b2
 300,a3,b3
-\end{verbatim}
+</code>
 
 After we copy and paste the data above in a file named ``MyData.csv" with a text editor, we can read the data with the \texttt{read.csv()} function. (The file should be in the working directory).
-\begin{verbatim}
+<code>
 > mydata = read.csv("MyData.csv")  # read csv file
 > mydata                           # print data frame
   Col1 Col2 Col3
 1  100   a1   b1
 2  200   a2   b2
 3  300   a3   b3
-\end{verbatim}
+</code>
 (Remark: In various European locales, as the comma character serves as decimal point, the \texttt{read.csv2()} function should be used instead.)
 
-\bigskip
-\noindent \textbf{Exercise:} Load the GNW dataset into the \texttt{R} Environment. (We will do more work with it shortly).
-
-\subsubsection{Data export - \texttt{write.csv()}}
+<b>{Exercise:}</b> Load the GNW dataset into the \texttt{R} Environment. (We will do more work with it shortly).
+          
+          <h4>Data export - \texttt{write.csv()}}</h4>
 The basic tool to produce output files is \texttt{write.csv()}.
 
 The only two required arguments to \texttt{write.csv()} are ,firstly, the name of a dataset or matrix (with just a single argument) then the name (in quotations) of the file to be created.
 
-\begin{framed}
-\begin{verbatim}
+<code>
 > getwd()
 [1] "C:/Users/Kevin/Documents"
 > write.csv(iris,"iris2")
 > 
-\end{verbatim}
-\end{framed}
+</code>
 %Usually, the second argument, file= will be used to specify the destination as either a character string to represent a file, or a connection (i.e. database connectivity).
 
 %By default, character strings are surrounded by quotes by write.table(); use the quote=FALSE argument to suppress this feature. To suppress row names or column names from being written to the file, use the row.names=FALSE or col.names=FALSE arguments, respectively.
@@ -76,22 +73,19 @@ The  \texttt{sep=} argument can be used to specify a separator other than a blan
 
 
 
-\subsubsection{Data export - \texttt{sink()}}
+<h4>Data export - \texttt{sink()}}</h4>
 
 
 The code first instructs \texttt{R} to re-direct output away from the \texttt{R} terminal to the file "output.txt" and
 then the relevant output  (below the summary of the GNW data frame) which goes to the sink.
 To close the sink, use
-\texttt{sink()} with no arguments.
+          <code>sink()</code> with no arguments.
 
-\begin{framed}
-\begin{verbatim}
+<code>
  sink("GNW.txt")
  summary(GNW)
 sink()
-\end{verbatim}
-\end{framed}
-
+          </code>
 
 While a sink is open all output will go to it, replacing what is already in the file. To append output
 to a file, use the \texttt{append=TRUE} option with \texttt{sink()}. 

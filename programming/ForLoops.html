@@ -27,29 +27,30 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
+      
 
-The for loop 
+          <h3>The for loop </h3>
 If you have a statement or statements that you want to repeat a number of times, you can use the “for” statement to do so. 
 
 The “for” statement loops over all elements in a list or vector: 
 for (variable in sequence) statement.1 
-
+<pre><code>
 x = numeric(100)
 
 for( i in 1:100)
 {
 x[i] = i + exp(i)
 }
+</code></pre>
 Note the colon (:) operator generates a sequence of integers. You can use this in places other than the for loop or array indexing, too. Also note that statement.1 can be a group of statements inside braces.
-The if statement 
+        <h3>The if statement </h3>
 This is used when you want to do something if a condition is true and something else otherwise. The statement looks like this: 
 if ( condition ) statement 1 else statement 2 
 This will execute statement 1 if the condition is true and statement 2 if the condition is false. 
 if (x < 3) print("x less than 3") else print ("x not less than 3")
 If you want statement 1 and / or statement 2 to consist of more than one statement, then the if construct looks like this: 
 The group of statements between a { and a } are treated as one statement by the if and else. 
-if (condition) { 
+<pre><code>if (condition) { 
 statement 1a 
 statement 1b 
 …
@@ -58,8 +59,8 @@ statement 2a
 statement 2b 
 …
 } 
-
-Other flow control statements 
+        </code></pre>
+      <h4>Other flow control statements </h4>
 R has two statements break and next: these discontinue normal execution in the middle of “for” loop. The “next” statement causes the next pass through the loop to begin at once, while “break” causes a jump to the statement immediately after the end of the loop.
 Dice Roll simulation
 
@@ -87,7 +88,7 @@ sd(x)
 var(x)
 Using control loops, we can repeat this experiment “M” times. Let us specifically study the mean of the vector, for each of the M iterations.
 We will save these values in a vector “y”.
-
+<pre><code>
 y=numeric()
 M=1000;N=100
 for(i in 1:M)
@@ -96,7 +97,7 @@ X =sample(die,N, replace =TRUE)
 Xbar=mean(X)
 y=c(y,Xbar)
 }
-
+</code></pre>
 What is the mean value of y? what is its standard deviation and variance?
 How many values of  y are less than 3.1? how many are greater than 3.9?
 Histograms
@@ -107,12 +108,7 @@ hist(y)
 
 Comment on the shape of this resultant histogram. (Recall the  Central Limit Theorem)
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+      
 
     
 

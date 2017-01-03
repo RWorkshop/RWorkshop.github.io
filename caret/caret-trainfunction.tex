@@ -1,26 +1,26 @@
 \documentclass[caret-main.tex]{subfiles}
 \begin{document}
-\section{The \texttt{train} Function}
+\section*{The \texttt{train} Function}
 %-------------------------------------------------------------------------------------------------%
 
 
-One of the primary tools in the package is the train function which can be used to
+One of the primary tools in the package is the \texttt{train()} function which can be used to
 
 \begin{itemize}
 \item evaluate, using resampling, the eﬀect of model tuning parameters on performance
-\item choose the “optimal” model across these parameters
+\item choose the ``optimal" model across these parameters
 \item estimate model performance from a training set
 \end{itemize}
 
 \begin{framed}
-\textbf{
-\noindent This function sets up a grid of tuning parameters for a number of classification and regression routines, fits each model and calculates a resampling based performance measure.
+\noindent \textbf{
+This function sets up a grid of tuning parameters for a number of classification and regression routines, fits each model and calculates a resampling based performance measure.
 }
 \end{framed}
 %-------------------------------------------------------------------------------------------------%
 
 \begin{itemize}
-\item \texttt{train} can be used to tune models by picking the complexity parameters that are associated with the optimal resampling statistics. 
+\item \texttt{train()} function can be used to tune models by picking the complexity parameters that are associated with the optimal resampling statistics. 
 \item For particular model, a grid of parameters (if any) is created and the model is trained on slightly different data for each candidate combination of tuning parameters. 
 \item Across each data set, the performance of held-out samples is calculated and the mean and standard deviation is summarized for each combination. 
 \item The combination with the optimal resampling statistic is chosen as the final model and the entire training set is used to fit a final model.
@@ -28,11 +28,11 @@ One of the primary tools in the package is the train function which can be used 
 
 %----------------------------------------------------------------------------------------------%
 \newpage
-\subsection{Syntax}
+\subsection*{Syntax}
 
 % http://www.jstatsoft.org/v28/i05/paper
 
-\noindent The \texttt{train} function has the following arguments:
+\noindent The \texttt{train()} function has the following arguments:
 \begin{description}
 \item[\texttt{x}:] a matrix or data frame of predictors. Currently, the function only accepts numeric
 values (i.e., no factors or character variables). \\ \textit{In some cases, the \texttt{model.matrix} function may be needed to generate a data frame or matrix of purely numeric data}.
@@ -47,7 +47,7 @@ values (i.e., no factors or character variables). \\ \textit{In some cases, the 
 \end{description}
 \bigskip
 The metric value determines the objective function used to select the final model. For example,
-selecting "Kappa" makes the function select the tuning parameters with the largest value
+selecting ``Kappa" makes the function select the tuning parameters with the largest value
 of the mean Kappa statistic computed from the held-out samples.
 
 

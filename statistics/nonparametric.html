@@ -6,3 +6,62 @@ Because statistical tests work well even if the distribution is only approximate
 
 An alternative approach does not assume that data follow a Gaussian distribution. These tests, called nonparametric tests, are appealing because they require fewer assumptions about the distribution of the data. In this approach, values are ranked from low to high, and the analyses are based on the distribution of ranks.
 Often, the analysis will be one of a series of experiments. Since you want to analyze all the experiments the same way, you cannot rely on the results from a single normality test.
+<p>
+  
+  \section{Non-Parametric Inference Procedures}
+Nonparametric procedures were developed to be used in cases when the distribution of the variable of interest in the population is known to be not-normal, and furthermore the distribution is undetermined (hence the name nonparametric).
+
+% MA4605 Class
+Nonparametric tests are also referred to as \textbf{\emph{distribution-free}} tests. These tests have the obvious advantage of not requiring the assumption of normality or the assumption of homogeneity of variance. They compare medians rather than means and, as a result, if the data have one or two outliers, their influence is negated.
+
+Parametric tests are preferred because, in general, for the same number of observations, they are more likely to lead to the rejection of a false hull hypothesis. That is, they have more power. This greater power stems from the fact that if the data have been collected at an interval or ratio level, information is lost in the conversion to ranked data (i.e., merely ordering the data from the lowest to the highest value).
+
+\begin{itemize}
+\item Kolmogorov- Smirnov Test (\texttt{ks.test()})
+\item Wilcoxon test (\texttt{wilcox.test()})
+\end{itemize}
+
+
+\subsection{Kolmogorov-Smirnov Test}
+
+For a single sample of data, the Kolmogorov-Smirnov test is used to test whether or not the sample of data is consistent with a specified distribution function. (Not part of this course)
+When there are two samples of data, it is used to test whether or not these two samples may reasonably be assumed to come from the same distribution.
+The null and alternative hypotheses are as follows:\\
+\emph{
+H0: The two data sets are from the same distribution\\
+H1: The data sets are not from the same distribution\\
+}
+
+Consider two sample data sets X and Y that are bothnormally distributed with similar means and variances.
+<pre><code>
+> X=rnorm(16,mean=20,sd=5)
+> Y=rnorm(18,mean=21,sd=4)
+> ks.test(X,Y)
+
+        Two-sample Kolmogorov-Smirnov test
+
+data:  X and Y
+D = 0.2153, p-value = 0.7348
+alternative hypothesis: two-sided
+</code></pre>
+Remark: It doesn’t not suffice that both datasets are from the same distribution. They must have the same value for the defining parameters. Consider the case of data sets; X and Z. Both are normally distributed, but with different mean values.
+<pre><code>
+> X=rnorm(16,mean=20,sd=5)
+> Z=rnorm(16,mean=14,sd=5)
+> ks.test(X,Z)
+
+        Two-sample Kolmogorov-Smirnov test
+
+data:  X and Z
+D = 0.5625, p-value = 0.0112
+alternative hypothesis: two-sided
+</code></pre>
+
+<h4>Wilcoxon Mann-Whitney Test</h4>
+The Wilcoxon Mann-Whitney Test is one of the most powerful of the nonparametric tests for comparing two populations. It is used to test the null hypothesis that two populations have identical distribution functions against the alternative hypothesis that the two distribution functions differ only with respect to \textbf{\emph{location}} (i.e. median), if at all.
+<p>
+The Wilcoxon Mann-Whitney test does not require the assumption that the differences between the two samples are normally distributed.
+<p>
+In many applications, the Wilcoxon Mann-Whitney Test is used in place of the two sample t-test when the normality assumption is questionable.
+<p>
+This test can also be applied when the observations in a sample of data are ranks, that is, ordinal data rather than direct measurements.

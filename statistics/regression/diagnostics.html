@@ -49,4 +49,89 @@ influence.measures(Fit1)
 \end{verbatim} 
 \end{framed}
 
-\end{document}
+	      <h5>Analysis of residuals</h5>
+	      Perform an analysis of regression residuals ( you can pick the best regression model from last section).
+	      Are the residuals normally distributed?
+	      Histogram /  Boxplot / QQ plot / Shapiro Wilk Test
+	      Also you can plot the residuals to check that there is constant variance.
+	      <pre><code>y=rnorm(10)
+	      x=rnorm(10)
+	      fit1=lm(y~x)
+	      res.fit1 = resid(fit1)
+	      plot(res.fit1)
+	      </code></pre>
+	      
+	      \section{Assessing Model Assumptions}
+\subsection{Residuals}  The difference between the predicted value (based on the regression equation) and the actual, observed value. In simple linear regression models, the matter of whether or not residuals are normally distributed often arises.
+
+Additionally the expected value of the residuals should be zero.
+
+We have seen previously two methodologies for determining whether or not a data set is normally distributed;
+
+\begin{itemize} \item 	Shapiro-Wilk tests (or Anderson-Darling test)
+\item 	QQ plots
+\end{itemize}
+
+We will explore this more in a forthcoming example.
+\subsection{Influence Analysis}
+
+
+\subsubsection{Outlier} In linear regression, an outlier is an observation with large residual.  In other words, it is an observation whose dependent-variable value is unusual given its values on the predictor variables.  An outlier may indicate a sample peculiarity or may indicate a data entry error or other problem.
+\subsubsection{Leverage}  An observation with an extreme value on a predictor variable is a point with high leverage.  Leverage is a measure of how far an independent variable deviates from its mean.  These leverage points can have an effect on the estimate of regression coefficients.
+
+\subsubsection{Influence} An observation is said to be influential if removing the observation substantially changes the estimate of coefficients.  Influence can be thought of as the product of leverage and outlierness.
+\subsection{Example}
+A new hotel is built 15 miles from the location of a prominent annual sporting event. A study of the number of enquiries received by a random sample of 9 established hotels in the area showed that the number of enquiries and the distance in miles between the hotel and event. Here the independent variable is distance (x) and the dependent variable is number of enquiries.
+
+Lets looks at the residuals, and assess whether they are normally distributed.
+
+\begin{framed}
+\begin{verbatim}
+#enquiries
+y=c(35,61,74,92,113,159,188,217,328)
+ 	
+#distance from hotel
+x=c(28,20,17,12,16,8,2,3,1)	
+#
+
+#fit the linear model	
+fit2=lm(y~x)					
+resid(fit2)
+res.fit=resid(fit2)
+
+# test the residuals for normality.
+# Normal if p.value is high.
+shapiro.test(res.fit)	
+	
+qqnorm(res.fit)	#QQ plot
+qqline(res.fit)	#Add Trendline
+
+
+#Do all your analyses agree?
+
+\end{verbatim}
+\end{framed}
+Let’s look at the scatterplot of x and y (\textbf{\texttt{plot(x,y)}}).  Does the first covariate seem to be an outlier, given that a linear model is assumed?
+Lets omit the first element of both data sets and run the analysis again.
+
+\begin{framed}
+\begin{verbatim}
+fit2=lm(y[-1]~x[-1])
+resid(fit2)
+res.fit2=resid(fit2)
+
+shapiro.test(res.fit2)			
+
+#test the residuals for normality. Normal if p.value is high.
+qqnorm(res.fit2);  qqline(res.fit2)			
+
+# compare the coefficients of both models.
+coef(fit1)
+coef(fit2)
+
+\end{verbatim}
+\end{framed}
+Does the covariate in question have high leverage or high influence?
+
+
+Remark: Arguably it is a case that this problem is not best described by a simple linear regression model, and that a non-linear model would be more suitable.

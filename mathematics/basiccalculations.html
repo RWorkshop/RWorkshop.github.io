@@ -1,8 +1,8 @@
-Basic Calculations
+<h3>Basic Calculations</h3>
 
 We will briefly look at how R accomplished basic calculations. 
 
-
+<pre><code>
 x=10 ; y =5 ; z=2
 
 x*y			# multiplication
@@ -15,13 +15,13 @@ exp(z)		# exponentials
 log(y)		# logarithms
 
 pi             # returns the value of pi to 6 decimal places
-
+</code></pre>
  
 R can handle more advanced calculations too, such as complex numbers , trigonometric functions, factorials and binomial coefficients.
 
 When working with complex numbers, the data type needs to specified as complex, rather than numeric. 
 
-Binomial coefficients (e.g. 6C2) are computed using the choose() command.
+Binomial coefficients are computed using the <code>choose()</code> command.
 
 
 J = -1   
@@ -36,7 +36,8 @@ str(K)      # variable is defined as complex .
 sin(3.5*pi)       # correct answer is -1
 cos(3.5*pi)       # correct answer is zero
  
-
+<pre><code>
 factorial(6)      # Factorial
 
 choose(6,2)       # From 6 how many ways of choosing 2 items.
+</code></pre>

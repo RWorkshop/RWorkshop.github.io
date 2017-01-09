@@ -1,3 +1,20 @@
+\subsection{Determinants, Inverse Matrices and solving Linear systems}
+%================================================================================= %
+To compute the determinant of a square matrix, we simply use the det() command
+det(A)
+det(B)
+%================================================================================== %
+To find the inverse of a square matrix, we use the solve() command, specifying only the matrix in question
+solve(A)
+
+To solve a system of linear equations in the form Ax=b , where A is a square matrix, and b is a column vector of known values, we use the solve() command to determine the values of the unknown vector x.
+\begin{verbatim}
+b=vec2  # from before
+solve(A, b)
+\end{verbatim}
+%================================================================================== %
+
+
 Solving a System of Linear Equations
 
 

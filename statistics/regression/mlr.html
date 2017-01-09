@@ -1,0 +1,32 @@
+\section{Multiple Linear Regression}
+In your future studies, you will come across multiple linear regression (MLR). This is a linear model uses multiple independent variables to explain a single dependent variable.
+
+The implementation is very similar to simple linear regression (SLR). All that is required is to specify the additional independent variables.
+
+\begin{framed}
+\begin{verbatim}
+Fit.slr =lm(y~x)  	# SLR: y explained by predictor x
+Fit.mlr=lm(y~x+z)  # MLR: y explained by predictors x and z
+\end{verbatim}
+\end{framed}
+
+For this case, a  linear relationship can be defined by the regression model  \[y =\beta_0 + \beta+1x + \beta_2z + \epsilon\].
+
+Again, we determine the regression coefficients, i.e. estimates for slopes and intercept. (N.B. There are variations on this notation).
+
+\begin{itemize}
+\item	$b_0$ : the intercept estimate.
+\item	$b_1$  : the slope estimate for X
+\item	$b_2$  : the slope estimate for z
+\end{itemize}
+
+In many project datasets it is possible to implement a MLR model. For the moment, we will just look at slope and intercept estimates, their p-values and the coefficient of determination.
+
+Let try this out using the \textbf{\textit{iris}} data set. (This is not be a valid statistical analysis in practice. However we are focussing on the mechanics, so we shall proceed nonetheless).
+\begin{framed}
+\begin{verbatim}
+lm(Sepal.Length ~ Sepal.Width + Petal.Width)
+\end{verbatim}
+\end{framed}
+
+

@@ -1,0 +1,58 @@
+\section{Student t-Distribution}
+The Student’s t-distribution is a probability distribution that is used to estimate population parameters when the sample size is small and/or when the population variance is unknown.
+The parameters are the \textbf{\textit{degrees of freedom}} (df = n-1 where n is sample size).
+
+As with the normal distribution, there are four functions that can be used to generate the values associated with the $t-$distribution.The commands follow the same kind of naming convention, and the names of the commands are \texttt{\textbf{dt(), pt(), qt()}} and \texttt{\textbf{rt()}}.
+
+One difference between the $t-$distribution and the normal distribution is that, for the $t-$distribution, it is assumed that the values are \textit{\textbf{standardized }}to mean zero and standard deviation one.
+Also the number of degrees of freedom must be specified. 
+
+\begin{verbatim}
+> pt(-3,df=10)
+[1] 0.006671828
+>  pt(3,df=10)
+[1] 0.9933282
+>  1-pt(3,df=10)
+[1] 0.006671828
+>  pt(3,df=20)
+[1] 0.9964621
+\end{verbatim}
+The density curves for various degrees of freedom (red with df=5, blue with df=15 and green with df=100) are depicted on the following graph.
+\begin{framed}
+\begin{verbatim}
+x = seq(-5,5,by=.01)
+y = dt(x,df=100) 
+plot(x,y,type="l",lwd=2,col="red")
+abline(h=0)
+w = dt(x,df=10) 
+points(x,w,type="l",lwd=2,col="green",add=TRUE)
+z = dt(x,df=5) 
+points(x,z,type="l",lwd=2,col="blue",add=TRUE)
+\end{verbatim}
+\end{framed}
+ \begin{center}
+ \includegraphics[scale=0.30]{dtCurve}
+% \caption{Some function f(x) evaluated at x=1}
+ \end{center}
+Next we have the inverse cumulative probability distribution function. Recall computing critical values for small sample hypothesis tests. The values computed here are equivalent of the value found in statistical tables.
+
+\begin{verbatim}
+> qt(0.05,df=10)
+[1] -1.812461
+>  qt(0.95,df=10)
+[1] 1.812461
+>  qt(0.05,df=20)
+[1] -1.724718
+>  qt(0.95,df=20)
+[1] 1.724718
+\end{verbatim}
+Finally random numbers can be generated according to the $t-$distribution using the \textbf{\texttt{rt()}}.
+\begin{verbatim}
+> rt(3,df=10)
+[1] 0.9440930 2.1734365 0.6785262
+> rt(3,df=20)
+[1] 0.1043300 -1.4682198  0.0715013
+\end{verbatim}
+
+
+\newpage

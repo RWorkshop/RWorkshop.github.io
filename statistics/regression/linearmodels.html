@@ -1,0 +1,48 @@
+
+\subsection{Linear Regression Model}
+
+A linear relationship can be defined by the simple linear regression model
+\[y = \beta_0 + \beta_1x + \epsilon\]
+
+The intercept $\beta_0$ describes the point at which the line intersects the y axis.
+The slope $\beta_1$ describes the change in ‘y’ for every unit increase in the predictor variable $x$.
+
+From the data set, we determine the regression coefficients, i.e. estimates for slope and intercept. (N.B. There are variations on this notation in textbooks).
+
+\begin{itemize}	\item $b_0$ : the intercept estimate.
+\item	$b_1$ : the slope estimate.
+\end{itemize}
+
+Therefore the fitted model can be expressed as
+
+\[ \hat{y} = b_0 + b_1x \]
+Recall $\hat{y}$  denotes the predicted value for y, given some value x.
+
+\subsection{Fitting a Model with \texttt{R}}
+
+The  \texttt{R} command   \texttt{\textbf{lm()}} is used to fit linear models. Firstly the response variable $y$  is specified, then the predictor variable $x$.
+
+The tilde sign is used to denote the dependent relationship (i.e. y depends on x). The regression coefficients are then determined.
+
+\begin{framed}
+\begin{verbatim}
+lm(Y~X) # y depends on X
+\end{verbatim}
+\end{framed}
+
+The output will include the formula, and two coefficient terms
+\begin{itemize}
+\item The intercept estimate is recorded under $(Intercept)$
+\item The slope estimate is recorded under the name of the predictor variable (here : $X$ ).
+\end{itemize}	
+	
+\begin{verbatim}
+Call:
+lm(formula = Y ~ X)
+
+Coefficients:
+(Intercept)            X
+     0.7812       0.8581
+\end{verbatim}
+
+A more detailed data output (i.e. more than just the coefficients) is generated in the form of a data object, using the \textbf{\texttt{summary()}} command.

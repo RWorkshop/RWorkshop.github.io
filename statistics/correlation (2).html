@@ -55,7 +55,20 @@ A QQplot checks the assumption of normality.
 
 
 \section{Correlation and Simple Regression Models}
+\subsection{Correlation and Covariance}
 
+Pearson rho is the most commonly used correlation measure.
+
+Another commonly used measure is the Spearman Rank Correlation. 
+
+covaraince is related to correlation. In fact many students understand it only as an intermediate calculation when computing the correlation.
+
+It is common to express correlations in terms of a matrix. Necessarily the diagonal elements are all ones.
+
+It is possible to directly compute the correlation matrix from the covariance matrix using the functiob cov2cor().
+%==============================================================================%
+
+	      
 \subsection{Correlation}
 
 A correlation coefficient is a number between -1 and 1 which measures the degree to which two variables are linearly related. If there is perfect linear relationship with positive slope between the two variables, we have a correlation coefficient of 1; if there is positive correlation, whenever one variable has a high (low) value, so does the other.
@@ -111,23 +124,6 @@ Consider the response variable $F$ and predictor variable $C$.
 F=c(2.1,5.0,9.0,12.6,17.3,21.0,24.7)
 Fit1=lm(F~C)</code></pre>
 
-
-
-
-\subsection{Confidence and Prediction Intervals for Fitted Values} 
-
-Recall that a fitted value $\hat{Y}$ is a estimate for the response variable, as determined by a linear model. The difference between the observed value and the corresponding fitted value is known as the residual.
-
-The \textbf{\emph{residual standard error}} is the conditional standard deviation of the dependent variable Y given a value of the independent variable X. The calculation of this standard error follows from the definition of the residuals.
-
-The residual standard error is often called the root mean square error (RMSE), and is a measure of the differences between values predicted by a model or an estimator and the values actually observed from the thing being modelled or estimated.
-
-Since the residual standard error is a good measure of accuracy, it is ideal if it is small.
-
-<h5>Prediction Intervals</h5>
-In contrast to a confidence interval, which is concerned with estimating a population parameter, a prediction interval is concerned with estimating an individual value and is therefore a type of probability interval. 
-
-The complete standard error for a prediction interval is called the standard error of forecast, and it includes the uncertainty associated with the vertical “scatter” about the regression line plus the uncertainty associated with the position of the regression line value itself.
 
 \item{Correlation Analysis}
 Compute the Pearson correlation for the dependent variable with the respective independent variables.  As part of your report, mention the confidence interval for the correlation estimate

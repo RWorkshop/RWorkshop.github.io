@@ -10,23 +10,46 @@ This is a very important type of matrix analysis, and many will encounter it aga
 Y = eigen(A) 
 names(Y) # y$val are the eigenvalues of A # y$vec are the eigenvectors of A
 
+######################################################
+# Eigen Analysis
+
+y<-eigen(A) 
+y$val #There are the eigenvalues of A
+y$vec #These are the eigenvectors of A  
 
 
-\subsection{Determinants, Inverse Matrices and solving Linear systems}
-%================================================================================= %
-To compute the determinant of a square matrix, we simply use the det() command
-det(A)
-det(B)
-%================================================================================== %
-To find the inverse of a square matrix, we use the solve() command, specifying only the matrix in question
-solve(A)
+Eigenvalues and Eigenvectors
 
-To solve a system of linear equations in the form Ax=b , where A is a square matrix, and b is a column vector of known values, we use the solve() command to determine the values of the unknown vector x.
-\begin{verbatim}
-b=vec2  # from before
-solve(A, b)
-\end{verbatim}
-%================================================================================== %
+
+The eigenvalues and eigenvectors can be computed using the eigen() function.  A data object is created.
+
+
+This is a very important type of matrix analysis, and many will encounter it again in future modules.
+
+
+
+
+
+
+
+<pre><code>
+
+
+Y = eigen(A)
+
+
+names(Y)
+
+
+#   y$val are the eigenvalues of A
+
+#   y$vec are the eigenvectors of A 
+
+</code></pre>
+
+
+
+
 	Eigenvalues and Eigenvectors
 	The eigenvalues and eigenvectors can be computed using the eigen() function.  A data object is created.
 	This is a very important type of matrix analysis, and many will encounter it again in future modules.

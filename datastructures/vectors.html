@@ -185,7 +185,295 @@ seq(20,1)
 </table>
 </center>
 
+<!--#########################################################-->
 
+\subsection{Vectors}
+<ul>
+<li> $R$ operates on named data structures. The simplest such
+structure is the vector, which is a single entity consisting of an
+ordered collection of numbers or characters.
+
+<li> The most common types of vectors are:
+<ul>
+<li> Numeric vectors <li> Character vectors <li> Logical
+vectors
+</ul>
+
+<li> There are, of course, other types of vectors.
+<ul>
+<li> Colour vectors - potentially useful later on.
+<li> Order vectors - The rankings of items in a vector.
+<li> Complex number vectors - not part of this course.
+</ul>
+</ul>
+
+<!--#########################################################-->
+\subsection{Vectors: Creating and editing a vector}
+<ul>
+<li> From last class.
+<li> To create a vector, use the assignment operator ``$=$" or ( $<-$ )and
+the concatenate function ``c()". <li> For numeric vectors, the values
+entered are simply numbers.
+
+<code>
+>x =c(10.4,5.6,3.1,6.4,8.9)
+>
+<\code>
+
+And, from last week, we can use the ``data.entry()" function to edit our vector.
+<code>
+>data.entry(x)
+>
+<\code>
+</ul>
+
+
+
+
+<!--#########################################################-->
+\subsection{Vectors: Character \& logical vector}
+
+<ul>
+<li> For character vectors, the values are simply characters,
+specified with quotation marks.
+<li> Single quotation marks
+<code>
+
+>Charvec<-c(`Dog', `Cat', `Shed', `Spoon')
+
+<\code>
+
+<li> A logical vectors is a vector whose elements are TRUE, FALSE
+or NA (i.e. null)
+<code>
+
+>Logvec<-c(TRUE, FALSE,TRUE,TRUE )
+
+<\code>
+
+</ul>
+
+<!--#########################################################-->
+\subsection{Graphical Data Entry Interface}
+<ul>
+
+<li> The data.entry() command calls a spreadsheet graphical user
+interface, which can be used to edit data. All changes are saved
+automatically.
+
+
+
+
+<li> Alternatively, the edit() command calls the `R editor',
+which can be used to edit specified data or the code used to
+define that data.
+
+<code>
+x<-edit(x)
+<\code>
+
+</ul>
+
+
+
+<!--#########################################################-->
+
+\subsection{Vectors: Empty vectors}
+
+<ul>
+<li> Another method of creating vectors is to use the follow
+
+<ul>
+<li> numeric (length = n) <li> character (length = n) <li>
+logical (length = n)</ul>
+
+<li> These commands create empty vectors, of the appropriate
+kind, of length n.
+
+<code>
+> x<-numeric(4)
+> x
+[1] 0 0 0 0
+<\code>
+
+<li> You can use the graphical data entry interface to populate
+your data sets.
+</ul>
+
+
+<!--#########################################################-->
+\subsection{Vectors: Characteristics}
+
+<ul>
+<li> We can use several $R$ commands to gather information about
+a vector.
+
+<ul>
+<li> length(x) - how many elements in a vector.  <li> sum(x)-
+the sum of the elements in a vector. <li> prod(x) - the product
+of the elements in a vector.
+</ul>
+
+<li> We can also find statistical information about a vector
+<ul>
+<li> summary(x) - summary statistics of a vector.  <li> mean(x)-
+the mean value of a vector. <li> sd(x) -  the standard deviation
+of a vector.
+</ul>
+
+<li> Refer to the reference card for more commands to try out.
+</ul>
+
+<!--#########################################################-->
+\subsection{Vectors: Characteristics (contd)}
+
+<code>
+> mean(x)
+[1] 6.375
+> sd(y)
+[1] 2.858846
+> median(z)
+[1] 16
+> summary(x)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+  3.100   4.975   6.000   6.375   7.400  10.400
+<\code>
+
+
+<!--#########################################################-->
+\subsection{Calculations using vectors}
+
+<ul>
+<li> Calculations are performed on a vector on a case-wise basis.
+The calculations are carried out on each element individually.
+<code>
+> y^2
+[1]  2.56 12.25 60.84 44.89 65.61
+<\code>
+
+</ul>
+<ul>
+<li> Try the following calculations.
+<code>
+> y*z
+[1]  25.6  31.5 280.8  26.8 202.5
+> sum(z)
+[1] 90
+> sum(y^2)
+[1] 186.15
+> sum(y*z)
+[1] 567.2
+<\code>
+</ul>
+
+<!--#########################################################-->
+\subsection{Accessing vector's elements}
+
+<ul>
+<li> The $n$th element of vector `x' can be accessed by
+specifying its index when calling `x'.
+<code>
+>x[3]
+[1] 3.1
+<\code>
+
+<li> A sequence of  elements of vector `x' can be accessed by
+specifying the lower and upper bound of the the range, in form
+x[l:u].
+<code>
+> x[2:4]
+<\code>
+</ul>
+
+
+
+<!--#########################################################-->
+
+\subsection{Modifying a vector}
+
+<ul>
+<li> A vector can be updated by assigning an extra value to it.
+<code>
+> logvec<-c(logvec,TRUE)
+> logvec
+[1]  TRUE FALSE  TRUE  TRUE  TRUE
+<\code>
+
+<li> A vector can be repeated $n$ times using the rep() command.
+<code>
+> rep(charvec,2)
+[1] "blue" "pink" "red" "blue" "pink" "red"
+<\code>
+
+<li> Omitting and deleting the $n$th element of vector `x'.
+<code>
+>charvec[-5]
+>charvec <- charvec[-5]
+<\code>
+
+</ul>
+
+<!--#########################################################-->
+\subsection{Relational operators}
+A relational operator tests some kind of relation between two
+entities. For $R$ the relational operators are as follows:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+
+  Equals & == & Less or equal to  & <= \\
+  \hline
+  Not Equal & != & Greater than & > \\
+  \hline
+  Less than & < & Greater than & >= \\
+  \hline
+\end{tabular}
+\end{center}
+
+<!--#########################################################-->
+\subsection{Logical operators}
+<ul>
+<li> The logical operators are AND, OR and NOT
+
+<li> if c1 and c2 are logical expressions, then $c1 \& c2$ is
+their intersection (`AND'), $c1 | c2$ is their union (`OR'), and
+$!c1$ is the negation of c1.
+</ul>
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  AND & $ \& $ & also  & $\&\&$ \\
+  \hline
+  OR & $|$ & also & $||$ \\
+  \hline
+  NOT & $!$ & &  \\
+  \hline
+\end{tabular}
+\end{center}
+
+<!--#########################################################-->
+\subsection{Examples using operators}
+
+We can use relational and logical operators to selecting elements
+of a vector with specified criteria.
+
+<code>
+#selecting all elements of x greater than 5
+>x[x>5]
+
+#selecting all elements of x greater or equal to than 5
+>x[x>=5]
+
+#selecting all elements of x greater than 5 #or less than 3
+>x[(x>5)|(x<3)]
+
+#selecting all elements of x between 3 and 5
+>x[(x>3)&(x<5)]
+<\code>
+
+
+<!--#########################################################-->
+\end{document}
 
 
     </div>

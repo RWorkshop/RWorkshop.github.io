@@ -1,3 +1,42 @@
+%---------------------------------------------------------------------------------%
+\begin{slide}{Times and Dates}
+\begin{itemize}
+\item Sys.time() gives the date and time of when the command is executed.
+
+\begin{verbatim}
+> Time1=Sys.time()
+> Time1
+[1] "2010-03-18 12:45:10 GMT"
+\end{verbatim}
+
+The difference between two times can be determined:
+
+\begin{verbatim}
+> Time2-Time1
+Time difference of 1.17775 mins
+\end{verbatim}
+
+This is useful in estimating the length of very long simulations.
+
+\end{itemize}
+\end{slide}
+
+
+
+%---------------------------------------------------------------------------------%
+\begin{slide}{Months}
+\begin{itemize}
+\item The command `month.name[]' returns the name of the month that corresponds to the
+argument.Please note that square brackets are used.
+
+\begin{verbatim}
+> month.name[3]
+[1] "March"
+\end{verbatim}
+
+\end{itemize}
+\end{slide}
+
 <h2> Date/Time </h2>
 R and its contributed packages have a number of datetime (i.e. date or date/time) classes:
 POSIX classes: POSIX classes refer to the two classes POSIXct, POSIXlt and their common super class POSIXt. These support times and dates including time zones and standard vs. daylight savings time.

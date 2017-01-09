@@ -1,0 +1,53 @@
+\subsection{Linear Algebra Functions}
+R supports many import linear algebra functions such as cholesky decomposition, trace, rank, eigenvalues etc. The required results may be determinable from the output of a command that pertains to an overall approach.
+The eigenvalues and eigenvectors can be computed using the eigen() function. 
+
+A data object known as a list is then created.
+eigen(A) #eigenvalues and eigenvectors qr(A) 
+#returns Rank of a matrix svd(A)
+This is a very important type of matrix analysis, and many will encounter it again in future modules. 
+
+Y = eigen(A) 
+names(Y) # y$val are the eigenvalues of A # y$vec are the eigenvectors of A
+
+
+
+\subsection{Determinants, Inverse Matrices and solving Linear systems}
+%================================================================================= %
+To compute the determinant of a square matrix, we simply use the det() command
+det(A)
+det(B)
+%================================================================================== %
+To find the inverse of a square matrix, we use the solve() command, specifying only the matrix in question
+solve(A)
+
+To solve a system of linear equations in the form Ax=b , where A is a square matrix, and b is a column vector of known values, we use the solve() command to determine the values of the unknown vector x.
+\begin{verbatim}
+b=vec2  # from before
+solve(A, b)
+\end{verbatim}
+%================================================================================== %
+	Eigenvalues and Eigenvectors
+	The eigenvalues and eigenvectors can be computed using the eigen() function.  A data object is created.
+	This is a very important type of matrix analysis, and many will encounter it again in future modules.
+	\begin{verbatim}
+	Y = eigen(A)
+	names(Y)
+	"	y$val are the eigenvalues of A
+	"	y$vec are the eigenvectors of A
+	\end{verbatim}
+		\subsection{Eigenvalues and Eigenvectors}
+		The eigenvalues and eigenvectors can be computed using the eigen() function.  A data object is created.
+		This is a very important type of matrix analysis, and many will encounter it again in future modules.
+		\begin{verbatim}
+		
+		Y = eigen(A)
+		names(Y)
+		"	y$val are the eigenvalues of A
+		"	y$vec are the eigenvectors of A
+		
+		?
+		Part 2 Revision on Earlier Material
+		"	Accessing a column of a data frame
+		"	Accessing a row of a data frame
+		\end{verbatim}

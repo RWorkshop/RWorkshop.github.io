@@ -1,3 +1,16 @@
+\subsection{Analysis of residuals}
+Perform an analysis of regression residuals ( you can pick the best regression model from last section).
+Are the residuals normally distributed?
+	Histogram /  Boxplot / QQ plot / Shapiro Wilk Test
+Also you can plot the residuals to check that there is constant variance.
+\begin{verbatim}
+y=rnorm(10)
+x=rnorm(10)
+fit1=lm(y~x)
+res.fit1 = resid(fit1)
+plot(res.fit1)
+\end{verbatim}
+
 \chapter{Simple Linear Regression Models}
 
 
@@ -6,16 +19,13 @@ The basic form of a formula is ``response $\sim$ model".
 
 
 
-
-
-%------------------------------------------
-
+<!-- ############################################################ -->
 \subsection{Simple Linear Regression}
 
 \begin{itemize}
 \item `x' is the independent (i.e. predictor) variable, whereas `y' is the dependent `response' variable.
 \item Necessarily both x and y should be of equal length.
-\item
+
 \end{itemize}
 
 
@@ -63,75 +73,6 @@ Coefficients:
 \end{verbatim}
 
 
-%------------------------------------------
-
-\subsection{Multiple Linear Regression}
-
-\begin{itemize}
-\item
-\item
-\item
-\end{itemize}
-
-
-Simple linear regression is used to describe the relationship
-between two variables. For example, you may want to describe the
-relationship between age and blood pressure or the relationship
-between scores in a midterm exam and scores in the final exam,
-etc.
-
-The intercept $\beta_{0}$ describes the point at which the line intersects
-the y axis
-
-The slope $\beta_{1}$ describes the change in y
-(response/dependent variable) for every unit increase in x
-(explanatory/independent variable).
-
-One of the first steps in a regression analysis is to determine if any
-kind of relationship exists between the two variables.
-A scatterplot is created and can initially be used to get an idea
-about the nature of the relationship between the variables, e.g. if
-the relationship is linear, curvilinear, or no relationship exists.
-
-Can see from the scatterplot that there is a linear relationship
-between x and y. To measure the strength of this relationship,
-calculate the correlation coefficient (cor())
-
-Can add the fitted regression line to the scatterplot:
-
-\begin{verbatim}
-plot(x,y,main="Scatterplot")
-abline(coef(model), lty=2)
-abline(model$coef, lty=2)
-\end{verbatim}
-
-\begin{verbatim}
-summary(model)
-Call:
-lm(formula = y ~ x)
-Residuals:
-Min 1Q Median 3Q Max
--19.433 -8.580 -1.188 9.064 19.787
-Coefficients:
-Estimate Std. Error t value Pr(>|t|)
-(Intercept) 19.9438 3.4466 5.786 5.66e-07 ***
-x 2.0750 0.1111 18.679 < 2e-16 ***
----
-Signif. codes: 0 *** 0.001 ** 0.01 * 0.05 . 0.1 1
-Residual standard error: 10.88 on 47 degrees of freedom
-Multiple R-squared: 0.8813, Adjusted R-squared: 0.8788
-F-statistic: 348.9 on 1 and 47 DF, p-value: < 2.2e-16
-\end{verbatim}
-
-
-
-\section{Simple Linear Regression}
-
-\[
-y = b_0 + b_1x_1 + e
-\]
-
-$b_0$ is the intercept estimate. $b_1$ is the slope estimate.
 
 
 \section{Analysis of Variance}

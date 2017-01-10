@@ -1,35 +1,35 @@
 \section{Diagnosing a Linear Regression}
-The ease of implementation fosters the impression that linear regression is easy: just use the \texttt{\textbf{lm()}} function. Yet fitting
+The ease of implementation fosters the impression that linear regression is easy: just use the <code>lm() </code> function. Yet fitting
 this is only the beginning.
-
+<p>
 After a linear regression analysis has been performed. It is good practice to verify the model’s quality
 by running diagnostic checks.
 
 The approach we will take is to create diagnostic plots, by plotting the model object. Rather than producing a scatterplot, this method will produce several diagnostic plots:
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 attach(iris)
 Fit1 <- lm(Sepal.length ~ Sepal.Width)
 plot(Fit1)
-\end{verbatim} 
-\end{framed}
-
+</code> 
+</pre>
+<p>
 Next, identify possible outliers either by looking at the diagnostic plot of the residuals
 
-Another approach is to use the \texttt{\textbf{outlierTest()}} function of the \textit{\textbf{car}} package:
+Another approach is to use the <code>outlierTest() </code> function of the <b><i>car</i></b> package:
 
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 #If package not installed, uncomment next line.
 #install.packages("car")
 
 library(car)
 outlierTest(Fit1)
-\end{verbatim} 
-\end{framed}
-\begin{verbatim}
+</code> 
+</pre>
+<code>
 > outlierTest(Fit1)
 
 No Studentized residuals with Bonferonni p < 0.05
@@ -37,50 +37,50 @@ Largest |rstudent|:
     rstudent unadjusted p-value Bonferonni p
 132  2.79155          0.0059429      0.89143
 
-\end{verbatim}
+</code>
 \subsection{Influence Measures}
-Finally, identify any overly influential observations by using the \texttt{\textbf{influence.measures()}} 
+Finally, identify any overly influential observations by using the <code>influence.measures() </code> 
 function.
 If an observation is considered influential, it will be indicated with an asterisk on the right hand side. Interpretation of the individual statistics, such as \textit{DFFITS} and \textit{DFBETA} are beyond the scope of this course.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 influence.measures(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
-\section{Diagnosing a Linear Regression}
-The ease of implementation fosters the impression that linear regression is easy: just use the \texttt{\textbf{lm()}} function. Yet fitting
+<h3>Diagnosing a Linear Regression</h3>
+The ease of implementation fosters the impression that linear regression is easy: just use the <code>lm() </code> function. Yet fitting
 this is only the beginning.
-
+<p>
 After a linear regression analysis has been performed. It is good practice to verify the model’s quality
 by running diagnostic checks.
-
+<p>
 The approach we will take is to create diagnostic plots, by plotting the model object. Rather than producing a scatterplot, this method will produce several diagnostic plots:
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 attach(iris)
 Fit1 <- lm(Sepal.length ~ Sepal.Width)
 plot(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
 Next, identify possible outliers either by looking at the diagnostic plot of the residuals
 
-Another approach is to use the \texttt{\textbf{outlierTest()}} function of the \textit{\textbf{car}} package:
+Another approach is to use the <code>outlierTest() </code> function of the <b><i>car}} package:
 
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 #If package not installed, uncomment next line.
 #install.packages("car")
 
 library(car)
 outlierTest(Fit1)
-\end{verbatim} 
-\end{framed}
-\begin{verbatim}
+</code> 
+</pre>
+<code>
 > outlierTest(Fit1)
 
 No Studentized residuals with Bonferonni p < 0.05
@@ -88,22 +88,22 @@ Largest |rstudent|:
     rstudent unadjusted p-value Bonferonni p
 132  2.79155          0.0059429      0.89143
 
-\end{verbatim}
+</code>
 \subsection{Influence Measures}
-Finally, identify any overly influential observations by using the \texttt{\textbf{influence.measures()}} 
+Finally, identify any overly influential observations by using the <code>influence.measures() </code> 
 function.
 If an observation is considered influential, it will be indicated with an asterisk on the right hand side. Interpretation of the individual statistics, such as \textit{DFFITS} and \textit{DFBETA} are beyond the scope of this course.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 influence.measures(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
 \end{document}
 						 
 						 \section{Diagnosing a Linear Regression}
-The ease of implementation fosters the impression that linear regression is easy: just use the \texttt{\textbf{lm()}} function. Yet fitting
+The ease of implementation fosters the impression that linear regression is easy: just use the <code>lm() </code> function. Yet fitting
 this is only the beginning.
 
 After a linear regression analysis has been performed. It is good practice to verify the model’s quality
@@ -111,29 +111,29 @@ by running diagnostic checks.
 
 The approach we will take is to create diagnostic plots, by plotting the model object. Rather than producing a scatterplot, this method will produce several diagnostic plots:
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 attach(iris)
 Fit1 <- lm(Sepal.length ~ Sepal.Width)
 plot(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
 Next, identify possible outliers either by looking at the diagnostic plot of the residuals
 
-Another approach is to use the \texttt{\textbf{outlierTest()}} function of the \textit{\textbf{car}} package:
+Another approach is to use the <code>outlierTest() </code> function of the <b><i>car}} package:
 
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 #If package not installed, uncomment next line.
 #install.packages("car")
 
 library(car)
 outlierTest(Fit1)
-\end{verbatim} 
-\end{framed}
-\begin{verbatim}
+</code> 
+</pre>
+<code>
 > outlierTest(Fit1)
 
 No Studentized residuals with Bonferonni p < 0.05
@@ -141,9 +141,9 @@ Largest |rstudent|:
     rstudent unadjusted p-value Bonferonni p
 132  2.79155          0.0059429      0.89143
 
-\end{verbatim}
+</code>
 \section{Diagnosing a Linear Regression}
-The ease of implementation fosters the impression that linear regression is easy: just use the \texttt{\textbf{lm()}} function. Yet fitting
+The ease of implementation fosters the impression that linear regression is easy: just use the <code>lm() </code> function. Yet fitting
 this is only the beginning.
 
 After a linear regression analysis has been performed. It is good practice to verify the model’s quality
@@ -151,30 +151,30 @@ by running diagnostic checks.
 
 The approach we will take is to create diagnostic plots, by plotting the model object. Rather than producing a scatterplot, this method will produce several diagnostic plots:
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 attach(iris)
 Fit1 <- lm(Sepal.length ~ Sepal.Width)
 plot(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
 Next, identify possible outliers either by looking at the diagnostic plot of the residuals
 
-Another approach is to use the \texttt{\textbf{outlierTest()}} function of the \textit{\textbf{car}} package:
+Another approach is to use the <code>outlierTest() </code> function of the <b><i>car}} package:
 
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 #If package not installed, uncomment next line.
 #install.packages("car")
 
 library(car)
 outlierTest(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 	
-\begin{verbatim}
+<code>
 > outlierTest(Fit1)
 
 No Studentized residuals with Bonferonni p < 0.05
@@ -182,37 +182,35 @@ Largest |rstudent|:
     rstudent unadjusted p-value Bonferonni p
 132  2.79155          0.0059429      0.89143
 
-\end{verbatim}
-\subsection{Influence Measures}
-Finally, identify any overly influential observations by using the \texttt{\textbf{influence.measures()}} 
+</code>
+<h3>Influence Measures</h3>
+Finally, identify any overly influential observations by using the <code>influence.measures() </code> 
 function.
 If an observation is considered influential, it will be indicated with an asterisk on the right hand side. Interpretation of the individual statistics, such as \textit{DFFITS} and \textit{DFBETA} are beyond the scope of this course.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 influence.measures(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
-\end{document}						 
-						 
-\subsection{Influence Measures}
-Finally, identify any overly influential observations by using the \texttt{\textbf{influence.measures()}} 
+<h3>Influence Measures</h3>
+Finally, identify any overly influential observations by using the <code>influence.measures() </code> 
 function.
 If an observation is considered influential, it will be indicated with an asterisk on the right hand side. Interpretation of the individual statistics, such as \textit{DFFITS} and \textit{DFBETA} are beyond the scope of this course.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 influence.measures(Fit1)
-\end{verbatim} 
-\end{framed}
+</code> 
+</pre>
 
-	      <h5>Analysis of residuals</h5>
+<h3>Analysis of residuals</h3>
 	      Perform an analysis of regression residuals ( you can pick the best regression model from last section).
 	      Are the residuals normally distributed?
 	      Histogram /  Boxplot / QQ plot / Shapiro Wilk Test
 	      Also you can plot the residuals to check that there is constant variance.
-	      <pre><code>y=rnorm(10)
+<pre><code>y=rnorm(10)
 	      x=rnorm(10)
 	      fit1=lm(y~x)
 	      res.fit1 = resid(fit1)
@@ -243,8 +241,8 @@ A new hotel is built 15 miles from the location of a prominent annual sporting e
 
 Lets looks at the residuals, and assess whether they are normally distributed.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 #enquiries
 y=c(35,61,74,92,113,159,188,217,328)
  	
@@ -267,13 +265,13 @@ qqline(res.fit)	#Add Trendline
 
 #Do all your analyses agree?
 
-\end{verbatim}
-\end{framed}
+</code>
+</pre>
 Let’s look at the scatterplot of x and y (\textbf{\texttt{plot(x,y)}}).  Does the first covariate seem to be an outlier, given that a linear model is assumed?
 Lets omit the first element of both data sets and run the analysis again.
 
-\begin{framed}
-\begin{verbatim}
+<pre>
+<code>
 fit2=lm(y[-1]~x[-1])
 resid(fit2)
 res.fit2=resid(fit2)
@@ -287,8 +285,8 @@ qqnorm(res.fit2);  qqline(res.fit2)
 coef(fit1)
 coef(fit2)
 
-\end{verbatim}
-\end{framed}
+</code>
+</pre>
 Does the covariate in question have high leverage or high influence?
 
 

@@ -1,0 +1,26 @@
+<h3>Using R's help commands</h3>
+As mentioned earlier, R has an inbuilt help facility. To get more information on any specific named function, for example “boxplot”, the command is: “?boxplot” or “help(boxplot)”
+
+<pre><code>
+>?boxplot		  # access help on boxplots
+>help(Im)     # access help on "Im"
+</code></pre>
+
+A description of the package – as well as some demonstration code – are provided.
+
+Try out the demonstration code.
+
+On most R installations help is available in HTML format by running help.start() which will launch a Web browser that allows the help pages to be browsed with hyperlinks. 
+ 
+<pre><code>
+>help.start()
+</code></pre>
+
+There is also an “apropos” function. This command returns a list of the names of all objects matching the argument. This is very useful for finding out what commands and functions are available.
+Suppose we want to find out a way of performing a correlation analysis. Use “cor” as the argument (short, but not too short).
+<pre><code>
+> apropos("cor")
+[1] ".__C__recordedplot" "cancor"             "cor"               
+[4] "cor.test"           "cov2cor"            "Harman23.cor"      
+[7] "Harman74.cor"       "recordGraphics"     "recordPlot"    
+</code></pre>

@@ -1,0 +1,25 @@
+\subsection{Creating a matrix}
+Matrices can be created using the \texttt{matrix()} command. The arguments to be supplied are 1) vector of values to be entered
+2) Dimensions of the matrix, specifying either the numbers of rows or columns.
+
+Additionally you can specify if the values are to be allocated by row or column. By default they are allocated by column.
+\begin{verbatim}
+Vec1=c(1,4,5,6,4,5,5,7,9)		# 9 elements
+A=matrix(Vec,nrow=3)		#3 by 3 matrix. Values assigned by column.
+A
+B= matrix(c(1,6,7,0.6,0.5,0.3,1,2,1),ncol=3,byrow =TRUE)
+B				          #3 by 3 matrix. Values assigned by row.
+\end{verbatim}	
+If you have assigned values by column, but require that they are assigned by row, you can use the transpose function
+\begin{verbatim}
+t().
+t(A)				# Transpose
+A=t(A)	
+\end{verbatim}
+
+Another methods of creating a matrix is to "bind" a number of vectors together, either by row or by column. The commands are rbind() and cbind() respectively.
+\begin{verbatim}
+x1 =c(1,2) ; x2 = c(3,6)
+rbind(x1,x2)
+cbind(x1,x2)
+\end{verbatim}

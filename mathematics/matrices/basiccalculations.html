@@ -1,0 +1,51 @@
+
+
+
+
+<h3>Addition and subtractions</h3>
+
+
+For matrices, addition and subtraction works on an element- wise basis. 
+
+The first elements of the respective matrices are added, and so on.
+
+
+
+
+<pre><code>
+
+
+A+C                                             
+
+
+A–C
+ 
+</code></pre>
+
+Addition and subtractions
+For matrices, addition and subtraction works on an element- wise basis. The first elements of the respective matrices are added, and so on.
+A+B
+A-B
+
+Matrix Multiplication
+To multiply matrices, we require a special operator for matrices; "%*%".
+If we just used the normal multiplication, we would get an element-wise multiplication.
+A * B  		#Element-wise multiplication
+A %*% B  	#Matrix multiplication
+We can compute crossproducts using the crossprod () command. If only one matrix is used it
+\begin{framed}
+\begin{verbatim}
+crossprod(A,B) 		# A'B
+crossprod(A) 			# A'A
+\end{verbatim}
+\end{framed}
+
+
+
+Matrix Multiplication
+
+
+To multiply matrices, we require a special operator for matrices; “%*%”. 
+
+
+If we just used the normal multiplication, we would get an element-wise multiplication.

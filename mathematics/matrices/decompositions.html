@@ -1,0 +1,18 @@
+
+######################################################
+#Decomposition
+
+y<-svd(A) #Single value decomposition of A.
+y$d # vector containing the singular values of A
+y$u # matrix with columns contain the left singular vectors of A 
+y$v # matrix with columns contain the right singular vectors of A  
+
+R <- chol(A) #Choleski factorization of A. Returns the upper triangular factor, such that R'R = A. 
+y <- qr(A)  #QR decomposition of A. 
+y$qr #has an upper triangle that contains the decomposition and a lower triangle that contains information on the Q decomposition.
+y$rank #is the rank of A. 
+y$qraux #a vector which contains additional information on Q. 
+y$pivot #contains information on the pivoting strategy used.  
+
+#cbind(A,B,...) Combine matrices(vectors) horizontally. Returns a matrix.  
+#rbind(A,B,...) Combine matrices(vectors) vertically. Returns a matrix.  

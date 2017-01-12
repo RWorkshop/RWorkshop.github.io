@@ -55,7 +55,20 @@ A QQplot checks the assumption of normality.
 
 
 \section{Correlation and Simple Regression Models}
+\subsection{Correlation and Covariance}
 
+Pearson rho is the most commonly used correlation measure.
+
+Another commonly used measure is the Spearman Rank Correlation. 
+
+covaraince is related to correlation. In fact many students understand it only as an intermediate calculation when computing the correlation.
+
+It is common to express correlations in terms of a matrix. Necessarily the diagonal elements are all ones.
+
+It is possible to directly compute the correlation matrix from the covariance matrix using the functiob cov2cor().
+%==============================================================================%
+
+	      
 \subsection{Correlation}
 
 A correlation coefficient is a number between -1 and 1 which measures the degree to which two variables are linearly related. If there is perfect linear relationship with positive slope between the two variables, we have a correlation coefficient of 1; if there is positive correlation, whenever one variable has a high (low) value, so does the other.
@@ -112,23 +125,6 @@ F=c(2.1,5.0,9.0,12.6,17.3,21.0,24.7)
 Fit1=lm(F~C)</code></pre>
 
 
-
-
-\subsection{Confidence and Prediction Intervals for Fitted Values} 
-
-Recall that a fitted value $\hat{Y}$ is a estimate for the response variable, as determined by a linear model. The difference between the observed value and the corresponding fitted value is known as the residual.
-
-The \textbf{\emph{residual standard error}} is the conditional standard deviation of the dependent variable Y given a value of the independent variable X. The calculation of this standard error follows from the definition of the residuals.
-
-The residual standard error is often called the root mean square error (RMSE), and is a measure of the differences between values predicted by a model or an estimator and the values actually observed from the thing being modelled or estimated.
-
-Since the residual standard error is a good measure of accuracy, it is ideal if it is small.
-
-<h5>Prediction Intervals</h5>
-In contrast to a confidence interval, which is concerned with estimating a population parameter, a prediction interval is concerned with estimating an individual value and is therefore a type of probability interval. 
-
-The complete standard error for a prediction interval is called the standard error of forecast, and it includes the uncertainty associated with the vertical “scatter” about the regression line plus the uncertainty associated with the position of the regression line value itself.
-
 \item{Correlation Analysis}
 Compute the Pearson correlation for the dependent variable with the respective independent variables.  As part of your report, mention the confidence interval for the correlation estimate
 Choose the independent variables with the highest correlation as your candidate variables.
@@ -145,17 +141,82 @@ lm(y~x2 +x3)
 \end{verbatim}
 Again, comment on the slope and intercept estimates, and their respective p-values.
 In this instance, compare each of the models using the coefficient of determinations. Which model explains the data best?
-<h5>Analysis of residuals</h5>
-Perform an analysis of regression residuals ( you can pick the best regression model from last section).
-Are the residuals normally distributed?
-	Histogram /  Boxplot / QQ plot / Shapiro Wilk Test
-Also you can plot the residuals to check that there is constant variance.
-<pre><code>y=rnorm(10)
-x=rnorm(10)
-fit1=lm(y~x)
-res.fit1 = resid(fit1)
-plot(res.fit1)
-</code></pre>
+\subsection{Correlation}
+Recall that correlation describes the strength of a relationship between two numeric variables, and that the Pearson product-moment correlation coefficient is a measure of the strength of the linear relationship between two variables.
+
+It is referred to as Pearson's correlation or simply as the correlation coefficient. If the relationship between the variables is not linear, then the correlation coefficient does not adequately represent the strength of the relationship between the variables.
+
+The symbol for Pearson's correlation is "$\rho$" when it is measured in the population and \texttt{\textbf{r}} when it is measured in a sample.
+
+As we will be dealing almost exclusively with samples, we will use \texttt{\textbf{r}} to to represent Pearson's correlation unless otherwise noted.
+
+Pearson's r can range from -1 to 1. An r of -1 indicates a perfect negative linear relationship between variables, an \texttt{\textbf{r}} of 0 indicates no linear relationship between variables, and an \texttt{\textbf{r}} of 1 indicates a perfect positive relationship between variables.
+
+Importantly it is assumed that the relationship in question is supposed to be linear. Some variables will in fact have a non-linear relationship (more on that latet)
+
+The relevant R command is \texttt{\textbf{cor()}}.
+
+
+\begin{framed}
+\begin{verbatim}
+cor(immer$Y1,immer$Y2)
+
+cor(iris[,1],iris[,3])
+\end{verbatim}
+\end{framed}
+The strength of the relation is represented in a numeric value known at the correlation coefficient. This coefficient can take a value between -1 and1. Additionally there are no units.
+
+Getting a correlation coefficient is generally only half the story; you will want to know if the relationship is significant. There is a more complex command called \texttt{\textbf{cor.test()}}. This command additionally provides a hypothesis test for the correlation estimate.
+
+\begin{framed}
+\begin{verbatim}
+cor.test(immer$Y1,immer$Y2)
+
+cor.test(iris[,1],iris[,3])
+\end{verbatim}
+\end{framed}
+
+\begin{itemize}
+\item[Ho] : The correlation coefficient for the population of values is zero. (i.e. No linear relationship.)
+\item[Ha]: The coefficient is not zero. (Linear relationship exists.)
+\end{itemize}	
+
+
+A confidence interval for the coefficient is provided for in the \texttt{R} output. If the interval includes 0 then we fail to reject the null hypothesis.
+
+Simple linear regression is used to describe the relationship between two variables ‘x’ and ‘y’.
+
+For example, you may want to describe the relationship between age and blood pressure or the relationship between scores in a midterm exam and scores in the final exam, etc.
+
+\begin{itemize}
+\item	$x$ is the independent (i.e. predictor) variable.
+\item	$y$ is the dependent (i.e. response) variable.
+\end{itemize}
+That is to say $x$ is said to cause or influence $y$.
+
+Necessarily both x and y should be of equal length. One of the first steps in a regression analysis is to determine if any kind of relationship exists between $x$ and $y$.
+
+A scatterplot can created and can initially be used to get an idea about the nature of the relationship between the variables, e.g. if the relationship is linear, curvilinear, or no relationship exists.
+
+To make a simple scatter-plot, we simply use the \texttt{\textbf{plot()}} command. The independent variable (the variable to go along the x-axis) is always specified first.
+
+
+
+\begin{framed}
+\begin{verbatim}
+X=c(5.98, 8.80, 6.89, 8.49, 8.48, 7.47, 7.97,5.94, 7.32, 6.64, 6.94, 3.51)
+
+Y=c(5.56, 7.80, 6.13, 8.15, 7.95, 7.87, 8.03, 5.67, 7.11, 6.65, 7.02, 3.88)
+
+plot(X,Y)
+cor(X,Y)
+\end{verbatim}
+\end{framed}
+In this case here, we can see from the scatter-plot that there is a linear relationship between x and y.
+Simple linear regression is only useful when there is evidence of a linear relationship. In other cases, such as quadratic relationships, other types of regression may be more appropriate.
+	      
+	      
+
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">

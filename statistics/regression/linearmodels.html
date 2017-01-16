@@ -1,4 +1,31 @@
-<h2>Simple Linear Regression</h2>
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Simple Linear Regression</h2>
 Simple linear regression is used to describe the relationship between two variables. For example, you may want to describe the
 relationship between age and blood pressure or the relationship between scores in a midterm exam and scores in the final exam,
 etc.
@@ -28,6 +55,27 @@ abline(coef(model), lty=2)
 abline(model$coef, lty=2)
 </code></pre>
 
+<h3>Linear Regression Model</h3>
+
+A linear relationship can be defined by the simple linear regression model
+\[y = \beta_0 + \beta_1x + \epsilon\]
+
+The intercept $\beta_0$ describes the point at which the line intersects the y axis.
+The slope $\beta_1$ describes the change in ‘y’ for every unit increase in the predictor variable $x$.
+
+From the data set, we determine the regression coefficients, i.e. estimates for slope and intercept. (N.B. There are variations on this notation in textbooks).
+
+<ul>	
+<li> $b_0$ : the intercept estimate.</li>
+<li> $b_1$ : the slope estimate.</li>
+</ul>
+Therefore the fitted model can be expressed as
+
+\[ \hat{y} = b_0 + b_1x \]
+Recall $\hat{y}$  denotes the predicted value for y, given some value x.
+
+        
+        
 <pre><code>
 summary(model)
 Call:
@@ -81,7 +129,7 @@ By default, you will get an error if there are any missing values in your data w
 <pre><code>
 > lmfit <- lm(ytrans~conc, data=df, na.action=na.omit)
 </code></pre>
-<!-----########################################################################################--->
+<!-- #################################################################################################### -->
 
 This might make more sense if you know that R designates missing values by NA. Now let's look at this function call. The desired model is specified with ytrans~conc. Think of the tilde as an equal sign when specifying a model. ytrans is our response, so it goes on the left side. conc is our explanatory variable, so it goes on the right. An intercept term is assumed so you do not need to include it in the model definition. However, it is possible to force a zero intercept if you wanted. 
 Notice that there was not any output automatically generated when you fit the regression. The results have been saved in an object we called lmfit. This object is actually a list that contains several objects, which you can see with the function names() 
@@ -92,6 +140,7 @@ Notice that there was not any output automatically generated when you fit the re
 [5] "fitted.values" "assign"        "qr"            "df.residual"  
 [9] "xlevels"       "call"          "terms"         "model"  
 </code></pre>
+
 Any of these terms can be viewed or used with the same method you used to view a variable in a data frame: object name, followed by a dollar sign, then the element name. For example, lmfit$call. If you want to view most of the standard regression output, use the summary() function: 
 
 <pre><code>	
@@ -115,51 +164,4 @@ Residual standard error: 0.0009071 on 5 degrees of freedom
 Multiple R-Squared: 0.9993,     Adjusted R-squared: 0.9991 
 F-statistic:  7006 on 1 and 5 DF,  p-value: 4.612e-09 
 </code></pre>
-You can also easily view diagnostic plots (residuals, observed vs fitted, Cook's distance, etc.): 
-> plot(lmfit)
-R knows that this is the output from a linear model and will generate the appropriate plots. How does it know? Check to see what class it is: 
-> class(lmfit)
-[1] "lm"
-You can get the coefficients from your model fit with the coef() function: 
-> coef(lmfit)
-(Intercept)        conc 
-0.004303145 0.259602617
-These are estimates for the parameters we called a and b, respectively. The output from <code>coef()</code> is just a vector of length 2. Let's use the coefficients to add a line to our graph of ytrans vs conc: 
-<pre><code>
-> plot(df$conc, df$ytrans)
-> abline(coef(lmfit))
-</code></pre>
-Here's what it looks like:
 
-The last thing we have to do is back-calculate to get our non-linear parameters, Vm and K: 
-<pre><code>
-> Vm <- 1/coef(lmfit)[2]
-> K <- Vm*coef(lmfit)[1]
-> Vm
-conc 
-3.852041 
-> K
-conc 
-0.01657589 
-</code></pre>
-Remember that the output from the coef function is a vector of length 2 so we can access the desired coefficient using the brackets as shown. We now have our parameter estimates! 
-
-
-<h3>Linear Regression Model</h3>
-
-A linear relationship can be defined by the simple linear regression model
-\[y = \beta_0 + \beta_1x + \epsilon\]
-
-The intercept $\beta_0$ describes the point at which the line intersects the y axis.
-The slope $\beta_1$ describes the change in ‘y’ for every unit increase in the predictor variable $x$.
-
-From the data set, we determine the regression coefficients, i.e. estimates for slope and intercept. (N.B. There are variations on this notation in textbooks).
-
-<ul>	
-<li> $b_0$ : the intercept estimate.</li>
-<li> $b_1$ : the slope estimate.</li>
-</ul>
-Therefore the fitted model can be expressed as
-
-\[ \hat{y} = b_0 + b_1x \]
-Recall $\hat{y}$  denotes the predicted value for y, given some value x.

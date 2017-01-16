@@ -1,22 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-<<<<<<< HEAD
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-=======
     <meta name="description" content="Rworkshop.GitHub.io : R Workshop">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Rworkshop.GitHub.io</title>
->>>>>>> origin/master
+
   </head>
 
   <body>
@@ -24,10 +18,10 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-<<<<<<< HEAD
+
           
           <h1 id="project_title">RWorkshop.GitHub.io</h1>
-=======
+
           <a id="forkme_banner" href="https://github.com/RWorkshop">View on GitHub</a>
 
           <h1 id="project_title">Rworkshop.GitHub.io</h1>
@@ -120,31 +114,6 @@ $child.ages
 
 </code></pre>
 
-The function <code>length(Lst)</code> gives the number of (top level) components that the list has. 
-
-Components of lists may also be named, and in this case the component may be referred to either by giving the component name as a character string in place of the number in double square brackets, or, more conveniently, by giving an expression of the form 
-
-     > name$component_name
-for the same thing. 
-This is a very useful convention as it makes it easier to get the right component if you forget the number. So in the simple example given above: 
-•	Lst$name is the same as Lst[[1]] and is the string "Fred", 
-•	Lst$wife is the same as Lst[[2]] and is the string "Mary", 
-•	Lst$child.ages[1] is the same as Lst[[4]][1] and is the number 4.
-This dollar sign operator is very useful , particularly when looking at the output of a complex statistical function.
-To find out the names assigned to a list use the command names().
-
-<pre><code>
-> names(Lst)
-[1] "name"        "wife"        "no.children" "child.ages" 
-> Lst$name
-[1] "Fred"
-</code></pre>
- 
-
-<<<<<<< HEAD
-  </body>
-</html>
-=======
 %---------------------------------------------------------%
 \section{Lists}
 Many data objects returned as output are structured as lists, and some knowledge about them is quite important.
@@ -188,6 +157,34 @@ $child.ages
 \end{framed}
 
 
+The function <code>length(Lst)</code> gives the number of (top level) components that the list has. 
+
+Components of lists may also be named, and in this case the component may be referred to either by giving the component name as a character string in place of the number in double square brackets, or, more conveniently, by giving an expression of the form 
+
+     > name$component_name
+for the same thing. 
+This is a very useful convention as it makes it easier to get the right component if you forget the number. So in the simple example given above: 
+<ul>
+<li>	Lst$name is the same as Lst[[1]] and is the string "Fred", 
+<li>	Lst$wife is the same as Lst[[2]] and is the string "Mary", 
+<li>	Lst$child.ages[1] is the same as Lst[[4]][1] and is the number 4.
+</ul>
+This dollar sign operator is very useful , particularly when looking at the output of a complex statistical function.
+To find out the names assigned to a list use the command names().
+
+<pre><code>
+> names(Lst)
+[1] "name"        "wife"        "no.children" "child.ages" 
+> Lst$name
+[1] "Fred"
+</code></pre>
+ 
+
+  </body>
+</html>
+
+
+
 
 The function \texttt{length(Lst)} gives the number of (top level) components that the list has.
 
@@ -219,4 +216,3 @@ This is a very useful convention as it makes it easier to get the right componen
 
   </body>
 </html>
->>>>>>> origin/master

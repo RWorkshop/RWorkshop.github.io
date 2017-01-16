@@ -1,18 +1,42 @@
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
 <h3>Graphical Methods</h3>
 
 The quantile-quantile (Q-Q) plot is an excellent way to see whether the data deviate from normal (the plot can be set up to see if the data deviate from other distributions as well but here we are only interested in the normal distribution). 
 The process used for creating a QQ plot involves determining what proportion of the 'observed' scores fall below any one score, then the “z- score” that would fit that proportion if the data were normally distributed is calculated, and finally that “z- score” that would cut off that proportion (the 'expected normal value') is translated back into the original metric to see what raw score that would be. 
-
+<p>
 A scatter plot is then created that shows the relationship between the actual 'observed' values and what those values would be 'expected' to be if the data were normally distributed. 
 If the data is normally distributed then the circles on the resulting plot (each circle representing a score) will form a straight line. 
 A trend line can be added to the plot to assist in determining whether or not this relationship is linear.
- 
-
-
+<p> 
+<pre><code>
 > qqnorm(Ttrns)
 > qqline(Ttrns)
-
+</code></pre>
 The Q-Q plot will look like this. How well do the covariates follow the trendline? Compare your conclusion to the relatively low p-values of the formal tests.
  
  

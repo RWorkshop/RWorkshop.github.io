@@ -1,12 +1,37 @@
+<!DOCTYPE html>
+<html>
 
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	      
 %======================================================================================================== %
 \subsection{6. Non-linear Regression}
 
 
 We can also directly fit the Michaelis-Menten function to our data using non-linear regression. Remember the term "sum-of-squares" from your old regression class? When you fit a regression model, you get a "fitted value" for every data point used to fit the model. If you take the difference between the fitted value and the observed value, you get what we call a residual. Then if you square all the residuals and add them up, you get the residual sum-of-squares. The smaller that is, the better the model fits your data. You may have heard this called the least-squares method. Well, non-linear regression works the same way. With non-linear regression, we specify the form of the model we want to fit and the parameters that need to be estimated. R then searches for parameter values that will minimize the residual sum-of-squares. 
 To run the analysis, we use the function nls(), which stands for non-linear least squares. Use the summary() function to view the results. 
-\begin{framed}
-	\begin{verbatim}
+<pre><code>
 	> nlsfit <- nls(vel~Vm*conc/(K+conc),data=df, start=list(K=0.0166, Vm=3.852))
 	> summary(nlsfit)
 	
@@ -24,8 +49,7 @@ To run the analysis, we use the function nls(), which stands for non-linear leas
 	Correlation of Parameter Estimates:
 	K
 	Vm 0.7535 
-	\end{verbatim}
-\end{framed}
+</code></pre>
 
 You can view the estimates for K and Vm from the summary output, or you can use the coef() function again. How do the estimates compare with those from the previous analysis? We want to plot our non-linear fit to see how well it matches the data. First, plot the original variables again. Remember to create a new graphsheet if you want to keep your previous graph. 
 > plot(df$conc, df$vel, xlim=c(0,0.4), ylim=c(0,4))
@@ -49,13 +73,13 @@ For this to work, you must have created the objects Vm and K as we did in the pr
 
 
 <!--##########################################################################################################-->
-\subsection*{7. Polynomial Regression}
+<h2>7. Polynomial Regression</h2>
 
 
 The last method we'll use to fit these data is polynomial regression, where the model takes on the form y = b0 + b1x + b2x2 + b3x3 + ... , etc. We're going to fit a second order polynomial like this: 
-\begin{framed}
-	\begin{verbatim}
+<pre><code>
 	> polyfit2 <- lm(vel~conc+I(conc^2), data=df)
+</code></pre>
 	We're using the same function lm() as linear regression, but we're adding multiple instances of the explanatory variable to generate our polynomial formula. Note that we need to use the identity function, I(), because the caret (^) has special meaning in a formula. Another way to build this formula is to create a matrix where each column contains the explanatory variable raised to a power. Use the function cbind() to bind columns together to form a matrix. This is what that would look like: 
 	> polyfit2a <- lm(vel~cbind(conc, conc^2), data=df)
 	Run either of these commands and view the summary or just take a look at the coefficients: 
@@ -83,10 +107,11 @@ The last method we'll use to fit these data is polynomial regression, where the 
 	And it should look like this: 
 	
 	The last thing we're going to do is increase the polynomial order to the maximum. There are seven data points so the maximum order is six. (Why?) First we fit the new regression, then transform the coefficients, generate new y-values, and add the new line to our graph. 
-	> polyfit6 <- lm(vel~conc+I(conc^2)+I(conc^3)+I(conc^4)+I(conc^5)+I(conc^6),data=df)
+<pre><code>	> polyfit6 <- lm(vel~conc+I(conc^2)+I(conc^3)+I(conc^4)+I(conc^5)+I(conc^6),data=df)
 	> coef6 <- coef(polyfit6)
 	> y4 <- cbind(1,x,x^2,x^3,x^4,x^5,x^6) %*% coef6
 	> lines(x,y4,lty=2)
+</code></pre>
 	When you add the lines, you will see several warnings go by because some of the resulting y-values greatly exceed the range of the graph. The plot should now look like this: 
 	
 	It's a good fit (the line goes through every point) but how useful is it for predicting new points? Take a look at the summaries from each fit. Ever seen an R2 of 1 before? 

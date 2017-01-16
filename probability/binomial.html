@@ -1,120 +1,42 @@
+
 <!DOCTYPE html>
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Opportunities</title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Macroevolution and macroecology research">
-    <link rel="canonical" href="/about/">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-    <link rel="stylesheet" href="/style.css">
+    <title>RWorkshop.GitHub.io</title>
+  </head>
 
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <body>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
 
-
-    <body id="page-top" class="index">
-
-       <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">RWorkshop.github.io</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="index.html"></a>
-                    </li>
-                     <li class="">
-                        <a href="about.html">Main Page</a>
-                    </li>
-                    <li class="">
-                        <a href="group.html">Group</a>
-                    </li>
-                    <li class="">
-                        <a href="publications.html">Publications</a>
-                    </li>
-                    <li class="">
-                        <a href="miscellaneous.html">Outreach</a>
-                    </li>
-                    <li class="">
-                        <a href="opportunities.html">Opportunities</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header 
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/cooper1.JPG" width = "200" alt="">
-                    <div class="intro-text">
-                        <span class="name">Natalie Cooper</span>
-                        <hr class="star-light">
-                        <span class="skills">Macroevolution - Macroecology - Phylogenetic Comparative Methods</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> 
-
-    <!--    
-          <a class="page-link" href="/about/">About</a>
-        
--->
-
-
-<!-- CV -->
-<section class="success" id="about">
-        &nbsp
-        &nbsp
-        &nbsp
-        &nbsp
-  <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>Opportunities</h2>
-          <hr class="star-light">
-        </div>
-      </div>
-    
-  4.3. The Binomial Distribution
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+<h4>
+Probability Distributions with <tt>R</tt>
+</h4>
+<p>    
+<h3>The Binomial Distribution</h2>
 There are four functions that can be used to generate the values associated with the binomial distribution. You can get a full list of them and their options using the help command:
 
 > help(Binomial)
 These commands work just like the commands for the normal distribution. The binomial distribution requires two extra parameters, the number of trials and the probability of success for a single trial. The commands follow the same kind of naming convention, and the names of the commands are dbinom, pbinom, qbinom, and rbinom.
 
 A few examples are given below to show how to use the different commands. First we have the distribution function, dbinom:
-
+<pre><code>
 > x <- seq(0,50,by=1)
 > y <- dbinom(x,50,0.2)
 > plot(x,y)
@@ -123,8 +45,9 @@ A few examples are given below to show how to use the different commands. First 
 > x <- seq(0,100,by=1)
 > y <- dbinom(x,100,0.6)
 > plot(x,y)
+</code></pre>
 Next we have the cumulative probability distribution function:
-
+<pre><code>
 > pbinom(24,50,0.5)
 [1] 0.4438624
 > pbinom(25,50,0.5)
@@ -139,8 +62,9 @@ Next we have the cumulative probability distribution function:
 [1] 0.999962
 > pbinom(25,500,0.25)
 [1] 4.955658e-33
+</code></pre>
 Next we have the inverse cumulative probability distribution function:
-
+<pre>~<code>
 > qbinom(0.5,51,1/2)
 [1] 25
 > qbinom(0.25,51,1/2)
@@ -149,13 +73,14 @@ Next we have the inverse cumulative probability distribution function:
 [1] 0.2879247
 > pbinom(22,51,1/2)
 [1] 0.200531
+</code></pre>
 Finally random numbers can be generated according to the binomial distribution:
-
+<pre><code>
 > rbinom(5,100,.2)
 [1] 30 23 21 19 18
 > rbinom(5,100,.7)
 [1] 66 66 58 68 63
-
+</code></pre>
 
 
    

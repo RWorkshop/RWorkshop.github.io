@@ -1,4 +1,30 @@
-<h3>Non-Parametric Tests</h3>
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="RWorkshop.GitHub.io : Website">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWorkshop.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          
+          <h1 id="project_title">RWorkshop.GitHub.io</h1>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+	      <h3>Non-Parametric Tests</h3>
 Many statistical tests assume that you have sampled data from populations that follow a Normal distribution. 
 Biological data never follow a Gaussian distribution precisely, because a Gaussian distribution extends infinitely in both directions, and so it includes both infinitely low negative numbers and infinitely high positive numbers. But many kinds of biological data follow a bell-shaped distribution that is approximately Gaussian. 
 
@@ -10,16 +36,16 @@ Often, the analysis will be one of a series of experiments. Since you want to an
 <p>
 <!-- ###################################################################################### -->
 
-(MA4605 - Lecture 2B part I - Nonparametric Tests)
+	      <h3>(MA4605 - Lecture 2B part I - Nonparametric Tests)</h3>
 
 Occasionally, the assumptions of the t-tests are seriously violated. In particular, if the type of data you have is ordinal in nature and not at least interval. On such occasions an alternative approach is to use non-parametric tests. 
 
 We are not going to place much emphasis on them in this unit as they are only occasionally used. But you should be aware of them and have some familiarity with them.
-
+<p>
 Nonparametric tests are also referred to as distribution-free tests. These tests have the obvious advantage of not requiring the assumption of normality or the assumption of homogeneity of variance. They compare medians rather than means and, as a result, if the data have one or two outliers, their influence is negated.
 
 Parametric tests are preferred because, in general, for the same number of observations, they are more likely to lead to the rejection of a false hull hypothesis. That is, they have more power. This greater power stems from the fact that if the data have been collected at an interval or ratio level, information is lost in the conversion to ranked data (i.e., merely ordering the data from the lowest to the highest value).
-
+<p>
 The following table gives the non-parametric analogue for the paired sample t-test and the independent samples t-test. There is no obvious comparison for the one sample t-test. 
 
 There are a wide range of alternatives for the two group t-tests, the ones listed are the most commonly use ones and are the defaults in SPSS. Generally, running nonparametric procedures is very similar to running parametric procedures, because the same design principle is being assessed in each case. So, the process of identifying variables, selecting options, and running the procedure are very similar. The final p-value is what determines significance or not in the same way as the parametric tests. SPSS gives the option of two or three analogues for each type of parametric test, but you need to know only the ones cited in the table. 
@@ -46,6 +72,7 @@ Mann-Whitney U Test
 
 Spearman's correlation 
  
+<!-- ################################################################################################ -->  
  
 
 
@@ -99,7 +126,7 @@ This test can also be applied when the observations in a sample of data are rank
 <h4> Runs Test </h4>
 In studies where measurements are made according to some well defined ordering, either in time or space, a frequent question is whether or not the average value of the measurement is different at different points in the sequence. The runs test provides a means of testing this.
 
-Example 
+	      <h5>Example </h5>
 Suppose that, as part of a screening programme for heart disease, men aged 45-65 years have their blood cholesterol level measured on entry to the study. After many months it is noticed that cholesterol levels in this population appear somewhat higher in the Winter than in the Summer. This could be tested formally using a Runs test on the recorded data, first arranging the measurements in the date order in which they were collected.
 
 
@@ -113,8 +140,8 @@ When there are two samples of data, it is used to test whether or not these two 
 The null and alternative hypotheses are as follows:
 H0: The two data sets are from the same distribution
 H1: The data sets are not from the same distribution
-
-The R command is ks.test, with the names of the data sets specified as arguments. Consider the case of the data sets  X,Y and W,Z. 
+<p>
+The R command is <b><tt>ks.test()</tt></b>, with the names of the data sets specified as arguments. Consider the case of the data sets  X,Y and W,Z. 
 
  
 
@@ -132,7 +159,7 @@ alternative hypothesis: two-sided
 
 
 Remark:  It doesn’t not suffice that both datasets are from the same distribution. They must have the same value for the defining parameters.  Consider the case of data sets; X and Z. Both are normally distributed, but with different mean values. 
-
+<pre><code>
 > ks.test(X,Z)
 
         Two-sample Kolmogorov-Smirnov test
@@ -140,8 +167,8 @@ Remark:  It doesn’t not suffice that both datasets are from the same distribut
 data:  X and Z 
 D = 0.7692, p-value = 5e-04
 alternative hypothesis: two-sided
-
- Kruskal-Wallis Test
+</code></pre>
+	      <h4> Kruskal-Wallis Test</h4>
 The Kruskal-Wallis test is a nonparametric test used to compare three or more samples. It is used to test the null hypothesis that all populations have identical distribution functions against the alternative hypothesis that at least two of the samples differ only with respect to location (median), if at all.
 
 It is the analogue to the F-test used in analysis of variance. While analysis of variance tests depend on the assumption that all populations under comparison are normally distributed, the Kruskal-Wallis test places no such restriction on the comparison.
@@ -149,46 +176,8 @@ It is the analogue to the F-test used in analysis of variance. While analysis of
 It is a logical extension of the Wilcoxon-Mann-Whitney Test.
 
 
-%---------------------------------------------------------------------------------------------%
 
 
-MS4024 Non Parametric Tests
-(MA4605 - Lecture 2B part I - Nonparametric Tests)
-
-Occasionally, the assumptions required for the t-tests are seriously violated. In particular, if the type of data you have is ordinal in nature and not at least interval. On such occasions an alternative approach is to use non-parametric tests. 
-
-We are not going to place much emphasis on them in this unit as they are only occasionally used. But you should be aware of them and have some familiarity with them.
-
-Nonparametric tests are also referred to as distribution-free tests. These tests have the obvious advantage of not requiring the assumption of normality or the assumption of homogeneity of variance. They compare medians rather than means and, as a result, if the data have one or two outliers, their influence is negated.
-
-Parametric tests are preferred because, in general, for the same number of observations, they are more likely to lead to the rejection of a false hull hypothesis. That is, they have more power. This greater power stems from the fact that if the data have been collected at an interval or ratio level, information is lost in the conversion to ranked data (i.e., merely ordering the data from the lowest to the highest value).
-
-The following table gives the non-parametric analogue for the paired sample t-test and the independent samples t-test. There is no obvious comparison for the one sample t-test. 
-
-There are a wide range of alternatives for the two group t-tests, the ones listed are the most commonly use ones and are the defaults in SPSS. Generally, running nonparametric procedures is very similar to running parametric procedures, because the same design principle is being assessed in each case. So, the process of identifying variables, selecting options, and running the procedure are very similar. 
-
-The final p-value is what determines significance or not in the same way as the parametric tests. SPSS gives the option of two or three analogues for each type of parametric test, but you need to know only the ones cited in the table. 
-
-Parametric test
-	Non-parametric analogue
-
-One-sample t-test 
-
-Paired sample t-test 
-
-Independent samples t-test 
-
-Pearson's correlation 
-
-	Nothing quite comparable 
-
-Wilcoxon T Test 
-
-Mann-Whitney U Test 
-
-Spearman's correlation 
- 
- 
 
 Nonparametric tests are often used in place of their parametric counterparts when certain assumptions about the underlying population are questionable. 
 
@@ -276,7 +265,7 @@ In studies where measurements are made according to some well defined ordering, 
 Example 
 Suppose that, as part of a screening programme for heart disease, men aged 45-65 years have their blood cholesterol level measured on entry to the study. After many months it is noticed that cholesterol levels in this population appear somewhat higher in the Winter than in the Summer. This could be tested formally using a Runs test on the recorded data, first arranging the measurements in the date order in which they were collected.
 
- Kolmogorov-Smirnov Test
+	      <h4>Kolmogorov-Smirnov Test</h4>
 For a single sample of data, the Kolmogorov-Smirnov test is used to test whether or not the sample of data is consistent with a specified distribution function.  (Not part of this course)
 
 When there are two samples of data, it is used to test whether or not these two samples may reasonably be assumed to come from the same distribution. 
@@ -287,7 +276,7 @@ H1: The data sets are not from the same distribution
 
 The R command is ks.test, with the names of the data sets specified as arguments. Consider the case of the data sets  X,Y and W,Z. 
 
- 
+<pre><code> 
 X and Y are normally distributed with similar means and variances. 
 > ks.test(X,Y)
 
@@ -296,12 +285,12 @@ X and Y are normally distributed with similar means and variances.
 data:  X and Y 
 D = 0.2797, p-value = 0.6437
 alternative hypothesis: two-sided
-
+</code></pre>
 
 
 
 Remark:  It doesn’t not suffice that both datasets are from the same distribution. They must have the same value for the defining parameters.  Consider the case of data sets; X and Z. Both are normally distributed, but with different mean values. 
-
+<pre><code>
 > ks.test(X,Z)
 
         Two-sample Kolmogorov-Smirnov test
@@ -309,7 +298,7 @@ Remark:  It doesn’t not suffice that both datasets are from the same distribut
 data:  X and Z 
 D = 0.7692, p-value = 5e-04
 alternative hypothesis: two-sided
-
+</code></pre>
 <!-- ###################################################################################### -->
 
 
@@ -320,15 +309,12 @@ It is the analogue to the F-test used in analysis of variance. While analysis of
 
 It is a logical extension of the Wilcoxon-Mann-Whitney Test.
 
+<!-- ###################################################################################### -->
 
-
-
-
-  
-  \section{Non-Parametric Inference Procedures}
+<h2>Non-Parametric Inference Procedures</h2>
 Nonparametric procedures were developed to be used in cases when the distribution of the variable of interest in the population is known to be not-normal, and furthermore the distribution is undetermined (hence the name nonparametric).
 
-% MA4605 Class
+<p>
 Nonparametric tests are also referred to as \textbf{\emph{distribution-free}} tests. These tests have the obvious advantage of not requiring the assumption of normality or the assumption of homogeneity of variance. They compare medians rather than means and, as a result, if the data have one or two outliers, their influence is negated.
 
 Parametric tests are preferred because, in general, for the same number of observations, they are more likely to lead to the rejection of a false hull hypothesis. That is, they have more power. This greater power stems from the fact that if the data have been collected at an interval or ratio level, information is lost in the conversion to ranked data (i.e., merely ordering the data from the lowest to the highest value).
@@ -373,7 +359,7 @@ data:  X and Z
 D = 0.5625, p-value = 0.0112
 alternative hypothesis: two-sided
 </code></pre>
-
+<!-- ######################################################################## -->
 <h4>Wilcoxon Mann-Whitney Test</h4>
 The Wilcoxon Mann-Whitney Test is one of the most powerful of the nonparametric tests for comparing two populations. It is used to test the null hypothesis that two populations have identical distribution functions against the alternative hypothesis that the two distribution functions differ only with respect to \textbf{\emph{location}} (i.e. median), if at all.
 <p>

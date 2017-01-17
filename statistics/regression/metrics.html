@@ -25,53 +25,53 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
        
-%---------------------------------------------------
-\begin{slide}{Review of SLR}
-\begin{itemize}
-\item Used function lm() to fit model.
-\item Determined regression coefficients.
-\item Residuals and fitted values.
-\item Used summary() to determine inference values for the regression coefficients.
-\item Correlation, scatterplots etc.
-\end{itemize}
-\end{slide}
+<!-- ############################################# -->
+{Review of SLR}
+<ul>
+<li> Used function <tt>lm()</tt> to fit model.
+<li> Determined regression coefficients.
+<li> Residuals and fitted values.
+<li> Used summary() to determine inference values for the regression coefficients.
+<li> Correlation, scatterplots etc.
+</ul>
 
 
-%---------------------------------------------------
-\begin{slide}{Data}
-\begin{itemize}
 
-\item
+<!-- ############################################# -->
+{Data}
+<ul>
+
+<li>
 The data give scores for the taste of a cheese (Taste) from 30 different formulations which caused variation
 in the concentration in the cheese of acetic acid (Acetic), hydrogen sulphide (H2S)
 and lactic acid (Lactic).
 
-\item data in MLR.r
+<li> data in MLR.r
 
-\item For SLR, using Acetic as only explanatory variable (for simplicity).
-\end{itemize}
-\end{slide}
+<li> For SLR, using Acetic as only explanatory variable (for simplicity).
+</ul>
+
 
 
 
 
 \section{SLR Diagnostics}
 
-\begin{itemize}
-\item Once the model has been fitted, we must check the residuals.
-\item The residuals should be independent and normally distributed with
+<ul>
+<li> Once the model has been fitted, we must check the residuals.
+<li> The residuals should be independent and normally distributed with
 mean of 0 .
-\item Use a histogram of the residuals
-\item Can also use a Q-Q plot. ( i.e. qqnorm())
-\item The residuals should must have constant variance.
-\item Use a plot of fitted values vs residuals.
-\end{itemize}
+<li> Use a histogram of the residuals
+<li> Can also use a Q-Q plot. ( i.e. qqnorm())
+<li> The residuals should must have constant variance.
+<li> Use a plot of fitted values vs residuals.
+</ul>
 
 
-%---------------------------------------------------
+<!-- ############################################# -->
 
-\begin{slide}{SLR Diagnostics}
-\begin{verbatim}
+{SLR Diagnostics}
+<pre><code>
 
 >model =lm(Taste ~ Acetic)
 >par(mfrow=c(2,2))
@@ -81,15 +81,15 @@ mean of 0 .
 >qqnorm(resid(model))
 >plot(fitted(model), resid(model))
 >par(mfrow=c(1,1))	#reset
-\end{verbatim}
+</code></pre>
 
 The residuals seem to be normally distributed, judging by the histogram and QQ plot.
 There seems to be consistent variance too in the residual plot, but a possible ``funnell effect" .
 
-\end{slide}
 
-%---------------------------------------------------
-\begin{slide} {Multiple regression}
+
+<!-- ############################################# -->
+ {Multiple regression}
 Multiple regression is carried out when there is more than one
 explanatory variable.
 The multiple linear regression model has the form:\\
@@ -97,69 +97,69 @@ $y = \beta_{0} + \beta_{1}x1 + \beta_{2}x2 ....+ \beta_{p}Xp + \epsilon$\\
 Where the beta values are the regression coefficients and the 'x's are the predictor variables.\\
 The number of predictor variables is 'p'.
 
-\end{slide}
 
-%---------------------------------------------------
-\begin{slide}{Cheese Data}
-\begin{itemize}
 
-\item We wish to model the dependence of the taste score
+<!-- ############################################# -->
+{Cheese Data}
+<ul>
+
+<li> We wish to model the dependence of the taste score
 on the concentrations of those three constituents, using the n = 30 observations.
 
-\item We also wish to assess if one of the constituents has no effect at all.
-\item We can build various candidate models and choose the best.
+<li> We also wish to assess if one of the constituents has no effect at all.
+<li> We can build various candidate models and choose the best.
 
-\end{itemize}
-\end{slide}
-%---------------------------------------------------
+</ul>
 
-\begin{slide}{MLR}
+<!-- ############################################# -->
+
+{MLR}
 A number of models were fitted.
-\begin{verbatim}
+<pre><code>
 
 >model1=lm(Taste~ Acetic + H2S)
 >model2 =lm(Taste~ Acetic + Lactic)
 >model3 =lm(Taste~ Lactic + H2S)
 >model4 =lm(Taste~ Acetic + Lactic + H2S)
-\end{verbatim}
-\end{slide}
+</code></pre>
 
 
 
-%---------------------------------------------------
-\begin{slide} {Coefficient of determination}
-\begin{itemize}
-\item One can measure how well the model succeeds in explaining the variation in the
+
+<!-- ############################################# -->
+ {Coefficient of determination}
+<ul>
+<li> One can measure how well the model succeeds in explaining the variation in the
 response by the Coefficient of Determination $R^2$, (which is defined by the ratio of the
 Sum of squares for the slopes to the Total sum of squares in ANOVA)
 
-\item $R^2 = \frac{p S_{\beta}^2}{(n-1)S_{y}^2}$
+<li> $R^2 = \frac{p S_{\beta}^2}{(n-1)S_{y}^2}$
 
-\item $R^2$ found using the summary() function also.
+<li> $R^2$ found using the summary() function also.
 
-\item The higher the value of $R^2$ the better.
+<li> The higher the value of $R^2$ the better.
 
-\item $R^2$ is usually thought of as the proportion of the variation in the response variable
-explained by the regression. \item Often, one would look for $R^2$ over 60\% before thinking
+<li> $R^2$ is usually thought of as the proportion of the variation in the response variable
+explained by the regression. <li> Often, one would look for $R^2$ over 60\% before thinking
 that a model was useful.
-\end{itemize}
-\end{slide}
-%---------------------------------------------------
-\begin{slide} {Multiple Regression}
-\begin{itemize}
-\item $R^2$  is the square of the correlation coefficient between the values of the
+</ul>
+
+<!-- ############################################# -->
+ {Multiple Regression}
+<ul>
+<li> $R^2$  is the square of the correlation coefficient between the values of the
 response variable and the fitted values from the model.
 
-\item There is also an F-test for the Null Hypothesis that the population analogue of R2 is 0 against
+<li> There is also an F-test for the Null Hypothesis that the population analogue of R2 is 0 against
 the alternative that it is greater than 0. This is a test of whether there is any point in
 fitting the regression at all.
-\item A first check is to look at the scatter plots of
+<li> A first check is to look at the scatter plots of
 the response variable Taste against each of the explanatory variables.
-\end{itemize}
-\end{slide}
-%--------------------------------------------------------
-\begin{slide}{R squared}
-\begin{verbatim}
+</ul>
+
+<!-- ############################################# -->-----
+{R squared}
+<pre><code>
 > summary(model1)$r.squared
 [1] 0.5821773
 > summary(model2)$r.squared
@@ -168,32 +168,32 @@ the response variable Taste against each of the explanatory variables.
 [1] 0.6517024
 > summary(model4)$r.squared
 [1] 0.6517747
-\end{verbatim}
+</code></pre>
 Model 4 has the highest value for $R^2$.
-\end{slide}
-%---------------------------------------------------
-\begin{slide} {Multiple Regression}
-\begin{itemize}
-\item If the number of explanatory variables is increased, then $R^2$ always decreases.
+
+<!-- ############################################# -->
+ {Multiple Regression}
+<ul>
+<li> If the number of explanatory variables is increased, then $R^2$ always decreases.
  So if one wants to choose how many explanatory variables to include in the model,
 one cant depend entirely on $R^2$, because that would always suggest putting in every
 explanatory variable available.
 
-\item One should look also at Students t values for the estimated
+<li> One should look also at Students t values for the estimated
 slopes.
 
-\item The Adjusted Coefficient of Determination, which makes
+<li> The Adjusted Coefficient of Determination, which makes
 an attempt to correct for the number of explanatory variables used (i.e. penalizes using too many)
 
-\item Some explanatory variables may give the same information as each other. So all are not required.
+<li> Some explanatory variables may give the same information as each other. So all are not required.
 
 
-\end{itemize}
-\end{slide}
-%---------------------------------------------------
+</ul>
 
-\begin{slide}{Adjusted R squared}
-\begin{verbatim}
+<!-- ############################################# -->
+
+{Adjusted R squared}
+<pre><code>
 > summary(model1)$adj.r.squared
 [1] 0.5512274
 > summary(model2)$adj.r.squared
@@ -202,13 +202,6 @@ an attempt to correct for the number of explanatory variables used (i.e. penaliz
 [1] 0.6259025
 > summary(model4)$adj.r.squared
 [1] 0.6115948
-\end{verbatim}
+</code></pre>
 Model 3 has the highest value for Adjusted $R^2$.
-\end{slide}
-
-
-
-\end{document}
-
-
 

@@ -26,30 +26,8 @@ A
 B
 end.rcode-->
 
-<h3>Row and Column Statistics</h3>
-Statistic on the rows and columns can easily be computed if required.
-<ul>
-<li> <code> rowMeans()  </code> : Returns vector of row means.
-<li> <code> rowSums()  </code> : Returns vector of row sums.
-<li> <code> colMeans()  </code> : Returns vector of column means.
-<li> <code> colSums()  </code> : Returns vector of coumn means.
-</ul>
-.
-<!--begin.rcode
-rowMeans(A)  # Returns vector of row means.
-rowSums(A)  # Returns vector of row sums.
-colMeans(B)  # Returns vector of column means.
-colSums(B)  # Returns vector of coumn means.
-end.rcode-->
 
 <h4>Diagonals</h4>
-<ul>
-<li> The <code>diag()</code> command is a very versatile function for using matrices.
-<li> It can be used to create a diagonal matrix with elements of a vector in the principal diagonal. 
-<li> For an existing matrix, it can be used to return a vector containing the elements of the principal diagonal.
-<li>			
-Most importantly, if k is a scalar, <code>diag()</code> will create a k x k identity matrix.
-</ul>
 
 <!--begin.rcode
 Vec2=c(1,2,3)

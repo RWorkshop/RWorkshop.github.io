@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-	      
-	      %---------------------------------------- %
 
 \subsection{The Poisson Distribution}
 
@@ -47,7 +20,7 @@ The commands follow the same kind of naming convention, and the names of the com
 
 These commands work just like the commands for the other distribution. The Poisson distribution requires the lambda. parameters. A few examples are given below to show how to use the different commands. First we have the density function, <i><b>dpois()</b></i>.
 
-\subsubsection{Example}
+### Example
 Suppose that the expected number of occurences per unit space is 5, compute the probability of exactly 4 and exactly 5 occurences, i.e. $P(X = 4)$ and $P(X = 5)$ respectively.
 
 <pre>
@@ -78,7 +51,7 @@ y = dpois(x,lambda=5)
 plot(x,y,type="h",col="red",lwd=2,font.lab=2,font.axis=2)
 points(x,y,type="p",col="red",cex=1.60,pch=18)
 </code>
-\end{framed}
+
 Compute the probability that the number of successes is less than or equal to 15, i.e. $P(X \leq 15)$. To compute this, we would use the \textbf{\texttt{ppois()</b></i> command. The answer is 99.99\%.
 		
 		<pre>
@@ -116,11 +89,4 @@ Compute the probability that the number of successes is less than or equal to 15
 	</code>
 	
 	If there are twelve cars crossing a bridge per minute on average, the probability of having seventeen or more cars crossing the bridge in a particular minute is 10.1\%. 
-	
-	
-	
-	
-	
-	
-	
-	%----------------------------------------------------------------- %
+

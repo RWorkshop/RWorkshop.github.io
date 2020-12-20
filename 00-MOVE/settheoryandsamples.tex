@@ -1,48 +1,22 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-
-
-<h3>R Class : Set Theory and Sampling</h3>
+Set Theory and Sampling
+============================================
 
 
 
-
-1. Sequence of Integers
+### Sequence of Integers
 
 A sequence of integers can be created using the “:” operator, specifying the upper and lower bounds on either side.
 
-<!--##########################################################################################-->
+<p>
 
-2. Set Theory
+### Set Theory
 R has the following commands that it would use for set theory  - (Also quite useful for some simulations)
 
 •	Union	              (all values in the data sets combined)
 •	Intersection       (values in both data sets)
 •	Set Difference  (values in one data set but not the other)
+
+<pre><code>
 X = 5:10
 Y = 8:12
 
@@ -64,14 +38,15 @@ setdiff(X,Y)
 setdiff(Y,X)
 #[1] 11 12
 
-<!--##########################################################################################-->
+</code></pre>
 
-3. Sampling
+### Sampling
 
-The R command we use to perform sampling is sample().
+The R command we use to perform sampling is ``sample()``.
 
 We specify the dataset that we wish to sample from, and how many sample values to take.
 
+<pre><code>
 > sample(X,2)
 [1] 6 5
 >
@@ -79,10 +54,11 @@ We specify the dataset that we wish to sample from, and how many sample values t
 [1] 6
 [1] 8
 [1] 5
-
+</cod></pre>
 
 When x is a single value, the function sample() behaves differently.
 
+<pre><code>
 > Y=c(4)
 >
 > sample(Y,1)
@@ -90,14 +66,9 @@ When x is a single value, the function sample() behaves differently.
 > 
 > sample(Y,2)
 [1] 3 1
+</code><pre>
 
 
-
-
-
-
-
-<!--##########################################################################################-->
 <pre><code>
 > X = 5:10 ; Y = 8:12;
 > X
@@ -111,7 +82,7 @@ When x is a single value, the function sample() behaves differently.
 > intersect(X,Y)
 [1]  8  9 10
 </code></pre>
-<!--##########################################################################################-->
+
 <h3>Sampling</h3>
 
 The R command we use to perform sampling is sample().
@@ -179,9 +150,10 @@ By default, the command uses sampling without replacement. To specify sampling w
 
 
 
-5. Controlling precision of a value
+### Controlling precision of a value
 Consider the value pi.  When called, R presents a value to 6 decimal places.
 Often this level of precision is not necessary.
+<pre><code>
 > pi
 [1] 3.141593
 > floor(pi)
@@ -192,8 +164,11 @@ Often this level of precision is not necessary.
 [1] 3.14
 > round(pi,3)
 [1] 3.142
+</code></pre>
 
-As you can see, we have many different options when it comes to controlling the precision. If we want to round to the next highest, or next lowest, integers, we can use either the ceiling function or floor function.
+
+As you can see, we have many different options when it comes to controlling the precision. 
+If we want to round to the next highest, or next lowest, integers, we can use either the ceiling function or floor function.
 We can use the round function to specify the appropriate precision to a suitable number of decimal places.
 
 

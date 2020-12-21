@@ -1,22 +1,5 @@
 
 
-\chapter { R Graphics}
-\section Enhancing your scatter plots
-\subsection{Adding lines}
-Previously we have used scatter plots to plot bivariate data. They were constructed using the \texttt{plot()} command.
-Recall that we can use the arguments \texttt{xlim} and \texttt{ylim} to control the vertical and horizontal range of the plots, by specifying a two element vector (min and max) for each.
-
-Using the \texttt{abline()} command, we can add lines to our scatter plots. We specify the argument according to the type of line required. A demonstration of three types of line is provided below.
-Additionally we change the colour of the added lines, by specifying a colour in the \texttt{col} argument. We can also change the line type to one of four possible types, using the \texttt{lty} argument.
-
-The line types are follows
-\begin{itemize}
-\item	\texttt{lty =1}   Normal full line (default)
-\item	\texttt{lty =2}   Dashed line
-\item	\texttt{lty =3}   Dotted line
-\item	\texttt{lty =4}   Dash-dot line
-\end{itemize}
-
 
 <pre><code>
 x=rnorm(10)
@@ -37,7 +20,8 @@ plot(x,y,pch=15,col="red")		#Square plot symbols
 plot(x,y,pch=16,col="green")		#Orb plot symbols
 plot(x,y,pch=17,col="mauve")		#Triangular plot symbols
 plot(x,y,pch=36	,col="amber")		#Dollar sign plot symbols
-\end{verbatim}\normalsize
+\end{verbatim}
+
 Recall that we can add new variates to an existing scatterplot using the points() function. Remember to set the vertical and horizontal limits accordingly.
 \footnotesize \begin{verbatim}
 y1 = rnorm(10); y2 = rnorm(10)
@@ -102,86 +86,3 @@ $plot(x, type = "b")$
 
 
 
-
-
-
-\section{Histograms}
-Histograms can be created using the \texttt{hist()} command.
-To create a histogram of the car weights from the Cars93 data set
-
-<pre><code>
-hist(mtcars$mpg, main="Histogram of MPG (Data: MTCARS) ")
-\end{verbatim}
-\end{myindentpar}\normalsize
-\texttt{R} automatically chooses the number and width of the bars. We can
-change this by specifying the location of the break points.
-\footnotesize
-\begin{myindentpar}{1cm}
-\begin{verbatim}hist(Cars93$Weight, breaks=c(1500, 2050, 2300, 2350, 2400,
-2500, 3000, 3500, 3570, 4000, 4500), xlab="Weight",
-main="Histogram of Weight")
-</code></pre>
-
-
-
-<h4>Boxplot</h4>
-Boxplots can be used to identify outliers.
-
-By default, the \texttt{boxplot()} command sets the orientation as vertical. By adding the argument \texttt{horizontal=TRUE}, the orientation can be changed to horizontal.
-
-<pre><code>
-boxplot(mtcars$mpg, horizontal=TRUE, xlab="Miles Per Gallon",
-main="Boxplot of MPG")
-</code></pre>
-
-
-\chapter{Graphical methods}
-
-\section{Scatterplots}
-\begin{figure}
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.40]{MTCARSmpgwt.png}\\
-  \caption{Scatterplot}\label{mpgwt}
-\end{figure}
-
-
-\section{Adding titles, lines, points to plots}
-
-
-\footnotesize \begin{verbatim}
-library(MASS)
-# Colour points and choose plotting symbols according to a levels of a factor
-plot(Cars93$Weight, Cars93$EngineSize, col=as.numeric(Cars93$Type),
-pch=as.numeric(Cars93$Type))
-
-# Adds x and y axes labels and a title.
-plot(Cars93$Weight, Cars93$EngineSize, ylab="Engine Size",
-xlab="Weight", main="My plot")
-# Add lines to the plot.
-lines(x=c(min(Cars93$Weight), max(Cars93$Weight)), y=c(min(Cars93$EngineSize),
-max(Cars93$EngineSize)), lwd=4, lty=3, col="green")
-abline(h=3, lty=2)
-abline(v=1999, lty=4)
-# Add points to the plot.
-\end{verbatim}\normalsize
-
-\newpage
-
-Histograms
-Boxplots
-
-
-%-------------------------------------------------------------------------------------------------%
-Stem and Leaf Plots
-
-\subsection{Bivariate Data}
-\begin{verbatim}
-Simple Scatterplots, Correlation and Covariance
-X1 =
-Y1 =
-Plot(X1,Y1)
-cor(X1)
-cov(Y1)
-\end{verbatim}
-\end{document}
-%-----------------------------------------------------------------------------------------------%

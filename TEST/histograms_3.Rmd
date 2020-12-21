@@ -1,0 +1,83 @@
+
+
+
+\section{Histograms}
+Histograms can be created using the \texttt{hist()} command.
+To create a histogram of the car weights from the Cars93 data set
+
+<pre><code>
+hist(mtcars$mpg, main="Histogram of MPG (Data: MTCARS) ")
+\end{verbatim}
+\end{myindentpar}\normalsize
+\texttt{R} automatically chooses the number and width of the bars. We can
+change this by specifying the location of the break points.
+\footnotesize
+\begin{myindentpar}{1cm}
+\begin{verbatim}hist(Cars93$Weight, breaks=c(1500, 2050, 2300, 2350, 2400,
+2500, 3000, 3500, 3570, 4000, 4500), xlab="Weight",
+main="Histogram of Weight")
+</code></pre>
+
+
+
+<h4>Boxplot</h4>
+Boxplots can be used to identify outliers.
+
+By default, the \texttt{boxplot()} command sets the orientation as vertical. By adding the argument \texttt{horizontal=TRUE}, the orientation can be changed to horizontal.
+
+<pre><code>
+boxplot(mtcars$mpg, horizontal=TRUE, xlab="Miles Per Gallon",
+main="Boxplot of MPG")
+</code></pre>
+
+
+\chapter{Graphical methods}
+
+\section{Scatterplots}
+\begin{figure}
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.40]{MTCARSmpgwt.png}\\
+  \caption{Scatterplot}\label{mpgwt}
+\end{figure}
+
+
+\section{Adding titles, lines, points to plots}
+
+
+\footnotesize \begin{verbatim}
+library(MASS)
+# Colour points and choose plotting symbols according to a levels of a factor
+plot(Cars93$Weight, Cars93$EngineSize, col=as.numeric(Cars93$Type),
+pch=as.numeric(Cars93$Type))
+
+# Adds x and y axes labels and a title.
+plot(Cars93$Weight, Cars93$EngineSize, ylab="Engine Size",
+xlab="Weight", main="My plot")
+# Add lines to the plot.
+lines(x=c(min(Cars93$Weight), max(Cars93$Weight)), y=c(min(Cars93$EngineSize),
+max(Cars93$EngineSize)), lwd=4, lty=3, col="green")
+abline(h=3, lty=2)
+abline(v=1999, lty=4)
+# Add points to the plot.
+\end{verbatim}\normalsize
+
+\newpage
+
+Histograms
+Boxplots
+
+
+%-------------------------------------------------------------------------------------------------%
+Stem and Leaf Plots
+
+\subsection{Bivariate Data}
+\begin{verbatim}
+Simple Scatterplots, Correlation and Covariance
+X1 =
+Y1 =
+Plot(X1,Y1)
+cor(X1)
+cov(Y1)
+\end{verbatim}
+\end{document}
+%-----------------------------------------------------------------------------------------------%

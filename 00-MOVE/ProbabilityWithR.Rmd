@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
+### Calculate probability and likelihood
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-      Calculate probability and likelihood
 R has many built-in functions to calculate probabilities for discrete random variables and probability densities for continuous random variables. These are additionally useful for calculating likelihoods. This section highlights a few of the most commonly used probability distributions. If used to calculate likelihoods, the log=TRUE option (yielding log likelihoods instead) is recommended to prevent memory overflow or underflow.
 
 The basic structure of these commands is detailed in the section below on the binomial distribution. The structure of other commands will be similar, though options may vary.
@@ -104,7 +80,10 @@ id disease.state
 4 infected
 5 uninfected
 ...
-In this case, to calculate the log-likelihood of a specified value for p (the probability that an individual in the population is infected) you will first need to calculate the log-likelihood of p for each data observation (0 = uninfected, 1 = infected). The log-likelihood for p given all the data is then the sum of the log-likelihoods based on each observation. This assumes that the data represent a random sample (so that trials are independent).
+In this case, to calculate the log-likelihood of a specified value for p (the probability that an individual in the population is infected) you will first need to
+  calculate the log-likelihood of p for each data observation (0 = uninfected, 1 = infected). 
+  The log-likelihood for p given all the data is then the sum of the log-likelihoods based on each observation. 
+  This assumes that the data represent a random sample (so that trials are independent).
 
 x<-as.integer(disease.state=="infected") # converts to 0 and 1's
 z<-dbinom(x,size=1,prob=p,log=TRUE)      # log-like for each obs
@@ -112,7 +91,8 @@ loglike<-sum(z)                          # log-likelihood of p
 (Note: If you calculate the likelihood of p for each data observation, rather than the log-likelihood, then the likelihood of p given all the data will be the product of the likelihoods based on each observation, rather than their sum. This number can get very small, however, so calculating the log-likelihoods and summing is recommended.)
 
 <!-- ####################################################################################################### -->
-Typically, we would like to calculate the log-likelihood of many different values of p, given the same vector if data, so that we can draw the likelihood function and find the maximum. This can be accomplished by writing a loop
+Typically, we would like to calculate the log-likelihood of many different values of p, given the same vector if data, so that we can draw the likelihood function 
+and find the maximum. This can be accomplished by writing a loop
 <pre><code>
 loglike <- vector()                        # to store results
 x <- as.integer(disease.state=="infected") # converts to 0 and 1
@@ -132,7 +112,9 @@ loglike <- sapply(p,FUN=function(p.try){
 Geometric distribution
 Used for binary data (1 or 0; success or failure, etc). In a sequence of trials, the trial yielding the first success (all previous trials ending in failure) has a geometric distribution. The assumption required is that separate trials are independent and the probability of success p is the same in every trial. The probability of failure in each trial is 1  p.
 
-The variable X counts the number of failures before the first success. In other words, X = 0 if success occurs on the 1st trial. X = 1 means that the 1st trial ended in failure and success occurred in the 2nd trial. X = 2 means that the 1st and 2nd trial ended in failure and that success occurred in the 3rd trial. And so on. Pr[X] is calculated as
+The variable X counts the number of failures before the first success. 
+In other words, X = 0 if success occurs on the 1st trial. X = 1 means that the 1st trial ended in failure and success occurred in the 2nd trial. 
+X = 2 means that the 1st and 2nd trial ended in failure and that success occurred in the 3rd trial. And so on. Pr[X] is calculated as
 
 dgeom(X, prob = p)            # p is the probability of success
 dgeom(X, prob = p, log=TRUE)  # log of the probability instead
@@ -141,20 +123,24 @@ dgeom(X, prob = p, log=TRUE)  # log of the probability instead
 Hypergeometric distribution
 Used for mark-recapture data. The hypergeometric distribution describes the number of recaptures (marked individuals) X in a random sample of k individuals from a finite population in which m individuals in total are marked and n individuals are unmarked.
 
-The distribution is used to model mark-recapture data in which the goal is to estimate total population size m + n, where n is unknown. X can be any integer between 0 and m. k can be any integer between 1 and m + n. The model assumes no births, deaths, or immigration or emigration events between marking and recapturing. It also assumes that all individuals in the population have the same probability of being captured. The probability of X recaptures (marked individuals) in a random sample of size k is
+The distribution is used to model mark-recapture data in which the goal is to estimate total population size m + n, where n is unknown. 
+X can be any integer between 0 and m. k can be any integer between 1 and m + n. The model assumes no births, deaths, or immigration or emigration events between marking and recapturing. It also assumes that all individuals in the population have the same probability of being captured. The probability of X recaptures (marked individuals) in a random sample of size k is
 
 dhyper(X,m,n,k)
 dhyper(X,m,n,k,log=TRUE)
 
 <!-- ####################################################################################################### -->Poisson distribution
-Used for count data. The Poisson distribution describes the number of events X in a block of space or time. The single parameter lambda is the population mean number of events per block. The assumption is that individual events occur randomly and independently in space or time. Block size is arbitrary but is usually chosen such that the mean number of events per block is neither very small nor very large. The probability of X events occurring in a single block is
+Used for count data. The Poisson distribution describes the number of events X in a block of space or time. 
+The single parameter lambda is the population mean number of events per block. 
+The assumption is that individual events occur randomly and independently in space or time. Block size is arbitrary but is usually chosen such that the mean number of events per block is neither very small nor very large. The probability of X events occurring in a single block is
 
 dpois(X,lambda)
 dpois(X,lambda, log=TRUE)
 
 <!-- ####################################################################################################### -->
 <h4>Normal distribution<h4>
-Optimistically, this probability distribution approximates the frequency distribution of a trait in a population (except when it doesnt!). Because it is a continuous distribution, the height of the normal curve refers to probability density rather than probability as such. Probability is instead represented by area under the normal curve.
+Optimistically, this probability distribution approximates the frequency distribution of a trait in a population (except when it doesnt!). 
+Because it is a continuous distribution, the height of the normal curve refers to probability density rather than probability as such. Probability is instead represented by area under the normal curve.
 
 The probability density of a normally distributed variable X having mean µ and standard deviation s is
 
@@ -166,7 +152,8 @@ dnorm(X, mean=µ, sd=s, log=TRUE)
   <h4>Geometric distribution</h4>
 Used for binary data (1 or 0; success or failure, etc). In a sequence of trials, the trial yielding the first success (all previous trials ending in failure) has a geometric distribution. The assumption required is that separate trials are independent and the probability of success p is the same in every trial. The probability of failure in each trial is 1  p.
 
-The variable X counts the number of failures before the first success. In other words, X = 0 if success occurs on the 1st trial. X = 1 means that the 1st trial ended in failure and success occurred in the 2nd trial. X = 2 means that the 1st and 2nd trial ended in failure and that success occurred in the 3rd trial. And so on. Pr[X] is calculated as
+The variable X counts the number of failures before the first success. 
+In other words, X = 0 if success occurs on the 1st trial. X = 1 means that the 1st trial ended in failure and success occurred in the 2nd trial. X = 2 means that the 1st and 2nd trial ended in failure and that success occurred in the 3rd trial. And so on. Pr[X] is calculated as
 
 dgeom(X, prob = p)            # p is the probability of success
 dgeom(X, prob = p, log=TRUE)  # log of the probability instead

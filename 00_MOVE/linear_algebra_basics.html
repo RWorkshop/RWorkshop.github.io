@@ -1,75 +1,11 @@
-<html>
 
-<head>
-<style type="text/css">
-.knitr .inline {
-  background-color: #f7f7f7;
-  border:solid 1px #B0B0B0;
-}
-.error {
-	font-weight: bold;
-	color: #FF0000;
-}
-.warning {
-	font-weight: bold;
-}
-.message {
-	font-style: italic;
-}
-.source, .output, .warning, .error, .message {
-	padding: 0 1em;
-  border:solid 1px #F7F7F7;
-}
-.source {
-  background-color: #f5f5f5;
-}
-.rimage .left {
-  text-align: left;
-}
-.rimage .right {
-  text-align: right;
-}
-.rimage .center {
-  text-align: center;
-}
-.hl.num {
-  color: #AF0F91;
-}
-.hl.str {
-  color: #317ECC;
-}
-.hl.com {
-  color: #AD95AF;
-  font-style: italic;
-}
-.hl.opt {
-  color: #000000;
-}
-.hl.std {
-  color: #585858;
-}
-.hl.kwa {
-  color: #295F94;
-  font-weight: bold;
-}
-.hl.kwb {
-  color: #B05A65;
-}
-.hl.kwc {
-  color: #55aa55;
-}
-.hl.kwd {
-  color: #BC5A65;
-  font-weight: bold;
-}
 </style>
 <title>Matrices</title>
 </head>
 
 <body>
 <h1>Basics Linear Algebra</h1>
-<a href="RWorkshop.github.io">Main Page</a> | <a href="RWorkshop.github.io/Maths">Mathematical Operations</a> | <a href="index">Matrices Index</a>
-<p>
+
 Before we begin, let's set up some matrices to work with.
 </p>
 <div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl std">x1</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">2</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">);x2</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">3</span><span class="hl std">,</span><span class="hl num">8</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">);x3</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">c</span><span class="hl std">(</span><span class="hl num">1</span><span class="hl std">,</span><span class="hl num">4</span><span class="hl std">,</span><span class="hl num">3</span><span class="hl std">)</span>
@@ -109,7 +45,7 @@ To solve a system of linear equations in the form Ax=b , where A is a square mat
 </div></div>
 
 
-We can compute crossproducts using the crossprod () command. If only one matrix is used it
+We can compute crossproducts using the ``crossprod()`` command. If only one matrix is used it
 <div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">crossprod</span><span class="hl std">(A,C)</span>          <span class="hl com"># A'C</span>
 </pre></div>
 <div class="output"><pre class="knitr r">##      x1 x2 x3
@@ -117,7 +53,8 @@ We can compute crossproducts using the crossprod () command. If only one matrix 
 ## [2,] 34 86 46
 ## [3,] 24 56 29
 </pre></div>
-<div class="source"><pre class="knitr r"><span class="hl kwd">crossprod</span><span class="hl std">(A)</span>                    <span class="hl com"># A'A</span>
+<div class="source"><pre class="knitr r"><span class="hl kwd">crossprod</span><span class="hl std">(A)</span>                    
+<span class="hl com"># A'A</span>
 </pre></div>
 <div class="output"><pre class="knitr r">##      [,1] [,2] [,3]
 ## [1,]   11   30   19
@@ -129,6 +66,3 @@ We can compute crossproducts using the crossprod () command. If only one matrix 
 <p>You can also embed plots, for example:</p>
 
 
-
-</body>
-</html>

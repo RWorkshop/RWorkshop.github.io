@@ -1,5 +1,4 @@
-%=============================================%
-\begin{verbatim}
+<pre><code>
 x=c(15, 34, 7, 12, 18, 9, 1, 42, 56, 28, 13, 24, 35)
  
 sort(x)           # sort x into ascending order
@@ -13,5 +12,4 @@ IQR(x)
 fivenum(x)
 
 # code is committed
-
-\end{verbatim}
+</code></pre>

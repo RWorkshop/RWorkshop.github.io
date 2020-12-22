@@ -1,29 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
 
        
 <h3>Data Entry, Data Import and Export</h3>
@@ -32,7 +6,8 @@ The <code>scan()</code> function is a useful method of inputting data quickly. Y
 It is best used in the manner as described in the following example.  Create a variable “X” and use the <code>scan()</code> function to populate it with values.
 Type in a value, and then press return.
 Once you have entered all the values, press return again to return to normal operation.
-<pre><code>> X=scan()
+<pre><code>
+> X=scan()
 1: 4
 2: 5
 3: 5
@@ -50,7 +25,9 @@ We use the command data.entry() , and name of the data object as the argument.
 
 <h6>Data Import</h6>
 It is necessary to import outside data into R before you start analysing it
-Quite often, the sample data is in Excel format, and needs to be imported into R prior to use. For this, we use the read.xls() function from the “gdata” package. It reads from an Excel spreadsheet and returns a data frame. The following shows how to load an Excel spreadsheet named "mydata.xls". As the package is not in the core R library, it has to be installed and loaded into the R workspace.
+Quite often, the sample data is in Excel format, and needs to be imported into R prior to use. 
+For this, we use the read.xls() function from the “gdata” package. It reads from an Excel spreadsheet and returns a data frame. 
+The following shows how to load an Excel spreadsheet named "mydata.xls". As the package is not in the core R library, it has to be installed and loaded into the R workspace.
 \begin{verbatim}
 > library(gdata)                   # load the gdata package 
 > help(read.xls)                   # documentation 
@@ -78,7 +55,7 @@ Now copy and paste the table above in a file named "mydata.txt" with a text edit
 > help(read.table) 
 
 
-\section{Data export}
+#### Data export
 The basic tool to produce output files is <code>write.table()</code>.
  
 The only required argument to <code>write.table()</code> is the name of a dataset or matrix; with just a single argument, the output will be printed on the console, making it easy to test that the file you’ll be creating is in the correct format. 
@@ -87,9 +64,9 @@ Usually, the second argument, file= will be used to specify the destination as e
 
 By default, character strings are surrounded by quotes by <code>write.table()</code>; use the quote=FALSE argument to suppress this feature. To suppress row names or column names from being written to the file, use the row.names=FALSE or col.names=FALSE arguments, respectively. 
 
-Note that col.names=TRUE (the default) produces the same sort of headers that are read using the header=TRUE argument of read.table(). 
+Note that col.names=TRUE (the default) produces the same sort of headers that are read using the header=TRUE argument of ``read.table()``. 
 
-Finally, the sep= argument can be used to specify a separator other than a blank space. Using sep=’,’ (comma separated) or sep=’\t’ (tab-separated) are two common choices.
+Finally, the sep= argument can be used to specify a separator other than a blank space. Using ``sep=","`` (comma separated) or ``sep="\t"`` (tab-separated) are two common choices.
 
 <pre><code>write.table(CO2 ,file=’co2.txt’, row.names=FALSE, sep=’,’)
 
@@ -111,7 +88,7 @@ Col1,Col2,Col3
 </code></pre>
 
 
-After we copy and paste the data above in a file named "mydata.csv" with a text editor, we can read the data with the read.csv function.
+After we copy and paste the data above in a file named "mydata.csv" with a text editor, we can read the data with the ``read.csv()`` function.
 > mydata = read.csv("mydata.csv")  # read csv file 
 > mydata                           # print data frame 
   Col1 Col2 Col3 
@@ -126,8 +103,9 @@ In various European locales, as the comma character serves as decimal point, the
 <!--#################################################################################################################-->
 Data Entry, Data Import and Export
 
-The scan() function is a useful method of inputting data quickly. You can use to quickly copy and paste values into the R environment.
-It is best used in the manner as described in the following example.  Create a variable “X” and use the scan() function to populate it with values.
+The ``scan()`` function is a useful method of inputting data quickly. You can use to quickly copy and paste values into the R environment.
+It is best used in the manner as described in the following example.  
+Create a variable “X” and use the ``scan()`` function to populate it with values.
 Type in a value, and then press return.
 Once you have entered all the values, press return again to return to normal operation.
 > X=scan()
@@ -138,7 +116,7 @@ Once you have entered all the values, press return again to return to normal ope
 5: 
 Read 4 items
 
-Spreadsheet Interface
+### Spreadsheet Interface
 R provides a spreadsheet interface for editing the values of existing data sets.
 We use the command data.entry() , and name of the data object as the argument.
 > data.entry(X) # Edit the data set and exit interface
@@ -146,7 +124,7 @@ We use the command data.entry() , and name of the data object as the argument.
 
  
 
-Data Import
+### Data Import
 It is necessary to import outside data into R before you start analysing it
 Quite often, the sample data is in Excel format, and needs to be imported into R prior to use. For this, we use the read.xls() function from the “gdata” package. It reads from an Excel spreadsheet and returns a data frame. The following shows how to load an Excel spreadsheet named "mydata.xls". As the package is not in the core R library, it has to be installed and loaded into the R workspace.
 > library(gdata)                   # load the gdata package 
@@ -173,7 +151,8 @@ Now copy and paste the table above in a file named "mydata.txt" with a text edit
 
 > help(read.table) 
 
-Data export
+
+### Data export
 The basic tool to produce output files is write.table().
  
 The only required argument to write.table()is the name of a dataset or matrix; with just a single argument, the output will be printed on the console, making it easy to test that the file you’ll be creating is in the correct format. 
@@ -186,9 +165,9 @@ Note that col.names=TRUE (the default) produces the same sort of headers that ar
 
 Finally, the sep= argument can be used to specify a separator other than a blank space. Using sep=’,’ (comma separated) or sep=’\t’ (tab-separated) are two common choices.
 
-
+<pre><code>
 write.table(CO2 ,file=’co2.txt’, row.names=FALSE, sep=’,’)
-
+</code></pre>
 
 >
 Similarly to read.csv and read.csv2, the functions write.csv and write.csv2 are provided as wrappers to read.table, with appropriate options set to produce comma- or semicolon-separated files. 

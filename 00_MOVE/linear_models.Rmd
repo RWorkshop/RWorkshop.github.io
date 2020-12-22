@@ -1,50 +1,18 @@
 
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
         <h2>Simple Linear Regression</h2>
-Simple linear regression is used to describe the relationship between two variables. For example, you may want to describe the
-relationship between age and blood pressure or the relationship between scores in a midterm exam and scores in the final exam,
+Simple linear regression is used to describe the relationship between two variables. For example, you may want to describe the relationship between age and blood pressure or the relationship between scores in a midterm exam and scores in the final exam,
 etc.
 <p>
 The intercept $\beta_{0}$ describes the point at which the line intersects
 the y axis
 
-The slope $\beta_{1}$ describes the change in y
-(response/dependent variable) for every unit increase in x
+The slope $\beta_{1}$ describes the change in y (response/dependent variable) for every unit increase in x
 (explanatory/independent variable).
 <p>
-One of the first steps in a regression analysis is to determine if any
-kind of relationship exists between the two variables.
-A scatterplot is created and can initially be used to get an idea
-about the nature of the relationship between the variables, e.g. if
-the relationship is linear, curvilinear, or no relationship exists.
+One of the first steps in a regression analysis is to determine if any kind of relationship exists between the two variables.
+A scatterplot is created and can initially be used to get an idea about the nature of the relationship between the variables, e.g. if the relationship is linear, curvilinear, or no relationship exists.
 
-Can see from the scatterplot that there is a linear relationship
-between x and y. To measure the strength of this relationship,
+Can see from the scatterplot that there is a linear relationship between x and y. To measure the strength of this relationship,
 calculate the correlation coefficient (cor())
 
 Can add the fitted regression line to the scatterplot:
@@ -105,7 +73,7 @@ y = b_0 + b_1x_1 + e
 $b_0$ is the intercept estimate. $b_1$ is the slope estimate.
 
 
-<!-- ######################################################################################## -->
+<p>
 <h3> Simple Linear Regression</h3>
 
 
@@ -118,19 +86,22 @@ It may not look like this helped, but it did. If you look closely, you'll see th
 Here's our game plan. We'll first create the new transformed variable ytrans, then fit the linear regression to estimate the parameter a and b. Then we can calculate Vm and K from there. 
 We can easily add another variable to our data frame: 
 > df$ytrans <- df$conc/df$vel
-Take a look at df and see that there is a new column added. Plot the new variable against conc to check whether a linear regression model is appropriate. 
+Take a look at df and see that there is a new column added. 
+Plot the new variable against conc to check whether a linear regression model is appropriate. 
 > plot(df$conc, df$ytrans)
+
 Now we are ready to fit our regression model. We'll use the function lm(), which stands for linear model. 
 <pre><code>
 > lmfit <- lm(ytrans~conc, data=df)
 </code></pre>
 <p>
-By default, you will get an error if there are any missing values in your data when you run this function. If this happens, you may want to omit those cases that contain missing values and fit the model on the remaining cases. To do so, run the same function with an argument to specify the desired action. 
+By default, you will get an error if there are any missing values in your data when you run this function. 
+If this happens, you may want to omit those cases that contain missing values and fit the model on the remaining cases. 
+To do so, run the same function with an argument to specify the desired action. 
 <pre><code>
 > lmfit <- lm(ytrans~conc, data=df, na.action=na.omit)
 </code></pre>
-<!-- #################################################################################################### -->
-
+<p>
 This might make more sense if you know that R designates missing values by NA. Now let's look at this function call. The desired model is specified with ytrans~conc. Think of the tilde as an equal sign when specifying a model. ytrans is our response, so it goes on the left side. conc is our explanatory variable, so it goes on the right. An intercept term is assumed so you do not need to include it in the model definition. However, it is possible to force a zero intercept if you wanted. 
 Notice that there was not any output automatically generated when you fit the regression. The results have been saved in an object we called lmfit. This object is actually a list that contains several objects, which you can see with the function names() 
 

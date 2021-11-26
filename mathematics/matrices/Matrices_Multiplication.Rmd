@@ -1,5 +1,5 @@
 
-<h3>Matrix Multiplication}
+<h4>Matrix Multiplication<h4>
 To multiply matrices, we require a special operator for matrices; $"\%*\%"$.
 If we just used the normal multiplication, we would get an element-wise multiplication.
 <!--begin.rcode
@@ -104,22 +104,7 @@ length using <code>cbind()</code>, meaning "column bind". Alternatively one can 
 				crossprod(A) 			# A'A
 				end.rcode-->
 			\end{framed}
-			Diagonals
-			The diag() command is a very versatile function for using matrices.
-			It can be used to create a diagonal matrix with elements of a vector in the principal diagonal. For an existing matrix, it can be used to return a vector containing the elements of the principal diagonal.
-			
-			
-			Most importantly, if k is a scalar, diag() will create a k x k identity matrix.
-			
-			<!--begin.rcode
-				<!--begin.rcode
-				Vec2=c(1,2,3)
-				diag(Vec2)	#	Constructs a diagonal matrix based on values of Vec2
-				diag(A)	#        Returns diagonal elements of A as a vector
-				diag(3)	#	creates a 3 x 3 identity matrix
-				diag(diag(A)) #  	Diagonal matrix D of matrix A ( Jacobi Method)
-				end.rcode-->
-			\end{framed}
+		
 				Row and Column Statistics.
 			Statistic on the rows and columns can easily be computed if required.
 			%rowMeans(A)  # Returns vector of row means.

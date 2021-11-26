@@ -1,0 +1,18 @@
+
+
+### Set Theory Operations
+
+*  \texttt{union()} union of sets A and B
+*  \texttt{intersect()} intersection of sets A and B
+*  \texttt{setdiff()} set difference A-B (order is important)
+
+
+
+<pre><code>
+x = 5:10
+y = 8:12
+union(x,y)
+intersect(x,y)
+setdiff(x,y)
+setdiff(y,x)
+</code></pre>

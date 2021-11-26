@@ -1,0 +1,19 @@
+### Row and Column Statistics.
+Statistic on the rows and columns can easily be computed if required.
+
+Note that the following commands are often useful.
+
+
+* \texttt{rowMeans()}
+* \texttt{rowSums()}
+* \texttt{colMeans()}
+* \texttt{colSums()}
+
+<code>
+rowMeans(A)  # Returns vector of row means.
+rowSums(A)  # Returns vector of row sums.
+colMeans(A)  # Returns vector of column means.
+colSums(A)  # Returns vector of coumn means.
+</code>
+
+

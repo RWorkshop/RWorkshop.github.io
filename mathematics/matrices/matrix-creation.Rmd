@@ -1,0 +1,70 @@
+### Creating a matrix
+Matrices can be created using the matrix() command.
+
+
+
+{Matrices}
+%-------------------------%
+{Matrices}
+{Creating Matrices}
+<code>
+A=matrix(c(1,-2,0,3,0,-1),nrow=2,byrow=TRUE)
+B=matrix(c(4,1,0,2,-1,3),nrow=3,byrow=TRUE)
+C=matrix(c(2,1,0,-3),nrow=2,byrow=TRUE)
+</code>
+
+
+
+
+The arguments to be supplied are
+1. vector of values to be entered.
+2. dimensions of the matrix, specifying either the numbers of rows or columns.
+Additionally you can specify if the values are to be allocated by row or column. By default they are allocated by column.
+
+<code>
+Vec1 = c(1,4,5,6,4,5,5,7,9)  # 9 elements
+
+A = matrix(Vec1,nrow=3)      #3 by 3 matrix, assigned by column.
+
+A
+
+#      [,1] [,2] [,3]
+# [1,]    1    6    5
+# [2,]    4    4    7
+# [3,]    5    5    9
+</code>
+
+
+<pre><code>
+
+B= matrix(c(1,6,7,0.6,0.5,0.3,1,2,1),ncol=3,byrow =TRUE)
+B				          #3 by 3 matrix. Values assigned by row.
+</code></pre>	
+
+
+
+<p>
+
+If you have assigned values by column, but require that they are assigned by row, you can use the transpose function
+<pre><code>
+t().
+t(A)				# Transpose
+A=t(A)	
+</code></pre>
+
+#### Combining Vectors
+
+* Another method of creating a matrix is to “bind” a number of vectors together, either by row or by column. The commands are ``rbind() }.and ``cbind()`` respectively.
+
+
+A matrix refers to a numeric array of rows and columns.
+One of the easiest ways to create a matrix is to combine vectors of equal
+length using texttt{cbind()}, meaning "column bind". Alternatively one can use  texttt{rbind()}, meaning ``row bind".
+
+<pre>
+	<code>
+	x1 =c(1,2) ; x2 = c(3,6)
+	rbind(x1,x2)
+	cbind(x1,x2)
+	<\code>
+</pre>

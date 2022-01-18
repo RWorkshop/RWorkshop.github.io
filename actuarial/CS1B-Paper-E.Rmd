@@ -1,0 +1,189 @@
+
+
+
+CS1B Paper E {data-navmenu="R for Actuarial Statistics"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Exercise 1</h4>
+
+An employee at a café has been trained to set the coffee machine so that an espresso
+coffee portion results in 2.0 grams of coffee being placed into a cup. 
+
+Knowing that
+variations are expected, the employee pours eight portions and measures the amounts
+to be 
+$$\{1.95, 1.80, 2.10, 1.82, 1.75, 2.01, 1.83, 1.90\}$$.
+
+#### Exercises
+
+1. Calculate an 95% confidence interval for the mean size of espresso coffee
+portions. 
+2. Comment on whether the mean portion of coffee is equal to 2.0 grams. 
+3. Repeat Exercises 1 and 2 for an 80% confidence interval
+#### Video
+
+<a href="https://www.youtube.com/watch?v=gBJKMtzKIA4">Click Here for Video</a>
+
+
+
+
+### Question 2
+<h4>Exercise 2</h4>
+A researcher has collected the following data on a group of students, regarding
+whether they passed or failed an exam and whether or not they attended tutorials:
+
+
+| Number of students  | Exam Passed | Exam Failed |  
+|---|---|---|---|---|
+| Attended tutorials  | 132 | 27 |  
+| Did not attend tutorials  | 120 | 51 |  
+|  |  |  |  |  |
+
+
+#### Exercises
+The researcher wants to establish whether tutorial attendance is independent of exam
+success, using a chi-square test.
+
+1. State the hypotheses of this test. 
+
+2. Calculate the expected frequencies for the data under the null hypotheses
+in part 1.
+
+3. Perform the test stating clearly your conclusion. 
+
+
+The data can be entered into R using the following code:
+```{r}
+exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2) 
+```
+
+
+#### Video
+
+<a href="https://youtu.be/WbJejnoYnYA">Click Here for Video</a>
+
+
+### Question 3
+
+
+
+A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual
+weight of the sweet bags is known to follow a Normal distribution. 
+
+The sweet manufacturer believes that the machine is under-filling the sweet bags. A sample of
+10 sweet bags is taken and weighed, as summarised below.
+
+|  |  |  |  |  ||  |  |  |  |  |
+|---|---|---|---|---|---|---|---|---|---|---|
+|Bag | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+|Weight (grams) | 474.11 | 512.01 | 493.64 | 495.03 | 518.13 | 486.03 | 494.48 | 501.76 | 498.83 | 503.02 |
+
+---
+
+
+#### Exercises
+
+
+1. Perform a suitable t-test to determine whether the sweet bags are being
+consistently under-filled, stating the hypotheses and the level of significance
+used in the test. 
+
+2. Propose an interpretation of your conclusion in part 1. 
+
+
+
+The data can be entered into R using the following code:
+
+
+```{r}
+weight<-c(474.11,512.01,493.64,495.03,518.13,486.03,
+494.48,501.76,498.83,503.02)
+```
+
+
+#### Video
+
+<a href="https://youtu.be/w_HRoKpFImg">Click Here for Video</a>
+
+### Question 4
+
+4 Data were collected on average alcohol and cigarette consumption per adult per year 
+for a number of countries. The data are given in the file smoking_data.RData
+and contain the following information:
+
+* ***country*** the country concerned;
+* ***alcohol***: alcohol consumption per adult per year (litres/year);
+* ***cigarettes***: number of cigarettes consumed per adult per year.
+
+#### Exercises
+(i) (a) Construct a scatterplot of the data with alcohol consumption on the 
+x axis.
+(b) Comment on the relationship between the data on alcohol and cigarette 
+consumption based on your plot in part (i)(a).
+
+(ii) Calculate Pearson’s correlation coefficient between the data on alcohol and 
+cigarette consumption. 
+An analyst suggests using the following R code to modify the data:
+(iii) Explain what the above code does and give a justification for its use. 
+For the remainder of the question, use the modified data 
+(alcohol.2, cigarettes.2), as produced by applying the R code above.
+(iv) (a) Construct a scatterplot with alcohol consumption on the x axis.
+(b) Calculate Pearson’s correlation coefficient between the new data on 
+alcohol and cigarette consumption.
+(c) Comment on your answers in parts (ii) and (iv)(b). 
+
+(v) Perform a hypothesis test for the null hypothesis that Pearson’s population 
+correlation coefficient is equal to zero, against the alternative that it is positive. 
+You should report the p-value of the test and a clear conclusion. 
+
+A media bulletin has reported that ‘'h‘igher alcohol consumption causes higher cigarette consumption .
+(vi) Comment on whether this report is justified based on your analysis in parts (iv) 
+and (v). 
+
+```{r}
+alcohol.2 = alcohol[-c(6,16)]
+cigarettes.2 = cigarettes[-c(6,16)]
+```
+
+(vii) Perform a simple linear regression analysis on the new data using a 
+model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
+consumption, x), where the error terms ε independently follow a 
+N(0, s2) distribution.
+Your answer should show the fitted line plotted on the data scatterplot 
+and report the estimate of parameter s. [5]
+(viii) State the proportion of the total variability of the responses explained 
+by the model, based on your output in part (vii). [1]
+(ix) Plot a graph of the residuals of the model fitted in part (vii) 
+against the explanatory variable. 
+(x) Comment on the validity of the model, based on your output in 
+part (ix) . 
+
+### Question 5
+5 A waiting time random variable X follows an Exponential distribution with rate l
+parameterised as f(x) = le–lx
+ (x > 0, l > 0).
+The rate l has a Gamma prior distribution with parameters a and s. A Bayesian 
+credibility model provides that the posterior mean of 1/l can be expressed as
+Z 3x + (1– Z)3 s
+α – 1, where Z = 
+n
+α + n – 1
+with n being the number of past waiting times observed.
+Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
+(i) Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
+implementing M = 3,000 Monte Carlo repetitions. [14]
+(ii) Determine an estimate of the posterior mean of 1/l and the value of x when 
+n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. [15]
+(iii) Plot the histograms of the samples of the posterior mean of 1/l and of x
+obtained in part (ii). 
+(iv) Compare, by visual inspection of the graphs in part (iii), the distributions
+ of the posterior mean of 1/l and the distribution of x when n = 1,000. 
+(v) Comment on the behaviour of the credibility model as n increases, relating 
+your answer to your findings in part (iv). 
+[Total 39]
+END OF PAPER

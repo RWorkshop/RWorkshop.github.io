@@ -1,0 +1,41 @@
+
+CS1B Paper H {data-navmenu="R for Actuarial Statistics"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+The following amounts are the sizes of claims (in £) on house insurance policies for a 
+certain type of repair. 
+
+1990, 2400, 2150, 2090, 2300, 
+2100, 2180, 2150, 2030, 2100, 
+2180, 2010, 2060, 2160, 2120 
+
+
+
+-----------------------------------------------------
+
+* <a href="https://youtu.be/ijucRU9SsjY">	Video	</a>	
+
+				
+### Question 4
+
+<h4> Question 4</h4>
+
+#### Part 2
+
+Calculate Pearson’s correlation coefficient between Sales and Spend of the company. 
+
+
+#### Part 3
+
+
+Perform a hypothesis test for the null hypothesis that Pearson’s population correlation 
+coefficient is equal to zero, against the alternative that it is positive. You should report the 
+p-value of the test and a clear conclusion. 
+
+---------------------------------------------------------------
+

@@ -1,0 +1,70 @@
+
+
+
+CS1B Paper A {data-navmenu="R for Actuarial Statistics"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Exercise 1</h4>
+
+The following data represent the average total number of marks obtained for a
+particular exam, observed over seven exam sessions that had been administered by a
+professional examination body:
+
+
+\[87, 53, 72, 90, 78, 85, 83 \]
+
+Enter these data into R and compute their sample mean and variance.
+
+
+### Question 2
+
+Consider the n = 30 independent and identically distributed observations
+$( y_1 , y_2 , \ldots, y_n )$ given below from a random variable Y with probability distribution
+\[\theta y e –\theta
+function f ( y, \theta) =
+.
+y! \]
+
+
+You can enter the y values into R by using:
+
+
+```{r}
+
+y = c(5,5,6,2,4,10,2,5,5,2,5,3,7,     4,4,5,4,6,7,2,8,4,6,4,3,6,
+      6,6,5,7)
+
+```
+
+
+
+By assuming a prior distribution proportional to $e^{–a\theta}$ , we can show that the posterior
+distribution of $\theta$ is:
+\[
+\sum^{n}_{i=1}y
+f (\theta | y 1 , y 2 ,..., y n ) \propto \theta i=1 i e –(n + \alpha) \theta
+\]
+We can observe that the posterior distribution of $\theta$ is Gamma with parameters
+n
+∑ i=1 y i – 1 and n + a.
+
+
+
+
+Plot the posterior probability density function of $\theta$ for values of $\theta$ in
+the interval [3.2, 6.8] and assuming a = 0.01.
+		
+[Hint: the range of values of $\theta$ can be obtained in R by
+seq(3.2, 6.8, by = 0.01).]
+(b)
+Carry out a simulation of N = 5,000 posterior samples for the
+parameter $\theta$.
+
+(i) (a)
+(ii) Plot the histogram of the posterior distribution of $\theta$.
+

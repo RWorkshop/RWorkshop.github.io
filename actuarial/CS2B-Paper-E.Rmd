@@ -1,0 +1,117 @@
+
+CS2B Paper E {data-navmenu="R for Risk Modelling and Survival Analysis"}
+==============================================================
+
+Column  {.tabset}
+--------------------------------
+
+### Question 1
+<h4> Question 1</h4>
+An actuary is investigating the asymptotic behaviour of the sample autocorrelation 
+function for two time series models. 
+
+#### Exercises
+
+1.  Generate, using a random number generator seed of 967, a simulated sequence 
+of n = 200 observations for a first-order moving average process with 
+parameter β1= 0.4, assigning the simulated values to a vector called YMA. 
+2.  Generate, using a random number generator seed of 967, a simulated sequence 
+of n = 200 observations for a first-order autoregressive model with parameter 
+α1= 0.45, assigning the simulated values to a vector called YAR.  
+3.  Plot, on four separate graphs, the sample autocorrelation function (sample 
+ACF) and sample partial autocorrelation function (sample PACF) for each of 
+the two time series models, YMA and YAR, generated in parts 1.  and 2. .  
+4.  Comment on the general features of the plots in part 3. with reference to 
+whether they are consistent with the theoretical behaviour of the 
+corresponding functions for the true models.  
+The acf() function in R can also provide a vector output of the sample ACF values, 
+with component i giving the sample ACF at lag i – 1, provided that the plot argument 
+of the function is set to ‘FALSE’. 
+5. Determine the numerical values for the sample ACF at lag 2, for each of the 
+two time series models, YMA and YAR, generated in parts 1.  and 2. .  
+
+---------------------------------
+
+(vi) Construct R code that 
+* first sets a random number generator seed of 967; and then
+* generates 1,000 random vectors (of length n = 200) for each of the two
+models in parts 1.  and 2. ; and
+* assigns the values of the sample ACF at lag 2 for each random vector to
+two vectors ACF2MA and ACF2AR (each of length 1,000).
+[8]
+(vii) Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, 
+generated in part (vi). 
+(viii) Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and 
+ACF2AR, generated in part (vi).  
+(ix) Comment on the results in parts (vii) and (viii), including whether they agree 
+with the expected asymptotic behaviour.  
+
+### Question 2
+<h4> Question 2</h4>
+2 Before answering this question, generate the vector, X, in R using the following code:
+set.seed(1027); X = rexp(n=1000, rate=0.01)
+The vector X represents the gross claim sizes of 1,000 claims. The payments are to be 
+split between an insurance company and its reinsurer under an Excess of Loss 
+reinsurance arrangement with a retention level M = 400. 
+1.  Determine the proportion of the claims that are fully covered by the insurer. 
+
+2.  Generate an additional vector, Y, which is of the same length as X, such that Y
+represents the amounts to be paid by the insurer for each component of X. [1] 
+3.  Generate an additional vector, 𝑍, which is of the same length as X, such that 𝑍
+represents the amounts to be paid by the reinsurer for each component of X. 
+[1]
+An actuary assumes that the underlying gross claims distribution follows an 
+exponential distribution of some unknown rate $\lambda$. The actuary needs to estimate $\lambda$ 
+using only the claim amounts recorded in vector Y. 
+4.  Construct R code that calculates the log-likelihood, as a function of the 
+parameter $\lambda$, given the claim amounts data in vector Y.  
+(v) Determine the value of $\lambda$ at which the log-likelihood function reaches its 
+maximum. 
+
+### Question 3 Part (a)
+<h4> Question 3</h4>
+
+3 An analyst is investigating a life insurance portfolio data set that comprises two 
+variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 
+policyholders can be divided into two clusters (labelled A and B) based on the two 
+variables, x1 and x2. 
+Before answering this question, generate the data set, portfolio, in R using the 
+following code: 
+<pre><code>
+set.seed(2019); 
+portfolio = data.frame(x1=rnorm(200,3,1), 
+x2=scale(c(rnorm(70,4,1), rnorm(130,10,1)))) 
+</code></pre>
+In the first stage of the investigation, the analyst decides to assign the first 100 
+policyholders in the data set to cluster A, and the remaining policyholders to cluster B. 
+1.  Construct a new column in the data set, portfolio, called ***group_label_stage1***, 
+containing the policyholder cluster labels, defined above.  
+2.  Determine the coordinates (x1A, x2A) of the centre of cluster A and the 
+coordinates (x1B, x2B) of the centre of cluster B.  
+3.  Construct a new column in the data set, portfolio, called ***dist_A*** containing the 
+Euclidean distances between the policyholders and the centre of cluster A.  
+4.  Construct a new column in the data set, portfolio, called dist_B containing the 
+Euclidean distances between the policyholders and the centre of cluster B.  
+
+### Question 3 Part (a)
+<h4> Question 3</h4>
+
+The analyst decides to update the cluster labels by assigning to each policyholder the 
+label of the cluster whose centre is nearest, according to the distances calculated in 
+parts 3.  and 4. . 
+
+#### Exercises
+
+(v) Construct a new column in the data set, portfolio, called ***group_label_stage2***, 
+containing the updated policyholder cluster labels, defined above.  
+(vi) Generate a 2x2 matrix showing the number of policyholders with each 
+possible combination of values of ***group_label_stage1*** and 
+***group_label_stage2***.  
+(vii) Comment on the matrix generated in part (vi) with reference to how the cluster 
+labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
+(viii) Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the 
+x-axis and x2 on the y-axis), using two distinct colours to identify clusters A
+and B according to the label, ***group_label_stage2***.  
+The analyst decides to stop at this stage and to report ***group_label_stage2*** as the final 
+set of cluster labels. 
+(ix) Comment on this decision.  

@@ -1,0 +1,54 @@
+---
+title: "R Workshop"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: united
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+Introduction
+==================================
+Column {.tabset}
+--------------------
+
+### Introduction 
+
+
+
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 80%">
+            
+|  <b> <strong><u>Contents</u> </strong></b>       |   
+|:------------------:|
+|   |    
+| * <b> <strong><a href="actuarialexams.html">R for actuarial students</a>  -  CS1B and CS2B </strong></b>|        
+      
+|   | 
+</div>
+
+
+### Data Sets
+
+
+
+#### cheddar: Taste of Cheddar cheese
+
+In **{faraway}**: Functions and Datasets for Books by Julian Faraway
+
+#### Description
+In a study of cheddar cheese from the LaTrobe Valley of Victoria, Australia, samples of cheese were analyzed for their chemical composition and were subjected to taste tests. Overall taste scores were obtained by combining the scores from several tasters.
+
+
+* **taste** - a subjective taste score
+
+* **Acetic** - concentration of acetic acid (log scale)
+
+* **H2S** - concentration of hydrogen sulfice (log scale)
+
+* **Lactic** - concentration of lactic acid

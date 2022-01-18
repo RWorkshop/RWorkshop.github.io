@@ -1,0 +1,52 @@
+
+
+
+CS1B Paper D {data-navmenu="R for Actuarial Statistics"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Exercise 1</h4>
+
+The probability that India will win a cricket match against South Africa is 0.7
+
+#### Exercise 1
+Prepare a probability distribution table of number of wins if Indians are going to play 10
+matches against the South Africans. 
+
+#### Exercise 2
+Plot a bar chart of the probabilities of number of wins from 0 to 10. 
+
+#### Exercise 3
+Find the mean and median number of wins for India against South Africa.
+
+----------------
+
+
+### Question 3
+<h4>Exercise 3</h4>
+
+
+Refer to the data file ***Indices_Returns.csv*** and answer the following questions:
+
+
+
+<pre><code>
+# Load the data file
+
+indices<-read.csv("Indices_Returns.csv")
+</code></pre>
+
+
+
+---
+
+#### Exercise 1
+
+
+Compute the pairwise Pearson correlation coefficient between the returns of 10 sectors
+(BM, CD, EN, FM, FI, HC, IN, IT, TE and UT) rounded to three digits after the decimal point. 
+Display the correlation matrix in the output. 

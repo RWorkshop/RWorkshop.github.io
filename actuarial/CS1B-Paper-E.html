@@ -176,36 +176,135 @@ pre code {
 <h4>
 Exercise 1
 </h4>
+<p>An employee at a café has been trained to set the coffee machine so that an espresso coffee portion results in 2.0 grams of coffee being placed into a cup.</p>
+<p>Knowing that variations are expected, the employee pours eight portions and measures the amounts to be <span class="math display">\[\{1.95, 1.80, 2.10, 1.82, 1.75, 2.01, 1.83, 1.90\}\]</span>.</p>
+<div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Calculate an 95% confidence interval for the mean size of espresso coffee portions.</li>
+<li>Comment on whether the mean portion of coffee is equal to 2.0 grams.</li>
+<li>Repeat Exercises 1 and 2 for an 80% confidence interval #### Video</li>
+</ol>
+<p><a href="https://www.youtube.com/watch?v=gBJKMtzKIA4">Click Here for Video</a></p>
 </div>
-<div id="question-1-1" class="section level3">
-<h3>Question 1</h3>
-<p>1 An employee at a café has been trained to set the coffee machine so that an espresso coffee portion results in 2.0 grams of coffee being placed into a cup. Knowing that variations are expected, the employee pours eight portions and measures the amounts to be 1.95, 1.80, 2.10, 1.82, 1.75, 2.01, 1.83 and 1.90. (i) Calculate an 80% confidence interval for the mean size of espresso coffee portions. (ii) Comment on whether the mean portion of coffee is equal to 2.0 grams.</p>
 </div>
 <div id="question-2" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Exercise 2
 </h4>
-<p>2 A researcher has collected the following data on a group of students, regarding whether they passed or failed an exam and whether or not they attended tutorials: Number of students Exam passed Exam failed Attended tutorials 132 27 Did not attend tutorials 120 51 (i) State the hypotheses of this test.</p>
-The data can be entered into R using the following code:
-<pre><code>
-amounts=c(1.95,1.80,2.10,1.82,1.75,2.01,1.83,1.90) 
-</code></pre>
-<hr />
-<p>The data can be entered into R in matrix form using the following code: The reasercher wants to establish whether tutorial attendance is independent of exam success, using a chi-square test. (ii) Calculate the expected frequencies for the data under the null hypotheses in part (i). [3] (iii) Perform the test stating clearly your conclusion.</p>
+<p>A researcher has collected the following data on a group of students, regarding whether they passed or failed an exam and whether or not they attended tutorials:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Number of students</th>
+<th>Exam Passed</th>
+<th>Exam Failed</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Attended tutorials</td>
+<td>132</td>
+<td>27</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Did not attend tutorials</td>
+<td>120</td>
+<td>51</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<p>The researcher wants to establish whether tutorial attendance is independent of exam success, using a chi-square test.</p>
+<ol style="list-style-type: decimal">
+<li><p>State the hypotheses of this test.</p></li>
+<li><p>Calculate the expected frequencies for the data under the null hypotheses in part 1.</p></li>
+<li><p>Perform the test stating clearly your conclusion.</p></li>
+</ol>
+<p>The data can be entered into R using the following code:</p>
 <pre class="r"><code>exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2) </code></pre>
+</div>
+<div id="video" class="section level4">
+<h4>Video</h4>
+<p><a href="https://youtu.be/WbJejnoYnYA">Click Here for Video</a></p>
+</div>
 </div>
 <div id="question-3" class="section level3">
 <h3>Question 3</h3>
-<p>3 A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual weight of the sweet bags is known to follow a Normal distribution. The sweet manufacturer believes that the machine is under-filling the sweet bags. A sample of 10 sweet bags is taken and weighed, as summarised below. Bag 1 2 3 4 5 6 7 8 9 10 Weight (grams) 474.11 512.01 493.64 495.03 518.13 486.03 494.48 501.76 498.83 503.02 The data can be entered into R using the following code:</p>
-<pre class="r"><code>weight=c(474.11,512.01,493.64,495.03,518.13,486.03, 
-494.48,501.76,498.83,503.02)</code></pre>
-<div id="exercises" class="section level4">
+<p>A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual weight of the sweet bags is known to follow a Normal distribution.</p>
+<p>The sweet manufacturer believes that the machine is under-filling the sweet bags. A sample of 10 sweet bags is taken and weighed, as summarised below.</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>Bag</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr class="even">
+<td>Weight (grams)</td>
+<td>474.11</td>
+<td>512.01</td>
+<td>493.64</td>
+<td>495.03</td>
+<td>518.13</td>
+<td>486.03</td>
+<td>494.48</td>
+<td>501.76</td>
+<td>498.83</td>
+<td>503.02</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div id="exercises-2" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li>Perform a suitable t-test to determine whether the sweet bags are being consistently under-filled, stating the hypotheses and the level of significance used in the test.</li>
-<li>Propose an interpretation of your conclusion in exercise 1.</li>
+<li><p>Perform a suitable t-test to determine whether the sweet bags are being consistently under-filled, stating the hypotheses and the level of significance used in the test.</p></li>
+<li><p>Propose an interpretation of your conclusion in part 1.</p></li>
 </ol>
+<p>The data can be entered into R using the following code:</p>
+<pre class="r"><code>weight&lt;-c(474.11,512.01,493.64,495.03,518.13,486.03,
+494.48,501.76,498.83,503.02)</code></pre>
+</div>
+<div id="video-1" class="section level4">
+<h4>Video</h4>
+<p><a href="https://youtu.be/w_HRoKpFImg">Click Here for Video</a></p>
 </div>
 </div>
 <div id="question-4" class="section level3">
@@ -216,7 +315,7 @@ amounts=c(1.95,1.80,2.10,1.82,1.75,2.01,1.83,1.90)
 <li><strong><em>alcohol</em></strong>: alcohol consumption per adult per year (litres/year);</li>
 <li><strong><em>cigarettes</em></strong>: number of cigarettes consumed per adult per year.</li>
 </ul>
-<div id="exercises-1" class="section level4">
+<div id="exercises-3" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: lower-roman">
 <li><ol style="list-style-type: lower-alpha">
@@ -228,7 +327,7 @@ amounts=c(1.95,1.80,2.10,1.82,1.75,2.01,1.83,1.90)
 </ol>
 <ol start="2" style="list-style-type: lower-roman">
 <li>Calculate Pearson’s correlation coefficient between the data on alcohol and cigarette consumption. An analyst suggests using the following R code to modify the data:</li>
-<li>Explain what the above code does and give a justification for its use. [3] For the remainder of the question, use the modified data (alcohol.2, cigarettes.2), as produced by applying the R code above.</li>
+<li>Explain what the above code does and give a justification for its use. For the remainder of the question, use the modified data (alcohol.2, cigarettes.2), as produced by applying the R code above.</li>
 <li><ol style="list-style-type: lower-alpha">
 <li>Construct a scatterplot with alcohol consumption on the x axis.</li>
 </ol></li>
@@ -236,10 +335,14 @@ amounts=c(1.95,1.80,2.10,1.82,1.75,2.01,1.83,1.90)
 <ol start="2" style="list-style-type: lower-alpha">
 <li><p>Calculate Pearson’s correlation coefficient between the new data on alcohol and cigarette consumption.</p></li>
 <li><p>Comment on your answers in parts (ii) and (iv)(b).</p></li>
-<li><p>Perform a hypothesis test for the null hypothesis that Pearson’s population correlation coefficient is equal to zero, against the alternative that it is positive. You should report the p-value of the test and a clear conclusion. [5] A media bulletin has reported that ‘’h‘igher alcohol consumption causes higher cigarette consumption .</p></li>
+<li><p>Perform a hypothesis test for the null hypothesis that Pearson’s population correlation coefficient is equal to zero, against the alternative that it is positive. You should report the p-value of the test and a clear conclusion.</p></li>
 </ol>
-<ol start="6" style="list-style-type: lower-roman">
-<li>Comment on whether this report is justified based on your analysis in parts (iv) and (v). ‘ ’ alcohol.2 = alcohol[-c(6,16)] cigarettes.2 = cigarettes[-c(6,16)] CS1B S2020–5</li>
+<p>A media bulletin has reported that ‘’h‘igher alcohol consumption causes higher cigarette consumption . (vi) Comment on whether this report is justified based on your analysis in parts (iv) and (v).</p>
+<pre><code>
+alcohol.2 = alcohol[-c(6,16)]
+cigarettes.2 = cigarettes[-c(6,16)]
+</code></pre>
+<ol start="7" style="list-style-type: lower-roman">
 <li>Perform a simple linear regression analysis on the new data using a model of the form y = α + βx + ε (cigarette consumption, y, on alcohol consumption, x), where the error terms ε independently follow a N(0, s2) distribution. Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. [5]</li>
 <li>State the proportion of the total variability of the responses explained by the model, based on your output in part (vii). [1]</li>
 <li>Plot a graph of the residuals of the model fitted in part (vii) against the explanatory variable.</li>
@@ -249,7 +352,17 @@ amounts=c(1.95,1.80,2.10,1.82,1.75,2.01,1.83,1.90)
 </div>
 <div id="question-5" class="section level3">
 <h3>Question 5</h3>
-<p>5 A waiting time random variable X follows an Exponential distribution with rate l parameterised as f(x) = le–lx (x &gt; 0, l &gt; 0). The rate l has a Gamma prior distribution with parameters a and s. A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as Z 3x + (1– Z)3 s α – 1, where Z = n α + n – 1 with n being the number of past waiting times observed. Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1. (i) Determine an estimate of the posterior mean of 1/l assuming n = 10 by implementing M = 3,000 Monte Carlo repetitions. [14] (ii) Determine an estimate of the posterior mean of 1/l and the value of x when n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. [15] (iii) Plot the histograms of the samples of the posterior mean of 1/l and of x obtained in part (ii). (iv) Compare, by visual inspection of the graphs in part (iii), the distributions of the posterior mean of 1/l and the distribution of x when n = 1,000. (v) Comment on the behaviour of the credibility model as n increases, relating your answer to your findings in part (iv). [Total 39] END OF PAPER</p>
+<p>5 A waiting time random variable X follows an Exponential distribution with rate l parameterised as f(x) = le–lx (x &gt; 0, l &gt; 0). The rate l has a Gamma prior distribution with parameters a and s. A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as Z 3x + (1– Z)3 s α – 1, where Z = n α + n – 1 with n being the number of past waiting times observed. Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.</p>
+<div id="exercises-4" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: lower-roman">
+<li>Determine an estimate of the posterior mean of 1/l assuming n = 10 by implementing M = 3,000 Monte Carlo repetitions. [14]</li>
+<li>Determine an estimate of the posterior mean of 1/l and the value of x when n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. [15]</li>
+<li>Plot the histograms of the samples of the posterior mean of 1/l and of x obtained in part (ii).</li>
+<li>Compare, by visual inspection of the graphs in part (iii), the distributions of the posterior mean of 1/l and the distribution of x when n = 1,000.</li>
+<li>Comment on the behaviour of the credibility model as n increases, relating your answer to your findings in part (iv). [Total 39] END OF PAPER</li>
+</ol>
+</div>
 </div>
 </div>
 </div>

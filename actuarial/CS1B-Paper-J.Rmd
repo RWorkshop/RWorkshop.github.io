@@ -1,0 +1,35 @@
+
+CS1B Paper I {data-navmenu="R for Actuarial Statistics"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+
+### Question 1
+<h4> Question 1</h4>
+
+
+### Question 2
+
+<h4> Question 2</h4>
+
+
+A student is performing a study to understand the correlation of temperature among 
+different days of the week. 
+Temperature on weekdays is recorded for 15 weeks in the file ***Temperature_data.csv***.
+
+
+#### Exercises
+Generate the following correlation matrices
+
+1. Pearson’s correlation matrix 
+
+2. Kendall’s rank correlation matrix
+
+3. Spearman’s rank correlation matrix
+
+Comment on the outcomes of the results in parts 1 to 3.
+
+
+<a href="https://youtu.be/i96vHJkuH5M"> Clcik here for Video</a>

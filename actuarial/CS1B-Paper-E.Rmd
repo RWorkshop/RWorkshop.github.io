@@ -1,6 +1,3 @@
-
-
-
 CS1B Paper E {data-navmenu="R for Actuarial Statistics"}
 ==============================================================
 
@@ -145,10 +142,10 @@ A media bulletin has reported that ‘'h‘igher alcohol consumption causes high
 (vi) Comment on whether this report is justified based on your analysis in parts (iv) 
 and (v). 
 
-```{r}
+<pre><code>
 alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
-```
+</code></pre>
 
 (vii) Perform a simple linear regression analysis on the new data using a 
 model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
@@ -175,6 +172,8 @@ n
 α + n – 1
 with n being the number of past waiting times observed.
 Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
+
+#### Exercises
 (i) Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
 implementing M = 3,000 Monte Carlo repetitions. [14]
 (ii) Determine an estimate of the posterior mean of 1/l and the value of x when 

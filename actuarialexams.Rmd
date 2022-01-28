@@ -59,6 +59,10 @@ Risk Modelling and Survival Analysis (CS2) builds on CS1.  It develops knowledge
 ```{r child="actuarial/CS1B-Paper-E.Rmd"}
 ```
 
+
+```{r child="actuarial/CS1B-Paper-F.Rmd"}
+```
+
 ```{r child="actuarial/CS1B-Paper-G.Rmd"}
 ```
 
@@ -71,12 +75,22 @@ Risk Modelling and Survival Analysis (CS2) builds on CS1.  It develops knowledge
 ```
 
 
+```{r child="actuarial/CS1B-Paper-J.Rmd"}
+```
+
 
 ```{r child="actuarial/CS2B-Paper-A.Rmd"}
 ```
 
 
 ```{r child="actuarial/CS2B-Paper-B.Rmd"}
+```
+
+```{r child="actuarial/CS2B-Paper-C.Rmd"}
+```
+
+
+```{r child="actuarial/CS2B-Paper-D.Rmd"}
 ```
 
 ```{r child="actuarial/CS2B-Paper-E.Rmd"}

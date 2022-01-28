@@ -1,5 +1,5 @@
 
-CS1B Paper I {data-navmenu="R for Actuarial Statistics"}
+CS1B Paper J {data-navmenu="R for Actuarial Statistics"}
 ==============================================================
 
 Column {.tabset}
@@ -8,6 +8,14 @@ Column {.tabset}
 
 ### Question 1
 <h4> Question 1</h4>
+
+
+Assume X is a random variable which follows Poi  where X = 1,2,3,4,5,6,7,8,9,10 i.e. 
+values from 1 to 10
+
+1.  Calculate the probability for each of the values of X. 
+2.  Calculate the cumulative probability for each of the values of X. 
+3.  Plot a graph of the distribution function of X. 
 
 
 ### Question 2
@@ -33,3 +41,135 @@ Comment on the outcomes of the results in parts 1 to 3.
 
 
 <a href="https://youtu.be/i96vHJkuH5M"> Clcik here for Video</a>
+
+
+
+Q. 3) A child tosses n coins and the outcome of heads and tails are recorded in n samples as
+X1, X2, …… Xn, where, Xi’s are independent Bernoulli variables with p = 0.5. The total 
+outcome of n variables is Y = X1 +……. + Xn
+1.  Specify the distribution of Y 
+2.   Simulate a sample of 10 values for Y 
+3.    Assess the value of Y for the sample created in 2.   
+4.  what is the probability of Y = 4 
+
+Q. 4) For a sample data X = 0.5820, 0.04981, 0.1552, 0.1555, 0.9036, 0.8501, 0.9288, 0.4408, 
+0.9688, 0.6300
+1.  Find the mean value of X 
+2.   Calculate the standard deviation of X 
+3.    Find the median of X 
+
+### Question 5
+
+Q. 5) (Students can copy the R code as provided file ‘Reference_RCode’)
+
+Claim payment data (Year 1 to Year 4) in INR Crores
+Year 1 Year 2 Year 3 Year 4
+Insurer A 112 130 178 150
+Insurer B 38 50 80 68
+Insurer C 89 127 210 150
+Insurer D 70 75 77 80
+1.  Analyse the data using EBCT Model 1 and calculate the expected total claim 
+payment to be made by each insurer (A, B, C and D) in the Year 5 by replacing 
+question marks‘?’ with appropriate function in the R Code shared in file 
+“Reference_RCode”. 
+2.   You are now required to calculate the expected total claim payment to be made by 
+each insurer (A, B, C, D and E) in year 5, when additional data of insurer E is made 
+available to you (By using EBCT Model 1). 
+Additional claim payment data for Insurer E in INR Crores
+Year 1 Year 2 Year 3 Year 4
+Insurer E 73 87 113 112
+a) Provide the new R code so that ‘data’ includes insurer E and calculate the expected 
+claim payment to be paid by each insurer in year 5. 
+b) Comment on the values of Z and ‘s/v’ ratio in part 2.   compared to part (1. . 
+c) Comment on the change in expected claim payment for insurers A, B C and D in 
+year 5 in part 2.   compared to part (1. . 
+3.    Your manager is not happy with results based on EBCT 1 model. He has now 
+provided you additional information about volume measure for these 5 insurers over 
+Year 1 to Year 5. 
+Volume measure (Year 1 to Year 5)
+Year 1 Year 2 Year 3 Year 4 Year 5
+Insurer A 165 186 198 200 210 
+Insurer B 51 63 78 83 91 
+Insurer C 119 159 219 188 192 
+Insurer D 108 112 122 133 144 
+Insurer E 103 116 126 151 181 
+Analyse the data using EBCT Model 2 to calculate the expected total claim payment to 
+be made by each insurer (A, B, C, D and E) in Year 5.
+a) Complete the reference R Code (by replacing question marks‘?’ with appropriate 
+function for data and zi, where data is as used in part 2.   to arrive at the ‘claims5i’ 
+which represents the estimated claim payment for each insurer in Year 5. 
+
+b) Comment on change in expected claim payment for insurer A, B, C, D and E in year 
+5 in part (3.    compared to part 2.  . 
+
+### Exercise 6
+<h4> Qurstion 6</h4>
+You are investigating the level of premium charged by two companies for certain group. 
+Random samples of 10 policies from Company1 and Company2 are compared. Below R 
+code provides the premiums charged by Company1 and Company2 in current year for 
+10 sample policies.
+```{r}
+Company1<-c(1350,1790,1500,1150,2100,2350,1550,1800,1650,1450)
+Company2<-c(1500,1200,1300,1700,1800,2400,1450,1950,1850,2100)
+```
+Students are required to provide hypothesis, R code, Output and conclusion
+
+1.  Assuming that the premiums are normally distributed, carry out a statistical test to 
+check equal variance assumption so that it is appropriate to apply a two-sample t 
+test to these data. 
+ Use R code – var.test 
+2.   Test whether the level of premiums charged by Company1 and Company2 are 
+same.
+ Use R code – t.test (use var.equal =TRUE) 
+3.    The average premium charged by Company2 in the previous year was INR 1500. 
+Test whether Company2 appears to have increased its premiums since the previous 
+year.
+ Use R code -t.test (#one sided) 
+4.  It was found that out of sample of 200 policies of Company1 and 100 policies of 
+Company2 sold at the start of the year, 60 policies of Company1 and 50 policies of 
+Company2 resulted in claim. Carry out a hypothesis test for the difference in 
+proportions.
+ Use R code – prop.test (use correct=FALSE) 
+5.  Company2 wants to study the claim frequency between group1 policies having 
+premium less than INR 1500 and remaining policyholders. There were 65 claims 
+out of 250 policies of group1 and 45 claims out of 110 other policies in a year. 
+Assuming number of claims having Poisson distribution, test at 2.5% level whether 
+the ratio of claim frequency between group1 and other policyholders is less than 1.
+ Use R code – poisson.test (#one sided) 
+
+### Question 7
+Q.7) You are working as an Actuarial analyst in a medium size health insurance company in 
+India. Your manager has asked you to analyse the claim amounts paid data of the past 
+six months.
+You have received the data set “HealthClaims.csv” from the claims department of your 
+company with the following explanations of the data fields
+
+* GEOGRAPHY: The geographical region of residence of the Insured
+* PROFESSION: Profession of the Insured
+* GENDER: Gender of the Insured
+* AGE: Age of the Insured
+* CLAIM_AMOUNT: Amount of health claim paid by the Insurer
+
+Refer to the data set “HealthClaims.csv”.
+
+#### Exercise 
+
+1.  Fit a linear regression model to the data with “CLAIM_AMOUNT” as the response 
+and other variables as explanatory variables (consider “Age” as numerical variable 
+and others as categorical variables). 
+Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared & p-value of the model. Identify the significant variables in the prediction 
+of claim “CLAIM_AMOUNT”. 
+2.   Determine 95% confidence intervals for the parameters of the regression model. 
+3.    Plot “QQ plot of the residuals” and comment on applicability of linear regression 
+model. 
+4.  Your manager has also suggested you to include the interaction effects between 
+Geography and Profession, Profession and Gender, Gender and Geography as 
+additional explanatory variables to the set of independent variables taken in (1.  for 
+the purpose of improvement of the model. Comment on the suitability of inclusion 
+of interaction effects for the purpose of improvement of the model. (10)
+5.  One of your friend working with Actuarial consulting firm told you that natural 
+logarithm{loge(CLAIM_AMOUNT)} is better fit to normal distribution than 
+“CLAIM_AMOUNT”. You wanted to validate the same by fitting a linear 
+regression model to the data with loge(CLAIM_AMOUNT) as the response and 
+other variables as explanatory variables. Identify and comment on the key 
+differences between the models in (1.  and (4. . 

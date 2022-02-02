@@ -11,7 +11,9 @@ Column {.tabset}
 <h4><Question 1</h4>
 Before answering this question, the data file must be generated in R using the 
 following code: 
+```{r}
 set.seed(121118); y=arima.sim(list(order=c(1,1,0),ar=0.7), n=300)
+```
 
 #### Exercises 
 1.  (a) Plot the time series giving appropriate labels for each axis and paste 
@@ -20,28 +22,24 @@ the chart into your answer.
 
 2.   (a) Determine the best least squares linear fit, adding it to your chart in part 1  and paste the new chart into your answer. 
 (b) Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.
-
-3.    (a) Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving 
-appropriate labels for each axis and paste the charts into your answer.
-
-(b) Comment, by visually inspecting these plots, on the possible modelling 
-strategy which could be adopted. [3]
 <p>
-4.  (a) Perform an appropriate transformation to the data such that a stationary 
-model is possible, pasting any relevant charts into your answer. 
-(b) Comment on your answer to part (4. (a). [3]
+3.  Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving 
+appropriate labels for each axis. Comment, by visually inspecting these plots, on the possible modelling 
+strategy which could be adopted. 
 <p>
-5.  (a) Propose an appropriate model for the transformed data. 
-(b) Justify the choice of model in part (5. (a) by performing an appropriate 
+4.  Perform an appropriate transformation to the data such that a stationary 
+model is possible, pasting any relevant charts into your answer. Comment on your answer.
+<p>
+5.  Propose an appropriate model for the transformed data. Justify the choice of model by performing an appropriate 
 diagnostics procedure and comparisons with alternative models. 
 
 ### Question 2
 <h4><Question 2</h4>
-2 An airport has recently introduced a driverless pod system to transport passengers 
-between the terminal and the car park. Pods operate every two minutes from 
-the terminal exit, and each pod can take up to two passengers and their luggage. 
+An airport has recently introduced a driverless pod system to transport passengers 
+between the terminal and the car park. Pods operate every two minutes from the terminal exit, and each pod can take up to two passengers and their luggage. 
 Passengers arrive at the terminal exit seeking to travel to the car park according to a 
 Poisson process with a rate of 1 per minute.
+<p>
 If four or more passengers are waiting at the exit when a pod arrives, taxis are 
 immediately summoned to take all the remaining passengers to the car park.
 
@@ -49,16 +47,13 @@ immediately summoned to take all the remaining passengers to the car park.
 1.  Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear 
 at the exit to the terminal in any given two-minute period. 
 
-2.   Determine a transition matrix for the number of passengers waiting at the exit 
-when a pod arrives. 
+2.   Determine a transition matrix for the number of passengers waiting at the exit when a pod arrives. 
 
-3.    Calculate the average number of times per hour that the company operating the 
-pods will need to summon a taxi to take passengers to the car park. 
-A manager at the airport has suggested that pods could be operated every 
-1.75 minutes without compromising safety, and that this would greatly reduce the 
-need to use taxis.
+3.    Calculate the average number of times per hour that the company operating the pods will need to summon a taxi to take passengers to the car park. 
 
-4.  Evaluate the manager’s suggestion, showing any working where appropriate.
+
+4.  A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the 
+need to use taxis. Evaluate the manager’s suggestion, showing any working where appropriate.
 
 5.  Comment on your results in part 4. . 
 
@@ -68,27 +63,22 @@ In an insurance company’s portfolio, individual claim sizes, in £, follow an
 exponential distribution with parameter 0.0001.
 
 #### Exercises
-1.  In R console run the following code: set.seed(123)and then use R to 
-simulate 10,000 claims and plot a histogram of the simulated data. Paste your 
-R code and chart into your answer. 
-2.   (a) Calculate the mean and the variance of the simulated claims in part (1. .
-(b) Compare your answers to part 2.  (a) with the theoretical values 
+1.  In R console run the following code: ``set.seed(123)`` and then use R to simulate 10,000 claims and plot a histogram of the simulated data. 
+
+2.  Calculate the mean and the variance of the simulated claims in exercise 1. Compare your answers with the theoretical values 
 expected from the exponential distribution with parameter 0.0001.
 
-The insurer decides to take out an individual excess of loss reinsurance arrangement 
-with a retention level of £20,000.
-3.    Calculate the mean and the variance of the claims paid, under this 
-arrangement, by
-(a) the insurer
-(b) the reinsurer.
+3.  The insurer decides to take out an individual excess of loss reinsurance arrangement 
+with a retention level of £20,000. Calculate the mean and the variance of the claims paid, under this arrangement, by
+a. the insurer
+b. the reinsurer.
 
-The insurer wishes to determine an appropriate retention limit and has asked an 
-analyst to investigate the effect of different retention limits on the mean and variance 
-of claims.
 <p>
-4.  Calculate the mean and variance of the claims paid by:
-(a) the insurer
-(b) the reinsurer
+4. The insurer wishes to determine an appropriate retention limit and has asked an 
+analyst to investigate the effect of different retention limits on the mean and variance 
+of claims. Calculate the mean and variance of the claims paid by:
+a. the insurer
+b. the reinsurer.
 under each of the following six retention levels:
 £5,000, £10,000, £20,000, £30,000, £40,000 and £50,000.  
 5.  Plot your results from part 4.  on four separate charts to show how the mean 

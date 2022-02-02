@@ -18,26 +18,22 @@ y <- arima.sim(list(order=c(1,1,0),ar=0.7), n=300)
 
 
 #### Exercises
-1. (a) Plot the time series giving appropriate labels for each axis and paste 
-the chart into your answer. 
-(b) Comment on the general features of your chart. 
-2. (a) Determine the best least squares linear fit, adding it to your chart in 
-part 1. and paste the new chart into your answer. 
-(b) Explain whether this least squares linear trend can be removed such 
+1. Plot the time series giving appropriate labels for each axis and paste 
+the chart into your answer. Comment on the general features of your chart. 
+2. Determine the best least squares linear fit, adding it to your chart in 
+part 1. Explain whether this least squares linear trend can be removed such 
 that a zero mean stationary distribution is appropriate for the residuals.
 
-3. (a) Plot the sample Autocorrelation function (ACF) and sample Partial 
+3. Plot the sample Autocorrelation function (ACF) and sample Partial 
 Autocorrelation function (PACF) of the original data, giving 
 appropriate labels for each axis and paste the charts into your answer.
-
-(b) Comment, by visually inspecting these plots, on the possible modelling 
+<p>
+Comment, by visually inspecting these plots, on the possible modelling 
 strategy which could be adopted. 
 <p>
-4. (a) Perform an appropriate transformation to the data such that a stationary 
-model is possible, pasting any relevant charts into your answer. 
-(b) Comment on your answer to part (iv)(a). [3]
-5.  (a) Propose an appropriate model for the transformed data. 
-(b) Justify the choice of model in part 5. (a) by performing an appropriate 
+4. Perform an appropriate transformation to the data such that a stationary 
+model is possible, pasting any relevant charts into your answer. Comment on your answer. 
+5. Propose an appropriate model for the transformed data. Justify the choice of model by performing an appropriate 
 diagnostics procedure and comparisons with alternative models. 
 
 ### Question 2
@@ -68,11 +64,12 @@ pods will need to summon a taxi to take passengers to the car park.
 A manager at the airport has suggested that pods could be operated every 
 1.75 minutes without compromising safety, and that this would greatly reduce the 
 need to use taxis.
+<p>
 4. Evaluate the manager’s suggestion, showing any working where appropriate.
 
 5.  Comment on your results in part 4. 
 
-### Question 3
+### Question 3 Part (a)
 
 In an insurance company’s portfolio, individual claim sizes, in £, follow an 
 exponential distribution with parameter 0.0001.
@@ -85,26 +82,35 @@ R code and chart into your answer.
 2. (a) Calculate the mean and the variance of the simulated claims in part 1..
 (b) Compare your answers to part 2.(a) with the theoretical values 
 expected from the exponential distribution with parameter 0.0001.
+<p>
 
 The insurer decides to take out an individual excess of loss reinsurance arrangement 
 with a retention level of £20,000.
 3. Calculate the mean and the variance of the claims paid, under this 
 arrangement, by
-(a) the insurer
-(b) the reinsurer.
+a. the insurer
+b. the reinsurer.
 
 ### Question 3 Part (b)
 
 The insurer wishes to determine an appropriate retention limit and has asked an 
 analyst to investigate the effect of different retention limits on the mean and variance 
 of claims.
+
 #### Exercises
-(iv) Calculate the mean and variance of the claims paid by:
-(a) the insurer
-(b) the reinsurer
-under each of the following six retention levels:
-£5,000, £10,000, £20,000, £30,000, £40,000 and £50,000.  
-5.  Plot your results from part (iv) on four separate charts to show how the mean 
+
+4. Calculate the mean and variance of the claims paid by:
+ a. the insurer
+ b. the reinsurer under each of the following six retention levels:
+* £5,000, 
+* £10,000, 
+* £20,000, 
+* £30,000, 
+* £40,000 and 
+* £50,000.  
+
+5.  Plot your results from exercise 4 on four separate charts to show how the mean 
 and variance of the claims paid by the insurer and reinsurer vary with the 
 retention level. 
-6. Comment, with reference to the total variance, on your results in part 5. . 
+
+6. Comment, with reference to the total variance, on your results in exercise 5. . 

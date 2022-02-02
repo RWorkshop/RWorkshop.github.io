@@ -28,16 +28,17 @@ the two time series models, YMA and YAR, generated in parts 1.  and 2. .
 whether they are consistent with the theoretical behaviour of the 
 corresponding functions for the true models.  
 
-The acf() function in R can also provide a vector output of the sample ACF values, 
+5. The ``acf()`` function in R can also provide a vector output of the sample ACF values, 
 with component i giving the sample ACF at lag i – 1, provided that the plot argument 
-of the function is set to ‘FALSE’. 
-5. Determine the numerical values for the sample ACF at lag 2, for each of the 
+of the function is set to ‘``FALSE``’. 
+Determine the numerical values for the sample ACF at lag 2, for each of the 
 two time series models, YMA and YAR, generated in parts 1.  and 2. .  
 
 ### Question 1 Part (b)
 <h4> Question 1 </h4>
 
 6. Construct R code that 
+
 * first sets a random number generator seed of 967; and then
 * generates 1,000 random vectors (of length $n = 200$) for each of the two
 models in parts 1.  and 2. ; and
@@ -46,8 +47,10 @@ two vectors ACF2MA and ACF2AR (each of length 1,000).
 
 7. Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, 
 generated in part 6. 
+
 8. Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and 
 ACF2AR, generated in part 6.  
+
 9. Comment on the results in parts (vii) and (viii), including whether they agree 
 with the expected asymptotic behaviour.  
 
@@ -66,46 +69,45 @@ reinsurance arrangement with a retention level M = 400.
 
 2.  Generate an additional vector, Y, which is of the same length as X, such that Y
 represents the amounts to be paid by the insurer for each component of X. 
+
 3.  Generate an additional vector, 𝑍, which is of the same length as X, such that 𝑍
 represents the amounts to be paid by the reinsurer for each component of X. 
 
 An actuary assumes that the underlying gross claims distribution follows an 
 exponential distribution of some unknown rate $\lambda$. The actuary needs to estimate $\lambda$ 
 using only the claim amounts recorded in vector Y. 
-4.  Construct R code that calculates the log-likelihood, as a function of the 
-parameter $\lambda$, given the claim amounts data in vector Y.  
+4.  Construct R code that calculates the log-likelihood, as a function of the parameter $\lambda$, given the claim amounts data in vector Y.  
 5. Determine the value of $\lambda$ at which the log-likelihood function reaches its 
 maximum. 
 
 ### Question 3 Part (a)
 <h4> Question 3</h4>
 
-3 An analyst is investigating a life insurance portfolio data set that comprises two 
-variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 
-policyholders can be divided into two clusters (labelled A and B) based on the two 
-variables, x1 and x2. 
-Before answering this question, generate the data set, portfolio, in R using the 
-following code: 
-<pre><code>
+3 An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
+variables, $x_1$ and $x_2$. 
+
+Before answering this question, generate the data set, portfolio, in R using the following code: 
+```{r}
 set.seed(2019); 
 portfolio = data.frame(x1=rnorm(200,3,1), 
 x2=scale(c(rnorm(70,4,1), rnorm(130,10,1)))) 
-</code></pre>
+```
 
 In the first stage of the investigation, the analyst decides to assign the first 100 
 policyholders in the data set to cluster A, and the remaining policyholders to cluster B. 
 
+#### Exercises 
 1.  Construct a new column in the data set, portfolio, called ***group_label_stage1***, 
 containing the policyholder cluster labels, defined above.  
 2.  Determine the coordinates (x1A, x2A) of the centre of cluster A and the coordinates (x1B, x2B) of the centre of cluster B.  
 3.  Construct a new column in the data set, portfolio, called ***dist_A*** containing the Euclidean distances between the policyholders and the centre of cluster A.  
 4.  Construct a new column in the data set, portfolio, called dist_B containing the Euclidean distances between the policyholders and the centre of cluster B.  
 
-### Question 3 Part (a)
+### Question 3 Part (b)
 <h4> Question 3</h4>
 
 The analyst decides to update the cluster labels by assigning to each policyholder the label of the cluster whose centre is nearest, according to the distances calculated in 
-parts 3.  and 4. . 
+exercises 3 and 4 . 
 
 #### Exercises
 
@@ -116,5 +118,4 @@ containing the updated policyholder cluster labels, defined above.
 7. Comment on the matrix generated in part (vi) with reference to how the cluster labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
 8. Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the x-axis and x2 on the y-axis), using two distinct colours to identify clusters A and B according to the label, ***group_label_stage2***.  
 The analyst decides to stop at this stage and to report ***group_label_stage2*** as the final 
-set of cluster labels. 
-9. Comment on this decision.  
+set of cluster labels. Comment on this decision.  

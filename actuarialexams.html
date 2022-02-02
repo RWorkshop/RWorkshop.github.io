@@ -3693,9 +3693,9 @@ Question 1
 <li><p>In the South zone, taxis have a 40% chance of moving to North, 40% chance of staying in South and 20% chance of moving to West.</p></li>
 <li><p>Of all the drivers in the West zone, 50% will move to North and 30% to South with the remaining 20% staying in West.</p></li>
 </ul>
-<p>The movement of taxis in Dublin will be modelled in R using a Markov Chain.</p>
 <div id="driver-movement" class="section level4">
 <h4>Driver Movement</h4>
+<p>The movement of taxis in Dublin will be modelled in R using a Markov Chain.</p>
 <p>A 3 - dimensional discrete Markov Chain defined by the following states: North, South, West</p>
 <p>The transition matrix (by rows) is defined as follows:</p>
 <table>
@@ -3730,10 +3730,13 @@ Question 1
 </table>
 </div>
 </div>
-<div id="question-2-part-a" class="section level3">
-<h3>Question 2 (Part (a))</h3>
+<div id="question-1-exercises" class="section level3">
+<h3>Question 1 Exercises</h3>
+</div>
+<div id="question-2-7" class="section level3">
+<h3>Question 2</h3>
 <h4>
-Question 2 (Part (a))
+Question 2
 </h4>
 <ul>
 <li><p>An exponential distribution has a parameter of <span class="math inline">\(\lambda = 0.4\)</span>.</p></li>
@@ -3748,21 +3751,21 @@ Question 2 (Part (a))
 </div>
 <div id="exercise-2-1" class="section level4">
 <h4>Exercise 2</h4>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Plot a histogram of Exp_Vector showing the frequencies and paste the plot into your answer.</li>
-</ol>
+<p>Plot a histogram of Exp_Vector showing the frequencies and paste the plot into your answer.</p>
 </div>
 <div id="exercise-3-1" class="section level4">
 <h4>Exercise 3</h4>
-<ol start="3" style="list-style-type: lower-alpha">
-<li>Plot the probability density function for this distribution as: 1 a scatter plot 2 a line graph. Paste your plots into your answer</li>
+<p>Plot the probability density function for this distribution as:</p>
+<ol style="list-style-type: lower-alpha">
+<li>a scatter plot</li>
+<li>a line graph. Paste your plots into your answer</li>
 </ol>
 </div>
 </div>
-<div id="question-3-5" class="section level3">
-<h3>Question 3</h3>
+<div id="question-3---part-a" class="section level3">
+<h3>Question 3 - Part (a)</h3>
 <h4>
-Question 3
+Question 3 - Part (a)
 </h4>
 <p>You have been asked to analyse the percentage changes in quarterly personal consumption expenditure and personal disposable income in the US from 1970–2010. This information is contained in a time series called “consumption” in R’s fpp library. The data can be loaded into R using the command:</p>
 <pre><code>
@@ -3773,15 +3776,13 @@ consumption &lt;- usconsumption[,1]
 </code></pre>
 <div id="exercise-1-3" class="section level4">
 <h4>Exercise 1</h4>
-<ol style="list-style-type: lower-roman">
-<li>Plot this time series giving appropriate labels for each axis and paste the R code and the chart into your answer.</li>
-</ol>
+<p>Plot this time series giving appropriate labels for each axis and paste the R code and the chart into your answer.</p>
 </div>
 <div id="exercise-2-2" class="section level4">
 <h4>Exercise 2</h4>
 Plot the Autocorrelation function (ACF) and Partial Autocorrelation function (PACF), giving appropriate labels for each axis and paste the R code and the charts into your answer.
 <p>
-<p>Comment on your plots in part (ii)(a), making reference to the stationarity.</p>
+<p>Comment on your plots making reference to the stationarity.</p>
 </div>
 <div id="exercise-3-2" class="section level4">
 <h4>Exercise 3</h4>
@@ -3790,21 +3791,22 @@ Plot the Autocorrelation function (ACF) and Partial Autocorrelation function (PA
 </div>
 <div id="question-3-part-b" class="section level3">
 <h3>Question 3 (Part (b))</h3>
-<p>The dataset usconsumption also includes the quarterly personal disposable income from 1970 to 2010. The data can be loaded into R using the command:</p>
+The dataset usconsumption also includes the quarterly personal disposable income from 1970 to 2010.
+<p>
+<p>The data can be loaded into R using the command:</p>
 <pre><code>
 income &lt;- usconsumption[,2]
 </code></pre>
 <div id="exercise-4" class="section level4">
 <h4>Exercise 4</h4>
-<ol style="list-style-type: lower-alpha">
-<li><p>Compare the performance of the ARIMA model you have chosen in part (iii) with a linear regression model of consumption on income, by computing the root mean square error (RMSE) for the fitted values ofeach model. Paste your coding and R output into your answer.</p></li>
-<li><p>Explain why the RMSE is not the ideal measure to compare these models, including a recommendation of a more appropriate measure.</p></li>
-</ol>
-An analyst has suggested that neither model in part (iv) is a good fit to the data and has asked you to propose an alternative model.
+Compare the performance of the ARIMA model you have chosen in exercise 3 with a linear regression model of consumption on income, by computing the root mean square error (RMSE) for the fitted values ofeach model. Paste your coding and R output into your answer.
+<p>
+<p>Explain why the RMSE is not the ideal measure to compare these models, including a recommendation of a more appropriate measure.</p>
 <p>
 </div>
 <div id="exercise-5" class="section level4">
 <h4>Exercise 5</h4>
+<p>An analyst has suggested that neither model in exercise 4 is a good fit to the data and has asked you to propose an alternative model.</p>
 <ul>
 <li>Suggest a suitable alternative model to fit to the data.</li>
 <li>Fit the model you have suggested to the data, stating the equation used.</li>
@@ -3832,49 +3834,18 @@ Before answering this question, the data file must be generated in R using the f
 <div id="exercises-16" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Plot the time series giving appropriate labels for each axis and paste the chart into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Comment on the general features of your chart.</li>
-</ol>
-<ol start="2" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Determine the best least squares linear fit, adding it to your chart in part 1. and paste the new chart into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.</li>
-</ol>
-<ol start="3" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving appropriate labels for each axis and paste the charts into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Comment, by visually inspecting these plots, on the possible modelling strategy which could be adopted.
+<li><p>Plot the time series giving appropriate labels for each axis and paste the chart into your answer. Comment on the general features of your chart.</p></li>
+<li><p>Determine the best least squares linear fit, adding it to your chart in part 1. Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.</p></li>
+<li><p>Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving appropriate labels for each axis and paste the charts into your answer.</p>
+<p>
+<p>Comment, by visually inspecting these plots, on the possible modelling strategy which could be adopted.</p>
 <p></li>
-</ol>
-<ol start="4" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Perform an appropriate transformation to the data such that a stationary model is possible, pasting any relevant charts into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Comment on your answer to part (iv)(a). [3]</li>
-</ol>
-<ol start="5" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Propose an appropriate model for the transformed data.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Justify the choice of model in part 5. (a) by performing an appropriate diagnostics procedure and comparisons with alternative models.</li>
+<li><p>Perform an appropriate transformation to the data such that a stationary model is possible, pasting any relevant charts into your answer. Comment on your answer.</p></li>
+<li><p>Propose an appropriate model for the transformed data. Justify the choice of model by performing an appropriate diagnostics procedure and comparisons with alternative models.</p></li>
 </ol>
 </div>
 </div>
-<div id="question-2-7" class="section level3">
+<div id="question-2-8" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -3890,14 +3861,15 @@ Question 2
 <li><p>Calculate the average number of times per hour that the company operating the pods will need to summon a taxi to take passengers to the car park.</p>
 <p>
 <hr />
-<p>A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the need to use taxis.</p></li>
+<p>A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the need to use taxis.</p>
+<p></li>
 <li><p>Evaluate the manager’s suggestion, showing any working where appropriate.</p></li>
 <li><p>Comment on your results in part 4.</p></li>
 </ol>
 </div>
 </div>
-<div id="question-3-6" class="section level3">
-<h3>Question 3</h3>
+<div id="question-3-part-a-1" class="section level3">
+<h3>Question 3 Part (a)</h3>
 <p>In an insurance company’s portfolio, individual claim sizes, in £, follow an exponential distribution with parameter 0.0001.</p>
 <div id="exercises-18" class="section level4">
 <h4>Exercises</h4>
@@ -3908,15 +3880,37 @@ Question 2
 </ol></li>
 </ol>
 <ol start="2" style="list-style-type: lower-alpha">
-<li>Compare your answers to part 2.(a) with the theoretical values expected from the exponential distribution with parameter 0.0001.</li>
+<li>Compare your answers to part 2.(a) with the theoretical values expected from the exponential distribution with parameter 0.0001.
+<p></li>
 </ol>
-<p>The insurer decides to take out an individual excess of loss reinsurance arrangement with a retention level of £20,000. 3. Calculate the mean and the variance of the claims paid, under this arrangement, by (a) the insurer (b) the reinsurer.</p>
+<p>The insurer decides to take out an individual excess of loss reinsurance arrangement with a retention level of £20,000. 3. Calculate the mean and the variance of the claims paid, under this arrangement, by a. the insurer b. the reinsurer.</p>
 </div>
 </div>
 <div id="question-3-part-b-1" class="section level3">
 <h3>Question 3 Part (b)</h3>
-<p>The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance of claims. #### Exercises (iv) Calculate the mean and variance of the claims paid by: (a) the insurer (b) the reinsurer under each of the following six retention levels: £5,000, £10,000, £20,000, £30,000, £40,000 and £50,000.<br />
-5. Plot your results from part (iv) on four separate charts to show how the mean and variance of the claims paid by the insurer and reinsurer vary with the retention level. 6. Comment, with reference to the total variance, on your results in part 5. .</p>
+<p>The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance of claims.</p>
+<div id="exercises-19" class="section level4">
+<h4>Exercises</h4>
+<ol start="4" style="list-style-type: decimal">
+<li>Calculate the mean and variance of the claims paid by:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>the insurer</li>
+<li>the reinsurer under each of the following six retention levels:</li>
+</ol>
+<ul>
+<li>£5,000,</li>
+<li>£10,000,</li>
+<li>£20,000,</li>
+<li>£30,000,</li>
+<li>£40,000 and</li>
+<li>£50,000.</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Plot your results from exercise 4 on four separate charts to show how the mean and variance of the claims paid by the insurer and reinsurer vary with the retention level.</p></li>
+<li><p>Comment, with reference to the total variance, on your results in exercise 5. .</p></li>
+</ol>
+</div>
 </div>
 </div>
 </div>
@@ -3929,8 +3923,12 @@ Question 2
 <h4>
 &lt;Question 1
 </h4>
-<p>Before answering this question, the data file must be generated in R using the following code: set.seed(121118); y=arima.sim(list(order=c(1,1,0),ar=0.7), n=300)</p>
-<div id="exercises-19" class="section level4">
+Before answering this question, the data file must be generated in R using the following code:
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">121118</span>); y<span class="ot">=</span><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="at">ar=</span><span class="fl">0.7</span>), <span class="at">n=</span><span class="dv">300</span>)</span></code></pre></div>
+<div id="exercises-20" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
@@ -3946,79 +3944,61 @@ Question 2
 </ol></li>
 </ol>
 <ol start="2" style="list-style-type: lower-alpha">
-<li>Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.</li>
+<li>Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.
+<p></li>
 </ol>
 <ol start="3" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving appropriate labels for each axis and paste the charts into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Comment, by visually inspecting these plots, on the possible modelling strategy which could be adopted. [3]
+<li>Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving appropriate labels for each axis. Comment, by visually inspecting these plots, on the possible modelling strategy which could be adopted.
 <p></li>
-</ol>
-<ol start="4" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Perform an appropriate transformation to the data such that a stationary model is possible, pasting any relevant charts into your answer.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Comment on your answer to part (4. (a). [3]
+<li>Perform an appropriate transformation to the data such that a stationary model is possible, pasting any relevant charts into your answer. Comment on your answer.
 <p></li>
-</ol>
-<ol start="5" style="list-style-type: decimal">
-<li><ol style="list-style-type: lower-alpha">
-<li>Propose an appropriate model for the transformed data.</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Justify the choice of model in part (5. (a) by performing an appropriate diagnostics procedure and comparisons with alternative models.</li>
+<li>Propose an appropriate model for the transformed data. Justify the choice of model by performing an appropriate diagnostics procedure and comparisons with alternative models.</li>
 </ol>
 </div>
 </div>
-<div id="question-2-8" class="section level3">
+<div id="question-2-9" class="section level3">
 <h3>Question 2</h3>
 <h4>
 &lt;Question 2
 </h4>
-<p>2 An airport has recently introduced a driverless pod system to transport passengers between the terminal and the car park. Pods operate every two minutes from the terminal exit, and each pod can take up to two passengers and their luggage. Passengers arrive at the terminal exit seeking to travel to the car park according to a Poisson process with a rate of 1 per minute. If four or more passengers are waiting at the exit when a pod arrives, taxis are immediately summoned to take all the remaining passengers to the car park.</p>
-<div id="exercises-20" class="section level4">
+An airport has recently introduced a driverless pod system to transport passengers between the terminal and the car park. Pods operate every two minutes from the terminal exit, and each pod can take up to two passengers and their luggage. Passengers arrive at the terminal exit seeking to travel to the car park according to a Poisson process with a rate of 1 per minute.
+<p>
+<p>If four or more passengers are waiting at the exit when a pod arrives, taxis are immediately summoned to take all the remaining passengers to the car park.</p>
+<div id="exercises-21" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear at the exit to the terminal in any given two-minute period.</p></li>
 <li><p>Determine a transition matrix for the number of passengers waiting at the exit when a pod arrives.</p></li>
-<li><p>Calculate the average number of times per hour that the company operating the pods will need to summon a taxi to take passengers to the car park. A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the need to use taxis.</p></li>
-<li><p>Evaluate the manager’s suggestion, showing any working where appropriate.</p></li>
+<li><p>Calculate the average number of times per hour that the company operating the pods will need to summon a taxi to take passengers to the car park.</p></li>
+<li><p>A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the need to use taxis. Evaluate the manager’s suggestion, showing any working where appropriate.</p></li>
 <li><p>Comment on your results in part 4. .</p></li>
 </ol>
 </div>
 </div>
-<div id="question-3-7" class="section level3">
+<div id="question-3-5" class="section level3">
 <h3>Question 3</h3>
 <h4>
 &lt;Question 3
 </h4>
 <p>In an insurance company’s portfolio, individual claim sizes, in £, follow an exponential distribution with parameter 0.0001.</p>
-<div id="exercises-21" class="section level4">
+<div id="exercises-22" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li>In R console run the following code: set.seed(123)and then use R to simulate 10,000 claims and plot a histogram of the simulated data. Paste your R code and chart into your answer.</li>
-<li><ol style="list-style-type: lower-alpha">
-<li>Calculate the mean and the variance of the simulated claims in part (1. .</li>
-</ol></li>
-</ol>
-<ol start="2" style="list-style-type: lower-alpha">
-<li>Compare your answers to part 2. (a) with the theoretical values expected from the exponential distribution with parameter 0.0001.</li>
-</ol>
-<p>The insurer decides to take out an individual excess of loss reinsurance arrangement with a retention level of £20,000. 3. Calculate the mean and the variance of the claims paid, under this arrangement, by (a) the insurer (b) the reinsurer.</p>
-The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance of claims.
-<p>
-<ol start="4" style="list-style-type: decimal">
-<li>Calculate the mean and variance of the claims paid by:</li>
+<li><p>In R console run the following code: <code>set.seed(123)</code> and then use R to simulate 10,000 claims and plot a histogram of the simulated data.</p></li>
+<li><p>Calculate the mean and the variance of the simulated claims in exercise 1. Compare your answers with the theoretical values expected from the exponential distribution with parameter 0.0001.</p></li>
+<li><p>The insurer decides to take out an individual excess of loss reinsurance arrangement with a retention level of £20,000. Calculate the mean and the variance of the claims paid, under this arrangement, by</p></li>
 </ol>
 <ol style="list-style-type: lower-alpha">
 <li>the insurer</li>
-<li>the reinsurer under each of the following six retention levels: £5,000, £10,000, £20,000, £30,000, £40,000 and £50,000.<br />
+<li>the reinsurer.</li>
+</ol>
+<p>
+<ol start="4" style="list-style-type: decimal">
+<li>The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance of claims. Calculate the mean and variance of the claims paid by:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>the insurer</li>
+<li>the reinsurer. under each of the following six retention levels: £5,000, £10,000, £20,000, £30,000, £40,000 and £50,000.<br />
 </li>
 </ol>
 <ol start="5" style="list-style-type: decimal">
@@ -4039,31 +4019,53 @@ The insurer wishes to determine an appropriate retention limit and has asked an 
 Question 1
 </h4>
 <p>Monthly totals of airline passengers are given in time series data ‘AirPassengers’.</p>
-<div id="exercises-22" class="section level4">
+<div id="exercises-23" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li>Plot the data as time series with frequency =12.</li>
-<li>Plot the acf function.</li>
-<li>Decompose the trend, seasonality and randomness for the data. (Hint: use decompose function.)</li>
-<li>Fit Arima model. (Hint: order=c(1,0,0), list(order=c(2,1,0), period=12 as parameters.)</li>
-<li>Predict the data for next 24 months.</li>
-<li>Find upper and lower bound of fitted data and plot the same along with predicted data with legends.</li>
+<li><p>Plot the data as time series with <code>frequency =12</code>.</p></li>
+<li><p>Plot the acf function.</p></li>
+<li><p>Decompose the trend, seasonality and randomness for the data. (Hint: use <code>decompose()</code> function.)</p></li>
+<li><p>Fit Arima model.</p></li>
+</ol>
+<p>(Hint:<code>order=c(1,0,0), list(order=c(2,1,0), period=12</code> as parameters.)</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Predict the data for next 24 months.</p></li>
+<li><p>Find upper and lower bound of fitted data and plot the same along with predicted data with legends.</p></li>
 </ol>
 </div>
 </div>
-<div id="question-2-9" class="section level3">
+<div id="question-2-10" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
-<p>Q. 2) 1. Draw the graph of hazard function for the gamma distribution with parameters = 0.75 and <span class="math inline">\(\lambda = 0.5\)</span>. 2. Draw the graph of hazard function for the gamma distribution with parameters = 1 and <span class="math inline">\(\lambda = 0.5\)</span>. 3. Draw the graph of hazard function for the gamma distribution with parameters = 1.5 and <span class="math inline">\(\lambda = 0.5\)</span>. 4. Comment on the thickness of the tails of the distribution of 2. with the tails of (1. and (3. . (For the graphs, the value of x varies from 0 to 10).</p>
+<div id="exercises-24" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 0.75\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
+<li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 1\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
+<li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 1.5\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
+<li>Comment on the thickness of the tails of the distribution of 2. with the tails of exercises 1 and 3 (For the graphs, the value of x varies from 0 to 10).</li>
+</ol>
 </div>
-<div id="question-3-8" class="section level3">
+</div>
+<div id="question-3-6" class="section level3">
 <h3>Question 3</h3>
 <h4>
 Question 3
 </h4>
-<p>Q. 3) Mortality of a group of lives follows Gompertz’s law. The value of the parameters is known as c = 1.128 &amp; B = 7.29 x 10-6 . Use the approximation 𝑞𝑥 = 1 − 𝑒 −𝜇(𝑥+ 1 2 ) , calculate an approximate of the curtate value for age 55 or e55. Assuming 100 is the maximum age.</p>
+<p>Mortality of a group of lives follows Gompertz’s law. The value of the parameters is known as c = 1.128 &amp; B = 7.29 x 10-6 . Use the approximation <span class="math display">\[  f ( t ) = a e − e b − c t {\displaystyle f(t)=a\mathrm {e} ^{-\mathrm {e} ^{b-ct}}}\]</span> where</p>
+<ul>
+<li>a is an asymptote, since $ {_{t}a ^{- ^{b-ct}}=a ^{0}=a}$</li>
+<li>b sets the displacement along the x-axis (translates the graph to the left or right).</li>
+<li>c sets the growth rate (y scaling)</li>
+<li>e is Euler’s Number (e = 2.71828…)</li>
+</ul>
+<div id="exercise-7" class="section level4">
+<h4>Exercise</h4>
+<p>Calculate an approximate of the curtate value for age 55 or e55.</p>
+<p>Assuming 100 is the maximum age.</p>
+</div>
 </div>
 <div id="question-4-5" class="section level3">
 <h3>Question 4</h3>
@@ -4071,8 +4073,9 @@ Question 3
 Question 4
 </h4>
 <p>An life insurance company is selling Endowment, Pure Term and Unit Linked products wherein 80% of the business comes from Endowment, 5% from Term Insurance and 15% from Unit Linked products. The sum assured ranges between 30000 to 200000 with multiple of 5000.</p>
-<p>The sum assured are normally distributed with below parameters - Endowment (mean 50000, standard deviation 10000), Pure Term (mean 100000, standard deviation 25000), Unit Linked (mean 60000, standard deviation 5000). One policy is randomly picked from the system and the sum assured of that policy is 75000.</p>
-<div id="exercises-23" class="section level4">
+<p>The sum assured are normally distributed with below parameters * Endowment (mean 50000, standard deviation 10000), * Pure Term (mean 100000, standard deviation 25000), * Unit Linked (mean 60000, standard deviation 5000).</p>
+<p>One policy is randomly picked from the system and the sum assured of that policy is 75000.</p>
+<div id="exercises-25" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Create a sequence ranging from 30000 to 200000 with an increase of 5000 and plot the density functions of the above three distributions in a single graph.</li>
@@ -4085,14 +4088,14 @@ Question 4
 <h4>
 Question 5
 </h4>
-<p>Signals are mathematically represented by a function that takes into account the magnitude and frequency. xt = A cos(2πt + ) + wt, where is equal to 1/50 and wt is the white noise with mean zero and SD of 5. A and need to be estimated. In this case the parameters appear in a nonlinear way, so we use a trigonometric identity and write</p>
+<p>Signals are mathematically represented by a function that takes into account the magnitude and frequency. <span class="math display">\[xt = A cos(2π\omega t + \phi) + wt,\]</span> where <span class="math inline">\(\omega\)</span> is equal to 1/50 and wt is the white noise with mean zero and SD of 5. <span class="math inline">\(A\)</span> and <span class="math inline">\(\phi\)</span> need to be estimated. In this case the parameters appear in a nonlinear way, so we use a trigonometric identity and write</p>
 <p><span class="math display">\[
-A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\omega t),
-= β1 cos(2π\omega t) + β2 sin(2π\omega t),
-= β1*z1 + β2*z2
+A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\omega t),\\
+= β1 cos(2π\omega t) + β2 sin(2π\omega t),\\
+= β1*z1 + β2*z2\\
 \]</span></p>
-<p>If we can estimate β1 and β2, then A and can be estimated. Therefore, $xt = β1 cos(2πt) + β2 sin(2πt) + wt $</p>
-<div id="exercises-24" class="section level4">
+<p>If we can estimate β1 and β2, then A and <span class="math inline">\(\phi\)</span> can be estimated. Therefore, $xt = β1 cos(2πt) + β2 sin(2πt) + wt $</p>
+<div id="exercises-26" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Simulate and plot a series xt, using A=2, = 0.6π and SD of white noise as 5 (for t= 1 to 1000).</li>
@@ -4107,18 +4110,22 @@ A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\o
 <h4>
 Question 6
 </h4>
-<p>Q. 6) Suppose the transition probabilities are a function of the age of a person. The transition probability of a person aged x moving: * from Healthy to Sick state is 0.007x * from Healthy to Death state is 0.001x * from Sick to Death state is 0.002(100-x) * from Sick to Healthy is 0.006(100-x).</p>
-<div id="exercises-25" class="section level4">
+<p>Suppose the transition probabilities are a function of the age of a person. The transition probability of a person aged x moving: * from Healthy to Sick state is 0.007x * from Healthy to Death state is 0.001x * from Sick to Death state is 0.002(100-x) * from Sick to Healthy is 0.006(100-x).</p>
+<div id="exercises-27" class="section level4">
 <h4>Exercises</h4>
-<p>Assuming 100 is the maximum age. Calculate the probability of: 1. Healthy person aged 30 will be in Sick state after 4 years. (9)</p>
-<ol start="2" style="list-style-type: decimal">
+<p>Assuming 100 is the maximum age. Calculate the probability of:</p>
+<ol style="list-style-type: decimal">
+<li>Healthy person aged 30 will be in Sick state after 4 years.</li>
 <li>Sick person aged 25 will be in Death state after 7 years.</li>
 </ol>
 </div>
 </div>
-<div id="exercise-7" class="section level3">
+<div id="exercise-7-1" class="section level3">
 <h3>Exercise 7</h3>
-<p>Q. 7) An extract from the data for 15 patients monitored in hospital after every 15 minutes post giving them a dosage of life saving drug is shown in the table below.</p>
+<h4>
+Question 7
+</h4>
+<p>An extract from the data for 15 patients monitored in hospital after every 15 minutes post giving them a dosage of life saving drug is shown in the table below.</p>
 <pre><code>
 Person Last time at which patient was 
 observed (time unit in 15 Minutes) Outcome
@@ -4138,21 +4145,25 @@ observed (time unit in 15 Minutes) Outcome
 14 60 Survived
 15 60 Survived
 </code></pre>
-<div id="exercises-26" class="section level4">
+<div id="exercises-28" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li>Use the data to create the Kaplan-Meier estimate of the survival function. Use the “Survival” library in R to create the summary of the model (survival rates, standard deviation, lower 95% confidence interval, upper 95% confidence interval).</li>
-<li>Use the results of the summary created in (1. and input the values of tj, dj and nj in the model to calculate the estimated integrated hazard and hence the Nelson ‐ Aalen estimate of the survival model.</li>
+<li>Use the data to create the Kaplan-Meier estimate of the survival function. Use the “{Survival}” library in R to create the summary of the model (survival rates, standard deviation, lower 95% confidence interval, upper 95% confidence interval).</li>
+<li>Use the results of the summary created in exercise 1 and input the values of tj, dj and nj in the model to calculate the estimated integrated hazard and hence the Nelson ‐ Aalen estimate of the survival model.</li>
 <li>Create a table to compare the above two analysis.</li>
 </ol>
 </div>
 </div>
 <div id="exercise-8" class="section level3">
 <h3>Exercise 8</h3>
-<p>Q. 8) Consider a set of data generated by tossing a fair coin, letting xt = 1 when a head is obtained and xt = −1 when a tail is obtained. Then, construct yt as yt = 2 + 1.5xt − 0.5xt−1</p>
-<div id="exercises-27" class="section level4">
+<p>Consider a set of data generated by tossing a fair coin, letting <span class="math inline">\(x_t = 1\)</span> when a head is obtained and xt = −1 when a tail is obtained. Then, construct yt as yt = 2 + 1.5xt − 0.5xt−1</p>
+<div id="exercises-29" class="section level4">
 <h4>Exercises</h4>
-<p>Simulate data for three cases, one with a small sample size (n = 10), another one with a moderate sample size (n = 100) and lastly with large sample size (n = 1000). 1. Plot the series for all three cases. 2. Find the mean and variance and comment on results.</p>
+<p>Simulate data for three cases, one with a small sample size (n = 10), another one with a moderate sample size (n = 100) and lastly with large sample size (n = 1000).</p>
+<ol style="list-style-type: decimal">
+<li>Plot the series for all three cases.</li>
+<li>Find the mean and variance and comment on results.</li>
+</ol>
 </div>
 </div>
 </div>
@@ -4167,15 +4178,15 @@ observed (time unit in 15 Minutes) Outcome
 Question 1
 </h4>
 <p>An actuary is investigating the asymptotic behaviour of the sample autocorrelation function for two time series models.</p>
-<div id="exercises-28" class="section level4">
+<div id="exercises-30" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order moving average process with parameter β1= 0.4, assigning the simulated values to a vector called YMA.</p></li>
 <li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order autoregressive model with parameter α1= 0.45, assigning the simulated values to a vector called YAR.</p></li>
 <li><p>Plot, on four separate graphs, the sample autocorrelation function (sample ACF) and sample partial autocorrelation function (sample PACF) for each of the two time series models, YMA and YAR, generated in parts 1. and 2. .</p></li>
 <li><p>Comment on the general features of the plots in part 3. with reference to whether they are consistent with the theoretical behaviour of the corresponding functions for the true models.</p></li>
+<li><p>The <code>acf()</code> function in R can also provide a vector output of the sample ACF values, with component i giving the sample ACF at lag i – 1, provided that the plot argument of the function is set to ‘<code>FALSE</code>’. Determine the numerical values for the sample ACF at lag 2, for each of the two time series models, YMA and YAR, generated in parts 1. and 2. .</p></li>
 </ol>
-<p>The acf() function in R can also provide a vector output of the sample ACF values, with component i giving the sample ACF at lag i – 1, provided that the plot argument of the function is set to ‘FALSE’. 5. Determine the numerical values for the sample ACF at lag 2, for each of the two time series models, YMA and YAR, generated in parts 1. and 2. .</p>
 </div>
 </div>
 <div id="question-1-part-b" class="section level3">
@@ -4192,20 +4203,19 @@ Question 1
 <li>assigns the values of the sample ACF at lag 2 for each random vector to two vectors ACF2MA and ACF2AR (each of length 1,000).</li>
 </ul>
 <ol start="7" style="list-style-type: decimal">
-<li>Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, generated in part 6.</li>
-<li>Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and ACF2AR, generated in part 6.<br />
-</li>
-<li>Comment on the results in parts (vii) and (viii), including whether they agree with the expected asymptotic behaviour.</li>
+<li><p>Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, generated in part 6.</p></li>
+<li><p>Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and ACF2AR, generated in part 6.</p></li>
+<li><p>Comment on the results in parts (vii) and (viii), including whether they agree with the expected asymptotic behaviour.</p></li>
 </ol>
 </div>
-<div id="question-2-10" class="section level3">
+<div id="question-2-11" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
 <p>Before answering this question, generate the vector, X, in R using the following code: <code>set.seed(1027); X = rexp(n=1000, rate=0.01)</code></p>
 <p>The vector X represents the gross claim sizes of 1,000 claims. The payments are to be split between an insurance company and its reinsurer under an Excess of Loss reinsurance arrangement with a retention level M = 400.</p>
-<div id="exercises-29" class="section level4">
+<div id="exercises-31" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Determine the proportion of the claims that are fully covered by the insurer.</p></li>
@@ -4216,18 +4226,22 @@ Question 2
 5. Determine the value of <span class="math inline">\(\lambda\)</span> at which the log-likelihood function reaches its maximum.</p>
 </div>
 </div>
-<div id="question-3-part-a-1" class="section level3">
+<div id="question-3-part-a-2" class="section level3">
 <h3>Question 3 Part (a)</h3>
 <h4>
 Question 3
 </h4>
-3 An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two variables, x1 and x2. Before answering this question, generate the data set, portfolio, in R using the following code:
-<pre><code>
-set.seed(2019); 
-portfolio = data.frame(x1=rnorm(200,3,1), 
-x2=scale(c(rnorm(70,4,1), rnorm(130,10,1)))) 
-</code></pre>
+<p>3 An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two variables, <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>.</p>
+Before answering this question, generate the data set, portfolio, in R using the following code:
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2019</span>); </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>portfolio <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x1=</span><span class="fu">rnorm</span>(<span class="dv">200</span>,<span class="dv">3</span>,<span class="dv">1</span>), </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="at">x2=</span><span class="fu">scale</span>(<span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">70</span>,<span class="dv">4</span>,<span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">130</span>,<span class="dv">10</span>,<span class="dv">1</span>)))) </span></code></pre></div>
 <p>In the first stage of the investigation, the analyst decides to assign the first 100 policyholders in the data set to cluster A, and the remaining policyholders to cluster B.</p>
+<div id="exercises-32" class="section level4">
+<h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Construct a new column in the data set, portfolio, called <strong><em>group_label_stage1</em></strong>, containing the policyholder cluster labels, defined above.<br />
 </li>
@@ -4238,13 +4252,14 @@ x2=scale(c(rnorm(70,4,1), rnorm(130,10,1))))
 <li>Construct a new column in the data set, portfolio, called dist_B containing the Euclidean distances between the policyholders and the centre of cluster B.</li>
 </ol>
 </div>
-<div id="question-3-part-a-2" class="section level3">
-<h3>Question 3 Part (a)</h3>
+</div>
+<div id="question-3-part-b-2" class="section level3">
+<h3>Question 3 Part (b)</h3>
 <h4>
 Question 3
 </h4>
-<p>The analyst decides to update the cluster labels by assigning to each policyholder the label of the cluster whose centre is nearest, according to the distances calculated in parts 3. and 4. .</p>
-<div id="exercises-30" class="section level4">
+<p>The analyst decides to update the cluster labels by assigning to each policyholder the label of the cluster whose centre is nearest, according to the distances calculated in exercises 3 and 4 .</p>
+<div id="exercises-33" class="section level4">
 <h4>Exercises</h4>
 <ol start="5" style="list-style-type: decimal">
 <li>Construct a new column in the data set, portfolio, called <strong><em>group_label_stage2</em></strong>, containing the updated policyholder cluster labels, defined above.<br />
@@ -4254,8 +4269,7 @@ Question 3
 <li>Comment on the matrix generated in part (vi) with reference to how the cluster labels have changed between <strong><em>group_label_stage1</em></strong> and <strong><em>group_label_stage2</em></strong>.<br />
 </li>
 <li>Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the x-axis and x2 on the y-axis), using two distinct colours to identify clusters A and B according to the label, <strong><em>group_label_stage2</em></strong>.<br />
-The analyst decides to stop at this stage and to report <strong><em>group_label_stage2</em></strong> as the final set of cluster labels.</li>
-<li>Comment on this decision.</li>
+The analyst decides to stop at this stage and to report <strong><em>group_label_stage2</em></strong> as the final set of cluster labels. Comment on this decision.</li>
 </ol>
 </div>
 </div>
@@ -4270,25 +4284,24 @@ The analyst decides to stop at this stage and to report <strong><em>group_label_
 <h4>
 Question 1
 </h4>
-<p>Paste your R Code, Outputs and plots/ graphs in your answer sheet. Q. 1) Use the data file “Mortality_Investigation.csv” to answer the below questions. This table contains the details of mortality investigation performed on 100 different male lives between 1-Jan-2016 and 31-Dec-2018.</p>
-<div id="exercises-31" class="section level4">
+<p>Use the data file “<strong><em>Mortality_Investigation.csv</em></strong>” to answer the below questions.</p>
+<p>This table contains the details of mortality investigation performed on 100 different male lives between 1-Jan-2016 and 31-Dec-2018.</p>
+<div id="exercises-34" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li>Print first 6 rows of the data ensuring correct data formats for all the columns and calculate the proportion of the total sample died, survived and withdrew from the observation period.</li>
-<li>Compute two new columns ‘Age_At_Entry’ and ‘Age_At_Exit’ for each person (you can assume a completed year as 365.25 days and you can compute the age as difference between the dates in decimals like 35.234 years) and print the last 6 rows of the newly formed table.
-<p>
-<ol start="3" style="list-style-type: decimal">
-<li>Compute the average age at entry and the average age at exit of the people for whom “Death” was the reason of Exit. If the age label used is “Age last Birthday”, then calculate</li>
-</ol></li>
-<li>Number of lives out of total 100 lives who have contributed the full year towards the central exposed to risk 𝐸37
+<li><p>Print first 6 rows of the data ensuring correct data formats for all the columns and calculate the proportion of the total sample died, survived and withdrew from the observation period.</p></li>
+<li><p>Compute two new columns ‘Age_At_Entry’ and ‘Age_At_Exit’ for each person (you can assume a completed year as 365.25 days and you can compute the age as difference between the dates in decimals like 35.234 years) and print the last 6 rows of the newly formed table.</p>
 <p></li>
-<li>Number of lives who did not contribute at all towards the central exposed to risk 𝐸37
+<li><p>Compute the average age at entry and the average age at exit of the people for whom “Death” was the reason of Exit. If the age label used is “Age last Birthday”, then calculate</p></li>
+<li><p>Number of lives out of total 100 lives who have contributed the full year towards the central exposed to risk £37</p>
 <p></li>
-<li>Total number of years of contribution to 𝐸37 𝑐 by all the lives together (Round your answer to 2 digits after the decimal).</li>
+<li><p>Number of lives who did not contribute at all towards the central exposed to risk £37</p>
+<p></li>
+<li><p>Total number of years of contribution to £37 𝑐 by all the lives together (Round your answer to 2 digits after the decimal).</p></li>
 </ol>
 </div>
 </div>
-<div id="question-2-11" class="section level3">
+<div id="question-2-12" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4299,65 +4312,58 @@ Question 2
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ar =</span> <span class="fl">0.7</span>, <span class="at">ma =</span> <span class="fl">0.3</span>), <span class="at">n =</span> <span class="dv">200</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ar =</span> <span class="fl">0.7</span>, <span class="at">ma =</span> <span class="fl">0.3</span>), <span class="at">n =</span> <span class="dv">200</span>) </span></code></pre></div>
 <pre><code>Time Series:
 Start = 1 
 End = 201 
 Frequency = 1 
-  [1]   0.00000000   2.82971355   6.07031313   8.58916071  10.10050755
-  [6]   9.32564225   8.47769520   8.80191876   9.26452529   9.14011416
- [11]   8.92400042   9.57402351  10.05860257  10.98972755  11.01199883
- [16]  11.15601750  11.31907370  13.06987460  13.33370181  13.25884736
- [21]  14.20030646  15.29347009  15.97942765  16.20307200  15.01235184
- [26]  13.74250480  11.29828963   7.87313237   4.74868632   1.05672068
- [31]  -0.06772673   0.88950292   2.51814111   2.98173247   2.74037551
- [36]   3.30652914   3.32330508   2.90009269   2.47276794   0.32427521
- [41]  -1.21026010  -1.59331123  -2.48598154  -4.65851651  -7.94425168
- [46] -11.98286523 -13.97102735 -14.48564419 -15.22030865 -13.54858362
- [51] -12.91125277 -10.22122698  -7.19613189  -4.25568315  -2.55103278
- [56]  -1.12527155  -0.09355281   0.23622398   0.33495197   0.11468207
- [61]   0.38931048  -0.35611037  -0.45753038   1.24989838   3.85657561
- [66]   4.84704060   6.39909031   7.35449575   9.02165725   9.08284462
- [71]   9.32727943   9.60063018  10.23124499  10.09828832   8.09973068
- [76]   5.96690951   5.11702049   3.84040781   0.90762564  -1.48480025
- [81]  -2.70643577  -3.20951361  -6.74588256 -11.79406215 -15.69686552
- [86] -16.99608129 -17.17484041 -16.62612156 -16.60366371 -17.43983429
- [91] -18.76878533 -20.29356717 -20.50756286 -19.39850260 -18.78447532
- [96] -17.17439746 -14.64389197 -12.26391463 -11.19692767 -12.67661808
-[101] -15.42955489 -17.77615537 -19.77255861 -20.69115181 -23.00331134
-[106] -25.37603188 -26.19133342 -25.47266594 -23.83459117 -20.38695218
-[111] -16.54776701 -15.33392650 -15.19723384 -15.75099399 -15.40309837
-[116] -15.54793178 -14.51011719 -12.66430735 -10.62888610  -9.04195328
-[121]  -7.54622621  -6.89336193  -5.98986314  -5.57220847  -6.88018151
-[126]  -8.49946981 -10.69042419 -12.72399162 -14.74333442 -15.63846489
-[131] -15.46724729 -13.60853320 -12.43081280 -13.11089628 -14.59790222
-[136] -16.01867179 -16.44400945 -15.90876406 -15.77720345 -14.84596497
-[141] -12.89175529 -10.62874993 -10.25419876  -8.60574606  -8.47181382
-[146] -10.64564618 -14.00756824 -18.15943065 -21.76085011 -23.41736193
-[151] -26.29579229 -27.18544678 -26.69589060 -26.70678215 -26.92859043
-[156] -25.52307192 -23.35206412 -22.50998262 -22.57803713 -21.51195271
-[161] -19.07160115 -17.21662748 -16.53630272 -17.15466532 -19.09927646
-[166] -21.41697314 -24.86670379 -27.07322311 -29.15994111 -32.40517831
-[171] -36.14747149 -39.88665243 -42.86153683 -43.98766983 -45.67927757
-[176] -46.81817553 -47.60636643 -46.16044704 -44.25889952 -41.16470248
-[181] -39.33113246 -38.69392105 -37.51923821 -35.35722346 -32.69979398
-[186] -31.64746910 -33.90170778 -36.07875494 -37.78199018 -40.12625326
-[191] -42.10179076 -42.50118453 -45.67592596 -47.90626550 -51.22335837
-[196] -54.06395918 -55.32315165 -55.98244387 -55.32867448 -54.95252146
-[201] -55.88524828</code></pre>
+  [1]   0.0000000  -1.8054554  -1.8871178  -1.4761174  -2.9542310  -3.6392317
+  [7]  -2.6239865  -1.0495323   1.0497449   2.1341722   4.1827339   6.3210891
+ [13]   6.8906019   6.6768984   6.7463483   6.7593308   5.8869396   5.2200407
+ [19]   3.8795211   3.4509073   1.4326257  -0.6614575  -3.0855995  -4.3388907
+ [25]  -5.5399971  -5.7025956  -4.6934148  -4.0400613  -5.6498293  -8.3936297
+ [31] -11.2889906 -15.5351489 -21.8128533 -27.5942015 -31.1032933 -33.1207319
+ [37] -35.9357784 -37.1780881 -37.1397794 -35.9394870 -34.4245018 -34.4356750
+ [43] -35.7307326 -38.2730479 -39.5517308 -39.6827180 -39.9831693 -39.2855774
+ [49] -38.1955072 -38.3036798 -37.8053505 -36.7830148 -35.3875414 -34.3705226
+ [55] -34.0164804 -34.0234588 -31.2691711 -27.6065315 -24.2416414 -21.8880486
+ [61] -18.4961118 -16.2704653 -16.6897864 -18.0168818 -19.2173117 -19.2927862
+ [67] -19.0057157 -18.1439458 -16.9862935 -12.8036164  -9.9111095  -8.9040634
+ [73]  -6.5791228  -5.7657592  -6.0184827  -7.1677359  -8.2038111  -7.4102705
+ [79]  -7.6332851  -9.6241131 -12.0385097 -13.3388456 -14.6000025 -15.1000174
+ [85] -15.0632267 -16.5258606 -18.2520345 -18.4219989 -18.3696360 -17.6297977
+ [91] -18.2932238 -19.8045055 -20.2976387 -20.5134465 -19.0629198 -18.7042581
+ [97] -17.8652403 -17.3622159 -18.0001028 -20.0117710 -22.1549254 -22.4565579
+[103] -22.2088332 -22.8827353 -21.5155136 -18.9928348 -14.1128710 -10.9377187
+[109]  -9.2291265  -9.4832101  -9.7681131 -11.6175548 -12.3910381 -13.2693795
+[115] -14.5211026 -15.9221103 -17.4516914 -18.0776275 -18.0342368 -18.5468509
+[121] -17.6811187 -18.7102191 -19.4533297 -20.2154377 -20.0244319 -20.6062595
+[127] -19.5663149 -18.1583984 -17.0718897 -16.0882190 -14.2169930 -13.5477075
+[133] -13.5204320 -14.6257989 -15.2434576 -14.8384069 -11.3170196  -7.1575480
+[139]  -4.7717405  -4.9897905  -5.2410762  -5.3001764  -6.8690635  -9.8351323
+[145] -12.8473878 -13.7870248 -14.3421970 -16.3279998 -17.9240806 -17.1025815
+[151] -15.4534291 -14.5719275 -13.1405162 -11.3995222  -8.5111681  -5.6706697
+[157]  -3.4912162  -0.2545639   2.4135988   4.6159334   6.0416224   6.6967046
+[163]   6.3435306   5.6345651   5.3675386   5.3534011   4.1631879   3.8032819
+[169]   2.3325149   0.8453151  -1.4834136  -2.9947834  -3.0008523  -2.7844537
+[175]  -1.7360082  -1.5552800  -0.1041343  -0.1923632  -0.7637338  -1.7492620
+[181]  -3.9640926  -6.4798259  -8.4274114  -9.8264284 -10.5959054 -10.8776716
+[187] -11.7757222 -13.0344068 -13.6429011 -14.0643232 -14.0003602 -13.8960370
+[193] -13.5873258 -13.4921042 -13.7238533 -13.4108479 -13.5631423 -13.6249091
+[199] -13.0072829 -12.3810717 -12.1376845</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Plot the auto correlation function and partial auto correlation function of the data if (1. is stationarity, otherwise take the first difference of the observations and plot the above graphs. Comment on the possible ARMA model based on the graphs.</p></li>
-<li><p>Fit AR(1), AR(2), MA(1) and ARMA(1,1) models to the observations from (2. and comment on the best fitting model using AIC or any other metric.</p></li>
-<li><p>Using the best fitted model from exercise 3 create a forecast of the observations for the next 3 periods.</p></li>
+<li><p>Fit AR(1), AR(2), MA(1) and ARMA(1,1) models to the observations from exercise 2 and comment on the best fitting model using AIC or any other metric.</p></li>
+<li><p>Using the best fitted model from exercise 3, create a forecast of the observations for the next 3 periods.</p></li>
 </ol>
 </div>
-<div id="question-3-9" class="section level3">
+<div id="question-3-7" class="section level3">
 <h3>Question 3</h3>
 <h4>
 Question 3
 </h4>
-<p>Q. 3) The number of claims in a year on an individual policy follows a Poisson distribution with a parameter of 0.75. Individual claim amounts follow a Gamma distribution with parameters (shape parameter = 2 and rate parameter λ = 20,000). Set seed value of 100.</p>
-<div id="exercises-32" class="section level4">
+<p>The number of claims in a year on an individual policy follows a Poisson distribution with a parameter of 0.75. Individual claim amounts follow a Gamma distribution with parameters (shape parameter <span class="math inline">\(\alpha = 2\)</span> and rate parameter <span class="math inline">\(\lambda = 20,000\)</span>). Set seed value of 100.</p>
+<div id="exercises-35" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Simulate claims for 10,000 policies and create a frequency distribution of the number of claims made on a policy per year.</p></li>
@@ -4365,7 +4371,7 @@ Question 3
 <p></li>
 <li><p>Compute the mean and variance of the aggregated claim amounts by using the method of moments of the compound Poisson distribution. An insurer plans to go for an aggregate excess of loss reinsurance policy. The insurer wants to evaluate the expected cost for the retention limits from 50,000 to 100,000 in steps of 5,000.</p></li>
 <li><p>Compute expected costs for the insurer and the reinsurer for each of the retention limits.</p></li>
-<li><p>The insurer decides to set a maximum retention limit where the mean cost to the insurer is not more than 75% of the mean aggregated claims. Identify the maximum possible retention limit based on the computations of (4. and the proportion of total claims to be handled by the reinsurer.</p></li>
+<li><p>The insurer decides to set a maximum retention limit where the mean cost to the insurer is not more than 75% of the mean aggregated claims. Identify the maximum possible retention limit based on the computations of exercise 4 and the proportion of total claims to be handled by the reinsurer.</p></li>
 <li><p>Based on that limit, compute the standard deviation and coefficient of skewness of the costs to the reinsurer.</p></li>
 </ol>
 </div>
@@ -4375,7 +4381,18 @@ Question 3
 <h4>
 Question 4
 </h4>
-<p>Q. 4) Consider the data set ‘Covid_2019.csv’ (name it covid19) where the first row of the csv file contains the headings for the columns. 1. Print the number of missing values in each of the columns and create a new data set ‘covid19_1’ by removing all the missing values. From covid19_1, use the columns from Population Density (8th column) to Life Expectancy (17th column) to answer the following questions. 2. Create a new data frame “Covid_Cluster” containing only the above mentioned columns. Normalize all the columns of the data frame using the scale function. 3. Classify the countries into five groups by using the values obtained from (2. applying K-Means clustering algorithm. It is mandatory to set a seed value of 100 before executing the algorithm. Print the number of countries in each cluster. 4. What proportion of total countries in each cluster are severe with respect to COVID19? You can use the “Severe” column from the original dataset. 5. Print the total number of cases and total number of deaths for each cluster. [21] CS2B_COVID_2019 <a href="http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_COVID_2" class="uri">http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_COVID_2</a> 019.csv CS2B_Mortality_Investigation <a href="http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_Mortality_" class="uri">http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_Mortality_</a> Investigation.csv</p>
+<p>Consider the data set ‘<strong><em>Covid_2019.csv</em></strong>’ (name it <strong><em>covid19</em></strong>) where the first row of the csv file contains the headings for the columns.</p>
+<div id="exercises-36" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li><p>Print the number of missing values in each of the columns and create a new data set ‘covid19_1’ by removing all the missing values. From covid19_1, use the columns from Population Density (8th column) to Life Expectancy (17th column) to answer the following questions.</p></li>
+<li><p>Create a new data frame “<strong><em>Covid_Cluster</em></strong>” containing only the above mentioned columns. Normalize all the columns of the data frame using the scale function.</p></li>
+<li><p>Classify the countries into five groups by using the values obtained from exercise 2 applying K-Means clustering algorithm. It is mandatory to set a seed value of 100 before executing the algorithm. Print the number of countries in each cluster.</p></li>
+<li><p>What proportion of total countries in each cluster are severe with respect to COVID19? You can use the “Severe” column from the original dataset.</p></li>
+<li><p>Print the total number of cases and total number of deaths for each cluster.</p></li>
+</ol>
+<p><a href="http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_COVID_2" class="uri">http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_COVID_2</a> 019.csv CS2B_Mortality_Investigation <a href="http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_Mortality_" class="uri">http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS2B_Mortality_</a> Investigation.csv</p>
+</div>
 </div>
 </div>
 </div>
@@ -4389,7 +4406,7 @@ Question 4
 Question 1
 </h4>
 <p>1 Before answering this question, the R package for Markov chains should be loaded into R using the following code: install.packages(“markovchain”) library(markovchain) Xt is a Markov chain on the state space {1,2,3} with the following transition matrix: ൭ p 1 – p 0 q 0 1 – q 0 r 1 – r ൱ where 0 &lt; p, q, r &lt; 1.</p>
-<div id="exercises-33" class="section level4">
+<div id="exercises-37" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Construct an R function, with arguments p, q and r, that generates a Markov chain object for Xt. Assume that p = 0.75 and r = 0.25.</p></li>
@@ -4399,7 +4416,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-12" class="section level3">
+<div id="question-2-13" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4408,11 +4425,11 @@ Question 2
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rpareto <span class="ot">=</span> <span class="cf">function</span>(n, alpha, lambda){ </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">=</span> lambda <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fu">runif</span>(n))<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">/</span>alpha) <span class="sc">-</span> <span class="dv">1</span>) </span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>rp}</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rpareto <span class="ot">=</span> <span class="cf">function</span>(n, alpha, lambda){ </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">=</span> lambda <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fu">runif</span>(n))<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">/</span>alpha) <span class="sc">-</span> <span class="dv">1</span>) </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>rp}</span></code></pre></div>
 <p>The rpareto function generates a random sample of size n from a two-parameter Pareto distribution with parameters α and λ.</p>
-<div id="exercises-34" class="section level4">
+<div id="exercises-38" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Generate, using rpareto, a random sample of size 25,000 from the two-parameter Pareto distribution with parameters α = 3 and λ = 1, assigning the simulated values to a vector called A_vec. You should set a random number generator seed of 123 before generating A_vec and use the R function, head(), to display the first eight values of A_vec in your answer script.</p></li>
@@ -4423,7 +4440,7 @@ Question 2
 </ol>
 </div>
 </div>
-<div id="question-3-10" class="section level3">
+<div id="question-3-8" class="section level3">
 <h3>Question 3</h3>
 <h4>
 Question 3
@@ -4444,7 +4461,7 @@ library(survival)
 <h4>Data</h4>
 <p>Before answering this question, the ‘CS2B_Apr_21_Qu_3_Data.csv’ file should be loaded into R and assigned to a data frame called mortalitydata.</p>
 </div>
-<div id="exercises-35" class="section level4">
+<div id="exercises-39" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the Kaplan–Meier survival function estimate for all patients, together with its two-sided 99.5% confidence interval.</p></li>
@@ -4486,13 +4503,13 @@ Question 1
 <li>Comment on the stationarity of the data based on the above graphs.</li>
 </ol>
 </div>
-<div id="question-2-13" class="section level3">
+<div id="question-2-14" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
 <p>The file “Data.csv” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, calculated from the first transaction date.</p>
-<div id="exercises-36" class="section level4">
+<div id="exercises-40" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Separate the data into two tables – premium and claim, based on the transaction type and calculate</li>
@@ -4508,10 +4525,10 @@ Question 2
 </ol>
 </div>
 </div>
-<div id="question-3-11" class="section level3">
+<div id="question-3-9" class="section level3">
 <h3>Question 3</h3>
 <p>Claim size [X] for a class of insurance follows Gamma (10,0.2).</p>
-<div id="exercises-37" class="section level4">
+<div id="exercises-41" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Calculate f{30}.</p></li>
@@ -4543,7 +4560,7 @@ Question 2
 <div id="question-5-5" class="section level3">
 <h3>Question 5</h3>
 <p>A primary school has two wings A and B. The students can change their Wing freely. It was observed that the rate of movement is dependent on the age ‘x’ of the student (ranging from 5 to 15). The rate of movement from A to B = [0.08*x – 0.2] and the rate of movement from B to A = [0.05 * x + 0.1].</p>
-<div id="exercises-38" class="section level4">
+<div id="exercises-42" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Write a code to calculate the generator matrix G(x). Calculate the rate at which a 12 year old student will move from wing B to A and from A to B.</li>
@@ -4564,7 +4581,7 @@ Question 2
 Question 1
 </h4>
 <p>1 The ‘CS2B_Sept_21_Qu_1_Data.csv’ file contains mortality data for a particular population of females in the year 1921, taken from the Human Mortality Database. The file contains the following three variables: Age Age, 𝑥, in single years from 25 to 90 mu_x Crude values of the forces of mortality at age x, μ௫ Exposed_x Exposed to risk at age 𝑥 nearest birthday Before answering this question, the ‘CS2B_Sept_21_Qu_1_Data.csv’ file should be loaded into R and assigned to a data frame called mortalitydata.</p>
-<div id="exercises-39" class="section level4">
+<div id="exercises-43" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: lower-roman">
 <li>Plot the crude values of μ௫ against age, x, using a line graph. [</li>
@@ -4574,7 +4591,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-14" class="section level3">
+<div id="question-2-15" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4604,7 +4621,7 @@ GaussXY[,1] = qnorm(GaussUV[,1], mean = 20, sd = 3)
 GaussXY[,2] = qnorm(GaussUV[,2], mean = 200, sd = 50) 
 </code></pre>
 <p>The 200,000 × 2 matrix, GaussXY, represents 200,000 observations of (X, Y) under Copula 1.</p>
-<div id="exercises-40" class="section level4">
+<div id="exercises-44" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Generate 200,000 observations of (X, Y) using Copula 2 and the marginal distributions of X and Y, assigning the observations to a 200,000 × 2 matrix named t3XY. You should set a random number generator seed of 3 before generating the observations and use the R function, <code>head()</code>, to display the first six rows of t3XY in your answer script.</li>
@@ -4615,7 +4632,7 @@ GaussXY[,2] = qnorm(GaussUV[,2], mean = 200, sd = 50)
 </ol>
 </div>
 </div>
-<div id="question-3-12" class="section level3">
+<div id="question-3-10" class="section level3">
 <h3>Question 3</h3>
 <h4>
 Question 3
@@ -4629,7 +4646,7 @@ library(rpart.plot)
 </code></pre>
 <p>A new start-up bank is considering which product it should first launch to market. One of the products it is considering is a personal loan. An Actuary employed by the bank wants to construct a simple decision tree machine learning model to determine which loan applications to approve.</p>
 <p>The Actuary has decided to construct the decision tree model to classify each potential customer as either expected to default (default = 1) or not expected to default (default = 0) based on the following inputs: * a categorical feature, f1, that takes values –1, 0 or +1 * a continuous feature, f2, that takes values between –1 and 1. With no previous customer data to draw on, the Actuary decides to construct a specimen data set to train the decision tree model containing the following information for each of n hypothetical customers, where n = 10,000: * feature f1 taking the values –1, 0 and +1 with equal probability * feature f2 being uniformly distributed on [–1,1] * a field containing the value 1 if the customer defaults on the loan and 0 otherwise. To determine whether a hypothetical customer will default, the Actuary decides to model the probability of default as: exp (f) 1 + exp (f) where f = a + bf1 + cf2 and a, b and c are parameters. Before constructing the specimen data set, the Actuary first needs to generate three sets of 10,000 observations from the uniform distribution on [0, 1].</p>
-<div id="exercises-41" class="section level4">
+<div id="exercises-45" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Generate a 10,000 × 3 matrix named U of observations from the uniform distribution on [0, 1]. Each column of U should contain 10,000 observations that have been generated together but separately from the observations in other columns. You should set a random number generator seed of 12345 before generating the observations in the first column and use the R function, head(), to display the first six rows of U in your answer script.</li>
@@ -4654,14 +4671,14 @@ The R code to create the data frame in the format required, given the vectors f1
 </ol>
 </div>
 </div>
-<div id="question-3-part-b-2" class="section level3">
+<div id="question-3-part-b-3" class="section level3">
 <h3>Question 3 Part (b)</h3>
 <h4>
 Question 3
 </h4>
 <p>Before launching the product, the Actuary gathers actual customer data from another bank, that is available in the public domain, to assess the predictive power of the decision tree model.</p>
 <p>The <strong><em>CS2B_Sept_21_Qu_3_Data.csv</em></strong> file contains the actual data for 100 customers in the required format for the decision tree model. Before answering the remainder of this question, the ‘CS2B_Sept_21_Qu_3_Data.csv’ file should be loaded into R and assigned to a data frame called actual.</p>
-<div id="exercises-42" class="section level4">
+<div id="exercises-46" class="section level4">
 <h4>Exercises</h4>
 <ol start="7" style="list-style-type: decimal">
 <li><p>Show the first six rows of the actual data frame in your answer script using the R function, head(). The R code for generating the predicted default classifications of the policyholders in the actual data frame using the tree decision tree object is as follows:</p>
@@ -4696,23 +4713,23 @@ Question 1
 <li><p>Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add appropriate x and y-axis labels.</p></li>
 </ol>
 </div>
-<div id="question-2-15" class="section level3">
+<div id="question-2-16" class="section level3">
 <h3>Question 2</h3>
 A random variable follows a Weibull distribution with parameters for the shape and scale as follows:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Shape <span class="ot">=</span> <span class="fl">1.5</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>Scale <span class="ot">=</span> <span class="dv">100000</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Shape <span class="ot">=</span> <span class="fl">1.5</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Scale <span class="ot">=</span> <span class="dv">100000</span></span></code></pre></div>
 Run the following code in R before beginning your answer:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">5</span>)</span></code></pre></div>
 <p>Use the in-build functions in R to:</p>
 </div>
-<div id="exercises-43" class="section level3">
+<div id="exercises-47" class="section level3">
 <h3>Exercises</h3>
 <ol style="list-style-type: decimal">
 <li>Simulate 1,000 values from a Weibull distribution with parameters given above, assign this to a vector variable called ‘WeibullSim’.</li>
@@ -4729,11 +4746,11 @@ Run the following code in R before beginning your answer:
 <li>Set the y-axis limits from 0 to 0.00001. Hint: Use the density function in R to estimate densities of your simulated values.</li>
 </ul>
 </div>
-<div id="question-3-13" class="section level3">
+<div id="question-3-11" class="section level3">
 <h3>Question 3</h3>
 <p>An Actuary in the country of Actuaria believes the actions of a football player while playing a football match, can be modelled on a ball-by-ball action basis using a Markov Chain. The Actuary has considered 3 states for a player to model the ball-by-ball action – Pass, Shoot and Dribble. Library required – ‘markovchain’</p>
 <p>The following probabilities have been defined based on past data for each state: 1. There is a 50% chance of a Pass being made, 10% chance of Shooting and 40% chance of Dribbling in the next state of play, if the player had Passed the ball in the previous play. 2. There is a 70% chance of a Pass being made, 20% chance of Shooting and 10% chance of Dribbling in the next state of play, if the player had Shot the ball in the previous play. 3. There is a 40% chance of a Pass being made, 30% chance of Shooting and 30% chance of Dribbling in the next state of play, if the player had Dribbled the ball in the previous play.</p>
-<div id="exercises-44" class="section level4">
+<div id="exercises-48" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Create a vector with the state space of this Markov Chain in R.</li>
@@ -4757,7 +4774,7 @@ Run the following code in R before beginning your answer:
 <div id="question-4-8" class="section level3">
 <h3>Question 4</h3>
 <p>The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory. Please import this dataset from the ‘datasets’ package in R. Libraries required: ‘tseries’ ‘forecast’</p>
-<div id="exercises-45" class="section level4">
+<div id="exercises-49" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the timeseries with frequency = 12, giving appropriate labels for each axis and paste the chart into your answer sheet.</p></li>
@@ -4780,7 +4797,7 @@ Run the following code in R before beginning your answer:
 <li>‘{tree}’</li>
 </ul>
 </div>
-<div id="exercises-46" class="section level4">
+<div id="exercises-50" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Load the data from the csv file into a data frame (while importing the dataset ensure you set <code>stringsAsFactors= TRUE</code> in the <code>read.csv</code> function).</p>

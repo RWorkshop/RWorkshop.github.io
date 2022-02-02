@@ -10,7 +10,9 @@ Column {.tabset}
 ### Question 1
 <h4> Question 1 </h4>
 
-Q. 1) Monthly totals of airline passengers are given in time series data ‘AirPassengers’. 
+Monthly totals of airline passengers are given in time series data ‘AirPassengers’. 
+
+#### Exercises 
 1.  Plot the data as time series with frequency =12. 
 2.   Plot the acf function. 
 3.    Decompose the trend, seasonality and randomness for the data.
@@ -23,11 +25,11 @@ with legends.
 
 ### Question 2
 <h4> Question 2 </h4>
-Q. 2) 1.  Draw the graph of hazard function for the gamma distribution with parameters α = 0.75 
+Q. 2) 1.  Draw the graph of hazard function for the gamma distribution with parameters \alpha  = 0.75 
 and $\lambda = 0.5$. 
-2.   Draw the graph of hazard function for the gamma distribution with parameters α = 1 
+2.   Draw the graph of hazard function for the gamma distribution with parameters \alpha  = 1 
 and $\lambda = 0.5$. 
-3.    Draw the graph of hazard function for the gamma distribution with parameters α = 1.5 
+3.    Draw the graph of hazard function for the gamma distribution with parameters \alpha  = 1.5 
 and $\lambda = 0.5$. 
 4.  Comment on the thickness of the tails of the distribution of 2.   with the tails of (1.  and 
 (3.   . 
@@ -48,10 +50,11 @@ for age 55 or e55. Assuming 100 is the maximum age.
 
 ### Question 4
 <h4> Question 4 </h4>
-Q. 4) An life insurance company is selling Endowment, Pure Term and Unit Linked products 
-wherein 80% of the business comes from Endowment, 5% from Term Insurance and 15% 
+An life insurance company is selling Endowment, Pure Term and Unit Linked products wherein 80% of the business comes from Endowment, 5% from Term Insurance and 15% 
 from Unit Linked products. The sum assured ranges between 30000 to 200000 with multiple 
-of 5000. The sum assured are normally distributed with below parameters - Endowment 
+of 5000. 
+
+The sum assured are normally distributed with below parameters - Endowment
 (mean 50000, standard deviation 10000), Pure Term (mean 100000, standard deviation 
 25000), Unit Linked (mean 60000, standard deviation 5000). One policy is randomly picked 
 from the system and the sum assured of that policy is 75000. 
@@ -66,25 +69,27 @@ portfolio.
 
 ### Question 5
 <h4> Question 5 </h4>
-Q. 5) Signals are mathematically represented by a function that takes into account the magnitude 
+Signals are mathematically represented by a function that takes into account the magnitude 
 and frequency.
-xt = A cos(2πωt + φ) + wt, where ω is equal to 1/50 and wt is the white noise with mean 
-zero and SD of 5. A and φ need to be estimated.
+xt = A cos(2π\omega t + \phi) + wt, where \omega  is equal to 1/50 and wt is the white noise with mean 
+zero and SD of 5. A and \phi need to be estimated.
 In this case the parameters appear in a nonlinear way, so we use a trigonometric identity 
 and write
 
 $$
-A cos(2πωt + φ) = A cos(φ) cos(2πωt) - A sin(φ) sin(2πωt),
-= β1 cos(2πωt) + β2 sin(2πωt),
+A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\omega t),
+= β1 cos(2π\omega t) + β2 sin(2π\omega t),
 = β1*z1 + β2*z2
 $$
 
-If we can estimate β1 and β2, then A and φ can be estimated.
-Therefore, xt = β1 cos(2πωt) + β2 sin(2πωt) + wt 
-1.  Simulate and plot a series xt, using A=2, φ = 0.6π and SD of white noise as 5 (for t= 1 
+If we can estimate β1 and β2, then A and \phi can be estimated.
+Therefore, $xt = β1 cos(2π\omega t) + β2 sin(2π\omega t) + wt $
+
+#### Exercises
+1.  Simulate and plot a series xt, using A=2, \phi = 0.6π and SD of white noise as 5 (for t= 1 
 to 1000). 
 2.   Generate two series z1 and z2 (for t= 1 to 1000). 
-3.    Fit a Linear model to between xt, z1 and z2 and estimate parameters β1, β2 , A and φ. 
+3.    Fit a Linear model to between xt, z1 and z2 and estimate parameters β1, β2 , A and \phi. 
 4.  Plot x, fitted line. 
 
 ### Question 6
@@ -106,6 +111,8 @@ Assuming 100 is the maximum age. Calculate the probability of:
 ### Exercise 7
 Q. 7) An extract from the data for 15 patients monitored in hospital after every 15 minutes post 
 giving them a dosage of life saving drug is shown in the table below. 
+
+<pre><code>
 Person Last time at which patient was 
 observed (time unit in 15 Minutes) Outcome
 1 6 (i.e. 90 minutes) Died
@@ -123,6 +130,8 @@ observed (time unit in 15 Minutes) Outcome
 13 60 Survived
 14 60 Survived
 15 60 Survived
+</code></pre>
+#### Exercises
 1.  Use the data to create the Kaplan-Meier estimate of the survival function. Use the 
 “Survival” library in R to create the summary of the model (survival rates, standard 
 deviation, lower 95% confidence interval, upper 95% confidence interval). 
@@ -130,13 +139,14 @@ deviation, lower 95% confidence interval, upper 95% confidence interval).
 model to calculate the estimated integrated hazard and hence the Nelson ‐ Aalen 
 estimate of the survival model. 
 3.    Create a table to compare the above two analysis. 
-[16]
+
+### Exercise 8
 Q. 8) Consider a set of data generated by tossing a fair coin, letting xt = 1 when a head is obtained 
 and xt = −1 when a tail is obtained. Then, construct yt as
 yt = 2 + 1.5xt − 0.5xt−1
+
+#### Exercises 
 Simulate data for three cases, one with a small sample size (n = 10), another one with a 
 moderate sample size (n = 100) and lastly with large sample size (n = 1000).
 1.  Plot the series for all three cases. 
 2.   Find the mean and variance and comment on results. 
-[10]
-***********************

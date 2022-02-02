@@ -27,9 +27,9 @@ Import the time series data file “ARIMA.csv” and answer the below questions.
 ### Question 2
 <h4> Question 2</h4>
 
-Q. 2) The file “Data.csv” contains records of premium received and claim paid between certain 
-time period. The ‘Day’ information represents the date on which the transaction occurred, 
+The file “Data.csv” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, 
 calculated from the first transaction date. 
+
 #### Exercises
 
 1. Separate the data into two tables – premium and claim, based on the transaction type 
@@ -44,17 +44,22 @@ process. Expand the ‘claim’ table to include a column for observed waiting t
 days) for all the claims and calculate a Poisson parameter value.
 
 ### Question 3
-Q. 3) Claim size [X] for a class of insurance follows Gamma (10,0.2). 
+
+Claim size [X] for a class of insurance follows Gamma (10,0.2). 
+
 #### Exercises
 
 1. Calculate f{30}. 
+
 2.  Calculate the median of the function. (2)
+
 3.   A quota share reinsurance is in place with 75% retained proportion. Estimate the mean 
 and variance of the amount paid by the reinsurer in respect of a single claim.
+<p>
 The aggregate claim follows a compound distribution with below parameters: 
 
- Number of claims follow Poisson distribution with parameter 500 
- Individual claim size follows a Gamma distribution with parameters (600,0.3) 
+* Number of claims follow Poisson distribution with parameter 500 
+* Individual claim size follows a Gamma distribution with parameters (600,0.3) 
 [use seed = 250 for below 3 questions]. 
 4.   Generate 1000 observations and calculate the 500th simulated value. 
  
@@ -64,9 +69,10 @@ claim. Calculate the 500th simulated value for the insurer under the revised con
 6.  The insurer wants to analyze another claim sharing option. Under this, insurer will pay 
 75% of the claim amount and the rest 25% will be borne by the policyholder. Calculate 
 the 500th simulated value for the insurer under this option. 
+
 ### Question 4
 
-Q. 4) The force of mortality ‘mu(x)’ for a particular group of life can be calculated using the 
+The force of mortality ‘mu(x)’ for a particular group of life can be calculated using the 
 formula as A*B^x; where A=0.00002; B=exp(c); c=0.09; x denotes the age of the life. 
 #### Exercises
 
@@ -76,17 +82,18 @@ probability that a life aged 50, will remain alive after 10 years.
 3.   Create a table of mortality rate qx for ages between 40 to 50. 
 
 ### Question 5
-Q. 5) A primary school has two wings A and B. The students can change their Wing freely. It was 
-observed that the rate of movement is dependent on the age ‘x’ of the student (ranging from 
-5 to 15). The rate of movement from A to B = [0.08*x – 0.2] and the rate of movement from 
-B to A = [0.05 * x + 0.1]. 
+
+A primary school has two wings A and B. The students can change their Wing freely. 
+It was observed that the rate of movement is dependent on the age ‘x’ of the student (ranging from 5 to 15). 
+The rate of movement from A to B = [0.08*x – 0.2] and the rate of movement from B to A = [0.05 * x + 0.1]. 
 
 
 
 #### Exercises
 
 1. Write a code to calculate the generator matrix G(x). Calculate the rate at which a 12 
-year old student will move from wing B to A and from A to B. (8)
+year old student will move from wing B to A and from A to B. 
 2.  Over a very small time period h, the transition probability matrix P(t,t+h) can be 
-approximated as P(t,t+h) = I + h*G(t); I is the identity matrix. Using this, calculate the 
-probability that a 8 year old will move to Wing B in next 5 years in case h=1/365. (10)
+approximated as $P(t,t+h) = I + h*G(t)$; where $I$ is the identity matrix. 
+
+Using this, calculate the probability that a 8 year old will move to Wing B in next 5 years in case h=1/365. 

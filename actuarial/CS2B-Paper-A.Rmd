@@ -33,10 +33,11 @@ North, South, West
 
 The transition matrix (by rows) is defined as follows:
 
-| North | South | West |
-North | 0.3 | 0.3 | 0.4|
-South | 0.4 | 0.4 | 0.2|
-West | 0.5 | 0.3 | 0.2|
+|| North | South | West |
+| :----:| :----:|:----:|:----:|
+|North | 0.3 | 0.3 | 0.4|
+|South | 0.4 | 0.4 | 0.2|
+|West | 0.5 | 0.3 | 0.2|
 
 ### Question 2 (Part (a))
 
@@ -68,7 +69,7 @@ the plot into your answer.
 (c) Plot the probability density function for this distribution as:
  1 a scatter plot
  2 a line graph.
- Paste your plots into your answer
+Paste your plots into your answer
  
  
  
@@ -79,6 +80,7 @@ You have been asked to analyse the percentage changes in quarterly personal
 consumption expenditure and personal disposable income in the US from 1970–2010. 
 This information is contained in a time series called “consumption” in R’s fpp library.
 The data can be loaded into R using the command: 
+
 <pre><code>
 install.packages(“fpp”)
 library(fpp)
@@ -86,17 +88,19 @@ library(fpp)
 consumption <- usconsumption[,1]
 </code></pre>
 
+
+#### Exercise 1
+
 (i) Plot this time series giving appropriate labels for each axis and paste the R 
 code and the chart into your answer. 
 
 #### Exercise 2
-(ii) (a) Plot the Autocorrelation function (ACF) and Partial Autocorrelation 
-function (PACF), giving appropriate labels for each axis and paste the R code and the charts into your answer. [8]
-(b) Comment on your plots in part (ii)(a), making reference to the 
-stationarity. 
+Plot the Autocorrelation function (ACF) and Partial Autocorrelation 
+function (PACF), giving appropriate labels for each axis and paste the R code and the charts into your answer. <p>
+Comment on your plots in part (ii)(a), making reference to the stationarity. 
 
 #### Exercise 3
-Fit the most appropriate ARIMA model based on the results in part (ii)(a), 
+Fit the most appropriate ARIMA model based on the results in exercise 2, 
 stating the equation of the model and justifying your choice. 
 
 
@@ -108,13 +112,14 @@ The dataset usconsumption also includes the quarterly personal disposable income
 income <- usconsumption[,2]
 </code></pre>
 
-(iv) (a) Compare the performance of the ARIMA model you have chosen in 
+#### Exercise 4 
+(a) Compare the performance of the ARIMA model you have chosen in 
 part (iii) with a linear regression model of consumption on income, by computing the root mean square error (RMSE) for the fitted values ofeach model. Paste your coding and R output into your answer.
 
 (b) Explain why the RMSE is not the ideal measure to compare these models, including a recommendation of a more appropriate measure.
 
 An analyst has suggested that neither model in part (iv) is a good fit to the data and has asked you to propose an alternative model.
-
+<p>
 #### Exercise 5
 * Suggest a suitable alternative model to fit to the data.
 * Fit the model you have suggested to the data, stating the 

@@ -16,7 +16,10 @@ mu_x Crude values of the forces of mortality at age x, μ௫
 Exposed_x Exposed to risk at age 𝑥 nearest birthday 
 Before answering this question, the ‘CS2B_Sept_21_Qu_1_Data.csv’ file should be 
 loaded into R and assigned to a data frame called mortalitydata. 
-(i) Plot the crude values of μ௫ against age, x, using a line graph. [6] 
+
+#### Exercises
+
+(i) Plot the crude values of μ௫ against age, x, using a line graph. [
 (ii) Comment on the age pattern of the crude values of μx
  shown in the graph in 
 part (i). [4] 
@@ -80,8 +83,8 @@ Copula 1.
 1. Generate 200,000 observations of (X, Y) using Copula 2 and the marginal 
 distributions of X and Y, assigning the observations to a 200,000 × 2 matrix 
 named t3XY. You should set a random number generator seed of 3 before 
-generating the observations and use the R function, head(), to display the 
-first six rows of t3XY in your answer script. [5] 
+generating the observations and use the R function, ``head()``, to display the 
+first six rows of t3XY in your answer script. 
 2. Plot, on a single graph, line graphs of the estimated conditional mean of Y
 given that X ൒ x against x for values of x at intervals of 1 from 10 to 30 
 inclusive for each of the two generated copulas. You should use separate 
@@ -129,11 +132,10 @@ Before constructing the specimen data set, the Actuary first needs to generate t
 sets of 10,000 observations from the uniform distribution on [0, 1]. 
 
 #### Exercises
-(i) Generate a 10,000 × 3 matrix named U of observations from the uniform 
+
+1. Generate a 10,000 × 3 matrix named U of observations from the uniform 
 distribution on [0, 1]. Each column of U should contain 10,000 observations 
-that have been generated together but separately from the observations in other 
-columns. You should set a random number generator seed of 12345 before 
-generating the observations in the first column and use the R function, 
+that have been generated together but separately from the observations in other columns. You should set a random number generator seed of 12345 before generating the observations in the first column and use the R function, 
 head(), to display the first six rows of U in your answer script. 
 
 Let Uij represent the (i, j) entry of matrix U. 
@@ -147,31 +149,28 @@ The Actuary proceeds with creating the specimen data set by constructing:
  and to +1 if Ui1 > 2
 3
 *  an n-component vector f2 whose ith component is equal to 2(Ui2 – 0.5) 
-*  an n-component vector f whose ith component is the value of f given by the 
-formula above for customer i
-*  an n-component vector defprob whose ith component is the probability of default 
-given by the formula above for customer i
-*  an n-component vector default whose ith component is equal to 1 if Ui3 is less than 
-or equal to the probability from the vector defprob for customer i and 0 otherwise 
-*  a data frame in the format required to construct decision trees using the R package 
-rpart, incorporating the vectors f1, f2 and default. 
+*  an n-component vector f whose ith component is the value of f given by the formula above for customer i
+*  an n-component vector defprob whose ith component is the probability of default given by the formula above for customer i
+*  an n-component vector default whose ith component is equal to 1 if Ui3 is less than or equal to the probability from the vector defprob for customer i and 0 otherwise 
+*  a data frame in the format required to construct decision trees using the R package ***rpart***, incorporating the vectors f1, f2 and default. 
+<p>
 The R code to create the data frame in the format required, given the vectors f1, f2 and 
 default, is: 
 data.frame("f1" = f1, "f2" = f2, "default" = default)
-
+<p>
 (ii) Generate a data frame named specimen, in line with the Actuary’s construction 
 rules, corresponding to the parameter values n = 10,000, a = 0 and b = c = 0.5. 
 Use the R function, head(), to display the first six rows of specimen in your 
 answer script. 
 (iii) Determine the expected probability of customer default based on the specimen 
 data. 
-(iv) Comment on how realistic your answer to part (iii) is in terms of what the 
-bank may expect in practice, suggesting how the parameter a could be 
-changed to make it more realistic. [4] 
-The R code for fitting and plotting a decision tree object called tree, that predicts 
-whether a customer will default or not, is as follows: 
+4. Comment on how realistic your answer to exercise 3 is in terms of what the bank may expect in practice, suggesting how the parameter a could be 
+changed to make it more realistic. 
+The R code for fitting and plotting a decision tree object called tree, that predicts whether a customer will default or not, is as follows: 
+
 tree = rpart(default ~ ., data = specimen, method = "class")
 rpart.plot(tree, digits = 3, type = 5, extra = 106) 
+
 (v) Plot the decision tree object, called tree, using the R code above. 
 (vi) State, using the decision tree plot, whether a customer with features f1 = 0 and 
 f2 = –0.425 is expected to default or not. 
@@ -180,37 +179,32 @@ f2 = –0.425 is expected to default or not.
 <h4> Question 3</h4>
 
 Before launching the product, the Actuary gathers actual customer data from another 
-bank, that is available in the public domain, to assess the predictive power of the 
-decision tree model. The ***CS2B_Sept_21_Qu_3_Data.csv*** file contains the actual 
-data for 100 customers in the required format for the decision tree model. 
-Before answering the remainder of this question, the ‘CS2B_Sept_21_Qu_3_Data.csv’ 
+bank, that is available in the public domain, to assess the predictive power of the decision tree model. 
+
+The ***CS2B_Sept_21_Qu_3_Data.csv*** file contains the actual data for 100 customers in the required format for the decision tree model. Before answering the remainder of this question, the ‘CS2B_Sept_21_Qu_3_Data.csv’ 
 file should be loaded into R and assigned to a data frame called actual. 
 
 #### Exercises
 
 7. Show the first six rows of the actual data frame in your answer script using the 
 R function, head(). 
-The R code for generating the predicted default classifications of the policyholders in 
-the actual data frame using the tree decision tree object is as follows: 
+The R code for generating the predicted default classifications of the policyholders in the actual data frame using the tree decision tree object is as follows: 
 <pre><code>
 predict(tree, actual, type = 'class') 
 </code></pre>
 
-8. Generate the predicted default classifications of the 100 customers in the 
-actual data frame using the R code above, assigning the predictions to a vector 
-called predict_defaults. Use the R function, head(), to display the first six 
-values of predict_defaults in your answer script. 
+8. Generate the predicted default classifications of the 100 customers in the actual data frame using the R code above, assigning the predictions to a vector called predict_defaults. Use the R function, ``head()``, to display the first six values of predict_defaults in your answer script. 
 
 9. Generate a confusion matrix of actual defaults versus predicted defaults for the 
 100 actual customers, displaying the matrix in your answer script.  
 
 10. Determine, using R, the values of the precision and recall percentages for the 
-decision tree model’s predictions for the 100 actual customers, where the true 
-positive is defined as the case where the model predicts a default for a 
+decision tree model’s predictions for the 100 actual customers, where the true positive is defined as the case where the model predicts a default for a 
 customer that has actually defaulted. 
 
 Based on the value of the recall percentage for the 100 actual customers, the bank’s 
 Finance Director concludes that the decision tree model needs no further refinement 
 and can be used to determine which loan applications to approve when the product is 
 launched. 
-(xi) Comment on the Finance Director’s conclusion. 
+
+11. Comment on the Finance Director’s conclusion. 

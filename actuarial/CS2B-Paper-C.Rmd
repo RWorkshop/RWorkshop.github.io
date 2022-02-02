@@ -9,28 +9,29 @@ Column {.tabset}
 
 ### Question 1
 <h4><Question 1</h4>
-1 Before answering this question, the data file must be generated in R using the 
+Before answering this question, the data file must be generated in R using the 
 following code: 
 set.seed(121118); y=arima.sim(list(order=c(1,1,0),ar=0.7), n=300)
-(1.  (a) Plot the time series giving appropriate labels for each axis and paste 
+
+#### Exercises 
+1.  (a) Plot the time series giving appropriate labels for each axis and paste 
 the chart into your answer. 
 (b) Comment on the general features of your chart. 
 
-2.   (a) Determine the best least squares linear fit, adding it to your chart in 
-part (1.  and paste the new chart into your answer. 
-(b) Explain whether this least squares linear trend can be removed such 
-that a zero mean stationary distribution is appropriate for the residuals.
-[3]
-(3.    (a) Plot the sample Autocorrelation function (ACF) and sample Partial 
-Autocorrelation function (PACF) of the original data, giving 
+2.   (a) Determine the best least squares linear fit, adding it to your chart in part 1  and paste the new chart into your answer. 
+(b) Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.
+
+3.    (a) Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving 
 appropriate labels for each axis and paste the charts into your answer.
 
 (b) Comment, by visually inspecting these plots, on the possible modelling 
 strategy which could be adopted. [3]
-(4.  (a) Perform an appropriate transformation to the data such that a stationary 
+<p>
+4.  (a) Perform an appropriate transformation to the data such that a stationary 
 model is possible, pasting any relevant charts into your answer. 
 (b) Comment on your answer to part (4. (a). [3]
-(5.  (a) Propose an appropriate model for the transformed data. [3]
+<p>
+5.  (a) Propose an appropriate model for the transformed data. 
 (b) Justify the choice of model in part (5. (a) by performing an appropriate 
 diagnostics procedure and comparisons with alternative models. 
 
@@ -43,23 +44,30 @@ Passengers arrive at the terminal exit seeking to travel to the car park accordi
 Poisson process with a rate of 1 per minute.
 If four or more passengers are waiting at the exit when a pod arrives, taxis are 
 immediately summoned to take all the remaining passengers to the car park.
-(1.  Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear 
+
+#### Exercises
+1.  Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear 
 at the exit to the terminal in any given two-minute period. 
+
 2.   Determine a transition matrix for the number of passengers waiting at the exit 
 when a pod arrives. 
-(3.    Calculate the average number of times per hour that the company operating the 
-pods will need to summon a taxi to take passengers to the car park. [9]
+
+3.    Calculate the average number of times per hour that the company operating the 
+pods will need to summon a taxi to take passengers to the car park. 
 A manager at the airport has suggested that pods could be operated every 
 1.75 minutes without compromising safety, and that this would greatly reduce the 
 need to use taxis.
-(4.  Evaluate the manager’s suggestion, showing any working where appropriate.
 
-(5.  Comment on your results in part (4. . 
+4.  Evaluate the manager’s suggestion, showing any working where appropriate.
+
+5.  Comment on your results in part 4. . 
 
 ### Question 3
 <h4><Question 3</h4>
-3 In an insurance company’s portfolio, individual claim sizes, in £, follow an 
+In an insurance company’s portfolio, individual claim sizes, in £, follow an 
 exponential distribution with parameter 0.0001.
+
+#### Exercises
 1.  In R console run the following code: set.seed(123)and then use R to 
 simulate 10,000 claims and plot a histogram of the simulated data. Paste your 
 R code and chart into your answer. 
@@ -77,6 +85,7 @@ arrangement, by
 The insurer wishes to determine an appropriate retention limit and has asked an 
 analyst to investigate the effect of different retention limits on the mean and variance 
 of claims.
+<p>
 4.  Calculate the mean and variance of the claims paid by:
 (a) the insurer
 (b) the reinsurer

@@ -10,12 +10,12 @@ Column  {.tabset}
 <h4> Question 1</h4>
 
 The Logistic function can be defined by the function:
-𝑓(𝑥) =
-1
-(1 + exp(−𝑥))
+
+$$ f(𝑥) = \frac{1}{(1 + exp(-x))}$$
+
 1. Create a function in R to calculate f(x). 
-2.  Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add 
-appropriate x and y-axis labels. 
+
+2.  Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add appropriate x and y-axis labels. 
 
 ### Question 2
 
@@ -26,15 +26,18 @@ Shape = 1.5
 Scale = 100000
 ```
 Run the following code in R before beginning your answer:
+```{r}
 set.seed(1234)
 options(scipen=5)
+```
 Use the in-build functions in R to:
 
 ### Exercises
 
 1. Simulate 1,000 values from a Weibull distribution with parameters given above, assign 
 this to a vector variable called ‘WeibullSim’. 
-2.  Calculate the mean and standard deviation of the simulated values. (2)
+2.  Calculate the mean and standard deviation of the simulated values. 
+<p>
 3.   Using the mean and standard deviation estimated from (ii), estimate the 𝜇 and 𝜎 parameters 
 of a LogNormal distribution following the method of moments approach. 
 4.   Simulate 1,000 values from the LogNormal distribution using the parameter estimates in 
@@ -42,14 +45,15 @@ of a LogNormal distribution following the method of moments approach.
 mean and standard deviation of the simulated values. 
 5.  Plot a histogram of ‘WeibullSim’ and ‘LognormalSim’ showing the frequencies and paste 
 the plot into your answer. 
+<p>
 6.  Plot the probability density function for ‘WeibullSim’ and ‘LognormalSim’ as a line plot.
- Set the WeibullSim line to color ‘red’ and the LognormalSim line to color ‘green’.
- Set the y-axis limits from 0 to 0.00001.
+* Set the WeibullSim line to color ‘red’ and the LognormalSim line to color ‘green’.
+* Set the y-axis limits from 0 to 0.00001.
 Hint: Use the density function in R to estimate densities of your simulated values. 
 
 ### Question 3
 
-Q. 3) An Actuary in the country of Actuaria believes the actions of a football player while playing 
+An Actuary in the country of Actuaria believes the actions of a football player while playing 
 a football match, can be modelled on a ball-by-ball action basis using a Markov Chain. The 
 Actuary has considered 3 states for a player to model the ball-by-ball action – Pass, Shoot and 
 Dribble.
@@ -68,6 +72,7 @@ Dribbling in the next state of play, if the player had Dribbled the ball in the 
 2.  Create a matrix of transition probabilities in R with names of that states in the matrix. Then 
 create a Markov Chain Object using the ‘new’ function and details from the matrix created. 
 3.   Plot the transition probability matrix. 
+<p>
 4.   Calculate the steady state of this distribution.
 5.  Calculate the probability that a player who Passes the ball initially, will Pass the ball after:
 a) 2 plays have taken place
@@ -75,51 +80,69 @@ b) 5 plays have taken place
 
 6.  Use the function set.seed(100). Simulate a sequence of 100 states using 
 markovchainSequence function. Compute the frequency of the states.
-vii)Use a bar chart to plot the relative frequency of the states and label the chart appropriately.
-v3.   Comment by comparing the results obtained in (v2.  with the steady state distribution 
-obtained in (4.  . 
+
+7. Use a bar chart to plot the relative frequency of the states and label the chart appropriately.
+
+8. Comment by comparing the results obtained in exercise 7 with the steady state distribution 
+obtained in exercise 4. 
 
 ### Question 4
 
-Q. 4) The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. 
+The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. 
 Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical 
 Observatory. Please import this dataset from the ‘datasets’ package in R.
 Libraries required:
 ‘tseries’
 ‘forecast’
+
+
+#### Exercises 
 1. Plot the timeseries with frequency = 12, giving appropriate labels for each axis and paste 
 the chart into your answer sheet. 
-IAI CS2B-0921
- Page 4 of 4
+
 2.  Plot the sample Auto-correlation Function (ACF) and the sample Partial Auto-Correlation 
 Function (PACF) of the data, giving appropriate labels for the x and y axes. 
-3.   Estimate the ACF and PACF values at each lag. (2)
-4.   Comment on the ACF based on the charts and values computed in (2.  and (iii). (2)
+
+3.   Estimate the ACF and PACF values at each lag. 
+
+4.   Comment on the ACF based on the charts and values computed in (2.  and (iii). 
+
 5.  Calculate the simple seasonal difference with period 12. Print the top 12 values of the 
-seasonal difference. (2)
+seasonal difference. 
+
 6.  Decompose the trend, seasonality and randomness of the data. Plot the decomposed values.
-vii)Comment on the general features of your chart. (2)
+
+7. Comment on the general features of your chart. 
 
 ### Question 5
 
-Q. 5) The ‘DTData.csv’ file that has been provided contains details of individuals who made 
-insurance claims in the country of Actuaria. A ‘Yes’ in the ‘type’ column indicates a claim 
-was made. The data, additionally contains details on the age and BMI of the individuals at the 
-time of claim. Use a decision tree approach to classify the type of claims based on BMI and 
+The ‘***DTData.csv***’ file that has been provided contains details of individuals who made insurance claims in the country of **Actuaria**. 
+
+A ‘Yes’ in the ‘type’ column indicates a claim was made. The data, additionally contains details on the age and BMI of the individuals at the time of claim. Use a decision tree approach to classify the type of claims based on BMI and 
 age. 
-Library required - ‘tree’
+
+#### Library required 
+* ‘{tree}’
+
+#### Exercises
 1. Load the data from the csv file into a data frame (while importing the dataset ensure you 
-set stringsAsFactors to TRUE in the read.csv function). Split the dataset into 2 – one to 
-train the model and the other to test the model. The first 70% of the data should go into the 
-training set and the rest into the test dataset. 
+set ``stringsAsFactors= TRUE`` in the ``read.csv`` function). 
+<p>
+Split the dataset into 2 – one to train the model and the other to test the model. 
+The first 70% of the data should go into the training set and the rest into the test dataset. 
+<p>
+
 2.  Using the ‘tree’ package and the ‘tree’ function, train a decision tree model on your training 
 dataset. Print the results of the model. 
+
 3.   Summarise the results and plot the decision tree. Use the ‘text’ function to add text to the 
 decision tree.
-4.   Using the model trained on the ‘Training’ dataset, predict whether a claim will or will not 
-occur on the test dataset. Use the ‘predict’ function to carry out the prediction. 
+4.   Using the model trained on the ‘Training’ dataset, predict whether a claim will or will not occur on the test dataset. Use the ‘``predict()``’ function to carry out the prediction. 
+
 5.  Summarise the results of your prediction. 
+
 6.  Create a summary table to compare the predicted results against the actual ‘type’ in the test 
 dataset and calculate an accuracy score and type 1 and type 2 errors.
-vii)Comment on the accuracy of your predictions and provide suggestions on how any bias in 
+
+7. Comment on the accuracy of your predictions and provide suggestions on how any bias in 
 the modelling could be minimised.

@@ -83,12 +83,12 @@ consumption expenditure and personal disposable income in the US from 1970–201
 This information is contained in a time series called “consumption” in R’s fpp library.
 The data can be loaded into R using the command: 
 
-<pre><code>
+```{r eval=FALSE}
 install.packages(“fpp”)
 library(fpp)
 
 consumption <- usconsumption[,1]
-</code></pre>
+```
 
 
 #### Exercise 1
@@ -111,9 +111,9 @@ The dataset usconsumption also includes the quarterly personal disposable income
 <p>
 The data can be loaded into R using the command:
 
-<pre><code>
+```{r eval=FALSE}
 income <- usconsumption[,2]
-</code></pre>
+```
 
 #### Exercise 4 
 Compare the performance of the ARIMA model you have chosen in 

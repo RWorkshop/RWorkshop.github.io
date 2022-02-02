@@ -2,6 +2,14 @@
 CS2B Paper H {data-navmenu="R for Risk Modelling and Survival Analysis"}
 ==============================================================
 
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
 Column  {.tabset}
 --------------------------------
 
@@ -9,7 +17,7 @@ Column  {.tabset}
 ### Question 1
 <h4> Question 1</h4>
 
-The data file “Expenses.csv” contains records of last 5 years monthly expenses paid by a 
+The data file “***Expenses.csv***” contains records of last 5 years monthly expenses paid by a 
 company starting from January 2015. 
 #### Exercises
 
@@ -19,6 +27,7 @@ the data using seasonal differencing.
 3.   Plot a graph showing the actual data, the trend line, the trend + seasonal line and any 
 remaining un-trended number. Plot them in the same graph and use different colour 
 lines for each of the series. 
+-------
 Import the time series data file “ARIMA.csv” and answer the below questions. 
 4.   Plot a graph for the above time series data “ARIMA.csv”.
 5.  Plot two graphs to show the ACF and PACF for the time series provided.
@@ -45,13 +54,13 @@ days) for all the claims and calculate a Poisson parameter value.
 
 ### Question 3
 
-Claim size [X] for a class of insurance follows Gamma (10,0.2). 
+Claim size [X] for a class of insurance follows a Gamma (10,0.2) distribution. 
 
 #### Exercises
 
-1. Calculate f{30}. 
+1. Calculate $f{30}$. 
 
-2.  Calculate the median of the function. (2)
+2.  Calculate the median of the function. 
 
 3.   A quota share reinsurance is in place with 75% retained proportion. Estimate the mean 
 and variance of the amount paid by the reinsurer in respect of a single claim.
@@ -66,6 +75,7 @@ The aggregate claim follows a compound distribution with below parameters:
 5.  The insurer wants to limit its claim liability and hence has modified the terms of the 
 policy. It would now only pay for any amount in excess of an amount 500 on each 
 claim. Calculate the 500th simulated value for the insurer under the revised condition. 
+
 6.  The insurer wants to analyze another claim sharing option. Under this, insurer will pay 
 75% of the claim amount and the rest 25% will be borne by the policyholder. Calculate 
 the 500th simulated value for the insurer under this option. 

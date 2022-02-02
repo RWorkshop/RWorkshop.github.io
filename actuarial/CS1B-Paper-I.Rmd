@@ -237,7 +237,7 @@ where the critical point is the α/2 quantile of an appropriate distribution.
 An estimate of the true significance level for this two-sided test, when the chosen 
 level of significance is α = 0.1, can be computed using the R Monte Carlo simulation 
 code provided below: 
-<pre><code>
+```{r eval=FALSE}
 set.seed(123) # 
 alpha = 0.1 
 m=20 
@@ -252,7 +252,7 @@ if (abs(ts)>=qt(1-alpha/2, df)) #
 nrej=nrej+1 # 
 } 
 alpha_est=nrej/N # 
-</code></pre>
+```
 Note that the code provided above lacks best practice of including appropriate 
 comments. 
 (iii) Explain the provided code by placing comments after each ‘#’ sign in 

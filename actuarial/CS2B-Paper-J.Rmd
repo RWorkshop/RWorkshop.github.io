@@ -1,6 +1,13 @@
-
 CS2B Paper J {data-navmenu="R for Risk Modelling and Survival Analysis"}
 ==============================================================
+
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
 
 Column  {.tabset}
 --------------------------------
@@ -30,9 +37,11 @@ Run the following code in R before beginning your answer:
 set.seed(1234)
 options(scipen=5)
 ```
+#### Exercises
+
 Use the in-build functions in R to:
 
-### Exercises
+
 
 1. Simulate 1,000 values from a Weibull distribution with parameters given above, assign 
 this to a vector variable called ‘WeibullSim’. 

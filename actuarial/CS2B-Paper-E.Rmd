@@ -1,6 +1,13 @@
-
 CS2B Paper E {data-navmenu="R for Risk Modelling and Survival Analysis"}
 ==============================================================
+
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
 
 Column  {.tabset}
 --------------------------------
@@ -56,12 +63,14 @@ with the expected asymptotic behaviour.
 
 ### Question 2
 <h4> Question 2</h4>
+
 Before answering this question, generate the vector, X, in R using the following code:
+
 ``set.seed(1027); X = rexp(n=1000, rate=0.01)``
 
 
-The vector X represents the gross claim sizes of 1,000 claims. The payments are to be 
-split between an insurance company and its reinsurer under an Excess of Loss 
+The vector $X$ represents the gross claim sizes of 1,000 claims. 
+The payments are to be split between an insurance company and its reinsurer under an Excess of Loss 
 reinsurance arrangement with a retention level M = 400. 
 
 #### Exercises
@@ -70,20 +79,21 @@ reinsurance arrangement with a retention level M = 400.
 2.  Generate an additional vector, Y, which is of the same length as X, such that Y
 represents the amounts to be paid by the insurer for each component of X. 
 
-3.  Generate an additional vector, 𝑍, which is of the same length as X, such that 𝑍
+3.  Generate an additional vector, $Z$, which is of the same length as X, such that 𝑍
 represents the amounts to be paid by the reinsurer for each component of X. 
+<p>
+-----
 
-An actuary assumes that the underlying gross claims distribution follows an 
-exponential distribution of some unknown rate $\lambda$. The actuary needs to estimate $\lambda$ 
+An actuary assumes that the underlying gross claims distribution follows an exponential distribution of some unknown rate $\lambda$. The actuary needs to estimate $\lambda$ 
 using only the claim amounts recorded in vector Y. 
+
 4.  Construct R code that calculates the log-likelihood, as a function of the parameter $\lambda$, given the claim amounts data in vector Y.  
-5. Determine the value of $\lambda$ at which the log-likelihood function reaches its 
-maximum. 
+
+5. Determine the value of $\lambda$ at which the log-likelihood function reaches its maximum. 
 
 ### Question 3 Part (a)
 <h4> Question 3</h4>
-
-3 An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
+ An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
 variables, $x_1$ and $x_2$. 
 
 Before answering this question, generate the data set, portfolio, in R using the following code: 

@@ -127,7 +127,7 @@ Assuming 100 is the maximum age. Calculate the probability of:
 An extract from the data for 15 patients monitored in hospital after every 15 minutes post 
 giving them a dosage of life saving drug is shown in the table below. 
 
-<pre><code>
+```{r eval=FALSE}
 Person Last time at which patient was 
 observed (time unit in 15 Minutes) Outcome
 1 6 (i.e. 90 minutes) Died
@@ -145,7 +145,7 @@ observed (time unit in 15 Minutes) Outcome
 13 60 Survived
 14 60 Survived
 15 60 Survived
-</code></pre>
+```
 #### Exercises
 1.  Use the data to create the Kaplan-Meier estimate of the survival function. Use the 
 “{Survival}” library in R to create the summary of the model (survival rates, standard 

@@ -5,42 +5,53 @@ CS2B Paper I {data-navmenu="R for Risk Modelling and Survival Analysis"}
 Column  {.tabset}
 --------------------------------
 
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
 
 ### Question 1
 <h4> Question 1</h4>
-1 The ‘CS2B_Sept_21_Qu_1_Data.csv’ file contains mortality data for a particular 
-population of females in the year 1921, taken from the Human Mortality Database. 
+The ‘***CS2B_Sept_21_Qu_1_Data.csv***’ file contains mortality data for a particular population of females in the year 1921, taken from the Human Mortality Database. 
 The file contains the following three variables:
-Age Age, 𝑥, in single years from 25 to 90 
-mu_x Crude values of the forces of mortality at age x, μ௫
-Exposed_x Exposed to risk at age 𝑥 nearest birthday 
+
+* ***Age*** Age, 𝑥, in single years from 25 to 90 
+* ***mu_x*** Crude values of the forces of mortality at age x, μ௫
+* ***Exposed_x*** Exposed to risk at age $X$ nearest birthday 
+
 Before answering this question, the ‘CS2B_Sept_21_Qu_1_Data.csv’ file should be 
 loaded into R and assigned to a data frame called mortalitydata. 
 
 #### Exercises
 
-(i) Plot the crude values of μ௫ against age, x, using a line graph. [
-(ii) Comment on the age pattern of the crude values of μx
- shown in the graph in 
-part (i). [4] 
+1. Plot the crude values of μ௫ against age, x, using a line graph. [
+
+2. Comment on the age pattern of the crude values of μx
+ shown in the graph in exercise 1part (i). 
+
+--------------
+
 The Gompertz law of mortality can be expressed as follows: 
 μx
  = Bcx
-(iii) Perform a graduation of the crude values of μ௫ using the Gompertz formula, 
-specifying the values of B and c in your answer script. [7] 
-(iv) Perform a chi-square goodness-of-fit test of the graduated values of μx
- from 
-part (iii) using a 95% confidence level. [9]
+
+3. Perform a graduation of the crude values of μ௫ using the Gompertz formula, 
+specifying the values of B and c in your answer script. 
+4. Perform a chi-square goodness-of-fit test of the graduated values of μx
+ from exercise 3 using a 95% confidence level. 
  
 ### Question 2
 <h4> Question 2</h4>
 
 2 Before answering this question, the R package for copulas should be loaded into R 
 using the following code: 
-<pre><code>
+```{r eval=FALSE}
 install.packages("copula") 
 library(copula) 
-</code></pre>
+```
 
 A copula model is to be constructed of the dependence between annual average 
 temperature X, in degrees Celsius, and annual rainfall Y, in millimetres, in a region at 
@@ -48,64 +59,60 @@ risk of desertification. The marginal distributions of X and Y are:
 X ~ N൫20, 32
 ൯, Y ~ N൫200, 502
 ൯. 
+----
 
 Two copulas are under consideration to model the dependence of X and Y: 
 * Copula 1: A Gaussian copula with ρ = –0.5. 
 * Copula 2: A Student’s t copula with 3 degrees of freedom and ρ = –0.5. 
 
-The following R code generates n simulations of jointly distributed random variables 
-U and V, where the marginal distributions of U and V are the uniform distribution on 
-[0, 1] and the dependency between U and V is given by a Gaussian copula with 
-correlation ρ (rho): 
-<pre><code>
+The following R code generates n simulations of jointly distributed random variables U and V, where the marginal distributions of U and V are the uniform distribution on 
+[0, 1] and the dependency between U and V is given by a Gaussian copula with correlation ρ (rho): 
+```{r eval=FALSE}
 rCopula(n, normalCopula(param = rho)) 
-</code></pre>
+```
 The corresponding code for the Student’s t-copula with nu degrees of freedom is: 
-<pre><code>
+```{r eval=FALSE}
 rCopula(n, tCopula(param = rho, df = nu)) 
-</code></pre>
-The output from the function rCopula is in the format of an n × 2 matrix whose 
-rows are the observations of (U, V). 
+```
+The output from the function rCopula is in the format of an n × 2 matrix whose rows are the observations of (U, V). 
 
-Before answering part (i), generate the matrix, GaussXY, in R using the following 
-code: 
-<pre><code>
+Before answering exercise 1, generate the matrix, GaussXY, in R using the following code: 
+```{r eval=FALSE}
 set.seed(3) 
-GaussUV = rCopula(200000, normalCopula(param = -0.5)) 
-GaussXY = matrix(nrow = 200000, ncol = 2) 
-GaussXY[,1] = qnorm(GaussUV[,1], mean = 20, sd = 3) 
-GaussXY[,2] = qnorm(GaussUV[,2], mean = 200, sd = 50) 
-</code></pre>
+GaussUV <- rCopula(200000, normalCopula(param = -0.5)) 
+GaussXY <- matrix(nrow = 200000, ncol = 2) 
+GaussXY[,1] <- qnorm(GaussUV[,1], mean = 20, sd = 3) 
+GaussXY[,2] <- qnorm(GaussUV[,2], mean = 200, sd = 50) 
+```
+
 The 200,000 × 2 matrix, GaussXY, represents 200,000 observations of (X, Y) under 
 Copula 1. 
 
 #### Exercises
-1. Generate 200,000 observations of (X, Y) using Copula 2 and the marginal 
-distributions of X and Y, assigning the observations to a 200,000 × 2 matrix 
-named t3XY. You should set a random number generator seed of 3 before 
-generating the observations and use the R function, ``head()``, to display the 
+1. Generate 200,000 observations of (X, Y) using Copula 2 and the marginal distributions of X and Y, assigning the observations to a 200,000 × 2 matrix 
+named t3XY. You should set a random number generator seed of 3 before generating the observations and use the R function, ``head()``, to display the 
 first six rows of t3XY in your answer script. 
 2. Plot, on a single graph, line graphs of the estimated conditional mean of Y
 given that X ൒ x against x for values of x at intervals of 1 from 10 to 30 
 inclusive for each of the two generated copulas. You should use separate 
 colours to identify each of the two line graphs and set the y-axis range from 50 
 to 250. 
-3. Comment on the key features of your plot in part (ii).  
-4. Comment on the implications of your plot in part (ii) if the distribution of 
+3. Comment on the key features of your plot in exercise 2.  
+4. Comment on the implications of your plot in exercise 2 if the distribution of 
 temperatures, X, is expected to become more weighted towards higher values 
 as a result of climate change.  
 
 ### Question 3
 <h4> Question 3</h4>
 
-3 Before answering this question, the R packages for calculating and plotting Recursive 
+Before answering this question, the R packages for calculating and plotting Recursive 
 Partitioning and Regression Trees should be loaded into R using the following code: 
-<pre><code>
+```{r eval=FALSE}
 install.packages("rpart") 
 install.packages("rpart.plot") 
 library(rpart) 
 library(rpart.plot) 
-</code></pre>
+```
 
 A new start-up bank is considering which product it should first launch to market. 
 One of the products it is considering is a personal loan. An Actuary employed by the 
@@ -133,9 +140,9 @@ sets of 10,000 observations from the uniform distribution on [0, 1].
 
 #### Exercises
 
-1. Generate a 10,000 × 3 matrix named U of observations from the uniform 
-distribution on [0, 1]. Each column of U should contain 10,000 observations 
-that have been generated together but separately from the observations in other columns. You should set a random number generator seed of 12345 before generating the observations in the first column and use the R function, 
+1. Generate a 10,000 × 3 matrix named U of observations from the uniform distribution on [0, 1]. 
+Each column of U should contain 10,000 observations that have been generated together but separately from the observations in other columns. 
+You should set a random number generator seed of 12345 before generating the observations in the first column and use the R function, 
 head(), to display the first six rows of U in your answer script. 
 
 Let Uij represent the (i, j) entry of matrix U. 
@@ -158,21 +165,24 @@ The R code to create the data frame in the format required, given the vectors f1
 default, is: 
 data.frame("f1" = f1, "f2" = f2, "default" = default)
 <p>
-(ii) Generate a data frame named specimen, in line with the Actuary’s construction 
+2. Generate a data frame named specimen, in line with the Actuary’s construction 
 rules, corresponding to the parameter values n = 10,000, a = 0 and b = c = 0.5. 
 Use the R function, head(), to display the first six rows of specimen in your 
 answer script. 
-(iii) Determine the expected probability of customer default based on the specimen 
+
+3. Determine the expected probability of customer default based on the specimen 
 data. 
+
 4. Comment on how realistic your answer to exercise 3 is in terms of what the bank may expect in practice, suggesting how the parameter a could be 
 changed to make it more realistic. 
 The R code for fitting and plotting a decision tree object called tree, that predicts whether a customer will default or not, is as follows: 
-
+<pre><cpde>
 tree = rpart(default ~ ., data = specimen, method = "class")
 rpart.plot(tree, digits = 3, type = 5, extra = 106) 
+```
 
-(v) Plot the decision tree object, called tree, using the R code above. 
-(vi) State, using the decision tree plot, whether a customer with features f1 = 0 and 
+5. Plot the decision tree object, called tree, using the R code above. 
+6. State, using the decision tree plot, whether a customer with features f1 = 0 and 
 f2 = –0.425 is expected to default or not. 
 
 ### Question 3 Part (b)
@@ -181,17 +191,17 @@ f2 = –0.425 is expected to default or not.
 Before launching the product, the Actuary gathers actual customer data from another 
 bank, that is available in the public domain, to assess the predictive power of the decision tree model. 
 
-The ***CS2B_Sept_21_Qu_3_Data.csv*** file contains the actual data for 100 customers in the required format for the decision tree model. Before answering the remainder of this question, the ‘CS2B_Sept_21_Qu_3_Data.csv’ 
-file should be loaded into R and assigned to a data frame called actual. 
+The ***CS2B_Sept_21_Qu_3_Data.csv*** file contains the actual data for 100 customers in the required format for the decision tree model. 
+Before answering the remainder of this question, the ‘CS2B_Sept_21_Qu_3_Data.csv’ file should be loaded into R and assigned to a data frame called actual. 
 
 #### Exercises
 
 7. Show the first six rows of the actual data frame in your answer script using the 
 R function, head(). 
 The R code for generating the predicted default classifications of the policyholders in the actual data frame using the tree decision tree object is as follows: 
-<pre><code>
+```{r eval=FALSE}
 predict(tree, actual, type = 'class') 
-</code></pre>
+```
 
 8. Generate the predicted default classifications of the 100 customers in the actual data frame using the R code above, assigning the predictions to a vector called predict_defaults. Use the R function, ``head()``, to display the first six values of predict_defaults in your answer script. 
 

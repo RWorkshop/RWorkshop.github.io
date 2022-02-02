@@ -1,8 +1,17 @@
-
 CS2B Paper G {data-navmenu="R for Risk Modelling and Survival Analysis"}
 ==============================================================
 
-Column
+
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+
+Column {.tabset}
 --------------------------------
 
 ### Question 1
@@ -12,8 +21,10 @@ Column
 
 1 Before answering this question, the R package for Markov chains should be loaded 
 into R using the following code: 
+```{r eval=FALSE}
 install.packages("markovchain") 
 library(markovchain)
+```
 Xt is a Markov chain on the state space {1,2,3} with the following transition matrix: 
 ൭
 p 1 – p 0
@@ -24,17 +35,14 @@ where 0 < p, q, r < 1.
 
 #### Exercises
 
-1.  Construct an R function, with arguments p, q and r, that generates a Markov 
-chain object for Xt. 
+1.  Construct an R function, with arguments p, q and r, that generates a Markov chain object for $X_t$. 
  Assume that p = 0.75 and r = 0.25. 
 
-2.  Construct R code that calculates the stationary distribution of Xt for values of 
-q from 0.1 to 0.9 inclusive, at intervals of 0.1, pasting your results into your 
+2.  Construct R code that calculates the stationary distribution of Xt for values of q from 0.1 to 0.9 inclusive, at intervals of 0.1, pasting your results into your 
 answer script.<p> 
 
-3. Plot a graph showing the stationary distributions of Xt calculated in part (ii) as 
-a function of q. You should include three separately coloured lines on your 
-graph, each line representing the stationary probabilities of each state.  
+3. Plot a graph showing the stationary distributions of Xt calculated in exercise 2 as 
+a function of q. You should include three separately coloured lines on your graph, each line representing the stationary probabilities of each state.  
 
 ### Question 2
 
@@ -70,10 +78,10 @@ values of A_exceed_u when A = A_vec and u = 1.
 probabilities: 
 PሺAi – u ≤ x | Ai > u), where x ≥ 0, 
 for values of x from 0 to 10 inclusive, at intervals of 0.1. 
-Use the R function, head(), to display in your answer script the first eight values of F_u when A_greater_than_u = A_exceed_u with arguments 
+Use the R function, head(), to display in your answer script the first eight values of F_u when ***A_greater_than_u = A_exceed_u*** with arguments 
 A = A_vec and u = 1. 
 
-4. Plot, on a single graph, four line graphs of the values of F_u against x for the values of x specified in part (iii) when A_greater_than_u = A_exceed_u, 
+4. Plot, on a single graph, four line graphs of the values of F_u against x for the values of x specified in exercise 3 when A_greater_than_u = A_exceed_u, 
 A = A_vec and u = 1, 2, 3 and 4. You should use separate colours to identify each line graph and you should clearly specify which value of u is represented 
 by each of the four line graphs.  
 
@@ -82,13 +90,13 @@ by each of the four line graphs.
 ### Question 3
 
 <h4>Question 3</h4>
-3 Before answering this question, the ‘survival’ package should be loaded into R using the following code: 
-<pre><code>
+Before answering this question, the ‘survival’ package should be loaded into R using the following code: 
+```{r eval=FALSE}
 install.packages("survival") 
 library(survival)
-</code></pre>
-A recently developed drug, MediCo, has been used over the past 12 months to treat a potentially fatal disease. MediCo was approved by a medical regulator last year following initial trials and mortality data has been collected over the past 12 months, 
-since approval, to continue reviewing the drug’s effectiveness. 
+```
+A recently developed drug, MediCo, has been used over the past 12 months to treat a potentially fatal disease. 
+MediCo was approved by a medical regulator last year following initial trials and mortality data has been collected over the past 12 months, since approval, to continue reviewing the drug’s effectiveness. 
 
 This mortality data has been compared with mortality data collected from infected patients, prior to MediCo’s approval, who were NOT administered the drug. 
 

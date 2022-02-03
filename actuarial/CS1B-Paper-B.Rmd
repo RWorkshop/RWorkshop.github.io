@@ -69,7 +69,7 @@ Mark each plot distinctly using an appropriate legend.
 3. Compute the 5th percentile, 1st quartile, median, 3rd quartile and 95th percentile of both
 the actual claims paid as well as from the fitted distributions. 
 
-4. Using the results from (ii) and (iii), comment on goodness-of-fit of the models to the
+4. Using the results from exercises 2 and 3, comment on goodness-of-fit of the models to the
 data. 
 
 

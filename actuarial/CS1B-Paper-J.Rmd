@@ -13,9 +13,9 @@ Column {.tabset}
 Assume X is a random variable which follows Poi  where X = 1,2,3,4,5,6,7,8,9,10 i.e. 
 values from 1 to 10
 
-1.  Calculate the probability for each of the values of X. 
-2.  Calculate the cumulative probability for each of the values of X. 
-3.  Plot a graph of the distribution function of X. 
+1.  Calculate the probability for each of the values of $X$. 
+2.  Calculate the cumulative probability for each of the values of $X$. 
+3.  Plot a graph of the distribution function of $X$. 
 
 
 ### Question 2
@@ -43,7 +43,9 @@ Comment on the outcomes of the results in parts 1 to 3.
 <a href="https://youtu.be/i96vHJkuH5M"> Clcik here for Video</a>
 
 
+### Question 3
 
+<h4> Question 3</h4>
 Q. 3) A child tosses n coins and the outcome of heads and tails are recorded in n samples as
 X1, X2, …… Xn, where, Xi’s are independent Bernoulli variables with p = 0.5. The total 
 outcome of n variables is Y = X1 +……. + Xn
@@ -52,11 +54,14 @@ outcome of n variables is Y = X1 +……. + Xn
 3.    Assess the value of Y for the sample created in 2.   
 4.  what is the probability of Y = 4 
 
+### Question 4
+
+<h4> Question 4</h4>
 Q. 4) For a sample data X = 0.5820, 0.04981, 0.1552, 0.1555, 0.9036, 0.8501, 0.9288, 0.4408, 
 0.9688, 0.6300
-1.  Find the mean value of X 
-2.   Calculate the standard deviation of X 
-3.    Find the median of X 
+1.  Find the mean value of $X$ 
+2.   Calculate the standard deviation of $X$ 
+3.    Find the median of $X$ 
 
 ### Question 5
 
@@ -68,6 +73,8 @@ Insurer A 112 130 178 150
 Insurer B 38 50 80 68
 Insurer C 89 127 210 150
 Insurer D 70 75 77 80
+
+#### Exercises 
 1.  Analyse the data using EBCT Model 1 and calculate the expected total claim 
 payment to be made by each insurer (A, B, C and D) in the Year 5 by replacing 
 question marks‘?’ with appropriate function in the R Code shared in file 
@@ -93,6 +100,7 @@ Insurer B 51 63 78 83 91
 Insurer C 119 159 219 188 192 
 Insurer D 108 112 122 133 144 
 Insurer E 103 116 126 151 181 
+
 Analyse the data using EBCT Model 2 to calculate the expected total claim payment to 
 be made by each insurer (A, B, C, D and E) in Year 5.
 a) Complete the reference R Code (by replacing question marks‘?’ with appropriate 
@@ -108,12 +116,13 @@ You are investigating the level of premium charged by two companies for certain 
 Random samples of 10 policies from Company1 and Company2 are compared. Below R 
 code provides the premiums charged by Company1 and Company2 in current year for 
 10 sample policies.
-```{r}
+```{ eval= FALSE}
 Company1<-c(1350,1790,1500,1150,2100,2350,1550,1800,1650,1450)
 Company2<-c(1500,1200,1300,1700,1800,2400,1450,1950,1850,2100)
 ```
 Students are required to provide hypothesis, R code, Output and conclusion
 
+#### E
 1.  Assuming that the premiums are normally distributed, carry out a statistical test to 
 check equal variance assumption so that it is appropriate to apply a two-sample t 
 test to these data. 

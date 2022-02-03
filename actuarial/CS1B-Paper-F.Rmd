@@ -4,18 +4,19 @@ CS1B Paper F {data-navmenu="R for Actuarial Statistics"}
 Column {.tabset}
 --------------------------------
 
-
+### Question `1
 Q. 1) Use the ‘MotorClaims’ dataset provided to answer the following questions: 
 (MotorClaims.cs5. 
 1.  Fit Gamma distribution on the dataset provided by determining its scale and shape 
 parameters. State clearly the distribution with the parameters. 
-2.   Simulate 1000 values from the distribution obtained in question (1.  and print the first 
+2.   Simulate 1000 values from the distribution obtained in exercise 1.  and print the first 
 six values. (Set seed to 100) 
 3.    Calculate the mean and variance of simulated values. 
 4.  Obtain a QQ plot for the simulations of 1000 values and a normal distribution. 
 5.  Add a line to the above plot to show the true position of normal distribution. 
 6.   Comment on the shape of the distribution and how close it is to a normal distribution. 
-[24]
+
+### Question 2
 Q. 2) The dataset ‘mtcars’ (built into R) consists of data on various models of car, taken from an 
 American motoring magazine (1974 Motor Trend magazine). For each car, there are certain 
 features expressed in varying units.
@@ -29,32 +30,35 @@ should include the R output.
 arguments, ‘center’ and ‘scale’ to be TRUE. Your answer should include a summary 
 of the principal component analysis. 
 5.  How many components of the reduced data should be retained using the output 
-derived in question (4. ? Also state the reason for the same. 
-[19]
-Q. 3) Data is provided for ‘BMIClaims’ of 150 policyholders and corresponding claim count. 
-(BMIClaims.cs5. 
-1.  Obtain 95% confidence interval for the standard deviation of BMI (using qchisq). (6)
-2.   Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State 
-your conclusion of the test. (6)
-IAI CS1B–1120
-Page 3 of 3
-3.    If obese is defined to be BMI above 30, use binom.test to calculate 99% confidence 
-interval for proportion of obese people and comment on the likelihood if more than 
-20 pc are obese. (6)
+derived in exercise 4. ? Also state the reason for the same. 
+
+### Question 3
+Data is provided for ‘***BMIClaims***’ of 150 policyholders and corresponding claim count. 
+(BMIClaims.csv).
+ 
+1. Obtain 95% confidence interval for the standard deviation of BMI (using qchisq). 
+2. Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State your conclusion of the test. 
+3. If obese is defined to be BMI above 30, use ``binom.test()`` to calculate 99% confidence interval for proportion of obese people and comment on the likelihood if more than 20 pc are obese. 
 4.  Claim frequency can be calculated as claim count divided by number of policyholders. 
-Test whether claim frequency is different between obese and others. (6)
-[24]
+Test whether claim frequency is different between obese and others. 
+
+### Question 4
 Q. 4) The CDC and EISS detect influenza activity through clinical data including Influenza-like 
 Illness (IL1.  physician visits on weekly basis. The objective of this question is to estimate 
 influenza-like illness (IL1.  activity using Google web search logs.
-The csv file FluTrain.csv aggregates this data from January 1, 2004 until December 31, 2011 
+<p>
+
+#### Data
+The csv file ***FluTrain.csv*** aggregates this data from January 1, 2004 until December 31, 2011 
 as follows:
-"Week" - The range of dates represented by this observation, in year/month/day format.
-"ILI" - This column lists the percentage of ILI-related physician visits for the corresponding 
+* "Week" - The range of dates represented by this observation, in year/month/day format.
+* "ILI" - This column lists the percentage of ILI-related physician visits for the corresponding 
 week.
-"Queries" - This column lists the fraction of queries that are ILI-related for the corresponding 
+* "Queries" - This column lists the fraction of queries that are ILI-related for the corresponding 
 week, adjusted to be between 0 and 1 (higher values correspond to more ILI-related search 
 queries).
+
+#### Exercises
 1.  Plot a histogram of the dependent variable, ILI. Comment on the shape of the 
 distribution. 
 2.   Plot the natural logarithm of ILI versus Queries. What does the plot suggest? 
@@ -64,17 +68,15 @@ distribution.
 variable. What is the relationship between the two values? 
 6.   Looking at the time period 2004-2011, which week corresponds to the highest 
 percentage of ILI-related physician visits? 
-v2.   Based on the linear regression model fitted in question (3.   , what is the estimate for 
-the percentage of ILI-related physician visits for the week computed in question (6.  ? 
-v3.    What is the relative error between the estimate (prediction calculated in question (v2.  ) 
-and the actual observed value for the week computed in question (6.  ? 
-[33]
-IAI CS1B–1120
-Page 4 of 3
+v2.   Based on the linear regression model fitted in exercise 3, what is the estimate for 
+the percentage of ILI-related physician visits for the week computed in exercise 6.  ? 
+v3.    What is the relative error between the estimate (prediction calculated in exercise v2.  ) 
+and the actual observed value for the week computed in exercise 6 ? 
+
+### Data 
 CS1B_BMIClaims
 http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS1B_BMIClaims.csv
 CS1B_FluTrain
 http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS1B_FluTrain.csv
 CS1B_MotorClaims
 http://www.actuariesindia.org/downloads/Year_2020_November_Exam/CS1B_MotorClaims.csv
-*******************

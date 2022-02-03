@@ -6,7 +6,7 @@ Column {.tabset}
 
 ### Question 1
 
-<h4>Exercise 1</h4>
+<h4>Question  1</h4>
 
 An employee at a café has been trained to set the coffee machine so that an espresso
 coffee portion results in 2.0 grams of coffee being placed into a cup. 
@@ -22,6 +22,7 @@ $$\{1.95, 1.80, 2.10, 1.82, 1.75, 2.01, 1.83, 1.90\}$$.
 portions. 
 2. Comment on whether the mean portion of coffee is equal to 2.0 grams. 
 3. Repeat Exercises 1 and 2 for an 80% confidence interval
+
 #### Video
 
 <a href="https://www.youtube.com/watch?v=gBJKMtzKIA4">Click Here for Video</a>
@@ -30,7 +31,7 @@ portions.
 
 
 ### Question 2
-<h4>Exercise 2</h4>
+<h4>Question  2</h4>
 A researcher has collected the following data on a group of students, regarding
 whether they passed or failed an exam and whether or not they attended tutorials:
 
@@ -55,7 +56,7 @@ in part 1.
 
 
 The data can be entered into R using the following code:
-```{r}
+```{ eval= FALSE}
 exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2) 
 ```
 
@@ -97,7 +98,7 @@ used in the test.
 The data can be entered into R using the following code:
 
 
-```{r}
+```{ eval= FALSE}
 weight<-c(474.11,512.01,493.64,495.03,518.13,486.03,
 494.48,501.76,498.83,503.02)
 ```
@@ -118,34 +119,34 @@ and contain the following information:
 * ***cigarettes***: number of cigarettes consumed per adult per year.
 
 #### Exercises
-(i) (a) Construct a scatterplot of the data with alcohol consumption on the 
+1.  (a) Construct a scatterplot of the data with alcohol consumption on the 
 x axis.
 (b) Comment on the relationship between the data on alcohol and cigarette 
-consumption based on your plot in part (i)(a).
+consumption based on your plot in part 1. (a).
 
-(ii) Calculate Pearson’s correlation coefficient between the data on alcohol and 
+2.  Calculate Pearson’s correlation coefficient between the data on alcohol and 
 cigarette consumption. 
 An analyst suggests using the following R code to modify the data:
-(iii) Explain what the above code does and give a justification for its use. 
+3.  Explain what the above code does and give a justification for its use. 
 For the remainder of the question, use the modified data 
 (alcohol.2, cigarettes.2), as produced by applying the R code above.
-(iv) (a) Construct a scatterplot with alcohol consumption on the x axis.
+4.  (a) Construct a scatterplot with alcohol consumption on the x axis.
 (b) Calculate Pearson’s correlation coefficient between the new data on 
 alcohol and cigarette consumption.
-(c) Comment on your answers in parts (ii) and (iv)(b). 
+(c) Comment on your answers in parts 2.  and 4. (b). 
 
-(v) Perform a hypothesis test for the null hypothesis that Pearson’s population 
+5.  Perform a hypothesis test for the null hypothesis that Pearson’s population 
 correlation coefficient is equal to zero, against the alternative that it is positive. 
 You should report the p-value of the test and a clear conclusion. 
 
 A media bulletin has reported that ‘'h‘igher alcohol consumption causes higher cigarette consumption .
-(vi) Comment on whether this report is justified based on your analysis in parts (iv) 
-and (v). 
+6.  Comment on whether this report is justified based on your analysis in parts 4.  
+and 5. . 
 
-<pre><code>
+```{r eval=FALSE}
 alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
-</code></pre>
+```
 
 (vii) Perform a simple linear regression analysis on the new data using a 
 model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
@@ -174,15 +175,15 @@ with n being the number of past waiting times observed.
 Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
 
 #### Exercises
-(i) Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
+1.  Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
 implementing M = 3,000 Monte Carlo repetitions. [14]
-(ii) Determine an estimate of the posterior mean of 1/l and the value of x when 
+2.  Determine an estimate of the posterior mean of 1/l and the value of $X$ when 
 n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. [15]
-(iii) Plot the histograms of the samples of the posterior mean of 1/l and of x
-obtained in part (ii). 
-(iv) Compare, by visual inspection of the graphs in part (iii), the distributions
- of the posterior mean of 1/l and the distribution of x when n = 1,000. 
-(v) Comment on the behaviour of the credibility model as n increases, relating 
-your answer to your findings in part (iv). 
+3.  Plot the histograms of the samples of the posterior mean of 1/l and of $X$
+obtained in part 2. . 
+4.  Compare, by visual inspection of the graphs in part 3. , the distributions
+ of the posterior mean of 1/l and the distribution of $X$ when n = 1,000. 
+5.  Comment on the behaviour of the credibility model as n increases, relating 
+your answer to your findings in part 4. . 
 [Total 39]
 END OF PAPER

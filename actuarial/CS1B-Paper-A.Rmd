@@ -9,7 +9,7 @@ Column {.tabset}
 
 ### Question 1
 
-<h4>Exercise 1</h4>
+<h4>Question  1</h4>
 
 The following data represent the average total number of marks obtained for a
 particular exam, observed over seven exam sessions that had been administered by a
@@ -34,9 +34,10 @@ y! \]
 You can enter the y values into R by using:
 
 
-```{r}
+```{ eval= FALSE}
 
-y = c(5,5,6,2,4,10,2,5,5,2,5,3,7,     4,4,5,4,6,7,2,8,4,6,4,3,6,
+y = c(5,5,6,2,4,10,2,5,5,2,5,3,7, 
+      4,4,5,4,6,7,2,8,4,6,4,3,6,
       6,6,5,7)
 
 ```
@@ -65,6 +66,6 @@ seq(3.2, 6.8, by = 0.01).]
 Carry out a simulation of N = 5,000 posterior samples for the
 parameter $\theta$.
 
-(i) (a)
-(ii) Plot the histogram of the posterior distribution of $\theta$.
+1.  (a)
+2.  Plot the histogram of the posterior distribution of $\theta$.
 

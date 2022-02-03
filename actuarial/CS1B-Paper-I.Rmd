@@ -58,13 +58,14 @@ thisTable_t %>% kable( col.names = NULL) %>%
 
 The values can be entered in R using: 
 
-```{r}
+```{ eval= FALSE}
 
 approval_before <- c(8, 6, 8, 7, 7, 4, 2, 10, 8, 7, 10, 
 8, 8, 9, 6) 
 approval_after <- c(5, 6, 2, 3, 4, 1, 4, 7, 4, 2, 10, 1, 
 5, 3, 7) 
 ```
+
 ---
 
 
@@ -124,10 +125,10 @@ values $k = 220, 240, 260, …, 400$.
 3. It is suggested that the true distribution of Y can be approximated with a Normal 
 distribution with expectation EሾYሿ = 324 and a standard deviation of 14.4. 
 Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for all 
-values k = 220, 240, 260, …, 400 based on the suggested Normal distribution. 
+values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 
 
 4. Plot the values calculated in parts 2. and 3. on the same graph. 
-[Hint: you may find the R command lines(…) useful.] 
+[Hint: you may find the R command ``lines(…)`` useful.] 
 
 5.Discuss your answers in parts 1 to 4.. 
 
@@ -159,10 +160,11 @@ and is deciding whether to fit the GLM using a Poisson or Normal distribution.
 
 and the remaining three covariates as factors, calling this model_g. Your 
 answer should include the estimated value, standard error and p-value of each 
-parameter in the model. [7] 
+parameter in the model. 
 2. (a) Fit a GLM, using the Poisson distribution, that treats age as a 
 numerical variable and the remaining three covariates as factors, 
-calling this model_p. 
+calling this ***model_p***. 
+
 Your answer should include the estimated value, standard error and 
 p-value of each parameter in the model. 
 (b) Justify which model the modeller should use, using your answers to 
@@ -176,35 +178,31 @@ The modeller has fitted the GLM using a Poisson distribution and now wants to
 investigate which of the three factors should be selected in the model, by using a 
 method similar to the backward selection approach. The following models are 
 considered: 
-model_p2: removes Gender from model_p
-model_p3: removes Gender and Pre_exisiting_health_condition from 
-model_p
-model_p4: removes Gender, Pre_exisiting_health_condition and 
-Region from model_p 
+* model_p2: removes Gender from model_p
+* model_p3: removes Gender and Pre_exisiting_health_condition from model_p
+* model_p4: removes Gender, Pre_exisiting_health_condition and  Region from model_p 
 
-(iii) Compare the values of the Akaike’s Information Criterion for the four models 
+3.  Compare the values of the Akaike’s Information Criterion for the four models 
 model_p, model_p2, model_p3 and model_p4. [6] 
-(iv) (a) Comment on your answer to part (iii). 
-(b) Comment on the differences between the process in part (iii) and the full backward selection method. 
+4.  (a) Comment on your answer to part 3. . 
+(b) Comment on the differences between the process in part 3.  and the full backward selection method. 
 
 The modeller suggests refining the fitted GLM (model_p) by also including the 
 interactions between the variables: Age, Region and 
 Pre_existing_health_condition. 
 
-(v) (a) Fit an appropriate model, to include the interactions between the 
+5.  (a) Fit an appropriate model, to include the interactions between the 
 variables Age, Region and 
 ***Pre_existing_health_condition***. 
-(b) Justify whether the refined model in part (v)(a) improves the model 
+(b) Justify whether the refined model in part 5. (a) improves the model 
 (model_p) fitted in part 2.(a). 
 (c) Comment on whether any of the interactions are significantly  associated with claim numbers. 
 
 ### Question 5
 <h4> Question 5</h4>
 
-An analyst collected samples of the prices (in £000s) of 25 one-bedroom flats in each 
-of two different cities. The data from these two samples are saved in the file 
-onebedflat.Rdata. After loading the data into R, using the command 
-***load("onebedflat.Rdata")***, the data frame onebedflat with its variables 
+An analyst collected samples of the prices (in £000s) of 25 one-bedroom flats in each of two different cities. The data from these two samples are saved in the file 
+onebedflat.Rdata. After loading the data into R, using the command ***load("onebedflat.Rdata")***, the data frame onebedflat with its variables 
 listed below will be available. 
 
 * City1: one-bedroom flat prices in the first city. 
@@ -214,22 +212,18 @@ It is assumed that the two samples come from Normal populations with equal
 variances. 
 
 #### Exercises
-1.  Calculate an appropriate test statistic for the hypothesis of equal means in the 
-two corresponding populations using these data.  
-2. Test at a 1% significance level whether the mean flat prices are the same in the 
-two cities, against the alternative that they are different, based on your answer 
+1.  Calculate an appropriate test statistic for the hypothesis of equal means in the two corresponding populations using these data.  
+2. Test at a 1% significance level whether the mean flat prices are the same in the two cities, against the alternative that they are different, based on your answer 
 to part 1. . 
 The standard assumptions for a two-sided test of the hypothesis of equal means in two 
 populations are that the populations: 
 
 * (A1) follow Normal distributions 
 * (A2) have equal variances. 
-The analyst suspects that those assumptions may not be satisfied, and they are 
-therefore interested in learning about the true significance level for such tests when 
+The analyst suspects that those assumptions may not be satisfied, and they are therefore interested in learning about the true significance level for such tests when 
 assumptions (A1) and (A2) do not necessarily hold. 
 With two independent samples, given a particular choice of the significance level, α, 
-the true significance level for a two-sided test of the hypothesis of equal means can be 
-calculated as 
+the true significance level for a two-sided test of the hypothesis of equal means can be calculated as 
 αtrue ൌ 𝑃ሺ|test statistic| ൒ critical pointሻ,
 where the critical point is the α/2 quantile of an appropriate distribution. 
 
@@ -255,19 +249,15 @@ alpha_est=nrej/N #
 ```
 Note that the code provided above lacks best practice of including appropriate 
 comments. 
-(iii) Explain the provided code by placing comments after each ‘#’ sign in 
+3.  Explain the provided code by placing comments after each ‘#’ sign in 
 the code. 
 
-(iv) Estimate the true significance level, by using the code provided above, when 
-the two populations are from a standard Normal distribution. [1] 
-(v) Estimate the true significance level, by adjusting the code provided above to 
-reflect the following pairs of populations: 
+4.  Estimate the true significance level, by using the code provided above, when the two populations are from a standard Normal distribution. 
+5.  Estimate the true significance level, by adjusting the code provided above to reflect the following pairs of populations: 
 (a) The first population is from a standard Normal distribution and the 
-second population is from a Normal distribution with mean 0 and
-standard deviation 10. 
-(b) The first population is from a Normal distribution with mean 10 and 
-standard deviation 2 and the second population is from an Exponential 
+second population is from a Normal distribution with mean 0 and standard deviation 10. 
+(b) The first population is from a Normal distribution with mean 10 and standard deviation 2 and the second population is from an Exponential 
 distribution with mean 10. 
- [8] 
-(vi) Compare your estimates of the true significance level under all scenarios in 
-parts (iv), (v)(a) and (v)(b), stating your conclusions. [4] 
+ 
+6.  Compare your estimates of the true significance level under all scenarios in 
+parts 4. , 5. (a) and 5. (b), stating your conclusions. 

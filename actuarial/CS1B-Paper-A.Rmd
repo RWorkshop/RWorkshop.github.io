@@ -22,7 +22,7 @@ Enter these data into R and compute their sample mean and variance.
 
 
 ### Question 2
-
+<h4>Question  2</h4>
 Consider the n = 30 independent and identically distributed observations
 $( y_1 , y_2 , \ldots, y_n )$ given below from a random variable Y with probability distribution
 \[\theta y e –\theta
@@ -69,3 +69,8 @@ parameter $\theta$.
 1.  (a)
 2.  Plot the histogram of the posterior distribution of $\theta$.
 
+### Question 3
+<h4>Question  3</h4>
+
+### Question 4
+<h4>Question  4</h4>

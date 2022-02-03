@@ -49,10 +49,10 @@ Comment on the outcomes of the results in parts 1 to 3.
 Q. 3) A child tosses n coins and the outcome of heads and tails are recorded in n samples as
 X1, X2, …… Xn, where, Xi’s are independent Bernoulli variables with p = 0.5. The total 
 outcome of n variables is Y = X1 +……. + Xn
-1.  Specify the distribution of Y 
+1.  Specify the distribution of $Y$ 
 2.   Simulate a sample of 10 values for Y 
-3.    Assess the value of Y for the sample created in 2.   
-4.  what is the probability of Y = 4 
+3.    Assess the value of $Y$ for the sample created in 2.   
+4.  what is the probability of $Y$ = 4 
 
 ### Question 4
 
@@ -150,7 +150,7 @@ the ratio of claim frequency between group1 and other policyholders is less than
 Q.7) You are working as an Actuarial analyst in a medium size health insurance company in 
 India. Your manager has asked you to analyse the claim amounts paid data of the past 
 six months.
-You have received the data set “HealthClaims.csv” from the claims department of your 
+You have received the data set “HealthClaims.csv” from the claims department of $Y$our 
 company with the following explanations of the data fields
 
 * GEOGRAPHY: The geographical region of residence of the Insured
@@ -166,19 +166,16 @@ Refer to the data set “HealthClaims.csv”.
 1.  Fit a linear regression model to the data with “CLAIM_AMOUNT” as the response 
 and other variables as explanatory variables (consider “Age” as numerical variable 
 and others as categorical variables). 
-Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared & p-value of the model. Identify the significant variables in the prediction 
+Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared & p-value of the model. 
+Identify the significant variables in the prediction 
 of claim “CLAIM_AMOUNT”. 
 2.   Determine 95% confidence intervals for the parameters of the regression model. 
 3.    Plot “QQ plot of the residuals” and comment on applicability of linear regression 
 model. 
 4.  Your manager has also suggested you to include the interaction effects between 
-Geography and Profession, Profession and Gender, Gender and Geography as 
-additional explanatory variables to the set of independent variables taken in (1.  for 
-the purpose of improvement of the model. Comment on the suitability of inclusion 
-of interaction effects for the purpose of improvement of the model. (10)
-5.  One of your friend working with Actuarial consulting firm told you that natural 
-logarithm{loge(CLAIM_AMOUNT)} is better fit to normal distribution than 
-“CLAIM_AMOUNT”. You wanted to validate the same by fitting a linear 
-regression model to the data with loge(CLAIM_AMOUNT) as the response and 
-other variables as explanatory variables. Identify and comment on the key 
+Geography and Profession, Profession and Gender, Gender and Geography as additional explanatory variables to the set of independent variables taken in (1.  for 
+the purpose of improvement of the model. Comment on the suitability of inclusion of interaction effects for the purpose of improvement of the model. 
+5.  One of $Y$our friend working with Actuarial consulting firm told you that natural 
+logarithm{loge(CLAIM_AMOUNT)} is better fit to normal distribution than “CLAIM_AMOUNT”. You wanted to validate the same by fitting a linear 
+regression model to the data with loge(CLAIM_AMOUNT) as the response and other variables as explanatory variables. Identify and comment on the key 
 differences between the models in (1.  and (4. . 

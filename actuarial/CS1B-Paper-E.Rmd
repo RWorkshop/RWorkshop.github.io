@@ -70,11 +70,9 @@ exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2)
 
 
 
-A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual
-weight of the sweet bags is known to follow a Normal distribution. 
+A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual weight of the sweet bags is known to follow a Normal distribution. 
 
-The sweet manufacturer believes that the machine is under-filling the sweet bags. A sample of
-10 sweet bags is taken and weighed, as summarised below.
+The sweet manufacturer believes that the machine is under-filling the sweet bags. A sample of 10 sweet bags is taken and weighed, as summarised below.
 
 |  |  |  |  |  ||  |  |  |  |  |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -87,11 +85,10 @@ The sweet manufacturer believes that the machine is under-filling the sweet bags
 #### Exercises
 
 
-1. Perform a suitable t-test to determine whether the sweet bags are being
-consistently under-filled, stating the hypotheses and the level of significance
+1. Perform a suitable t-test to determine whether the sweet bags are being consistently under-filled, stating the hypotheses and the level of significance
 used in the test. 
 
-2. Propose an interpretation of your conclusion in part 1. 
+2. Propose an interpretation of $Y$our conclusion in part 1. 
 
 
 
@@ -108,65 +105,62 @@ weight<-c(474.11,512.01,493.64,495.03,518.13,486.03,
 
 <a href="https://youtu.be/w_HRoKpFImg">Click Here for Video</a>
 
-### Question 4
 
-4 Data were collected on average alcohol and cigarette consumption per adult per year 
-for a number of countries. The data are given in the file smoking_data.RData
-and contain the following information:
+### Question 4 Part (a)
+<h4> Question 4 Part (a)</h4>
+
+Data were collected on average alcohol and cigarette consumption per adult per year for a number of countries.
+The data are given in the file smoking_data.RData and contain the following information:
 
 * ***country*** the country concerned;
 * ***alcohol***: alcohol consumption per adult per year (litres/year);
 * ***cigarettes***: number of cigarettes consumed per adult per year.
 
 #### Exercises
-1.  (a) Construct a scatterplot of the data with alcohol consumption on the 
-x axis.
-(b) Comment on the relationship between the data on alcohol and cigarette 
-consumption based on your plot in part 1. (a).
+1. Construct a scatterplot of the data with alcohol consumption on the 
+x axis. Comment on the relationship between the data on alcohol and cigarette 
+consumption based on your plot.
 
 2.  Calculate Pearson’s correlation coefficient between the data on alcohol and 
 cigarette consumption. 
 An analyst suggests using the following R code to modify the data:
 3.  Explain what the above code does and give a justification for its use. 
-For the remainder of the question, use the modified data 
-(alcohol.2, cigarettes.2), as produced by applying the R code above.
+For the remainder of the question, use the modified data (alcohol.2, cigarettes.2), as produced by applying the R code above.
 4.  (a) Construct a scatterplot with alcohol consumption on the x axis.
-(b) Calculate Pearson’s correlation coefficient between the new data on 
-alcohol and cigarette consumption.
+(b) Calculate Pearson’s correlation coefficient between the new data on alcohol and cigarette consumption.
 (c) Comment on your answers in parts 2.  and 4. (b). 
 
 5.  Perform a hypothesis test for the null hypothesis that Pearson’s population 
 correlation coefficient is equal to zero, against the alternative that it is positive. 
 You should report the p-value of the test and a clear conclusion. 
 
+
+### Question 4 Part (b)
+<h4> Question 4 Part (b)</h4>
 A media bulletin has reported that ‘'h‘igher alcohol consumption causes higher cigarette consumption .
-6.  Comment on whether this report is justified based on your analysis in parts 4.  
-and 5. . 
+6.  Comment on whether this report is justified based on your analysis in exercises 4 and 5.
 
 ```{r eval=FALSE}
 alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
 ```
 
-(vii) Perform a simple linear regression analysis on the new data using a 
-model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
-consumption, x), where the error terms ε independently follow a 
-N(0, s2) distribution.
-Your answer should show the fitted line plotted on the data scatterplot 
-and report the estimate of parameter s. [5]
-(viii) State the proportion of the total variability of the responses explained 
-by the model, based on your output in part (vii). [1]
-(ix) Plot a graph of the residuals of the model fitted in part (vii) 
-against the explanatory variable. 
-(x) Comment on the validity of the model, based on your output in 
+7. Perform a simple linear regression analysis on the new data using a model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
+consumption, x), where the error terms ε independently follow a N(0, s2) distribution.
+Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. 
+8. State the proportion of the total variability of the responses explained by the model, based on your output in exercise 7. 
+
+9. Plot a graph of the residuals of the model fitted in exercise 7 against the explanatory variable. 
+10. Comment on the validity of the model, based on your output in 
 part (ix) . 
 
 ### Question 5
-5 A waiting time random variable X follows an Exponential distribution with rate l
+<h4> Question 5</h4>
+A waiting time random variable X follows an Exponential distribution with rate l
 parameterised as f(x) = le–lx
  (x > 0, l > 0).
-The rate l has a Gamma prior distribution with parameters a and s. A Bayesian 
-credibility model provides that the posterior mean of 1/l can be expressed as
+The rate l has a Gamma prior distribution with parameters a and s. 
+A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as
 Z 3x + (1– Z)3 s
 α – 1, where Z = 
 n
@@ -176,14 +170,10 @@ Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
 
 #### Exercises
 1.  Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
-implementing M = 3,000 Monte Carlo repetitions. [14]
+implementing M = 3,000 Monte Carlo repetitions. 
 2.  Determine an estimate of the posterior mean of 1/l and the value of $X$ when 
-n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. [15]
+n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. 
 3.  Plot the histograms of the samples of the posterior mean of 1/l and of $X$
 obtained in part 2. . 
-4.  Compare, by visual inspection of the graphs in part 3. , the distributions
- of the posterior mean of 1/l and the distribution of $X$ when n = 1,000. 
-5.  Comment on the behaviour of the credibility model as n increases, relating 
-your answer to your findings in part 4. . 
-[Total 39]
-END OF PAPER
+4.  Compare, by visual inspection of the graphs in part 3. , the distributions of the posterior mean of 1/l and the distribution of $X$ when n = 1,000. 
+5.  Comment on the behaviour of the credibility model as n increases, relating your answer to your findings in part 4. . 

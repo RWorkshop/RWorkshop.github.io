@@ -32,46 +32,40 @@ The columns carry the following explanation
 
 With reference to the dataset "***AutoClaims.csv***", answer the following questions.
 
-1. Prepare a table with mean, standard deviation and coefficient of variance (CV) of the
-claims paid
-a) for each STATE and identify the one with the least and the highest CV
-b) for each CLASS and sort the table in the ascending order of the CV
+1. Prepare a table with mean, standard deviation and coefficient of variance (CV) of the claims paid
+a. for each STATE and identify the one with the least and the highest CV
+b. for each CLASS and sort the table in the ascending order of the CV
 
-Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation 
-to the mean. 
-
+*Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation 
+to the mean. *
+<p>
 2. By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier
 values in terms of the claims paid. 
-3.  Prepare a contingency table identifying the proportion of insured across different
-CLASS(es) for each gender. Test the null hypothesis “There is no relationship between
-the GENDER and the CLASS of the insured” against an alternate hypothesis of
-existence of significant relation at 95% confidence level. Perform an appropriate test
-and comment. 
-
+<p>
+3.  Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. Test the null hypothesis “There is no relationship between the GENDER and the CLASS of the insured” against an alternate hypothesis of
+existence of significant relation at 95% confidence level. Perform an appropriate test and comment. 
+<p>
 4. Use an appropriate test to test if the mean claim amount paid and variance of claim
 amounts paid is uniform between males and females. 
 
 ### Question 2
 Refer to the dataset "***AutoClaims.csv***" and answer the following questions.
-You were asked to fit an appropriate distribution to the “PAID” data. You decided to fit 
-Normal distribution, Lognormal distribution, Exponential distribution and Gamma 
-Distribution based on the method of moments.
+You were asked to fit an appropriate distribution to the “PAID” data. 
+You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.
 
 #### Exercises
 
 1. Estimate the parameters of each of these distributions. 
 
-2. Plot a histogram of “PAID” data with 30 equal class intervals. Superimpose the
-histogram with the Probability Density Functions of the above four distributions using
-their estimated parameters obtained in exercise 1. 
+2. Plot a histogram of “PAID” data with 30 equal class intervals. 
+Superimpose the histogram with the Probability Density Functions of the above four distributions using their estimated parameters obtained in exercise 1. 
 Mark each plot distinctly using an appropriate legend. 
 
-3. Compute the 5th percentile, 1st quartile, median, 3rd quartile and 95th percentile of both
-the actual claims paid as well as from the fitted distributions. 
+3. Compute the 5th percentile, 1st quartile, median, 3rd quartile and 95th percentile of both the actual claims paid as well as from the fitted distributions. 
 
-4. Using the results from exercises 2 and 3, comment on goodness-of-fit of the models to the
-data. 
+4. Using the results from exercises 2 and 3, comment on goodness-of-fit of the models to the data. 
 
+#### Video
 
 
 
@@ -79,9 +73,9 @@ data.
 ### Question 3 Part (a)
 <h4> Question 3</h4>
 
-* Fit a linear regression model to predict the “PAID” claim amount based on other variables (Consider the AGE as a numerical variable and all others as categorical).
+* Fit a linear regression model to predict the “PAID” claim amount based on other variables (*Consider the AGE as a numerical variable and all others as categorical*).
 
-* Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. Identify the
-significant variables in the prediction of “PAID” claims. 
+* Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. 
+Identify the significant variables in the prediction of “PAID” claims. 
 
 * Comment on the applicability of the linear regression model by plotting “Residuals vs. Fitted Values” and “QQ Plot of the residuals”. 

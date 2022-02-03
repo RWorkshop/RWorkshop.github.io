@@ -13,16 +13,16 @@ Column {.tabset}
 Monthly totals of airline passengers are given in time series data ‘AirPassengers’. 
 
 #### Exercises 
-1.  Plot the data as time series with ``frequency =12``. 
+1.  Plot the data as time series with ***frequency =12*** (i.e. 12 months). 
 
 2.   Plot the acf function. 
 
 3.    Decompose the trend, seasonality and randomness for the data.
-(Hint: use ``decompose()`` function.) 
+(Hint: use ***decompose()*** function.) 
 
 4.  Fit Arima model.
 
-(Hint:`` order=c(1,0,0), list(order=c(2,1,0), period=12`` as parameters.) 
+(Hint: *** order=c(1,0,0), list(order=c(2,1,0), period=12*** as parameters.) 
 
 5.  Predict the data for next 24 months. 
 

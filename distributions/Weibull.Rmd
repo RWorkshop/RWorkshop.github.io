@@ -1,0 +1,21 @@
+Weibull Distribution {data-navmenu="Continuous Distributions"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Question  1</h4>
+
+The following data represent the average total number of marks obtained for a
+particular exam, observed over seven exam sessions that had been administered by a
+professional examination body:
+
+
+\[87, 53, 72, 90, 78, 85, 83 \]
+
+Enter these data into R and compute their sample mean and variance.
+
+
+### Worked Examples

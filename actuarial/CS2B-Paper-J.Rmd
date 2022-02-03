@@ -135,7 +135,7 @@ age.
 
 #### Exercises
 1. Load the data from the csv file into a data frame (while importing the dataset ensure you 
-set ``stringsAsFactors= TRUE`` in the ``read.csv`` function). 
+set ***stringsAsFactors= TRUE*** in the ***read.csv()*** function). 
 <p>
 Split the dataset into 2 – one to train the model and the other to test the model. 
 The first 70% of the data should go into the training set and the rest into the test dataset. 

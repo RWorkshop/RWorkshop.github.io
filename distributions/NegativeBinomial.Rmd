@@ -1,0 +1,29 @@
+Negative Binomial Distribution {data-navmenu="Continuous Distributions"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Question  1</h4>
+
+In a very small empirical study a sample from a random variable X is observed. The 
+data can be entered into R using the following code:
+
+```{r eval=FALSE}
+x <- c(0.22,0.38,1.28,0.54,0.56,1.36,0.55,0.37,0.43,0.46,0.62,
+0.54,0.54,0.51,0.44,0.68,0.55,0.30)
+```
+
+#### Exercises 
+1. Estimate the expected value of $X$. 
+
+2. Calculate a 95% confidence interval for the expected value of $X$ assuming that $X$ is Normally distributed. 
+
+3. Construct a confidence interval for the expected value of $X$ using the bootstrap 
+method with 10,000 bootstrap replications.
+
+4. Comment on the differences between the confidence intervals in exercises 2  and 3.  
+
+### Worked Examples

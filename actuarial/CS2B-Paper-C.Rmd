@@ -20,7 +20,7 @@ set.seed(121118); y=arima.sim(list(order=c(1,1,0),ar=0.7), n=300)
 the chart into your answer. 
 (b) Comment on the general features of your chart. 
 
-2.   (a) Determine the best least squares linear fit, adding it to your chart in part 1  and paste the new chart into your answer. 
+2.   (a) Determine the best least squares linear fit, adding it to your chart in exercise  1  and paste the new chart into your answer. 
 (b) Explain whether this least squares linear trend can be removed such that a zero mean stationary distribution is appropriate for the residuals.
 <p>
 3.  Plot the sample Autocorrelation function (ACF) and sample Partial Autocorrelation function (PACF) of the original data, giving 
@@ -55,7 +55,7 @@ at the exit to the terminal in any given two-minute period.
 4.  A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the 
 need to use taxis. Evaluate the manager’s suggestion, showing any working where appropriate.
 
-5.  Comment on your results in part 4. . 
+5.  Comment on your results in exercise  4. . 
 
 ### Question 3
 <h4><Question 3</h4>
@@ -63,7 +63,7 @@ In an insurance company’s portfolio, individual claim sizes, in £, follow an
 exponential distribution with parameter 0.0001.
 
 #### Exercises
-1.  In R console run the following code: ``set.seed(123)`` and then use R to simulate 10,000 claims and plot a histogram of the simulated data. 
+1.  In R console run the following code: ***set.seed(123)*** and then use R to simulate 10,000 claims and plot a histogram of the simulated data. 
 
 2.  Calculate the mean and the variance of the simulated claims in exercise 1. Compare your answers with the theoretical values 
 expected from the exponential distribution with parameter 0.0001.
@@ -84,4 +84,4 @@ under each of the following six retention levels:
 5.  Plot your results from part 4.  on four separate charts to show how the mean 
 and variance of the claims paid by the insurer and reinsurer vary with the 
 retention level. 
-6.   Comment, with reference to the total variance, on your results in part (5. 
+6.   Comment, with reference to the total variance, on your results in exercise  (5. 

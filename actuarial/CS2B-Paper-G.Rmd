@@ -85,7 +85,7 @@ A = A_vec and u = 1.
 A = A_vec and u = 1, 2, 3 and 4. You should use separate colours to identify each line graph and you should clearly specify which value of u is represented 
 by each of the four line graphs.  
 
-5. Comment on the graph produced in part (iv). 
+5. Comment on the graph produced in exercise  (iv). 
 
 ### Question 3
 
@@ -129,23 +129,23 @@ its two-sided 99.5% confidence interval.
 that a patient survived from the beginning of the investigation to the end of the 
 investigation.  
 
-3. Evaluate the appropriateness of the probability value, calculated in part (ii), 
+3. Evaluate the appropriateness of the probability value, calculated in exercise  (ii), 
 for assessing MediCo’s effectiveness.  
 
 4. Plot, on a single graph, four Kaplan–Meier survival function estimates without 
 any confidence intervals, where each estimate represents one of the four 
 possible patient group combinations of drug and gender. You should use 
 separate colours to identify each survival function.  
-5. Comment on the graph produced in part (iv).  
+5. Comment on the graph produced in exercise  (iv).  
 <p>
 6. Estimate a Cox proportional hazards model with death as the event of interest 
 using the two covariates, drug and gender, with no interaction term, pasting 
 your results into your answer script. You should use the Breslow method for 
 tie handling.  
 
-7. Comment on the results produced in part (vi) with reference to the effects of 
+7. Comment on the results produced in exercise  (vi) with reference to the effects of 
 the two covariates, drug and gender, on the mortality rate. 
-(viii) Update the Cox proportional hazards model in part (vi) to include an 
+(viii) Update the Cox proportional hazards model in exercise  (vi) to include an 
 interaction term between drug and gender, pasting your results into your 
 answer script.  
 (ix) Analyse the effectiveness of MediCo, commenting on any differences between 

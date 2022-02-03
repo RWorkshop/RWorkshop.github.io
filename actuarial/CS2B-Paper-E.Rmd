@@ -29,17 +29,17 @@ of n = 200 observations for a first-order autoregressive model with parameter
 
 3.  Plot, on four separate graphs, the sample autocorrelation function (sample 
 ACF) and sample partial autocorrelation function (sample PACF) for each of 
-the two time series models, YMA and YAR, generated in parts 1.  and 2. .  
+the two time series models, YMA and YAR, generated in exercise s 1.  and 2. .  
 
-4.  Comment on the general features of the plots in part 3. with reference to 
+4.  Comment on the general features of the plots in exercise  3. with reference to 
 whether they are consistent with the theoretical behaviour of the 
 corresponding functions for the true models.  
 
-5. The ``acf()`` function in R can also provide a vector output of the sample ACF values, 
+5. The ***acf()*** function in R can also provide a vector output of the sample ACF values, 
 with component i giving the sample ACF at lag i – 1, provided that the plot argument 
-of the function is set to ‘``FALSE``’. 
+of the function is set to ‘***FALSE***’. 
 Determine the numerical values for the sample ACF at lag 2, for each of the 
-two time series models, YMA and YAR, generated in parts 1.  and 2. .  
+two time series models, YMA and YAR, generated in exercise s 1.  and 2. .  
 
 ### Question 1 Part (b)
 <h4> Question 1 </h4>
@@ -48,17 +48,17 @@ two time series models, YMA and YAR, generated in parts 1.  and 2. .
 
 * first sets a random number generator seed of 967; and then
 * generates 1,000 random vectors (of length $n = 200$) for each of the two
-models in parts 1.  and 2. ; and
+models in exercises 1 and 2.; and
 * assigns the values of the sample ACF at lag 2 for each random vector to
 two vectors ACF2MA and ACF2AR (each of length 1,000).
 
 7. Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, 
-generated in part 6. 
+generated in exercise  6. 
 
 8. Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and 
-ACF2AR, generated in part 6.  
+ACF2AR, generated in exercise  6.  
 
-9. Comment on the results in parts (vii) and (viii), including whether they agree 
+9. Comment on the results in exercise s (vii) and (viii), including whether they agree 
 with the expected asymptotic behaviour.  
 
 ### Question 2
@@ -66,8 +66,10 @@ with the expected asymptotic behaviour.
 
 Before answering this question, generate the vector, X, in R using the following code:
 
-``set.seed(1027); X = rexp(n=1000, rate=0.01)``
-
+```{r eval = FALSE}
+set.seed(1027); X = rexp(n=1000, rate=0.01)
+```
+	
 
 The vector $X$ represents the gross claim sizes of 1,000 claims. 
 The payments are to be split between an insurance company and its reinsurer under an Excess of Loss 
@@ -85,15 +87,16 @@ represents the amounts to be paid by the reinsurer for each component of X.
 -----
 
 An actuary assumes that the underlying gross claims distribution follows an exponential distribution of some unknown rate $\lambda$. The actuary needs to estimate $\lambda$ 
-using only the claim amounts recorded in vector Y. 
+using only the claim amounts recorded in vector $Y$. 
 
-4.  Construct R code that calculates the log-likelihood, as a function of the parameter $\lambda$, given the claim amounts data in vector Y.  
+4.  Construct R code that calculates the log-likelihood, as a function of the parameter $\lambda$, given the claim amounts data in vector $Y$.  
 
 5. Determine the value of $\lambda$ at which the log-likelihood function reaches its maximum. 
 
 ### Question 3 Part (a)
 <h4> Question 3</h4>
- An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
+ An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. 
+ The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
 variables, $x_1$ and $x_2$. 
 
 Before answering this question, generate the data set, portfolio, in R using the following code: 
@@ -125,7 +128,7 @@ exercises 3 and 4 .
 containing the updated policyholder cluster labels, defined above.  
 6. Generate a 2x2 matrix showing the number of policyholders with each possible combination of values of ***group_label_stage1*** and 
 ***group_label_stage2***.  
-7. Comment on the matrix generated in part (vi) with reference to how the cluster labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
+7. Comment on the matrix generated in exercise  (vi) with reference to how the cluster labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
 8. Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the x-axis and x2 on the y-axis), using two distinct colours to identify clusters A and B according to the label, ***group_label_stage2***.  
 The analyst decides to stop at this stage and to report ***group_label_stage2*** as the final 
 set of cluster labels. Comment on this decision.  

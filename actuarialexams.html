@@ -2710,150 +2710,107 @@ function f ( y, \theta) =
 .
 y! \]</span></p>
 <p>You can enter the y values into R by using:</p>
-<p>```{ eval= FALSE}</p>
-<p>y = c(5,5,6,2,4,10,2,5,5,2,5,3,7, 4,4,5,4,6,7,2,8,4,6,4,3,6, 6,6,5,7)</p>
-<pre><code>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
-
-By assuming a prior distribution proportional to $e^{–a\theta}$ , we can show that the posterior
-distribution of $\theta$ is:
-\[
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">10</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">7</span>, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>      <span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">7</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">6</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>      <span class="dv">6</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">7</span>)</span></code></pre></div>
+<p>By assuming a prior distribution proportional to <span class="math inline">\(e^{–a\theta}\)</span> , we can show that the posterior distribution of <span class="math inline">\(\theta\)</span> is: <span class="math display">\[
 \sum^{n}_{i=1}y
 f (\theta | y 1 , y 2 ,..., y n ) \propto \theta i=1 i e –(n + \alpha) \theta
-\]
-We can observe that the posterior distribution of $\theta$ is Gamma with parameters
-n
-∑ i=1 y i – 1 and n + a.
-
-
-
-
-Plot the posterior probability density function of $\theta$ for values of $\theta$ in
-the interval [3.2, 6.8] and assuming a = 0.01.
-        
-[Hint: the range of values of $\theta$ can be obtained in R by
-seq(3.2, 6.8, by = 0.01).]
-(b)
-Carry out a simulation of N = 5,000 posterior samples for the
-parameter $\theta$.
-
-1.  (a)
-2.  Plot the histogram of the posterior distribution of $\theta$.
-
-
-
-
-
-
-CS1B Paper B {data-navmenu=&quot;R for Actuarial Statistics&quot;}
-==============================================================
-
-Column {.tabset}
---------------------------------
-
-
-### AutoClaims Data
-
-&lt;h4&gt; AutoClaims Data &lt;/h4&gt;
-
-Description of the given data sets
-
-***AutoClaims.csv***
-
-An insurance company is trying to analyse the paid and closed claims data of the past quarter.
-
-The columns carry the following explanation
-
-* *STATE*: The state of registration of the vehicle
-* *CLASS*: Rating class of the insured based on marital status, use of vehicle and other attributes
-* *GENDER*: Gender of the Insured (Same as the Driver)
-* *AGE*: Age of the Insured (Same as the Driver)
-* *PAID*: Amount paid to settle and close a claim
-
-
-
-
-### Question 1
-
-With reference to the dataset &quot;***AutoClaims.csv***&quot;, answer the following questions.
-
-1. Prepare a table with mean, standard deviation and coefficient of variance (CV) of the
-claims paid
-a) for each STATE and identify the one with the least and the highest CV
-b) for each CLASS and sort the table in the ascending order of the CV
-
-Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation 
-to the mean. 
-
-2. By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier
-values in terms of the claims paid. 
-3.  Prepare a contingency table identifying the proportion of insured across different
-CLASS(es) for each gender. Test the null hypothesis “There is no relationship between
-the GENDER and the CLASS of the insured” against an alternate hypothesis of
-existence of significant relation at 95% confidence level. Perform an appropriate test
-and comment. 
-
-4. Use an appropriate test to test if the mean claim amount paid and variance of claim
-amounts paid is uniform between males and females. 
-
-### Question 2
-Refer to the dataset &quot;***AutoClaims.csv***&quot; and answer the following questions.
-You were asked to fit an appropriate distribution to the “PAID” data. You decided to fit 
-Normal distribution, Lognormal distribution, Exponential distribution and Gamma 
-Distribution based on the method of moments.
-
-#### Exercises
-
-1. Estimate the parameters of each of these distributions. 
-
-2. Plot a histogram of “PAID” data with 30 equal class intervals. Superimpose the
-histogram with the Probability Density Functions of the above four distributions using
-their estimated parameters obtained in exercise 1. 
-Mark each plot distinctly using an appropriate legend. 
-
-3. Compute the 5th percentile, 1st quartile, median, 3rd quartile and 95th percentile of both
-the actual claims paid as well as from the fitted distributions. 
-
-4. Using the results from exercises 2 and 3, comment on goodness-of-fit of the models to the
-data. 
-
-
-
-
-
-### Question 3 Part (a)
-&lt;h4&gt; Question 3&lt;/h4&gt;
-
-* Fit a linear regression model to predict the “PAID” claim amount based on other variables (Consider the AGE as a numerical variable and all others as categorical).
-
-* Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. Identify the
-significant variables in the prediction of “PAID” claims. 
-
-* Comment on the applicability of the linear regression model by plotting “Residuals vs. Fitted Values” and “QQ Plot of the residuals”. 
-
-
-
-
-CS1B Paper C {data-navmenu=&quot;R for Actuarial Statistics&quot;}
-==============================================================
-
-Column {.tabset}
---------------------------------
-
-### Question 1
-
-&lt;h4&gt;Question  1&lt;/h4&gt;
-
-In a very small empirical study a sample from a random variable X is observed. The 
-data can be entered into R using the following code:
-
-&lt;div class=&quot;knitr-options&quot; data-fig-width=&quot;576&quot; data-fig-height=&quot;460&quot;&gt;&lt;/div&gt;
-
-
-```r
-x &lt;- c(0.22,0.38,1.28,0.54,0.56,1.36,0.55,0.37,0.43,0.46,0.62,
-0.54,0.54,0.51,0.44,0.68,0.55,0.30)</code></pre>
+\]</span> We can observe that the posterior distribution of <span class="math inline">\(\theta\)</span> is Gamma with parameters n ∑ i=1 y i – 1 and n + a.</p>
+<p>Plot the posterior probability density function of <span class="math inline">\(\theta\)</span> for values of <span class="math inline">\(\theta\)</span> in the interval [3.2, 6.8] and assuming a = 0.01.</p>
+<p>[Hint: the range of values of <span class="math inline">\(\theta\)</span> can be obtained in R by seq(3.2, 6.8, by = 0.01).] (b) Carry out a simulation of N = 5,000 posterior samples for the parameter <span class="math inline">\(\theta\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><ol style="list-style-type: lower-alpha">
+<li></li>
+</ol></li>
+<li>Plot the histogram of the posterior distribution of <span class="math inline">\(\theta\)</span>.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="cs1b-paper-b" class="section level1" data-navmenu="R for Actuarial Statistics">
+<h1 data-navmenu="R for Actuarial Statistics">CS1B Paper B</h1>
+<div id="column-2" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="autoclaims-data" class="section level3">
+<h3>AutoClaims Data</h3>
+<h4>
+AutoClaims Data
+</h4>
+<p>Description of the given data sets</p>
+<p><strong><em>AutoClaims.csv</em></strong></p>
+<p>An insurance company is trying to analyse the paid and closed claims data of the past quarter.</p>
+<p>The columns carry the following explanation</p>
+<ul>
+<li><em>STATE</em>: The state of registration of the vehicle</li>
+<li><em>CLASS</em>: Rating class of the insured based on marital status, use of vehicle and other attributes</li>
+<li><em>GENDER</em>: Gender of the Insured (Same as the Driver)</li>
+<li><em>AGE</em>: Age of the Insured (Same as the Driver)</li>
+<li><em>PAID</em>: Amount paid to settle and close a claim</li>
+</ul>
+</div>
+<div id="question-1-1" class="section level3">
+<h3>Question 1</h3>
+<p>With reference to the dataset “<strong><em>AutoClaims.csv</em></strong>”, answer the following questions.</p>
+<ol style="list-style-type: decimal">
+<li>Prepare a table with mean, standard deviation and coefficient of variance (CV) of the claims paid</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>for each STATE and identify the one with the least and the highest CV</li>
+<li>for each CLASS and sort the table in the ascending order of the CV</li>
+</ol>
+<p>Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation to the mean.</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier values in terms of the claims paid.</p></li>
+<li><p>Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. Test the null hypothesis “There is no relationship between the GENDER and the CLASS of the insured” against an alternate hypothesis of existence of significant relation at 95% confidence level. Perform an appropriate test and comment.</p></li>
+<li><p>Use an appropriate test to test if the mean claim amount paid and variance of claim amounts paid is uniform between males and females.</p></li>
+</ol>
+</div>
+<div id="question-2-1" class="section level3">
+<h3>Question 2</h3>
+<p>Refer to the dataset “<strong><em>AutoClaims.csv</em></strong>” and answer the following questions. You were asked to fit an appropriate distribution to the “PAID” data. You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.</p>
 <div id="exercises" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li><p>Estimate the parameters of each of these distributions.</p></li>
+<li><p>Plot a histogram of “PAID” data with 30 equal class intervals. Superimpose the histogram with the Probability Density Functions of the above four distributions using their estimated parameters obtained in exercise 1. Mark each plot distinctly using an appropriate legend.</p></li>
+<li><p>Compute the 5th percentile, 1st quartile, median, 3rd quartile and 95th percentile of both the actual claims paid as well as from the fitted distributions.</p></li>
+<li><p>Using the results from exercises 2 and 3, comment on goodness-of-fit of the models to the data.</p></li>
+</ol>
+</div>
+</div>
+<div id="question-3-part-a" class="section level3">
+<h3>Question 3 Part (a)</h3>
+<h4>
+Question 3
+</h4>
+<ul>
+<li><p>Fit a linear regression model to predict the “PAID” claim amount based on other variables (Consider the AGE as a numerical variable and all others as categorical).</p></li>
+<li><p>Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. Identify the significant variables in the prediction of “PAID” claims.</p></li>
+<li><p>Comment on the applicability of the linear regression model by plotting “Residuals vs. Fitted Values” and “QQ Plot of the residuals”.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="cs1b-paper-c" class="section level1" data-navmenu="R for Actuarial Statistics">
+<h1 data-navmenu="R for Actuarial Statistics">CS1B Paper C</h1>
+<div id="column-3" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="question-1-2" class="section level3">
+<h3>Question 1</h3>
+<h4>
+Question 1
+</h4>
+<p>In a very small empirical study a sample from a random variable X is observed. The data can be entered into R using the following code:</p>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.22</span>,<span class="fl">0.38</span>,<span class="fl">1.28</span>,<span class="fl">0.54</span>,<span class="fl">0.56</span>,<span class="fl">1.36</span>,<span class="fl">0.55</span>,<span class="fl">0.37</span>,<span class="fl">0.43</span>,<span class="fl">0.46</span>,<span class="fl">0.62</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fl">0.54</span>,<span class="fl">0.54</span>,<span class="fl">0.51</span>,<span class="fl">0.44</span>,<span class="fl">0.68</span>,<span class="fl">0.55</span>,<span class="fl">0.30</span>)</span></code></pre></div>
+<div id="exercises-1" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Estimate the expected value of <span class="math inline">\(X\)</span>.</p></li>
@@ -2863,13 +2820,13 @@ x &lt;- c(0.22,0.38,1.28,0.54,0.56,1.36,0.55,0.37,0.43,0.46,0.62,
 </ol>
 </div>
 </div>
-<div id="question-2-1" class="section level3">
+<div id="question-2-2" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
 <p>The dataset “<strong><em>Interest_rates.csv</em></strong>” contains a series of returns on bonds of maturities 1 year, 5 years, 10 years, 15 years, 20 years and 30 years (i.e. bonds that provide a return of the principal investment after 1, 5, 10, 15, 20 and 30 years respectively).</p>
-<div id="exercises-1" class="section level4">
+<div id="exercises-2" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
@@ -2894,19 +2851,23 @@ Question 2
 <h4>
 Question 3
 </h4>
-<p>Use the command <code>set.seed(2021)</code> to initialise the random number generator. When you execute any R code, make sure you run the entire R script including the line set.seed(2019). Consider a random sample <span class="math inline">\(X1, \ldots, Xn\)</span> from an Exponential distribution with parameter l and define Y = Xi . i=1 n ∑</p>
-<div id="exercises-2" class="section level4">
+<p>Use the command <strong><em>set.seed(2021)</em></strong> to initialise the random number generator. When you execute any R code, make sure you run the entire R script including the line set.seed(2019). Consider a random sample <span class="math inline">\(X1, \ldots, Xn\)</span> from an Exponential distribution with parameter l and define Y = Xi . i=1 n ∑</p>
+<div id="exercises-3" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>State the distribution of Y, giving all the parameters of the distribution.</li>
-<li>Perform simulation of a sample x1, …, xn with sample size n = 15 from an exponential distribution with parameter l = 2.</li>
+<li>Perform simulation of a sample <span class="math inline">\(x1, …, xn\)</span> with sample size <span class="math inline">\(n = 15\)</span> from an exponential distribution with parameter l = 2.</li>
 <li>Calculate the value of Y for the sample in exercise 2. .</li>
 <li>Perform 1,000 repetitions of parts 2. and 3. to obtain a Bootstrap sample y1, …, yB from the random variable Y with <span class="math inline">\(B = 1,000\)</span>.</li>
 <li>Plot a histogram showing the relative frequencies of the sample y1, …, yB from part 4. .</li>
 <li><ol style="list-style-type: lower-alpha">
-<li>Compare graphically the histogram in exercise 5. to the density of a suitable Normal distribution. You might find the following R command useful: curve(dnorm(x,mean=, sd=, add=TRUE, lwd=2,col=“red”))</li>
+<li>Compare graphically the histogram in exercise 5. to the density of a suitable Normal distribution. You might find the following R command useful:
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div></li>
 </ol></li>
 </ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x,<span class="at">mean=</span>, <span class="at">sd=</span>, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">lwd=</span><span class="dv">2</span>,<span class="at">col=</span><span class="st">&quot;red&quot;</span>))</span></code></pre></div>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Comment on your findings in exercise 6. (a) in the context of the Central Limit Theorem.</li>
 </ol>
@@ -2921,10 +2882,10 @@ Question 1
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">18</span>,<span class="dv">23</span>,<span class="dv">25</span>,<span class="dv">35</span>,<span class="dv">65</span>,<span class="dv">54</span>,<span class="dv">34</span>,<span class="dv">56</span>,<span class="dv">72</span>,<span class="dv">19</span>,<span class="dv">23</span>,<span class="dv">42</span>,<span class="dv">18</span>,<span class="dv">39</span>,<span class="dv">37</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">202</span>,<span class="dv">186</span>,<span class="dv">187</span>,<span class="dv">180</span>,<span class="dv">156</span>,<span class="dv">169</span>,<span class="dv">174</span>,<span class="dv">172</span>,<span class="dv">153</span>,<span class="dv">199</span>,<span class="dv">193</span>,<span class="dv">174</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dv">198</span>,<span class="dv">183</span>,<span class="dv">178</span>)</span></code></pre></div>
-<div id="exercises-3" class="section level4">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">18</span>,<span class="dv">23</span>,<span class="dv">25</span>,<span class="dv">35</span>,<span class="dv">65</span>,<span class="dv">54</span>,<span class="dv">34</span>,<span class="dv">56</span>,<span class="dv">72</span>,<span class="dv">19</span>,<span class="dv">23</span>,<span class="dv">42</span>,<span class="dv">18</span>,<span class="dv">39</span>,<span class="dv">37</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">202</span>,<span class="dv">186</span>,<span class="dv">187</span>,<span class="dv">180</span>,<span class="dv">156</span>,<span class="dv">169</span>,<span class="dv">174</span>,<span class="dv">172</span>,<span class="dv">153</span>,<span class="dv">199</span>,<span class="dv">193</span>,<span class="dv">174</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="dv">198</span>,<span class="dv">183</span>,<span class="dv">178</span>)</span></code></pre></div>
+<div id="exercises-4" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the fitted line for the regression of Max Rate on Age.</p></li>
@@ -2943,8 +2904,8 @@ Question 1
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>class.code <span class="ot">=</span> <span class="fu">as.factor</span>(class.code)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sex.code <span class="ot">=</span> <span class="fu">as.factor</span>(sex.code)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>class.code <span class="ot">=</span> <span class="fu">as.factor</span>(class.code)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sex.code <span class="ot">=</span> <span class="fu">as.factor</span>(sex.code)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li><p>Fit a generalised linear model analysis to the data, using a Poisson distribution, with the numbers of policies as the response variable and the class of business as the only factor. Your answer should include estimates of the parameters, corresponding p-values and a brief interpretation of their effect. [8]</p></li>
 <li><p>Fit a second Poisson generalised linear model analysis to the data, using the numbers of policies as the response variable and both the class of business and the sex of the policyholders as factors. Your answer should include estimates of the parameters, corresponding p-values and a brief interpretation of their effect.</p></li>
@@ -2957,9 +2918,9 @@ and 4. provides a better fit to the data. Your answer should include the null hy
 </div>
 <div id="cs1b-paper-d" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper D</h1>
-<div id="column-2" class="section level2 tabset">
+<div id="column-4" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-1" class="section level3">
+<div id="question-1-3" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -2988,9 +2949,9 @@ Question 3
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data file</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>indices<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;Indices_Returns.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the data file</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>indices<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">&quot;Indices_Returns.csv&quot;</span>)</span></code></pre></div>
 <hr />
 <div id="exercise-1-1" class="section level4">
 <h4>Exercise 1</h4>
@@ -3001,16 +2962,16 @@ Question 3
 </div>
 <div id="cs1b-paper-e" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper E</h1>
-<div id="column-3" class="section level2 tabset">
+<div id="column-5" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-2" class="section level3">
+<div id="question-1-4" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
 </h4>
 <p>An employee at a café has been trained to set the coffee machine so that an espresso coffee portion results in 2.0 grams of coffee being placed into a cup.</p>
 <p>Knowing that variations are expected, the employee pours eight portions and measures the amounts to be <span class="math display">\[\{1.95, 1.80, 2.10, 1.82, 1.75, 2.01, 1.83, 1.90\}\]</span>.</p>
-<div id="exercises-4" class="section level4">
+<div id="exercises-5" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Calculate an 95% confidence interval for the mean size of espresso coffee portions.</li>
@@ -3023,7 +2984,7 @@ Question 1
 <p><a href="https://www.youtube.com/watch?v=gBJKMtzKIA4">Click Here for Video</a></p>
 </div>
 </div>
-<div id="question-2-2" class="section level3">
+<div id="question-2-3" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -3063,7 +3024,7 @@ Question 2
 </tr>
 </tbody>
 </table>
-<div id="exercises-5" class="section level4">
+<div id="exercises-6" class="section level4">
 <h4>Exercises</h4>
 <p>The researcher wants to establish whether tutorial attendance is independent of exam success, using a chi-square test.</p>
 <ol style="list-style-type: decimal">
@@ -3126,7 +3087,7 @@ Question 2
 </tbody>
 </table>
 <hr />
-<div id="exercises-6" class="section level4">
+<div id="exercises-7" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Perform a suitable t-test to determine whether the sweet bags are being consistently under-filled, stating the hypotheses and the level of significance used in the test.</p></li>
@@ -3148,7 +3109,7 @@ Question 2
 <li><strong><em>alcohol</em></strong>: alcohol consumption per adult per year (litres/year);</li>
 <li><strong><em>cigarettes</em></strong>: number of cigarettes consumed per adult per year.</li>
 </ul>
-<div id="exercises-7" class="section level4">
+<div id="exercises-8" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
@@ -3177,8 +3138,8 @@ and 5. .</p>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>alcohol<span class="fl">.2</span> <span class="ot">=</span> alcohol[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cigarettes<span class="fl">.2</span> <span class="ot">=</span> cigarettes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>alcohol<span class="fl">.2</span> <span class="ot">=</span> alcohol[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cigarettes<span class="fl">.2</span> <span class="ot">=</span> cigarettes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span></code></pre></div>
 <ol start="7" style="list-style-type: lower-roman">
 <li>Perform a simple linear regression analysis on the new data using a model of the form y = α + βx + ε (cigarette consumption, y, on alcohol consumption, x), where the error terms ε independently follow a N(0, s2) distribution. Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. [5]</li>
 <li>State the proportion of the total variability of the responses explained by the model, based on your output in part (vii). [1]</li>
@@ -3190,7 +3151,7 @@ and 5. .</p>
 <div id="question-5-1" class="section level3">
 <h3>Question 5</h3>
 <p>5 A waiting time random variable X follows an Exponential distribution with rate l parameterised as f(x) = le–lx (x &gt; 0, l &gt; 0). The rate l has a Gamma prior distribution with parameters a and s. A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as Z 3x + (1– Z)3 s α – 1, where Z = n α + n – 1 with n being the number of past waiting times observed. Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.</p>
-<div id="exercises-8" class="section level4">
+<div id="exercises-9" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Determine an estimate of the posterior mean of 1/l assuming n = 10 by implementing M = 3,000 Monte Carlo repetitions. [14]</li>
@@ -3205,13 +3166,13 @@ and 5. .</p>
 </div>
 <div id="cs1b-paper-f" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper F</h1>
-<div id="column-4" class="section level2 tabset">
+<div id="column-6" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-3" class="section level3">
+<div id="question-1-5" class="section level3">
 <h3>Question `1</h3>
 <p>Q. 1) Use the ‘MotorClaims’ dataset provided to answer the following questions: (MotorClaims.cs5. 1. Fit Gamma distribution on the dataset provided by determining its scale and shape parameters. State clearly the distribution with the parameters. 2. Simulate 1000 values from the distribution obtained in exercise 1. and print the first six values. (Set seed to 100) 3. Calculate the mean and variance of simulated values. 4. Obtain a QQ plot for the simulations of 1000 values and a normal distribution. 5. Add a line to the above plot to show the true position of normal distribution. 6. Comment on the shape of the distribution and how close it is to a normal distribution.</p>
 </div>
-<div id="question-2-3" class="section level3">
+<div id="question-2-4" class="section level3">
 <h3>Question 2</h3>
 <p>Q. 2) The dataset ‘mtcars’ (built into R) consists of data on various models of car, taken from an American motoring magazine (1974 Motor Trend magazine). For each car, there are certain features expressed in varying units. 1. Load the ‘mtcars’ dataset which is built into R. How many observations and variables are there in this dataset? Your answer should include the R output. 2. Identify the categorical variables from the dataset ‘mtcars’ and create a dataset excluding the categorical variables. 3. How many observations and variables are there in the new dataset? Your answer should include the R output. 4. Carry out a principal component analysis on the new dataset of mtcars by passing two arguments, ‘center’ and ‘scale’ to be TRUE. Your answer should include a summary of the principal component analysis. 5. How many components of the reduced data should be retained using the output derived in exercise 4. ? Also state the reason for the same.</p>
 </div>
@@ -3221,7 +3182,7 @@ and 5. .</p>
 <ol style="list-style-type: decimal">
 <li>Obtain 95% confidence interval for the standard deviation of BMI (using qchisq).</li>
 <li>Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State your conclusion of the test.</li>
-<li>If obese is defined to be BMI above 30, use <code>binom.test()</code> to calculate 99% confidence interval for proportion of obese people and comment on the likelihood if more than 20 pc are obese.</li>
+<li>If obese is defined to be BMI above 30, use <strong><em>binom.test()</em></strong> to calculate 99% confidence interval for proportion of obese people and comment on the likelihood if more than 20 pc are obese.</li>
 <li>Claim frequency can be calculated as claim count divided by number of policyholders. Test whether claim frequency is different between obese and others.</li>
 </ol>
 </div>
@@ -3233,7 +3194,7 @@ Q. 4) The CDC and EISS detect influenza activity through clinical data including
 <h4>Data</h4>
 <p>The csv file <strong><em>FluTrain.csv</em></strong> aggregates this data from January 1, 2004 until December 31, 2011 as follows: * “Week” - The range of dates represented by this observation, in year/month/day format. * “ILI” - This column lists the percentage of ILI-related physician visits for the corresponding week. * “Queries” - This column lists the fraction of queries that are ILI-related for the corresponding week, adjusted to be between 0 and 1 (higher values correspond to more ILI-related search queries).</p>
 </div>
-<div id="exercises-9" class="section level4">
+<div id="exercises-10" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Plot a histogram of the dependent variable, ILI. Comment on the shape of the distribution.</li>
@@ -3253,16 +3214,16 @@ Q. 4) The CDC and EISS detect influenza activity through clinical data including
 </div>
 <div id="cs1b-paper-g" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper G</h1>
-<div id="column-5" class="section level2 tabset">
+<div id="column-7" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-4" class="section level3">
+<div id="question-1-6" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
 </h4>
 <p>A researcher records the levels of caffeine present in their bloodstream at various time intervals after drinking a cup of coffee. T: Time elapsed (30-minute intervals) 1 2 3 4 5 6 7 8 9 10 C: Caffeine in blood (milligrams) 52.2 39.3 28.3 19.03 13.96 11.46 8.78 6.55 5.43 5.03</p>
 <p>You can enter the values, for T (time) and C (caffeine), into R using: time = c(1,2,3,4,5,6,7,8,9,10) caffeine = c(52.2,39.3,28.3,19.03,13.96,11.46,8.78,6.55,5.43,5.03)</p>
-<div id="exercises-10" class="section level4">
+<div id="exercises-11" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Plot a scatterplot of the data.</li>
@@ -3279,7 +3240,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-4" class="section level3">
+<div id="question-2-5" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -3289,8 +3250,8 @@ You can enter the exam marks for Marker 1 and Marker 2 into R using:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>marks_1 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">8</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">33</span>,<span class="dv">34</span>,<span class="dv">21</span>,<span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">2</span>) </span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>marks_2 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">16</span>,<span class="dv">25</span>,<span class="dv">27</span>,<span class="dv">42</span>,<span class="dv">23</span>,<span class="dv">4</span>,<span class="dv">9</span>,<span class="dv">0</span>)  </span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>marks_1 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">8</span>,<span class="dv">14</span>,<span class="dv">22</span>,<span class="dv">33</span>,<span class="dv">34</span>,<span class="dv">21</span>,<span class="dv">9</span>,<span class="dv">6</span>,<span class="dv">2</span>) </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>marks_2 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">16</span>,<span class="dv">25</span>,<span class="dv">27</span>,<span class="dv">42</span>,<span class="dv">23</span>,<span class="dv">4</span>,<span class="dv">9</span>,<span class="dv">0</span>)  </span></code></pre></div>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
 <li>Plot two graphs, one for each marker, for the distribution of the exam marks given by the two markers. [Hint: You may find the R command barplot() useful.]</li>
@@ -3303,16 +3264,16 @@ One of the marked exam papers is selected at random and the scores given by each
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Question <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span> <span class="dv">10</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Marker <span class="dv">1</span> <span class="dv">4</span> <span class="dv">1</span> <span class="dv">5</span> <span class="dv">1</span> <span class="dv">4</span> <span class="dv">6</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">3</span> <span class="dv">6</span> </span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Marker <span class="dv">2</span> <span class="dv">3</span> <span class="dv">2</span> <span class="dv">4</span> <span class="dv">0</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">3</span> <span class="dv">6</span> </span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Question <span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span> <span class="dv">10</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Marker <span class="dv">1</span> <span class="dv">4</span> <span class="dv">1</span> <span class="dv">5</span> <span class="dv">1</span> <span class="dv">4</span> <span class="dv">6</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">3</span> <span class="dv">6</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Marker <span class="dv">2</span> <span class="dv">3</span> <span class="dv">2</span> <span class="dv">4</span> <span class="dv">0</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">3</span> <span class="dv">6</span> </span></code></pre></div>
 <p>You can enter the scores for Marker 1 and Marker 2 into R using:</p>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>marker_1 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>) </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>marker_2 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">6</span>) </span></code></pre></div>
-<div id="exercises-11" class="section level4">
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>marker_1 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>) </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>marker_2 <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">6</span>) </span></code></pre></div>
+<div id="exercises-12" class="section level4">
 <h4>Exercises</h4>
 <ol start="2" style="list-style-type: decimal">
 <li>Perform a suitable test to determine whether the difference in the mean scores of the two markers is zero or not, at the 5% confidence level, taking into account that the two markers have marked the same exam paper.</li>
@@ -3357,9 +3318,9 @@ Question 4
 </div>
 <div id="cs1b-paper-h" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper H</h1>
-<div id="column-6" class="section level2 tabset">
+<div id="column-8" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-5" class="section level3">
+<div id="question-1-7" class="section level3">
 <h3>Question 1</h3>
 <p>The following amounts are the sizes of claims (in £) on house insurance policies for a certain type of repair.</p>
 <p>1990, 2400, 2150, 2090, 2300, 2100, 2180, 2150, 2030, 2100, 2180, 2010, 2060, 2160, 2120</p>
@@ -3387,9 +3348,9 @@ Question 4
 </div>
 <div id="cs1b-paper-i" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper I</h1>
-<div id="column-7" class="section level2 tabset">
+<div id="column-9" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-6" class="section level3">
+<div id="question-1-8" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -3621,7 +3582,7 @@ Calculate, to four decimal places, the probabilities $P[k &lt; Y \leq k + 20]$ f
 values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 
 
 4. Plot the values calculated in parts 2. and 3. on the same graph. 
-[Hint: you may find the R command ``lines(…)`` useful.] 
+[Hint: you may find the R command ***lines(…)*** useful.] 
 
 5.Discuss your answers in parts 1 to 4.. 
 
@@ -3759,9 +3720,9 @@ alpha_est=nrej/N # </code></pre>
 </div>
 <div id="cs1b-paper-j" class="section level1" data-navmenu="R for Actuarial Statistics">
 <h1 data-navmenu="R for Actuarial Statistics">CS1B Paper J</h1>
-<div id="column-8" class="section level2 tabset">
+<div id="column-10" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-7" class="section level3">
+<div id="question-1-9" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -3773,13 +3734,13 @@ Question 1
 <li>Plot a graph of the distribution function of <span class="math inline">\(X\)</span>.</li>
 </ol>
 </div>
-<div id="question-2-5" class="section level3">
+<div id="question-2-6" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
 <p>A student is performing a study to understand the correlation of temperature among different days of the week. Temperature on weekdays is recorded for 15 weeks in the file <strong><em>Temperature_data.csv</em></strong>.</p>
-<div id="exercises-12" class="section level4">
+<div id="exercises-13" class="section level4">
 <h4>Exercises</h4>
 <p>Generate the following correlation matrices</p>
 <ol style="list-style-type: decimal">
@@ -3810,7 +3771,7 @@ Question 4
 <h3>Question 5</h3>
 <p>Q. 5) (Students can copy the R code as provided file ‘Reference_RCode’)</p>
 <p>Claim payment data (Year 1 to Year 4) in INR Crores Year 1 Year 2 Year 3 Year 4 Insurer A 112 130 178 150 Insurer B 38 50 80 68 Insurer C 89 127 210 150 Insurer D 70 75 77 80</p>
-<div id="exercises-13" class="section level4">
+<div id="exercises-14" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Analyse the data using EBCT Model 1 and calculate the expected total claim payment to be made by each insurer (A, B, C and D) in the Year 5 by replacing question marks‘?’ with appropriate function in the R Code shared in file “Reference_RCode”.</li>
@@ -3873,9 +3834,9 @@ Qurstion 6
 </div>
 <div id="cs2b-paper-a" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper A</h1>
-<div id="column-9" class="section level2 tabset">
+<div id="column-11" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-8" class="section level3">
+<div id="question-1-10" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -3929,7 +3890,7 @@ Question 1
 <div id="question-1-exercises" class="section level3">
 <h3>Question 1 Exercises</h3>
 </div>
-<div id="question-2-6" class="section level3">
+<div id="question-2-7" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -3967,10 +3928,10 @@ Question 3 - Part (a)
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“fpp”)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fpp)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>consumption <span class="ot">&lt;-</span> usconsumption[,<span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(“fpp”)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fpp)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>consumption <span class="ot">&lt;-</span> usconsumption[,<span class="dv">1</span>]</span></code></pre></div>
 <div id="exercise-1-3" class="section level4">
 <h4>Exercise 1</h4>
 <p>Plot this time series giving appropriate labels for each axis and paste the R code and the chart into your answer.</p>
@@ -3994,7 +3955,7 @@ The dataset usconsumption also includes the quarterly personal disposable income
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>income <span class="ot">&lt;-</span> usconsumption[,<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>income <span class="ot">&lt;-</span> usconsumption[,<span class="dv">2</span>]</span></code></pre></div>
 <div id="exercise-4" class="section level4">
 <h4>Exercise 4</h4>
 Compare the performance of the ARIMA model you have chosen in exercise 3 with a linear regression model of consumption on income, by computing the root mean square error (RMSE) for the fitted values ofeach model. Paste your coding and R output into your answer.
@@ -4016,9 +3977,9 @@ Compare the performance of the ARIMA model you have chosen in exercise 3 with a 
 </div>
 <div id="cs2b-paper-b" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper B</h1>
-<div id="column-10" class="section level2 tabset">
+<div id="column-12" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-9" class="section level3">
+<div id="question-1-11" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -4027,9 +3988,9 @@ Before answering this question, the data file must be generated in R using the f
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">121118</span>); </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="at">ar=</span><span class="fl">0.7</span>), <span class="at">n=</span><span class="dv">300</span>)</span></code></pre></div>
-<div id="exercises-14" class="section level4">
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">121118</span>); </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="at">ar=</span><span class="fl">0.7</span>), <span class="at">n=</span><span class="dv">300</span>)</span></code></pre></div>
+<div id="exercises-15" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the time series giving appropriate labels for each axis and paste the chart into your answer. Comment on the general features of your chart.</p></li>
@@ -4043,7 +4004,7 @@ Before answering this question, the data file must be generated in R using the f
 </ol>
 </div>
 </div>
-<div id="question-2-7" class="section level3">
+<div id="question-2-8" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4051,7 +4012,7 @@ Question 2
 <p>An airport has recently introduced a driverless pod system to transport passengers between the terminal and the car park. Pods operate every two minutes from the terminal exit, and each pod can take up to two passengers and their luggage.</p>
 <p>
 <p>Passengers arrive at the terminal exit seeking to travel to the car park according to a Poisson process with a rate of 1 per minute. If four or more passengers are waiting at the exit when a pod arrives, taxis are immediately summoned to take all the remaining passengers to the car park.</p>
-<div id="exercises-15" class="section level4">
+<div id="exercises-16" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear at the exit to the terminal in any given two-minute period.</p></li>
@@ -4066,10 +4027,10 @@ Question 2
 </ol>
 </div>
 </div>
-<div id="question-3-part-a" class="section level3">
+<div id="question-3-part-a-1" class="section level3">
 <h3>Question 3 Part (a)</h3>
 <p>In an insurance company’s portfolio, individual claim sizes, in £, follow an exponential distribution with parameter 0.0001.</p>
-<div id="exercises-16" class="section level4">
+<div id="exercises-17" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>In R console run the following code: <code>set.seed(123)</code> and then use R to simulate 10,000 claims and plot a histogram of the simulated data. Paste your R code and chart into your answer.</p></li>
@@ -4087,7 +4048,7 @@ Question 2
 <div id="question-3-part-b-1" class="section level3">
 <h3>Question 3 Part (b)</h3>
 <p>The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance of claims.</p>
-<div id="exercises-17" class="section level4">
+<div id="exercises-18" class="section level4">
 <h4>Exercises</h4>
 <ol start="4" style="list-style-type: decimal">
 <li>Calculate the mean and variance of the claims paid by:</li>
@@ -4114,9 +4075,9 @@ Question 2
 </div>
 <div id="cs2b-paper-c" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper C</h1>
-<div id="column-11" class="section level2 tabset">
+<div id="column-13" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-10" class="section level3">
+<div id="question-1-12" class="section level3">
 <h3>Question 1</h3>
 <h4>
 &lt;Question 1
@@ -4125,8 +4086,8 @@ Before answering this question, the data file must be generated in R using the f
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">121118</span>); y<span class="ot">=</span><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="at">ar=</span><span class="fl">0.7</span>), <span class="at">n=</span><span class="dv">300</span>)</span></code></pre></div>
-<div id="exercises-18" class="section level4">
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">121118</span>); y<span class="ot">=</span><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>),<span class="at">ar=</span><span class="fl">0.7</span>), <span class="at">n=</span><span class="dv">300</span>)</span></code></pre></div>
+<div id="exercises-19" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
@@ -4154,7 +4115,7 @@ Before answering this question, the data file must be generated in R using the f
 </ol>
 </div>
 </div>
-<div id="question-2-8" class="section level3">
+<div id="question-2-9" class="section level3">
 <h3>Question 2</h3>
 <h4>
 &lt;Question 2
@@ -4162,7 +4123,7 @@ Before answering this question, the data file must be generated in R using the f
 An airport has recently introduced a driverless pod system to transport passengers between the terminal and the car park. Pods operate every two minutes from the terminal exit, and each pod can take up to two passengers and their luggage. Passengers arrive at the terminal exit seeking to travel to the car park according to a Poisson process with a rate of 1 per minute.
 <p>
 <p>If four or more passengers are waiting at the exit when a pod arrives, taxis are immediately summoned to take all the remaining passengers to the car park.</p>
-<div id="exercises-19" class="section level4">
+<div id="exercises-20" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Calculate the probabilities that 0, 1, 2, 3, and 4 or more passengers will appear at the exit to the terminal in any given two-minute period.</p></li>
@@ -4179,7 +4140,7 @@ An airport has recently introduced a driverless pod system to transport passenge
 &lt;Question 3
 </h4>
 <p>In an insurance company’s portfolio, individual claim sizes, in £, follow an exponential distribution with parameter 0.0001.</p>
-<div id="exercises-20" class="section level4">
+<div id="exercises-21" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>In R console run the following code: <code>set.seed(123)</code> and then use R to simulate 10,000 claims and plot a histogram of the simulated data.</p></li>
@@ -4209,15 +4170,15 @@ An airport has recently introduced a driverless pod system to transport passenge
 </div>
 <div id="cs2b-paper-d" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper D</h1>
-<div id="column-12" class="section level2 tabset">
+<div id="column-14" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-11" class="section level3">
+<div id="question-1-13" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
 </h4>
 <p>Monthly totals of airline passengers are given in time series data ‘AirPassengers’.</p>
-<div id="exercises-21" class="section level4">
+<div id="exercises-22" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the data as time series with <code>frequency =12</code>.</p></li>
@@ -4232,12 +4193,12 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-9" class="section level3">
+<div id="question-2-10" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
-<div id="exercises-22" class="section level4">
+<div id="exercises-23" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 0.75\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
@@ -4273,7 +4234,7 @@ Question 4
 <p>An life insurance company is selling Endowment, Pure Term and Unit Linked products wherein 80% of the business comes from Endowment, 5% from Term Insurance and 15% from Unit Linked products. The sum assured ranges between 30000 to 200000 with multiple of 5000.</p>
 <p>The sum assured are normally distributed with below parameters * Endowment (mean 50000, standard deviation 10000), * Pure Term (mean 100000, standard deviation 25000), * Unit Linked (mean 60000, standard deviation 5000).</p>
 <p>One policy is randomly picked from the system and the sum assured of that policy is 75000.</p>
-<div id="exercises-23" class="section level4">
+<div id="exercises-24" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Create a sequence ranging from 30000 to 200000 with an increase of 5000 and plot the density functions of the above three distributions in a single graph.</li>
@@ -4293,7 +4254,7 @@ A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\o
 = β1*z1 + β2*z2\\
 \]</span></p>
 <p>If we can estimate β1 and β2, then A and <span class="math inline">\(\phi\)</span> can be estimated. Therefore, $xt = β1 cos(2πt) + β2 sin(2πt) + wt $</p>
-<div id="exercises-24" class="section level4">
+<div id="exercises-25" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Simulate and plot a series xt, using A=2, = 0.6π and SD of white noise as 5 (for t= 1 to 1000).</li>
@@ -4309,7 +4270,7 @@ A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\o
 Question 6
 </h4>
 <p>Suppose the transition probabilities are a function of the age of a person. The transition probability of a person aged x moving: * from Healthy to Sick state is 0.007x * from Healthy to Death state is 0.001x * from Sick to Death state is 0.002(100-x) * from Sick to Healthy is 0.006(100-x).</p>
-<div id="exercises-25" class="section level4">
+<div id="exercises-26" class="section level4">
 <h4>Exercises</h4>
 <p>Assuming 100 is the maximum age. Calculate the probability of:</p>
 <ol style="list-style-type: decimal">
@@ -4327,24 +4288,24 @@ Question 7
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>Person Last time at which patient was </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">observed</span> (time unit <span class="cf">in</span> <span class="dv">15</span> Minutes) Outcome</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">6</span> (i.e. <span class="dv">90</span> minutes) Died</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">6</span> Discharged</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">12</span> Died</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">18</span> Discharged</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">27</span> Died</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="dv">27</span> Discharged</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="dv">30</span> Discharged</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span> <span class="dv">36</span> Discharged</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span> <span class="dv">39</span> Died</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">39</span> Discharged</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">54</span> Discharged</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">57</span> Died</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> <span class="dv">60</span> Survived</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> <span class="dv">60</span> Survived</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="dv">15</span> <span class="dv">60</span> Survived</span></code></pre></div>
-<div id="exercises-26" class="section level4">
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Person Last time at which patient was </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">observed</span> (time unit <span class="cf">in</span> <span class="dv">15</span> Minutes) Outcome</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">6</span> (i.e. <span class="dv">90</span> minutes) Died</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="dv">6</span> Discharged</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="dv">12</span> Died</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="dv">18</span> Discharged</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="dv">27</span> Died</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="dv">27</span> Discharged</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span> <span class="dv">30</span> Discharged</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="dv">8</span> <span class="dv">36</span> Discharged</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="dv">9</span> <span class="dv">39</span> Died</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span> <span class="dv">39</span> Discharged</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="dv">54</span> Discharged</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span> <span class="dv">57</span> Died</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="dv">13</span> <span class="dv">60</span> Survived</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> <span class="dv">60</span> Survived</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="dv">15</span> <span class="dv">60</span> Survived</span></code></pre></div>
+<div id="exercises-27" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Use the data to create the Kaplan-Meier estimate of the survival function. Use the “{Survival}” library in R to create the summary of the model (survival rates, standard deviation, lower 95% confidence interval, upper 95% confidence interval).</li>
@@ -4356,7 +4317,7 @@ Question 7
 <div id="exercise-8" class="section level3">
 <h3>Exercise 8</h3>
 <p>Consider a set of data generated by tossing a fair coin, letting <span class="math inline">\(x_t = 1\)</span> when a head is obtained and xt = −1 when a tail is obtained. Then, construct yt as yt = 2 + 1.5xt − 0.5xt−1</p>
-<div id="exercises-27" class="section level4">
+<div id="exercises-28" class="section level4">
 <h4>Exercises</h4>
 <p>Simulate data for three cases, one with a small sample size (n = 10), another one with a moderate sample size (n = 100) and lastly with large sample size (n = 1000).</p>
 <ol style="list-style-type: decimal">
@@ -4379,15 +4340,15 @@ pre {
   overflow-x: scroll;
 }
 </style>
-<div id="column-13" class="section level2 tabset">
+<div id="column-15" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-12" class="section level3">
+<div id="question-1-14" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
 </h4>
 <p>An actuary is investigating the asymptotic behaviour of the sample autocorrelation function for two time series models.</p>
-<div id="exercises-28" class="section level4">
+<div id="exercises-29" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order moving average process with parameter β1= 0.4, assigning the simulated values to a vector called YMA.</p></li>
@@ -4417,7 +4378,7 @@ Question 1
 <li><p>Comment on the results in parts (vii) and (viii), including whether they agree with the expected asymptotic behaviour.</p></li>
 </ol>
 </div>
-<div id="question-2-10" class="section level3">
+<div id="question-2-11" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4425,7 +4386,7 @@ Question 2
 <p>Before answering this question, generate the vector, X, in R using the following code:</p>
 <p><code>set.seed(1027); X = rexp(n=1000, rate=0.01)</code></p>
 <p>The vector <span class="math inline">\(X\)</span> represents the gross claim sizes of 1,000 claims. The payments are to be split between an insurance company and its reinsurer under an Excess of Loss reinsurance arrangement with a retention level M = 400.</p>
-<div id="exercises-29" class="section level4">
+<div id="exercises-30" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Determine the proportion of the claims that are fully covered by the insurer.</p></li>
@@ -4441,7 +4402,7 @@ Question 2
 </ol>
 </div>
 </div>
-<div id="question-3-part-a-1" class="section level3">
+<div id="question-3-part-a-2" class="section level3">
 <h3>Question 3 Part (a)</h3>
 <h4>
 Question 3
@@ -4451,11 +4412,11 @@ Before answering this question, generate the data set, portfolio, in R using the
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2019</span>); </span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>portfolio <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x1=</span><span class="fu">rnorm</span>(<span class="dv">200</span>,<span class="dv">3</span>,<span class="dv">1</span>), </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="at">x2=</span><span class="fu">scale</span>(<span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">70</span>,<span class="dv">4</span>,<span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">130</span>,<span class="dv">10</span>,<span class="dv">1</span>)))) </span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2019</span>); </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>portfolio <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">x1=</span><span class="fu">rnorm</span>(<span class="dv">200</span>,<span class="dv">3</span>,<span class="dv">1</span>), </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">x2=</span><span class="fu">scale</span>(<span class="fu">c</span>(<span class="fu">rnorm</span>(<span class="dv">70</span>,<span class="dv">4</span>,<span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">130</span>,<span class="dv">10</span>,<span class="dv">1</span>)))) </span></code></pre></div>
 <p>In the first stage of the investigation, the analyst decides to assign the first 100 policyholders in the data set to cluster A, and the remaining policyholders to cluster B.</p>
-<div id="exercises-30" class="section level4">
+<div id="exercises-31" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Construct a new column in the data set, portfolio, called <strong><em>group_label_stage1</em></strong>, containing the policyholder cluster labels, defined above.<br />
@@ -4474,7 +4435,7 @@ Before answering this question, generate the data set, portfolio, in R using the
 Question 3
 </h4>
 <p>The analyst decides to update the cluster labels by assigning to each policyholder the label of the cluster whose centre is nearest, according to the distances calculated in exercises 3 and 4 .</p>
-<div id="exercises-31" class="section level4">
+<div id="exercises-32" class="section level4">
 <h4>Exercises</h4>
 <ol start="5" style="list-style-type: decimal">
 <li>Construct a new column in the data set, portfolio, called <strong><em>group_label_stage2</em></strong>, containing the updated policyholder cluster labels, defined above.<br />
@@ -4492,16 +4453,16 @@ The analyst decides to stop at this stage and to report <strong><em>group_label_
 </div>
 <div id="cs2b-paper-f" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper F</h1>
-<div id="column-14" class="section level2 tabset">
+<div id="column-16" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-13" class="section level3">
+<div id="question-1-15" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
 </h4>
 <p>Use the data file “<strong><em>Mortality_Investigation.csv</em></strong>” to answer the below questions.</p>
 <p>This table contains the details of mortality investigation performed on 100 different male lives between 1-Jan-2016 and 31-Dec-2018.</p>
-<div id="exercises-32" class="section level4">
+<div id="exercises-33" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Print first 6 rows of the data ensuring correct data formats for all the columns and calculate the proportion of the total sample died, survived and withdrew from the observation period.</p></li>
@@ -4516,7 +4477,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-11" class="section level3">
+<div id="question-2-12" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4527,7 +4488,7 @@ Question 2
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ar =</span> <span class="fl">0.7</span>, <span class="at">ma =</span> <span class="fl">0.3</span>), <span class="at">n =</span> <span class="dv">200</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arima.sim</span>(<span class="fu">list</span>(<span class="at">order =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="at">ar =</span> <span class="fl">0.7</span>, <span class="at">ma =</span> <span class="fl">0.3</span>), <span class="at">n =</span> <span class="dv">200</span>) </span></code></pre></div>
 <pre><code>Time Series:
 Start = 1 
 End = 201 
@@ -4578,7 +4539,7 @@ Frequency = 1
 Question 3
 </h4>
 <p>The number of claims in a year on an individual policy follows a Poisson distribution with a parameter of 0.75. Individual claim amounts follow a Gamma distribution with parameters (shape parameter <span class="math inline">\(\alpha = 2\)</span> and rate parameter <span class="math inline">\(\lambda = 20,000\)</span>). Set seed value of 100.</p>
-<div id="exercises-33" class="section level4">
+<div id="exercises-34" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Simulate claims for 10,000 policies and create a frequency distribution of the number of claims made on a policy per year.</p></li>
@@ -4597,7 +4558,7 @@ Question 3
 Question 4
 </h4>
 <p>Consider the data set ‘<strong><em>Covid_2019.csv</em></strong>’ (name it <strong><em>covid19</em></strong>) where the first row of the csv file contains the headings for the columns.</p>
-<div id="exercises-34" class="section level4">
+<div id="exercises-35" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Print the number of missing values in each of the columns and create a new data set ‘covid19_1’ by removing all the missing values. From covid19_1, use the columns from Population Density (8th column) to Life Expectancy (17th column) to answer the following questions.</p></li>
@@ -4623,9 +4584,9 @@ pre {
   overflow-x: scroll;
 }
 </style>
-<div id="column-15" class="section level2 tabset">
+<div id="column-17" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-14" class="section level3">
+<div id="question-1-16" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -4634,10 +4595,10 @@ Question 1
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;markovchain&quot;</span>) </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(markovchain)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;markovchain&quot;</span>) </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(markovchain)</span></code></pre></div>
 <p>Xt is a Markov chain on the state space {1,2,3} with the following transition matrix: ൭ p 1 – p 0 q 0 1 – q 0 r 1 – r ൱ where 0 &lt; p, q, r &lt; 1.</p>
-<div id="exercises-35" class="section level4">
+<div id="exercises-36" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Construct an R function, with arguments p, q and r, that generates a Markov chain object for <span class="math inline">\(X_t\)</span>. Assume that p = 0.75 and r = 0.25.</p></li>
@@ -4647,7 +4608,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-12" class="section level3">
+<div id="question-2-13" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4656,11 +4617,11 @@ Question 2
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>rpareto <span class="ot">=</span> <span class="cf">function</span>(n, alpha, lambda){ </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">=</span> lambda <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fu">runif</span>(n))<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">/</span>alpha) <span class="sc">-</span> <span class="dv">1</span>) </span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>rp}</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>rpareto <span class="ot">=</span> <span class="cf">function</span>(n, alpha, lambda){ </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">=</span> lambda <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fu">runif</span>(n))<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">/</span>alpha) <span class="sc">-</span> <span class="dv">1</span>) </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>rp}</span></code></pre></div>
 <p>The rpareto function generates a random sample of size n from a two-parameter Pareto distribution with parameters α and λ.</p>
-<div id="exercises-36" class="section level4">
+<div id="exercises-37" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Generate, using rpareto, a random sample of size 25,000 from the two-parameter Pareto distribution with parameters α = 3 and λ = 1, assigning the simulated values to a vector called A_vec. You should set a random number generator seed of 123 before generating A_vec and use the R function, head(), to display the first eight values of A_vec in your answer script.</p></li>
@@ -4680,8 +4641,8 @@ Before answering this question, the ‘survival’ package should be loaded into
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;survival&quot;</span>) </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;survival&quot;</span>) </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(survival)</span></code></pre></div>
 <p>A recently developed drug, MediCo, has been used over the past 12 months to treat a potentially fatal disease. MediCo was approved by a medical regulator last year following initial trials and mortality data has been collected over the past 12 months, since approval, to continue reviewing the drug’s effectiveness.</p>
 <p>This mortality data has been compared with mortality data collected from infected patients, prior to MediCo’s approval, who were NOT administered the drug.</p>
 <p>It is suspected that gender may be a significant covariate on the mortality rate of infected patients.</p>
@@ -4693,7 +4654,7 @@ Before answering this question, the ‘survival’ package should be loaded into
 <h4>Data</h4>
 <p>Before answering this question, the ‘CS2B_Apr_21_Qu_3_Data.csv’ file should be loaded into R and assigned to a data frame called mortalitydata.</p>
 </div>
-<div id="exercises-37" class="section level4">
+<div id="exercises-38" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the Kaplan–Meier survival function estimate for all patients, together with its two-sided 99.5% confidence interval.</p></li>
@@ -4728,9 +4689,9 @@ pre {
   overflow-x: scroll;
 }
 </style>
-<div id="column-16" class="section level2 tabset">
+<div id="column-18" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-15" class="section level3">
+<div id="question-1-17" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -4745,13 +4706,13 @@ Question 1
 <li>Comment on the stationarity of the data based on the above graphs.</li>
 </ol>
 </div>
-<div id="question-2-13" class="section level3">
+<div id="question-2-14" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
 </h4>
 <p>The file “Data.csv” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, calculated from the first transaction date.</p>
-<div id="exercises-38" class="section level4">
+<div id="exercises-39" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Separate the data into two tables – premium and claim, based on the transaction type and calculate</li>
@@ -4770,7 +4731,7 @@ Question 2
 <div id="question-3-10" class="section level3">
 <h3>Question 3</h3>
 <p>Claim size [X] for a class of insurance follows a Gamma (10,0.2) distribution.</p>
-<div id="exercises-39" class="section level4">
+<div id="exercises-40" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Calculate <span class="math inline">\(f{30}\)</span>.</p></li>
@@ -4802,7 +4763,7 @@ Question 2
 <div id="question-5-4" class="section level3">
 <h3>Question 5</h3>
 <p>A primary school has two wings A and B. The students can change their Wing freely. It was observed that the rate of movement is dependent on the age ‘x’ of the student (ranging from 5 to 15). The rate of movement from A to B = [0.08*x – 0.2] and the rate of movement from B to A = [0.05 * x + 0.1].</p>
-<div id="exercises-40" class="section level4">
+<div id="exercises-41" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Write a code to calculate the generator matrix G(x). Calculate the rate at which a 12 year old student will move from wing B to A and from A to B.</li>
@@ -4815,7 +4776,7 @@ Question 2
 </div>
 <div id="cs2b-paper-i" class="section level1" data-navmenu="R for Risk Modelling and Survival Analysis">
 <h1 data-navmenu="R for Risk Modelling and Survival Analysis">CS2B Paper I</h1>
-<div id="column-17" class="section level2 tabset">
+<div id="column-19" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -4827,7 +4788,7 @@ pre {
   overflow-x: scroll;
 }
 </style>
-<div id="question-1-16" class="section level3">
+<div id="question-1-18" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -4839,7 +4800,7 @@ Question 1
 <li><strong><em>Exposed_x</em></strong> Exposed to risk at age <span class="math inline">\(X\)</span> nearest birthday</li>
 </ul>
 <p>Before answering this question, the ‘CS2B_Sept_21_Qu_1_Data.csv’ file should be loaded into R and assigned to a data frame called mortalitydata.</p>
-<div id="exercises-41" class="section level4">
+<div id="exercises-42" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the crude values of μ௫ against age, x, using a line graph. [</p></li>
@@ -4853,7 +4814,7 @@ Question 1
 </ol>
 </div>
 </div>
-<div id="question-2-14" class="section level3">
+<div id="question-2-15" class="section level3">
 <h3>Question 2</h3>
 <h4>
 Question 2
@@ -4862,32 +4823,32 @@ Question 2
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;copula&quot;</span>) </span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula) </span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;copula&quot;</span>) </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(copula) </span></code></pre></div>
 <p>A copula model is to be constructed of the dependence between annual average temperature X, in degrees Celsius, and annual rainfall Y, in millimetres, in a region at risk of desertification. The marginal distributions of X and Y are: X ~ N൫20, 32 ൯, Y ~ N൫200, 502 ൯. —-</p>
 <p>Two copulas are under consideration to model the dependence of X and Y: * Copula 1: A Gaussian copula with ρ = –0.5. * Copula 2: A Student’s t copula with 3 degrees of freedom and ρ = –0.5.</p>
 The following R code generates n simulations of jointly distributed random variables U and V, where the marginal distributions of U and V are the uniform distribution on [0, 1] and the dependency between U and V is given by a Gaussian copula with correlation ρ (rho):
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rCopula</span>(n, <span class="fu">normalCopula</span>(<span class="at">param =</span> rho)) </span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rCopula</span>(n, <span class="fu">normalCopula</span>(<span class="at">param =</span> rho)) </span></code></pre></div>
 The corresponding code for the Student’s t-copula with nu degrees of freedom is:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rCopula</span>(n, <span class="fu">tCopula</span>(<span class="at">param =</span> rho, <span class="at">df =</span> nu)) </span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rCopula</span>(n, <span class="fu">tCopula</span>(<span class="at">param =</span> rho, <span class="at">df =</span> nu)) </span></code></pre></div>
 <p>The output from the function rCopula is in the format of an n × 2 matrix whose rows are the observations of (U, V).</p>
 Before answering exercise 1, generate the matrix, GaussXY, in R using the following code:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>) </span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>GaussUV <span class="ot">&lt;-</span> <span class="fu">rCopula</span>(<span class="dv">200000</span>, <span class="fu">normalCopula</span>(<span class="at">param =</span> <span class="sc">-</span><span class="fl">0.5</span>)) </span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>GaussXY <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">200000</span>, <span class="at">ncol =</span> <span class="dv">2</span>) </span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>GaussXY[,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(GaussUV[,<span class="dv">1</span>], <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>) </span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>GaussXY[,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(GaussUV[,<span class="dv">2</span>], <span class="at">mean =</span> <span class="dv">200</span>, <span class="at">sd =</span> <span class="dv">50</span>) </span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">3</span>) </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>GaussUV <span class="ot">&lt;-</span> <span class="fu">rCopula</span>(<span class="dv">200000</span>, <span class="fu">normalCopula</span>(<span class="at">param =</span> <span class="sc">-</span><span class="fl">0.5</span>)) </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>GaussXY <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="at">nrow =</span> <span class="dv">200000</span>, <span class="at">ncol =</span> <span class="dv">2</span>) </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>GaussXY[,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(GaussUV[,<span class="dv">1</span>], <span class="at">mean =</span> <span class="dv">20</span>, <span class="at">sd =</span> <span class="dv">3</span>) </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>GaussXY[,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(GaussUV[,<span class="dv">2</span>], <span class="at">mean =</span> <span class="dv">200</span>, <span class="at">sd =</span> <span class="dv">50</span>) </span></code></pre></div>
 <p>The 200,000 × 2 matrix, GaussXY, represents 200,000 observations of (X, Y) under Copula 1.</p>
-<div id="exercises-42" class="section level4">
+<div id="exercises-43" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Generate 200,000 observations of (X, Y) using Copula 2 and the marginal distributions of X and Y, assigning the observations to a 200,000 × 2 matrix named t3XY. You should set a random number generator seed of 3 before generating the observations and use the R function, <code>head()</code>, to display the first six rows of t3XY in your answer script.</li>
@@ -4907,13 +4868,13 @@ Before answering this question, the R packages for calculating and plotting Recu
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart&quot;</span>) </span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart.plot&quot;</span>) </span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart) </span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot) </span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart&quot;</span>) </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rpart.plot&quot;</span>) </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart) </span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart.plot) </span></code></pre></div>
 <p>A new start-up bank is considering which product it should first launch to market. One of the products it is considering is a personal loan. An Actuary employed by the bank wants to construct a simple decision tree machine learning model to determine which loan applications to approve.</p>
 <p>The Actuary has decided to construct the decision tree model to classify each potential customer as either expected to default (default = 1) or not expected to default (default = 0) based on the following inputs: * a categorical feature, f1, that takes values –1, 0 or +1 * a continuous feature, f2, that takes values between –1 and 1. With no previous customer data to draw on, the Actuary decides to construct a specimen data set to train the decision tree model containing the following information for each of n hypothetical customers, where n = 10,000: * feature f1 taking the values –1, 0 and +1 with equal probability * feature f2 being uniformly distributed on [–1,1] * a field containing the value 1 if the customer defaults on the loan and 0 otherwise. To determine whether a hypothetical customer will default, the Actuary decides to model the probability of default as: exp (f) 1 + exp (f) where f = a + bf1 + cf2 and a, b and c are parameters. Before constructing the specimen data set, the Actuary first needs to generate three sets of 10,000 observations from the uniform distribution on [0, 1].</p>
-<div id="exercises-43" class="section level4">
+<div id="exercises-44" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Generate a 10,000 × 3 matrix named U of observations from the uniform distribution on [0, 1]. Each column of U should contain 10,000 observations that have been generated together but separately from the observations in other columns. You should set a random number generator seed of 12345 before generating the observations in the first column and use the R function, head(), to display the first six rows of U in your answer script.</li>
@@ -4978,9 +4939,9 @@ pre {
   overflow-x: scroll;
 }
 </style>
-<div id="column-18" class="section level2 tabset">
+<div id="column-20" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-17" class="section level3">
+<div id="question-1-19" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -4992,21 +4953,21 @@ Question 1
 <li><p>Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add appropriate x and y-axis labels.</p></li>
 </ol>
 </div>
-<div id="question-2-15" class="section level3">
+<div id="question-2-16" class="section level3">
 <h3>Question 2</h3>
 A random variable follows a Weibull distribution with parameters for the shape and scale as follows:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Shape <span class="ot">=</span> <span class="fl">1.5</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Scale <span class="ot">=</span> <span class="dv">100000</span></span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>Shape <span class="ot">=</span> <span class="fl">1.5</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>Scale <span class="ot">=</span> <span class="dv">100000</span></span></code></pre></div>
 Run the following code in R before beginning your answer:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">5</span>)</span></code></pre></div>
-<div id="exercises-44" class="section level4">
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">5</span>)</span></code></pre></div>
+<div id="exercises-45" class="section level4">
 <h4>Exercises</h4>
 <p>Use the in-build functions in R to:</p>
 <ol style="list-style-type: decimal">
@@ -5029,7 +4990,7 @@ Run the following code in R before beginning your answer:
 <h3>Question 3</h3>
 <p>An Actuary in the country of Actuaria believes the actions of a football player while playing a football match, can be modelled on a ball-by-ball action basis using a Markov Chain. The Actuary has considered 3 states for a player to model the ball-by-ball action – Pass, Shoot and Dribble. Library required – ‘markovchain’</p>
 <p>The following probabilities have been defined based on past data for each state: 1. There is a 50% chance of a Pass being made, 10% chance of Shooting and 40% chance of Dribbling in the next state of play, if the player had Passed the ball in the previous play. 2. There is a 70% chance of a Pass being made, 20% chance of Shooting and 10% chance of Dribbling in the next state of play, if the player had Shot the ball in the previous play. 3. There is a 40% chance of a Pass being made, 30% chance of Shooting and 30% chance of Dribbling in the next state of play, if the player had Dribbled the ball in the previous play.</p>
-<div id="exercises-45" class="section level4">
+<div id="exercises-46" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>Create a vector with the state space of this Markov Chain in R.</li>
@@ -5053,7 +5014,7 @@ Run the following code in R before beginning your answer:
 <div id="question-4-9" class="section level3">
 <h3>Question 4</h3>
 <p>The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory. Please import this dataset from the ‘datasets’ package in R. Libraries required: ‘tseries’ ‘forecast’</p>
-<div id="exercises-46" class="section level4">
+<div id="exercises-47" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the timeseries with frequency = 12, giving appropriate labels for each axis and paste the chart into your answer sheet.</p></li>
@@ -5076,7 +5037,7 @@ Run the following code in R before beginning your answer:
 <li>‘{tree}’</li>
 </ul>
 </div>
-<div id="exercises-47" class="section level4">
+<div id="exercises-48" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Load the data from the csv file into a data frame (while importing the dataset ensure you set <code>stringsAsFactors= TRUE</code> in the <code>read.csv</code> function).</p>

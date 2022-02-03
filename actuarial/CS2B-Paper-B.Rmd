@@ -61,13 +61,12 @@ when a pod arrives.
 pods will need to summon a taxi to take passengers to the car park. 
 <p>
 ----
-A manager at the airport has suggested that pods could be operated every 
-1.75 minutes without compromising safety, and that this would greatly reduce the 
+A manager at the airport has suggested that pods could be operated every 1.75 minutes without compromising safety, and that this would greatly reduce the 
 need to use taxis.
 <p>
 4. Evaluate the manager’s suggestion, showing any working where appropriate.
 
-5.  Comment on your results in part 4. 
+5.  Comment on your results in exercise  4. 
 
 ### Question 3 Part (a)
 
@@ -75,17 +74,15 @@ In an insurance company’s portfolio, individual claim sizes, in £, follow an
 exponential distribution with parameter 0.0001.
 
 #### Exercises
-1. In R console run the following code: ``set.seed(123)`` and then use R to 
-simulate 10,000 claims and plot a histogram of the simulated data. Paste your 
+1. In R console run the following code: ***set.seed(123)*** and then use R to simulate 10,000 claims and plot a histogram of the simulated data. Paste your 
 R code and chart into your answer. 
 
-2. (a) Calculate the mean and the variance of the simulated claims in part 1..
+2. (a) Calculate the mean and the variance of the simulated claims in exercise 1.
 (b) Compare your answers to part 2.(a) with the theoretical values 
 expected from the exponential distribution with parameter 0.0001.
 <p>
 
-The insurer decides to take out an individual excess of loss reinsurance arrangement 
-with a retention level of £20,000.
+The insurer decides to take out an individual excess of loss reinsurance arrangement with a retention level of £20,000.
 3. Calculate the mean and the variance of the claims paid, under this 
 arrangement, by
 a. the insurer
@@ -93,8 +90,7 @@ b. the reinsurer.
 
 ### Question 3 Part (b)
 
-The insurer wishes to determine an appropriate retention limit and has asked an 
-analyst to investigate the effect of different retention limits on the mean and variance 
+The insurer wishes to determine an appropriate retention limit and has asked an analyst to investigate the effect of different retention limits on the mean and variance 
 of claims.
 
 #### Exercises
@@ -109,8 +105,7 @@ of claims.
 * £40,000 and 
 * £50,000.  
 
-5.  Plot your results from exercise 4 on four separate charts to show how the mean 
-and variance of the claims paid by the insurer and reinsurer vary with the 
+5.  Plot your results from exercise 4 on four separate charts to show how the mean and variance of the claims paid by the insurer and reinsurer vary with the 
 retention level. 
 
 6. Comment, with reference to the total variance, on your results in exercise 5. . 

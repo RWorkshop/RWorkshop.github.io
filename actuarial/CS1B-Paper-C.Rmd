@@ -49,7 +49,7 @@ components of the transformed data should be retained.
 ### Question 3
 
 <h4>Question 3</h4>
-Use the command ``set.seed(2021)`` to initialise the random number generator. 
+Use the command ***set.seed(2021)*** to initialise the random number generator. 
 When you execute any R code, make sure you run the entire R script including the 
 line set.seed(2019).
 Consider a random sample $X1, \ldots, Xn$ from an Exponential distribution with parameter
@@ -60,7 +60,7 @@ n
 
 #### Exercises
 1.  State the distribution of Y, giving all the parameters of the distribution. 
-2.  Perform simulation of a sample x1, …, xn with sample size n = 15 from an 
+2.  Perform simulation of a sample $x1, …, xn$ with sample size $n = 15$ from an 
 exponential distribution with parameter l = 2. 
 3.  Calculate the value of Y for the sample in exercise  2. .
 4.  Perform 1,000 repetitions of parts 2.  and 3.  to obtain a Bootstrap sample 
@@ -70,7 +70,9 @@ part 4. .
 6.  (a) Compare graphically the histogram in exercise  5.  to the density of a 
 suitable Normal distribution. You might find the following R command 
 useful: 
+```{r eval=FALSE}
 curve(dnorm(x,mean=, sd=, add=TRUE, lwd=2,col="red"))
+```
 (b) Comment on your findings in exercise  6. (a) in the context of the Central 
 Limit Theorem.
 

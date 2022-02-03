@@ -38,7 +38,7 @@ Data is provided for ‘***BMIClaims***’ of 150 policyholders and correspondin
  
 1. Obtain 95% confidence interval for the standard deviation of BMI (using qchisq). 
 2. Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State your conclusion of the test. 
-3. If obese is defined to be BMI above 30, use ``binom.test()`` to calculate 99% confidence interval for proportion of obese people and comment on the likelihood if more than 20 pc are obese. 
+3. If obese is defined to be BMI above 30, use ***binom.test()*** to calculate 99% confidence interval for proportion of obese people and comment on the likelihood if more than 20 pc are obese. 
 4.  Claim frequency can be calculated as claim count divided by number of policyholders. 
 Test whether claim frequency is different between obese and others. 
 

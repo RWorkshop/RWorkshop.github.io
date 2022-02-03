@@ -128,7 +128,7 @@ Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for 
 values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 
 
 4. Plot the values calculated in parts 2. and 3. on the same graph. 
-[Hint: you may find the R command ``lines(…)`` useful.] 
+[Hint: you may find the R command ***lines(…)*** useful.] 
 
 5.Discuss your answers in parts 1 to 4.. 
 

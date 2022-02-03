@@ -52,13 +52,9 @@ The transition matrix (by rows) is defined as follows:
 #### Exercise 1
 
 
-Simulate 1,000 values from this distribution, assigning this to a variable called ``Exp_Vector`` and calculate the mean and variance of
+Simulate 1,000 values from this distribution, assigning this to a variable called ***Exp_Vector*** and calculate the mean and variance of
 the simulated values. Paste the results of your calculation into your answer.
 
-(a) Simulate 1,000 values from this distribution, assigning this to a 
-variable called Exp_Vector and calculate the mean and variance of 
-the simulated values. 
-Paste the results of your calculation into your answer.
 
 
 #### Exercise 2

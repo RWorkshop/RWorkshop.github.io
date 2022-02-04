@@ -2667,52 +2667,22 @@ window.FlexDashboardComponents.push({
 <h2 class="tabset">Column</h2>
 <div id="introduction-1" class="section level3">
 <h3>Introduction</h3>
-<div style="margin-left: auto;
-            margin-right: auto;
-            width: 80%">
-<table>
-<thead>
-<tr class="header">
-<th align="center"><b> <strong><u>Contents</u> </strong></b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center">* <b> <strong><a href="actuarialexams.html">R for actuarial students</a> - CS1B and CS2B </strong></b></td>
-</tr>
-</tbody>
-</table>
-<div class="line-block">  |</div>
+<div id="probability-distributions-with-r" class="section level4">
+<h4>Probability Distributions with R</h4>
+<ul>
+<li>Discrete Distributions</li>
+<li>Continuous Distributions</li>
+<li>Random Number Generation</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
-<div id="weibull-distribution" class="section level1" data-navmenu="Continuous Distributions">
-<h1 data-navmenu="Continuous Distributions">Weibull Distribution</h1>
+<div id="negative-binomial-distribution" class="section level1" data-navmenu="Discrete Distributions">
+<h1 data-navmenu="Discrete Distributions">Negative Binomial Distribution</h1>
 <div id="column-1" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
 <div id="question-1" class="section level3">
-<h3>Question 1</h3>
-<h4>
-Question 1
-</h4>
-<p>The following data represent the average total number of marks obtained for a particular exam, observed over seven exam sessions that had been administered by a professional examination body:</p>
-<p><span class="math display">\[87, 53, 72, 90, 78, 85, 83 \]</span></p>
-<p>Enter these data into R and compute their sample mean and variance.</p>
-</div>
-<div id="worked-examples" class="section level3">
-<h3>Worked Examples</h3>
-</div>
-</div>
-</div>
-<div id="negative-binomial-distribution" class="section level1" data-navmenu="Continuous Distributions">
-<h1 data-navmenu="Continuous Distributions">Negative Binomial Distribution</h1>
-<div id="column-2" class="section level2 tabset">
-<h2 class="tabset">Column</h2>
-<div id="question-1-1" class="section level3">
 <h3>Question 1</h3>
 <h4>
 Question 1
@@ -2733,44 +2703,127 @@ Question 1
 </ol>
 </div>
 </div>
+<div id="worked-examples" class="section level3">
+<h3>Worked Examples</h3>
+</div>
+</div>
+</div>
+<div id="exponential-distribution" class="section level1" data-navmenu="Continuous Distributions">
+<h1 data-navmenu="Continuous Distributions">Exponential Distribution</h1>
+<div id="column-2" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="the-exponential-distribution" class="section level3">
+<h3>The Exponential Distribution</h3>
+</div>
+</div>
+<div id="the-exponential-distribution-1" class="section level2">
+<h2>The Exponential Distribution</h2>
+<div id="definitions" class="section level4">
+<h4>Definitions</h4>
+<p>An exponentially distributed random variable <span class="math inline">\(X\)</span> is specifed with the <strong><em>rate parameter</em></strong> <span class="math inline">\(\lambda\)</span> <span class="math display">\[ X \sim \mbox{exp}(\lambda)  \]</span> The Expected Value of X is computed using the following formula <span class="math display">\[ E(X) = \frac{1}{\lambda} \]</span></p>
+</div>
+<div id="worked-example" class="section level3">
+<h3>Worked Example</h3>
+<p>####Description</p>
+<p>A machine is said to have a mean failure free lifetime of 2000 hours. It is assumed that the failure free lifetimes of the machines have an exponential distribution. What is the probability that the machine will last:</p>
+<div id="exercises-1" class="section level4">
+<h4>Exercises</h4>
+<ol style="list-style-type: decimal">
+<li>at least 1000 hours</li>
+<li>at least 1500 hours</li>
+<li>less than 800 hours</li>
+<li>between 1300 hours and 1800 hours</li>
+</ol>
+<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="log-normal-distribution" class="section level1" data-navmenu="Continuous Distributions">
+<h1 data-navmenu="Continuous Distributions">Log-Normal Distribution</h1>
+<div id="column-3" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="the-log-normal-distribution" class="section level3">
+<h3>The Log Normal Distribution</h3>
+</div>
+</div>
+<div id="the-log-normal-distribution-1" class="section level2">
+<h2>The Log Normal Distribution</h2>
+<p>####Description</p>
+<p>Density, distribution function, quantile function and random generation for the log normal distribution whose logarithm has mean equal to meanlog and standard deviation equal to sdlog.</p>
+<div id="usage" class="section level4">
+<h4>Usage</h4>
+<pre><code>
+dlnorm(x, meanlog = 0, sdlog = 1, log = FALSE)
+plnorm(q, meanlog = 0, sdlog = 1, lower.tail = TRUE, log.p = FALSE)
+qlnorm(p, meanlog = 0, sdlog = 1, lower.tail = TRUE, log.p = FALSE)
+rlnorm(n, meanlog = 0, sdlog = 1)
+</code></pre>
+</div>
 <div id="worked-examples-1" class="section level3">
 <h3>Worked Examples</h3>
 </div>
 </div>
 </div>
-<div id="negative-binomial-distribution-1" class="section level1" data-navmenu="Continuous Distributions">
-<h1 data-navmenu="Continuous Distributions">Negative Binomial Distribution</h1>
-<div id="column-3" class="section level2 tabset">
+<div id="weibull-distribution" class="section level1" data-navmenu="Continuous Distributions">
+<h1 data-navmenu="Continuous Distributions">Weibull Distribution</h1>
+<div id="column-4" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="question-1-2" class="section level3">
-<h3>Question 1</h3>
+<div id="worked-example-1" class="section level3">
+<h3>Worked Example</h3>
 <h4>
-Question 1
+Worked Example
 </h4>
-<p>In a very small empirical study a sample from a random variable X is observed. The data can be entered into R using the following code:</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.22</span>,<span class="fl">0.38</span>,<span class="fl">1.28</span>,<span class="fl">0.54</span>,<span class="fl">0.56</span>,<span class="fl">1.36</span>,<span class="fl">0.55</span>,<span class="fl">0.37</span>,<span class="fl">0.43</span>,<span class="fl">0.46</span>,<span class="fl">0.62</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fl">0.54</span>,<span class="fl">0.54</span>,<span class="fl">0.51</span>,<span class="fl">0.44</span>,<span class="fl">0.68</span>,<span class="fl">0.55</span>,<span class="fl">0.30</span>)</span></code></pre></div>
-<div id="exercises-1" class="section level4">
+<p>The lifetime <span class="math inline">\(X\)</span> (in hundreds of hours) of a certain type of industrial vacuum tube has a Weibull distribution with parameters <span class="math inline">\(\alpha = 2.5\)</span> and <span class="math inline">\(\beta = 200\)</span>.</p>
+<p>Using a seed of 1234, simulate 10,000 randomly generated lifetimes, and undertake the following exercises.</p>
+<div id="exercises-2" class="section level4">
 <h4>Exercises</h4>
+<p>Estimate the following:</p>
 <ol style="list-style-type: decimal">
-<li><p>Estimate the expected value of <span class="math inline">\(X\)</span>.</p></li>
-<li><p>Calculate a 95% confidence interval for the expected value of <span class="math inline">\(X\)</span> assuming that <span class="math inline">\(X\)</span> is Normally distributed.</p></li>
-<li><p>Construct a confidence interval for the expected value of <span class="math inline">\(X\)</span> using the bootstrap method with 10,000 bootstrap replications.</p></li>
-<li><p>Comment on the differences between the confidence intervals in exercises 2 and 3.</p></li>
+<li><span class="math inline">\(E(X)\)</span> and <span class="math inline">\(Var(X)\)</span></li>
+<li><span class="math inline">\(P(X\leq 200)\)</span></li>
+<li><span class="math inline">\(P(180\leq X \leq 250)\)</span></li>
+<li><span class="math inline">\(P(X\geq 300)\)</span>.</li>
 </ol>
 </div>
 </div>
-<div id="worked-examples-2" class="section level3">
-<h3>Worked Examples</h3>
+</div>
+</div>
+<div id="pareto-type-i-distribution" class="section level1" data-navmenu="Continuous Distributions">
+<h1 data-navmenu="Continuous Distributions">Pareto (Type I) Distribution</h1>
+<div id="column-5" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="pareto-distribution" class="section level3">
+<h3>Pareto Distribution</h3>
+<h4>
+Defintions
+</h4>
+<div id="cumulative-distribution-function" class="section level4">
+<h4>Cumulative distribution function</h4>
+<p>From the definition, the cumulative distribution function of a Pareto random variable with parameters <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(x_{\mathrm {m}\)</span> is</p>
+<p><span class="math display">\[{\displaystyle F_{X}(x)={\begin{cases}1-\left({\frac {x_{\mathrm {m} }}{x}}\right)^{\alpha }&amp;x\geq x_{\mathrm {m} },\\0&amp;x&lt;x_{\mathrm {m} }.\end{cases}}}
+\]</span> \end{cases}</p>
+</div>
+<div id="probability-density-function" class="section level4">
+<h4>Probability density function</h4>
+<p>It follows (by differentiation) that the probability density function is</p>
+<p><span class="math display">\[{\displaystyle f_{X}(x)={\begin{cases}{\frac {\alpha x_{\mathrm {m} }^{\alpha }}{x^{\alpha +1}}}&amp;x\geq x_{\mathrm {m} },\\0&amp;x&lt;x_{\mathrm {m} }.\end{cases}}}\]</span></p>
+</div>
+</div>
+<div id="pareto-distribution---worked-examples" class="section level3">
+<h3>Pareto Distribution - Worked Examples</h3>
+<h4>
+Worked Example 1
+</h4>
+<p>The claim severity for an auto liability insurance coverage is modeled by a Pareto Type I distribution with shape parameter <span class="math inline">\(\alpha=2.5\)</span> and scale parameter <span class="math inline">\(\theta=1000\)</span>. The insurance coverage pays up to a limit of 1200 per claim.</p>
+<p>Using a seed of 1234, simulate the nominal value of 50,000 such insurance claims. Estimate the expected insurance payment under this coverage for one claim.</p>
+<p><a href="https://youtu.be/HYI881qtKVA"> Click Here for Video</a></p>
 </div>
 </div>
 </div>
-<div id="lomax-distribution" class="section level1" data-navmenu="Continuous Distributions">
-<h1 data-navmenu="Continuous Distributions">Lomax Distribution</h1>
-<div id="column-4" class="section level2 tabset">
+<div id="lomax-pareto-type-ii-distribution" class="section level1" data-navmenu="Continuous Distributions">
+<h1 data-navmenu="Continuous Distributions">Lomax (Pareto Type II) Distribution</h1>
+<div id="column-6" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
 <div id="autoclaims-data" class="section level3">
 <h3>AutoClaims Data</h3>
@@ -2789,42 +2842,8 @@ AutoClaims Data
 <li><em>PAID</em>: Amount paid to settle and close a claim</li>
 </ul>
 </div>
-<div id="worked-examples-3" class="section level3">
+<div id="worked-examples-2" class="section level3">
 <h3>Worked Examples</h3>
-</div>
-</div>
-</div>
-<div id="pareto-type-i-distribution" class="section level1" data-navmenu="Continuous Distributions">
-<h1 data-navmenu="Continuous Distributions">Pareto (Type I) Distribution</h1>
-<div id="column-5" class="section level2 tabset">
-<h2 class="tabset">Column</h2>
-<div id="pareto-distribution" class="section level3">
-<h3>Pareto Distribution</h3>
-<h4>
-Question 1
-</h4>
-<p>The probability that India will win a cricket match against South Africa is 0.7</p>
-<div id="exercise-1" class="section level4">
-<h4>Exercise 1</h4>
-<p>Prepare a probability distribution table of number of wins if Indians are going to play 10 matches against the South Africans.</p>
-</div>
-<div id="exercise-2" class="section level4">
-<h4>Exercise 2</h4>
-<p>Plot a bar chart of the probabilities of number of wins from 0 to 10.</p>
-</div>
-<div id="exercise-3" class="section level4">
-<h4>Exercise 3</h4>
-<p>Find the mean and median number of wins for India against South Africa.</p>
-</div>
-</div>
-<div id="pareto-distribution---worked-examples" class="section level3">
-<h3>Pareto Distribution - Worked Examples</h3>
-<h4>
-Worked Example 1
-</h4>
-<p>The claim severity for an auto liability insurance coverage is modeled by a Pareto Type I distribution with shape parameter <span class="math inline">\(\alpha=2.5\)</span> and scale parameter <span class="math inline">\(\theta=1000\)</span>. The insurance coverage pays up to a limit of 1200 per claim.</p>
-<p>Using a seed of 1234, simulate the nominal value of 50,000 such insurance claims. Estimate the expected insurance payment under this coverage for one claim.</p>
-<p><a href="https://youtu.be/HYI881qtKVA"> Click Here for Video</a></p>
 </div>
 </div>
 </div>

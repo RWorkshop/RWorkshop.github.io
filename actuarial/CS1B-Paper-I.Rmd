@@ -28,8 +28,7 @@ after).
 
 ---
 
-The survey asked each of the 15 voters to record their approval for the winning 
-political party on a scale from 1 to 10, where 
+The survey asked each of the 15 voters to record their approval for the winning political party on a scale from 1 to 10, where 
 1 = Strongly disapprove and 10 = Strongly approve. 
 The results are shown in the table below:
 
@@ -122,7 +121,7 @@ Let $Y$ denote the number of winners in a random sample of 900 new customers.
 2. Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for all 
 values $k = 220, 240, 260, …, 400$.
 
-3. It is suggested that the true distribution of Y can be approximated with a Normal 
+3. It is suggested that the true distribution of $Y$ can be approximated with a Normal 
 distribution with expectation EሾYሿ = 324 and a standard deviation of 14.4. 
 Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for all 
 values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 

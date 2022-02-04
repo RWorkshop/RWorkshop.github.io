@@ -6,20 +6,21 @@ Column {.tabset}
 
 ### Pareto Distribution
 
-<h4>Question  1</h4>
+<h4>Defintions</h4>
 
-The probability that India will win a cricket match against South Africa is 0.7
+#### Cumulative distribution function
+From the definition, the cumulative distribution function of a Pareto random variable with parameters $\alpha$ and $x_{\mathrm {m}$ is
 
-#### Exercise 1
-Prepare a probability distribution table of number of wins if Indians are going to play 10
-matches against the South Africans. 
+$${\displaystyle F_{X}(x)={\begin{cases}1-\left({\frac {x_{\mathrm {m} }}{x}}\right)^{\alpha }&x\geq x_{\mathrm {m} },\\0&x<x_{\mathrm {m} }.\end{cases}}}
+$$
+\end{cases}
 
-#### Exercise 2
-Plot a bar chart of the probabilities of number of wins from 0 to 10. 
+#### Probability density function
 
-#### Exercise 3
-Find the mean and median number of wins for India against South Africa.
+It follows (by differentiation) that the probability density function is
 
+$${\displaystyle f_{X}(x)={\begin{cases}{\frac {\alpha x_{\mathrm {m} }^{\alpha }}{x^{\alpha +1}}}&x\geq x_{\mathrm {m} },\\0&x<x_{\mathrm {m} }.\end{cases}}}$$
+ 
 
 ### Pareto Distribution - Worked Examples
 

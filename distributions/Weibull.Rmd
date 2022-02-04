@@ -4,18 +4,22 @@ Weibull Distribution {data-navmenu="Continuous Distributions"}
 Column {.tabset}
 --------------------------------
 
-### Question 1
+### Worked Example
 
-<h4>Question  1</h4>
-
-The following data represent the average total number of marks obtained for a
-particular exam, observed over seven exam sessions that had been administered by a
-professional examination body:
+<h4>Worked Example</h4>
 
 
-\[87, 53, 72, 90, 78, 85, 83 \]
 
-Enter these data into R and compute their sample mean and variance.
+The lifetime $X$ (in hundreds of hours) of a certain type of industrial vacuum tube has a Weibull distribution with parameters $\alpha = 2.5$ and $\beta = 200$. 
 
 
-### Worked Examples
+Using a seed of 1234, simulate 10,000 randomly generated lifetimes, and undertake the following exercises.
+
+#### Exercises
+
+Estimate the following:
+
+1. $E(X)$ and $Var(X)$
+2. $P(X\leq 200)$
+3. $P(180\leq X \leq 250)$
+4. $P(X\geq 300)$.

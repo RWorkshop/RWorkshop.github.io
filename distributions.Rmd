@@ -19,20 +19,24 @@ Column {.tabset}
 ### Introduction 
 
 
+#### Probability Distributions with R
 
-<div style="margin-left: auto;
-            margin-right: auto;
-            width: 80%">
-            
-|  <b> <strong><u>Contents</u> </strong></b>       |   
-|:------------------:|
-|   |    
-| * <b> <strong><a href="actuarialexams.html">R for actuarial students</a>  -  CS1B and CS2B </strong></b>|        
-      
-|   | 
-</div>
+* Discrete Distributions
+* Continuous Distributions
+* Random Number Generation
 
 ```{r child="distributions/NegativeBinomial.Rmd"}
+```
+
+
+
+
+```{r child="distributions/Exponential.Rmd"}
+```
+
+
+
+```{r child="distributions/Lognormal.Rmd"}
 ```
 
 
@@ -44,20 +48,13 @@ Column {.tabset}
 ```
 
 
-```{r child="distributions/Lognormal.Rmd"}
+```{r child="distributions/Pareto.Rmd"}
 ```
-
 
 
 
 ```{r child="distributions/Lomax.Rmd"}
 ```
 
-
-
-
-
-```{r child="distributions/Pareto.Rmd"}
-```
 
 

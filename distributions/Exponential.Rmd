@@ -1,0 +1,30 @@
+Exponential Distribution {data-navmenu="Continuous Distributions"}
+==============================================================
+
+Column {.tabset}
+--------------------------------
+
+### The Exponential Distribution
+## The Exponential Distribution
+#### Definitions
+
+An exponentially distributed random variable $X$ is specifed with the ***rate parameter*** $\lambda$
+$$ X \sim \mbox{exp}(\lambda)  $$
+The  Expected Value of X is computed using the following formula
+$$ E(X) = \frac{1}{\lambda} $$
+
+### Worked Example
+####Description
+
+A machine is said to have a mean failure free lifetime of 2000 hours. It is assumed that the failure free lifetimes of the machines have an exponential distribution. 
+What is the probability that the machine will last:
+
+#### Exercises 
+
+1. at least 1000 hours
+2. at least 1500 hours
+3. less than 800 hours
+4. between 1300 hours and 1800 hours
+
+-------------
+

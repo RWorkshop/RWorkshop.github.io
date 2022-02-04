@@ -1,5 +1,5 @@
 
-Lomax Distribution {data-navmenu="Continuous Distributions"}
+Lomax (Pareto Type II) Distribution {data-navmenu="Continuous Distributions"}
 ==============================================================
 
 Column {.tabset}

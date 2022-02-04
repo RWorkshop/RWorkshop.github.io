@@ -1,4 +1,4 @@
-Negative Binomial Distribution {data-navmenu="Continuous Distributions"}
+Negative Binomial Distribution {data-navmenu="Discrete Distributions"}
 ==============================================================
 
 Column {.tabset}

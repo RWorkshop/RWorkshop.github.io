@@ -1,0 +1,25 @@
+6.8 group_by()
+This function is very handy if we want to perform functions separately on different groups or splits of the data frame. For instance, maybe instead of calculating an overall “grand” mean we want to calculate a “grand” mean for each Subject separately. Instead of manually breaking the data frame up by Subject, the group_by() function does this automatically in the background. Like this…
+
+data <- group_by(data, Subject)
+data <- mutate(data, 
+               RT = ifelse(RT < 200, NA, RT),
+               grandRT = mean(RT, na.rm = TRUE),
+               RTdiff = RT - grandRT)
+You will now notice that each subject has a different grandRT, simply because we specified group_by(data, Subject). Let’s say we want to do it not just grouped by Subject, but also Condition.
+
+data <- group_by(data, Subject, Condition)
+data <- mutate(data, 
+               RT = ifelse(RT < 200, NA, RT),
+               grandRT = mean(RT, na.rm = TRUE),
+               RTdiff = RT - grandRT)
+group_by() does not only work on mutate() - it will work on any other functions you specify after group_by(). Therefore, it can essentially replace most uses of for loops.
+
+I suggest exercising caution when using group_by() because the grouping will be maintained until you specify a different group_by() or until you ungroup it using ungroup(). So I always like to ungroup() immediately after I am done with it.
+
+data <- group_by(data, Subject, Condition)
+data <- mutate(data, 
+               RT = ifelse(RT < 200, NA, RT),
+               grandRT = mean(RT, na.rm = TRUE),
+               RTdiff = RT - grandRT)
+data <- ungroup(data)

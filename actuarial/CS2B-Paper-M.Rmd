@@ -1,0 +1,31 @@
+CS2B Paper G {data-navmenu="R for Risk Modelling and Survival Analysis"}
+==============================================================
+
+
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Question 1</h4>
+
+
+### Question 2
+
+<h4>Question 2</h4>
+
+
+
+### Question 3
+
+<h4>Question 3</h4>
+

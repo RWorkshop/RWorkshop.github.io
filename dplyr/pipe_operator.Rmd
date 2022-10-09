@@ -1,0 +1,38 @@
+6.12 Pipe Operator %>%
+One last thing about the dplyr package. dplyr allows for passing the output from one function to another using what is called a pipe operator.
+
+The pipe operator is: %>%
+
+This makes code more concise, easier to read, and easier to edit. When you pass the output of one function to another with %>% you do not need to specify the data frame (input) on the next function. %>% implies that the input is the output from the previous function, so this is made implicit.
+
+We can pipe all the functions in the chapter together as such
+
+## Setup
+library(readr)
+library(dplyr)
+library(tidyr)
+
+## Import
+import <- read_csv("Data Files/tidyverse_example.csv")
+
+## Score
+data <- import %>%
+  rename(Accuracy = ACC) %>%
+  filter(TrialProc == "real") %>%
+  select(Subject, Condition, RT, Trial, ACC = Accuracy) %>%
+  group_by(Subject, Condition) %>%
+  mutate(RT = ifelse(RT<200, NA, RT),
+         grandRT = mean(RT, na.rm=TRUE),
+         RTdiff = RT - grandRT) %>%
+  summarise(RT.mean = mean(RT, na.rm = TRUE),
+            ACC.mean = mean(ACC, na.rm = TRUE)) %>%
+  ungroup() %>%
+  pivot_wider(id_cols = "Subject",
+              names_from = "Condition", 
+              values_from = c("RT.mean", "ACC.mean")) %>%
+  mutate(FlankerEffect_RT = RT.mean_incongruent - RT.mean_congruent,
+         FlankerEffect_ACC = ACC.mean_incongruent - ACC.mean_congruent)
+Virtually all the R scripts you write will require the dplyr package. The more you know what it can do, the easier it will be for you to write R Scripts. I highly suggest checking out these introductions to dplyr.
+
+https://dplyr.tidyverse.org https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html
+

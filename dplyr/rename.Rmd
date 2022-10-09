@@ -1,0 +1,8 @@
+
+6.3 rename()
+We do not really need to, but let’s go ahead and rename() a column. How about instead of ACC let’s label it as Accuracy. Pretty simple
+
+data <- rename(import, Accuracy = ACC)
+rename() is really only useful if you are not also using select() or mutate(). In select() you can also rename columns as you select them to keep. This will be illustrated this later
+
+Notice that I passed the output of this function to a new object data. I like to keep the object import as the original imported file and any changes will be passed onto a new data frame, such as data. This makes it easy to go back and see what the original data is. Because if we were to overwrite import then we would have to execute the read_csv() import function again to be able to see the original data file, just a little more tedious.

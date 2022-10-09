@@ -1,0 +1,20 @@
+6.9 summarise()
+The summarise() function will reduce a data frame by summarizing values in one or multiple columns. The values will be summarised on some statistical value, such as a mean, median, or standard deviation.
+
+Remember that in order to calculate the FlankerEffect for each subject, we first need to calculate each subject’s mean RT on incongruent trials and their mean RT on congruent trials
+
+We’ve done our filtering, selecting, mutating, now let’s aggregate RTs across Condition to calculate mean RT. We will use a combo of group_by() and summarise(). summarise() is almost always used in conjunction with group_by().
+
+Let’s also summarise the mean accuracy across conditions.
+
+data <- group_by(data, Subject, Condition)
+data <- summarise(data,
+                  RT.mean = mean(RT, na.rm = TRUE),
+                  ACC.mean = mean(ACC, na.rm = TRUE))
+## `summarise()` has grouped output by 'Subject'. You can override using the `.groups` argument.
+data <- ungroup(data)
+To summarise() you need to create new column names that will contain the aggregate values. RT.mean seems to make sense to me.
+
+What does the resulting data frame look like? There should be three rows per subject, one for incongruent trials, one for congruent trials, and one for neutral trials. You can see that we now have mean RTs on all conditions for each subject.
+
+Also, notice how non-group_by columns got removed: Trial, and ACC.

@@ -30,6 +30,8 @@ The columns carry the following explanation
 
 ### Question 1
 
+<h4> Question 1 </h4>
+
 With reference to the dataset "***AutoClaims.csv***", answer the following questions.
 
 1. Prepare a table with mean, standard deviation and coefficient of variance (CV) of the claims paid
@@ -42,13 +44,16 @@ to the mean. *
 2. By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier
 values in terms of the claims paid. 
 <p>
-3.  Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. Test the null hypothesis “There is no relationship between the GENDER and the CLASS of the insured” against an alternate hypothesis of
+3.  Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. 
+Test the null hypothesis “**There is no relationship between the GENDER and the CLASS of the insured**” against an alternate hypothesis of
 existence of significant relation at 95% confidence level. Perform an appropriate test and comment. 
 <p>
 4. Use an appropriate test to test if the mean claim amount paid and variance of claim
 amounts paid is uniform between males and females. 
 
 ### Question 2
+
+<h4> Question 2 </h4>
 Refer to the dataset "***AutoClaims.csv***" and answer the following questions.
 You were asked to fit an appropriate distribution to the “PAID” data. 
 You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.

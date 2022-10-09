@@ -16,70 +16,6 @@
 
 <link rel="icon" href="data:image/x-icon;" type="image/x-icon">
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <script type="text/javascript">
 window.FlexDashboardComponents = [];
@@ -2687,21 +2623,8 @@ window.FlexDashboardComponents.push({
 <h4>
 Question 1
 </h4>
-<p>In a very small empirical study a sample from a random variable X is observed. The data can be entered into R using the following code:</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.22</span>,<span class="fl">0.38</span>,<span class="fl">1.28</span>,<span class="fl">0.54</span>,<span class="fl">0.56</span>,<span class="fl">1.36</span>,<span class="fl">0.55</span>,<span class="fl">0.37</span>,<span class="fl">0.43</span>,<span class="fl">0.46</span>,<span class="fl">0.62</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fl">0.54</span>,<span class="fl">0.54</span>,<span class="fl">0.51</span>,<span class="fl">0.44</span>,<span class="fl">0.68</span>,<span class="fl">0.55</span>,<span class="fl">0.30</span>)</span></code></pre></div>
-<div id="exercises" class="section level4">
-<h4>Exercises</h4>
-<ol style="list-style-type: decimal">
-<li><p>Estimate the expected value of <span class="math inline">\(X\)</span>.</p></li>
-<li><p>Calculate a 95% confidence interval for the expected value of <span class="math inline">\(X\)</span> assuming that <span class="math inline">\(X\)</span> is Normally distributed.</p></li>
-<li><p>Construct a confidence interval for the expected value of <span class="math inline">\(X\)</span> using the bootstrap method with 10,000 bootstrap replications.</p></li>
-<li><p>Comment on the differences between the confidence intervals in exercises 2 and 3.</p></li>
-</ol>
-</div>
+<p>Negative Binomial Experiment A negative binomial experiment is a statistical experiment that has the following properties:</p>
+<p>The experiment consists of x repeated trials. Each trial can result in just two possible outcomes. We call one of these outcomes a success and the other, a failure. The probability of success, denoted by P, is the same on every trial. The trials are independent; that is, the outcome on one trial does not affect the outcome on other trials. The experiment continues until r successes are observed, where r is specified in advance.</p>
 </div>
 <div id="worked-examples" class="section level3">
 <h3>Worked Examples</h3>
@@ -2714,19 +2637,19 @@ Question 1
 <h2 class="tabset">Column</h2>
 <div id="the-exponential-distribution" class="section level3">
 <h3>The Exponential Distribution</h3>
+<div id="the-exponential-distribution-1" class="section level4">
+<h4>The Exponential Distribution</h4>
 </div>
-</div>
-<div id="the-exponential-distribution-1" class="section level2">
-<h2>The Exponential Distribution</h2>
 <div id="definitions" class="section level4">
 <h4>Definitions</h4>
 <p>An exponentially distributed random variable <span class="math inline">\(X\)</span> is specifed with the <strong><em>rate parameter</em></strong> <span class="math inline">\(\lambda\)</span> <span class="math display">\[ X \sim \mbox{exp}(\lambda)  \]</span> The Expected Value of X is computed using the following formula <span class="math display">\[ E(X) = \frac{1}{\lambda} \]</span></p>
+</div>
 </div>
 <div id="worked-example" class="section level3">
 <h3>Worked Example</h3>
 <p>####Description</p>
 <p>A machine is said to have a mean failure free lifetime of 2000 hours. It is assumed that the failure free lifetimes of the machines have an exponential distribution. What is the probability that the machine will last:</p>
-<div id="exercises-1" class="section level4">
+<div id="exercises" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li>at least 1000 hours</li>
@@ -2745,12 +2668,13 @@ Question 1
 <h2 class="tabset">Column</h2>
 <div id="the-log-normal-distribution" class="section level3">
 <h3>The Log Normal Distribution</h3>
+<div id="the-log-normal-distribution-1" class="section level4">
+<h4>The Log Normal Distribution</h4>
 </div>
-</div>
-<div id="the-log-normal-distribution-1" class="section level2">
-<h2>The Log Normal Distribution</h2>
-<p>####Description</p>
+<div id="description" class="section level4">
+<h4>Description</h4>
 <p>Density, distribution function, quantile function and random generation for the log normal distribution whose logarithm has mean equal to meanlog and standard deviation equal to sdlog.</p>
+</div>
 <div id="usage" class="section level4">
 <h4>Usage</h4>
 <pre><code>
@@ -2759,6 +2683,7 @@ plnorm(q, meanlog = 0, sdlog = 1, lower.tail = TRUE, log.p = FALSE)
 qlnorm(p, meanlog = 0, sdlog = 1, lower.tail = TRUE, log.p = FALSE)
 rlnorm(n, meanlog = 0, sdlog = 1)
 </code></pre>
+</div>
 </div>
 <div id="worked-examples-1" class="section level3">
 <h3>Worked Examples</h3>
@@ -2769,6 +2694,11 @@ rlnorm(n, meanlog = 0, sdlog = 1)
 <h1 data-navmenu="Continuous Distributions">Weibull Distribution</h1>
 <div id="column-4" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
+<div id="introduction-2" class="section level3">
+<h3>Introduction</h3>
+<p>The Weibull distribution is a continuous probability distribution that can fit an extensive range of distribution shapes. Like the normal distribution, the Weibull distribution describes the probabilities associated with continuous data. However, unlike the normal distribution, it can also model skewed data. In fact, its extreme flexibility allows it to model both left- and right-skewed data.</p>
+<p>Weibull probability distribution plot.This distribution is an unusually versatile probability density function because it can fit a variety of shapes. It can even approximate the normal distribution and other distributions. Because of its flexibility, analysts use it in a broad range of settings, such as quality control, capability analysis, medical studies, and engineering. It’s frequently used in life data, reliability analysis, and warranty analysis to assess time to failure for systems and parts.</p>
+</div>
 <div id="worked-example-1" class="section level3">
 <h3>Worked Example</h3>
 <h4>
@@ -2776,7 +2706,7 @@ Worked Example
 </h4>
 <p>The lifetime <span class="math inline">\(X\)</span> (in hundreds of hours) of a certain type of industrial vacuum tube has a Weibull distribution with parameters <span class="math inline">\(\alpha = 2.5\)</span> and <span class="math inline">\(\beta = 200\)</span>.</p>
 <p>Using a seed of 1234, simulate 10,000 randomly generated lifetimes, and undertake the following exercises.</p>
-<div id="exercises-2" class="section level4">
+<div id="exercises-1" class="section level4">
 <h4>Exercises</h4>
 <p>Estimate the following:</p>
 <ol style="list-style-type: decimal">

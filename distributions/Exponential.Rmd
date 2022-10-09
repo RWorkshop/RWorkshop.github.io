@@ -5,7 +5,8 @@ Column {.tabset}
 --------------------------------
 
 ### The Exponential Distribution
-## The Exponential Distribution
+
+#### The Exponential Distribution
 #### Definitions
 
 An exponentially distributed random variable $X$ is specifed with the ***rate parameter*** $\lambda$

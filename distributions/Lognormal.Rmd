@@ -5,9 +5,9 @@ Column {.tabset}
 --------------------------------
 
 ### The Log Normal Distribution
-## The Log Normal Distribution
+#### The Log Normal Distribution
 
-####Description
+#### Description
 
 Density, distribution function, quantile function and random generation for the log normal distribution whose logarithm has mean equal to meanlog and standard deviation equal to sdlog.
 

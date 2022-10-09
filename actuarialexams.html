@@ -2723,8 +2723,8 @@ y! \]</span></p>
 \sum^{n}_{i=1}y
 f (\theta | y 1 , y 2 ,..., y n ) \propto \theta i=1 i e –(n + \alpha) \theta
 \]</span> We can observe that the posterior distribution of <span class="math inline">\(\theta\)</span> is Gamma with parameters n ∑ i=1 y i – 1 and n + a.</p>
-<p>Plot the posterior probability density function of <span class="math inline">\(\theta\)</span> for values of <span class="math inline">\(\theta\)</span> in the interval [3.2, 6.8] and assuming a = 0.01.</p>
-<p>[Hint: the range of values of <span class="math inline">\(\theta\)</span> can be obtained in R by seq(3.2, 6.8, by = 0.01).] (b) Carry out a simulation of N = 5,000 posterior samples for the parameter <span class="math inline">\(\theta\)</span>.</p>
+<p>Plot the posterior probability density function of <span class="math inline">\(\theta\)</span> for values of <span class="math inline">\(\theta\)</span> in the interval [3.2, 6.8] and assuming <span class="math inline">\(a = 0.01\)</span>.</p>
+<p>[Hint: the range of values of <span class="math inline">\(\theta\)</span> can be obtained in R by <tt>seq(3.2, 6.8, by = 0.01).</tt>] (b) Carry out a simulation of N = 5,000 posterior samples for the parameter <span class="math inline">\(\theta\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li><ol style="list-style-type: lower-alpha">
 <li></li>
@@ -2769,27 +2769,33 @@ AutoClaims Data
 </div>
 <div id="question-1-1" class="section level3">
 <h3>Question 1</h3>
+<h4>
+Question 1
+</h4>
 <p>With reference to the dataset “<strong><em>AutoClaims.csv</em></strong>”, answer the following questions.</p>
 <ol style="list-style-type: decimal">
-<li>Prepare a table with mean, standard deviation and coefficient of variance (CV) of the claims paid</li>
+<li>Prepare a table with mean, standard deviation and coefficient of variance (C5. of the claims paid</li>
 </ol>
 <ol style="list-style-type: lower-alpha">
 <li>for each STATE and identify the one with the least and the highest CV</li>
 <li>for each CLASS and sort the table in the ascending order of the CV</li>
 </ol>
-<em>Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation to the mean. </em>
+<em>Hint: Coefficient of Variance (C5. can be computed as the ratio of standard deviation to the mean. </em>
 <p>
 <ol start="2" style="list-style-type: decimal">
 <li>By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier values in terms of the claims paid.
 <p></li>
-<li>Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. Test the null hypothesis “There is no relationship between the GENDER and the CLASS of the insured” against an alternate hypothesis of existence of significant relation at 95% confidence level. Perform an appropriate test and comment.
+<li>Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. Test the null hypothesis “<strong>There is no relationship between the GENDER and the CLASS of the insured</strong>” against an alternate hypothesis of existence of significant relation at 95% confidence level. Perform an appropriate test and comment.
 <p></li>
 <li>Use an appropriate test to test if the mean claim amount paid and variance of claim amounts paid is uniform between males and females.</li>
 </ol>
 </div>
 <div id="question-2-1" class="section level3">
 <h3>Question 2</h3>
-<p>Refer to the dataset “<strong><em>AutoClaims.csv</em></strong>” and answer the following questions. You were asked to fit an appropriate distribution to the “PAID” data. You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.</p>
+<h4>
+Question 2
+</h4>
+<p>Refer to the dataset “<strong><em>AutoClaims.csv</em></strong>” and answer the following questions. You were asked to fit an appropriate distribution to the “<strong><em>PAID</em></strong>” data. You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.</p>
 <div id="exercises" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
@@ -2810,7 +2816,7 @@ Question 3
 </h4>
 <ul>
 <li><p>Fit a linear regression model to predict the “PAID” claim amount based on other variables (<em>Consider the AGE as a numerical variable and all others as categorical</em>).</p></li>
-<li><p>Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. Identify the significant variables in the prediction of “PAID” claims.</p></li>
+<li><p>Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. Identify the significant variables in the prediction of “<strong><em>PAID</em></strong>” claims.</p></li>
 <li><p>Comment on the applicability of the linear regression model by plotting “Residuals vs. Fitted Values” and “QQ Plot of the residuals”.</p></li>
 </ul>
 </div>
@@ -2960,23 +2966,20 @@ Question 3
 <p>Refer to the data file “Indices_Returns.csv” and answer the following questions: Indices_Returns.csv file is provided in the system.</p>
 <div id="exercises-4" class="section level4">
 <h4>Exercises</h4>
-<ol style="list-style-type: lower-roman">
+<ol style="list-style-type: decimal">
 <li>Express the number of months with negative Sensex returns as a proportion of total number of months.</li>
 <li>Test whether the proportion of months with negative Sensex returns is less than 50% at 95% confidence level as well as at 99% confidence level. of <span class="math inline">\(Y\)</span></li>
 <li>Classify the monthly returns of FI and IT sectors as follows and prepare a contingency table of counts.</li>
 </ol>
-<p>Monthly Return Classification ≤ First Quartile value Low &gt; Third Quartile value High All others Medium iv) Use the contingency table provided in 4(iii) above and test for the independence of monthly returns between FI and IT sector returns using an appropriate test and provide an interpretation of the test results. v) Test whether the returns of FI sector are significantly higher compared to that of IT Sector at 95% confidence level using appropriate test. of <span class="math inline">\(Y\)</span></p>
+<p>Monthly Return Classification ≤ First Quartile value Low &gt; Third Quartile value High All others Medium 4. Use the contingency table provided in 4(3. above and test for the independence of monthly returns between FI and IT sector returns using an appropriate test and provide an interpretation of the test results. 5. Test whether the returns of FI sector are significantly higher compared to that of IT Sector at 95% confidence level using appropriate test. of <span class="math inline">\(Y\)</span></p>
 </div>
 </div>
 <div id="question-5-1" class="section level3">
 <h3>Question 5</h3>
-<p>Q. 5) Refer to the data file “Indices_Returns.csv” and answer the following questions: Indices_Returns.csv file is provided in the system. #### Exercise i) Load the csv file into R and create a new column called “Sensex_Direction”. The value of this column will be “Positive” when the Sensex returns are positive and “Negative” when they are negative and convert the variable as a factor variable. ii) Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “Sensex_Direction” with the returns of 10 sectors as a multivariate model and display the summary of the model. iii) Identify which sectors have significantly impacted the direction of Sensex returns at 95% and 99% confidence level of <span class="math inline">\(Y\)</span></p>
-<ol start="4" style="list-style-type: lower-roman">
+<p>Q. 5) Refer to the data file “Indices_Returns.csv” and answer the following questions: Indices_Returns.csv file is provided in the system. #### Exercise 1. Load the csv file into R and create a new column called “Sensex_Direction”. The value of this column will be “Positive” when the Sensex returns are positive and “Negative” when they are negative and convert the variable as a factor variable. 2. Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “Sensex_Direction” with the returns of 10 sectors as a multivariate model and display the summary of the model. 3. Identify which sectors have significantly impacted the direction of Sensex returns at 95% and 99% confidence level of <span class="math inline">\(Y\)</span></p>
+<ol start="4" style="list-style-type: decimal">
 <li>Verify the relationship between residual deviance of the model and the Akaike Information Criteria (AIC).</li>
-<li>Plot the residuals of the fitted model and identify which month is the most significant outlier in the residuals of <span class="math inline">\(Y\)</span></li>
-<li>Comment on the appropriateness of the model fitted. Your actuarial friend has suggested that the current model can be improved by removing the variables which do not impact the direction of Sensex returns at 95% confidence level and refitting the GLM with ‘logit’ link function.</li>
-<li>Update the model fitted in (ii) above, as suggested by your friend and display the summary of the model. of <span class="math inline">\(Y\)</span></li>
-<li>Compare the models in (ii) and (vii) using an appropriate test and comment on the difference in the residual deviances between the two models.</li>
+<li>Plot the residuals of the fitted model and identify which month is the most significant outlier in the residuals of <span class="math inline">\(Y\)</span> v1. Comment on the appropriateness of the model fitted. Your actuarial friend has suggested that the current model can be improved by removing the variables which do not impact the direction of Sensex returns at 95% confidence level and refitting the GLM with ‘logit’ link function. v2. Update the model fitted in (2. above, as suggested by your friend and display the summary of the model. of <span class="math inline">\(Y\)</span> v3. Compare the models in (2. and (v2. using an appropriate test and comment on the difference in the residual deviances between the two models.</li>
 </ol>
 </div>
 </div>
@@ -3164,7 +3167,7 @@ Question 4 Part (b)
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>alcohol<span class="fl">.2</span> <span class="ot">=</span> alcohol[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>cigarettes<span class="fl">.2</span> <span class="ot">=</span> cigarettes[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">6</span>,<span class="dv">16</span>)]</span></code></pre></div>
 <ol start="7" style="list-style-type: decimal">
-<li><p>Perform a simple linear regression analysis on the new data using a model of the form y = α + βx + ε (cigarette consumption, y, on alcohol consumption, x), where the error terms ε independently follow a N(0, s2) distribution. Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s.</p></li>
+<li><p>Perform a simple linear regression analysis on the new data using a model of the form y = + βx + ε (cigarette consumption, y, on alcohol consumption, x), where the error terms ε independently follow a N(0, s2) distribution. Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s.</p></li>
 <li><p>State the proportion of the total variability of the responses explained by the model, based on your output in exercise 7.</p></li>
 <li><p>Plot a graph of the residuals of the model fitted in exercise 7 against the explanatory variable.</p></li>
 <li><p>Comment on the validity of the model, based on your output in part (ix) .</p></li>
@@ -3175,7 +3178,7 @@ Question 4 Part (b)
 <h4>
 Question 5
 </h4>
-<p>A waiting time random variable X follows an Exponential distribution with rate l parameterised as f(x) = le–lx (x &gt; 0, l &gt; 0). The rate l has a Gamma prior distribution with parameters a and s. A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as Z 3x + (1– Z)3 s α – 1, where Z = n α + n – 1 with n being the number of past waiting times observed. Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.</p>
+<p>A waiting time random variable X follows an Exponential distribution with rate l parameterised as f(x) = le–lx (x &gt; 0, l &gt; 0). The rate l has a Gamma prior distribution with parameters a and s. A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as Z 3x + (1– Z)3 s – 1, where Z = n + n – 1 with n being the number of past waiting times observed. Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.</p>
 <div id="exercises-9" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
@@ -3214,7 +3217,7 @@ Question 5
 </div>
 <div id="question-3-4" class="section level3">
 <h3>Question 3</h3>
-<p>Data is provided for ‘<strong><em>BMIClaims</em></strong>’ of 150 policyholders and corresponding claim count. (BMIClaims.csv).</p>
+<p>Data is provided for ‘<strong><em>BMIClaims</em></strong>’ of 150 policyholders and corresponding claim count. (BMIClaims.cs5. .</p>
 <ol style="list-style-type: decimal">
 <li>Obtain 95% confidence interval for the standard deviation of BMI (using <strong><em>qchisq()</em></strong>).</li>
 <li>Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State your conclusion of the test.</li>
@@ -3343,7 +3346,7 @@ A study was carried out to estimate the proportion, 𝑝, of workers that commut
 </ol>
 <ol start="2" style="list-style-type: lower-alpha">
 <li>Calculate the proportion of sampled values of p that exceed 0.25.</li>
-<li>Compare your answer in exercise (vii)(b) with your answer in exercise 6. .</li>
+<li>Compare your answer in exercise (v2. (b) with your answer in exercise 6. .</li>
 </ol>
 </div>
 <div id="question-4-4" class="section level3">
@@ -3430,7 +3433,7 @@ A statistician wants to model the number of passengers boarding a bus from a bus
 <li>Test at 5% level with clearly mentioning the hypothesis, if there is a difference in the mean of the two sample data assuming equal &amp; unknown variance. (8)</li>
 <li>Test whether the variances are equal at 5% level and comment on the results.</li>
 <li>Calculate the 95% confidence interval for the difference in means. (3)</li>
-<li>Comment on your findings in part (2. and part (4.. ### Question 4</li>
+<li>Comment on your findings in part 2. and part (4.. ### Question 4</li>
 </ol>
 <h4>
 Question 4
@@ -3444,7 +3447,7 @@ Question 4
 <h4>Part 3</h4>
 <p>Perform a hypothesis test for the null hypothesis that Pearson’s population correlation coefficient is equal to zero, against the alternative that it is positive. You should report the p-value of the test and a clear conclusion.</p>
 <hr />
-<p>Q. 4) Five years of marketing spend and company sales by month 1. Construct a scatterplot of the data. Comment on the relationship between the Sales &amp; Spend based on the plot. 2. Calculate Pearson’s correlation coefficient between Sales and Spend of the company. 3. Perform a hypothesis test for the null hypothesis that Pearson’s population correlation coefficient is equal to zero, against the alternative that it is positive. You should report the p-value of the test and a clear conclusion. 4. Perform a simple linear regression analysis on the data. Your answer should report the estimate of parameter sigma. 5. Plot the fitted line on the data scatterplot. v1. State the proportion of the total variability of the responses explained by the model based on your output in (4.. v2. Plot a graph of the residuals of the model fitted in (4. against the explanatory variable. v3. Obtain a 99% confidence interval for parameter sigma. ix) Comment on the validity of the model based on results in part (v2. and part (v3. . x) Calculate the p-value of a hypothesis test for this suggestion (slope equal to 10), by creating a suitable test statistic. (7) x1. Comment on the suggestion in point (x). x2. Calculate the predicted amount of sales when the marketing spend is INR 4500. [39] *******************</p>
+<p>Q. 4) Five years of marketing spend and company sales by month 1. Construct a scatterplot of the data. Comment on the relationship between the Sales &amp; Spend based on the plot. 2. Calculate Pearson’s correlation coefficient between Sales and Spend of the company. 3. Perform a hypothesis test for the null hypothesis that Pearson’s population correlation coefficient is equal to zero, against the alternative that it is positive. You should report the p-value of the test and a clear conclusion. 4. Perform a simple linear regression analysis on the data. Your answer should report the estimate of parameter sigma. 5. Plot the fitted line on the data scatterplot. v1. State the proportion of the total variability of the responses explained by the model based on your output in (4.. v2. Plot a graph of the residuals of the model fitted in (4. against the explanatory variable. v3. Obtain a 99% confidence interval for parameter sigma. ix) Comment on the validity of the model based on results in part v2. and part (v3. . x) Calculate the p-value of a hypothesis test for this suggestion (slope equal to 10), by creating a suitable test statistic. (7) x1. Comment on the suggestion in point (x). x2. Calculate the predicted amount of sales when the marketing spend is INR 4500. [39] *******************</p>
 </div>
 </div>
 </div>
@@ -3679,7 +3682,7 @@ Let $Y$ denote the number of winners in a random sample of 900 new customers.
 2. Calculate, to four decimal places, the probabilities $P[k &lt; Y \leq k + 20]$ for all 
 values $k = 220, 240, 260, …, 400$.
 
-3. It is suggested that the true distribution of Y can be approximated with a Normal 
+3. It is suggested that the true distribution of $Y$ can be approximated with a Normal 
 distribution with expectation EሾYሿ = 324 and a standard deviation of 14.4. 
 Calculate, to four decimal places, the probabilities $P[k &lt; Y \leq k + 20]$ for all 
 values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 
@@ -3779,14 +3782,14 @@ populations are that the populations:
 * (A2) have equal variances. 
 The analyst suspects that those assumptions may not be satisfied, and they are therefore interested in learning about the true significance level for such tests when 
 assumptions (A1) and (A2) do not necessarily hold. 
-With two independent samples, given a particular choice of the significance level, α, 
+With two independent samples, given a particular choice of the significance level, \alpha, 
 the true significance level for a two-sided test of the hypothesis of equal means can be calculated as 
-αtrue ൌ 𝑃ሺ|test statistic| ൒ critical pointሻ,
-where the critical point is the α/2 quantile of an appropriate distribution. 
+\alphatrue ൌ 𝑃ሺ|test statistic| ൒ critical pointሻ,
+where the critical point is the \alpha/2 quantile of an appropriate distribution. 
 
 
 An estimate of the true significance level for this two-sided test, when the chosen 
-level of significance is α = 0.1, can be computed using the R Monte Carlo simulation 
+level of significance is \alpha = 0.1, can be computed using the R Monte Carlo simulation 
 code provided below: 
 &lt;div class=&quot;knitr-options&quot; data-fig-width=&quot;576&quot; data-fig-height=&quot;460&quot;&gt;&lt;/div&gt;
 
@@ -3890,7 +3893,7 @@ Question 4
 </ol>
 <p>Analyse the data using EBCT Model 2 to calculate the expected total claim payment to be made by each insurer (A, B, C, D and E) in Year 5. a) Complete the reference R Code (by replacing question marks‘?’ with appropriate function for data and zi, where data is as used in part 2. to arrive at the ‘claims5i’ which represents the estimated claim payment for each insurer in Year 5.</p>
 <ol start="2" style="list-style-type: lower-alpha">
-<li>Comment on change in expected claim payment for insurer A, B, C, D and E in year 5 in part (3. compared to part 2. .</li>
+<li>Comment on change in expected claim payment for insurer A, B, C, D and E in year 5 in part 3. compared to part 2. .</li>
 </ol>
 </div>
 </div>
@@ -4283,7 +4286,7 @@ Question 1
 <ol style="list-style-type: decimal">
 <li><p>Plot the data as time series with <strong><em>frequency =12</em></strong> (i.e. 12 months).</p></li>
 <li><p>Plot the acf function.</p></li>
-<li><p>Decompose the trend, seasonality and randomness for the data. (Hint: use <strong><em>decompose()</em></strong> function.)</p></li>
+<li><p>Decompose the trend, seasonality and randomness for the data. (Hint: use &lt;tt?decompose()</tt> function.)</p></li>
 <li><p>Fit Arima model.</p></li>
 </ol>
 <p>(Hint: *** order=c(1,0,0), list(order=c(2,1,0), period=12*** as parameters.)</p>
@@ -4304,7 +4307,7 @@ Question 2
 <li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 0.75\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
 <li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 1\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
 <li>Draw the graph of hazard function for the gamma distribution with parameters <span class="math inline">\(\alpha = 1.5\)</span> and <span class="math inline">\(\lambda = 0.5\)</span>.</li>
-<li>Comment on the thickness of the tails of the distribution of 2. with the tails of exercises 1 and 3 (For the graphs, the value of x varies from 0 to 10).</li>
+<li>Comment on the thickness of the tails of the distribution of 2. with the tails of exercises 1 and 3 (For the graphs, the value of <span class="math inline">\(x\)</span> varies from 0 to 10).</li>
 </ol>
 </div>
 </div>
@@ -4347,9 +4350,9 @@ Question 4
 <h4>
 Question 5
 </h4>
-<p>Signals are mathematically represented by a function that takes into account the magnitude and frequency. <span class="math display">\[xt = A cos(2π\omega t + \phi) + wt,\]</span> where <span class="math inline">\(\omega\)</span> is equal to 1/50 and wt is the white noise with mean zero and SD of 5. <span class="math inline">\(A\)</span> and <span class="math inline">\(\phi\)</span> need to be estimated. In this case the parameters appear in a nonlinear way, so we use a trigonometric identity and write</p>
+<p>Signals are mathematically represented by a function that takes into account the magnitude and frequency. <span class="math display">\[xt = A cos(2π\omega t + \ph1.  + wt,\]</span> where <span class="math inline">\(\omega\)</span> is equal to 1/50 and wt is the white noise with mean zero and SD of 5. <span class="math inline">\(A\)</span> and <span class="math inline">\(\phi\)</span> need to be estimated. In this case the parameters appear in a nonlinear way, so we use a trigonometric identity and write</p>
 <p><span class="math display">\[
-A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\omega t),\\
+A cos(2π\omega t + \ph1.  = A cos(\ph1.  cos(2π\omega t) - A sin(\ph1.  sin(2π\omega t),\\
 = β1 cos(2π\omega t) + β2 sin(2π\omega t),\\
 = β1*z1 + β2*z2\\
 \]</span></p>
@@ -4360,7 +4363,7 @@ A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\o
 <li>Simulate and plot a series xt, using A=2, = 0.6π and SD of white noise as 5 (for t= 1 to 1000).</li>
 <li>Generate two series z1 and z2 (for t= 1 to 1000).</li>
 <li>Fit a Linear model to between xt, z1 and z2 and estimate parameters β1, β2 , A and .</li>
-<li>Plot x, fitted line.</li>
+<li>Plot <span class="math inline">\(x\)</span>, fitted line.</li>
 </ol>
 </div>
 </div>
@@ -4452,7 +4455,7 @@ Question 1
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order moving average process with parameter β1= 0.4, assigning the simulated values to a vector called YMA.</p></li>
-<li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order autoregressive model with parameter α1= 0.45, assigning the simulated values to a vector called YAR.</p></li>
+<li><p>Generate, using a random number generator seed of 967, a simulated sequence of n = 200 observations for a first-order autoregressive model with parameter = 0.45, assigning the simulated values to a vector called YAR.</p></li>
 <li><p>Plot, on four separate graphs, the sample autocorrelation function (sample ACF) and sample partial autocorrelation function (sample PACF) for each of the two time series models, YMA and YAR, generated in exercise s 1. and 2. .</p></li>
 <li><p>Comment on the general features of the plots in exercise 3. with reference to whether they are consistent with the theoretical behaviour of the corresponding functions for the true models.</p></li>
 <li><p>The <strong><em>acf()</em></strong> function in R can also provide a vector output of the sample ACF values, with component i giving the sample ACF at lag i – 1, provided that the plot argument of the function is set to ‘<strong><em>FALSE</em></strong>’. Determine the numerical values for the sample ACF at lag 2, for each of the two time series models, YMA and YAR, generated in exercise s 1. and 2. .</p></li>
@@ -4475,7 +4478,7 @@ Question 1
 <ol start="7" style="list-style-type: decimal">
 <li><p>Determine the mean and variance of the two vectors, ACF2MA and ACF2AR, generated in exercise 6.</p></li>
 <li><p>Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and ACF2AR, generated in exercise 6.</p></li>
-<li><p>Comment on the results in exercise s (vii) and (viii), including whether they agree with the expected asymptotic behaviour.</p></li>
+<li><p>Comment on the results in exercise s (v2. and (v3. , including whether they agree with the expected asymptotic behaviour.</p></li>
 </ol>
 </div>
 <div id="question-2-12" class="section level3">
@@ -4545,7 +4548,7 @@ Question 3
 </li>
 <li>Generate a 2x2 matrix showing the number of policyholders with each possible combination of values of <strong><em>group_label_stage1</em></strong> and <strong><em>group_label_stage2</em></strong>.<br />
 </li>
-<li>Comment on the matrix generated in exercise (vi) with reference to how the cluster labels have changed between <strong><em>group_label_stage1</em></strong> and <strong><em>group_label_stage2</em></strong>.<br />
+<li>Comment on the matrix generated in exercise (v1. with reference to how the cluster labels have changed between <strong><em>group_label_stage1</em></strong> and <strong><em>group_label_stage2</em></strong>.<br />
 </li>
 <li>Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the x-axis and x2 on the y-axis), using two distinct colours to identify clusters A and B according to the label, <strong><em>group_label_stage2</em></strong>.<br />
 The analyst decides to stop at this stage and to report <strong><em>group_label_stage2</em></strong> as the final set of cluster labels. Comment on this decision.</li>
@@ -4700,12 +4703,18 @@ Question 1
 </div>
 <div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;markovchain&quot;</span>) </span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(markovchain)</span></code></pre></div>
-<p>Xt is a Markov chain on the state space {1,2,3} with the following transition matrix: ൭ p 1 – p 0 q 0 1 – q 0 r 1 – r ൱ where 0 &lt; p, q, r &lt; 1.</p>
+<p><span class="math inline">\(X_t\)</span> is a Markov chain on the state space {1,2,3} with the following transition matrix: <span class="math display">\[
+\begin{array}{cccc}
+p &amp; 1 – p &amp; 0\\
+q &amp; 0 &amp; 1 – q\\
+0 &amp; r &amp; 1 – r\\
+\end{array}
+\]</span> where <span class="math inline">\(0 &lt; p, q, r &lt; 1\)</span>.</p>
 <div id="exercises-40" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li><p>Construct an R function, with arguments p, q and r, that generates a Markov chain object for <span class="math inline">\(X_t\)</span>. Assume that p = 0.75 and r = 0.25.</p></li>
-<li><p>Construct R code that calculates the stationary distribution of Xt for values of q from 0.1 to 0.9 inclusive, at intervals of 0.1, pasting your results into your answer script.</p>
+<li><p>Construct an R function, with arguments p, q and r, that generates a Markov chain object for <span class="math inline">\(X_t\)</span>. Assume that <span class="math inline">\(p = 0.75\)</span> and <span class="math inline">\(r = 0.25\)</span>.</p></li>
+<li><p>Construct R code that calculates the stationary distribution of <span class="math inline">\(X_t\)</span> for values of q from 0.1 to 0.9 inclusive, at intervals of 0.1, pasting your results into your answer script.</p>
 <p></li>
 <li><p>Plot a graph showing the stationary distributions of Xt calculated in exercise 2 as a function of q. You should include three separately coloured lines on your graph, each line representing the stationary probabilities of each state.</p></li>
 </ol>
@@ -4716,22 +4725,22 @@ Question 1
 <h4>
 Question 2
 </h4>
-2 Before answering this question, construct the function, rpareto, in R using the following code:
+<p>2 Before answering this question, construct the function, rpareto, in R using the following code:</p>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>rpareto <span class="ot">=</span> <span class="cf">function</span>(n, alpha, lambda){ </span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>rp <span class="ot">=</span> lambda <span class="sc">*</span> ((<span class="dv">1</span> <span class="sc">-</span> <span class="fu">runif</span>(n))<span class="sc">^</span>(<span class="sc">-</span><span class="dv">1</span><span class="sc">/</span>alpha) <span class="sc">-</span> <span class="dv">1</span>) </span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>rp}</span></code></pre></div>
-<p>The rpareto function generates a random sample of size n from a two-parameter Pareto distribution with parameters α and λ.</p>
+<p>The rpareto function generates a random sample of size n from a two-parameter Pareto distribution with parameters and .</p>
 <div id="exercises-41" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
-<li><p>Generate, using rpareto, a random sample of size 25,000 from the two-parameter Pareto distribution with parameters α = 3 and λ = 1, assigning the simulated values to a vector called A_vec. You should set a random number generator seed of 123 before generating A_vec and use the R function, head(), to display the first eight values of A_vec in your answer script.</p></li>
-<li><p>Construct an R function, called A_exceed_u, with two arguments, A and u, that returns only the non-zero entries of a vector, E, where vector E is of length 25,000, with entries defined as: Ei = maxሼAi – u, 0ሽ. Use the R function, head(), to display in your answer script the first eight values of A_exceed_u when A = A_vec and u = 1.</p></li>
-<li><p>Construct another R function, called F_u, with one argument, A_greater_than_u, that returns a vector of length 101, containing the probabilities: PሺAi – u ≤ x | Ai &gt; u), where x ≥ 0, for values of x from 0 to 10 inclusive, at intervals of 0.1. Use the R function, head(), to display in your answer script the first eight values of F_u when <strong><em>A_greater_than_u = A_exceed_u</em></strong> with arguments A = A_vec and u = 1.</p></li>
-<li><p>Plot, on a single graph, four line graphs of the values of F_u against x for the values of x specified in exercise 3 when A_greater_than_u = A_exceed_u, A = A_vec and u = 1, 2, 3 and 4. You should use separate colours to identify each line graph and you should clearly specify which value of u is represented by each of the four line graphs.</p></li>
-<li><p>Comment on the graph produced in exercise (iv).</p></li>
+<li><p>Generate, using rpareto, a random sample of size 25,000 from the two-parameter Pareto distribution with parameters <span class="math inline">\(\alpha = 3\)</span> and <span class="math inline">\(\lambda = 1\)</span>, assigning the simulated values to a vector called <tt>A_vec</tt>. You should set a random number generator seed of 123 before generating <tt>A_vec</tt> and use the R function, <tt>head()</tt>, to display the first eight values of <tt>A_vec</tt> in your answer script.</p></li>
+<li><p>Construct an R function, called <tt>A_exceed_u</tt>, with two arguments, A and u, that returns only the non-zero entries of a vector, E, where vector E is of length 25,000, with entries defined as: Ei = maxሼAi – u, 0ሽ. Use the R function, <tt>head()</tt>, to display in your answer script the first eight values of <tt>A_exceed_u</tt> when A = <tt>A_vec</tt> and u = 1.</p></li>
+<li><p>Construct another R function, called <tt>F_u</tt>, with one argument, A_greater_than_u, that returns a vector of length 101, containing the probabilities: PሺAi – u ≤ x | Ai &gt; u), where x ≥ 0, for values of x from 0 to 10 inclusive, at intervals of 0.1. Use the R function, <tt>head()</tt>, to display in your answer script the first eight values of <tt>F_u</tt> when <strong><em>A_greater_than_u = <tt>A_exceed_u</tt></em></strong> with arguments A = <tt>A_vec</tt> and u = 1.</p></li>
+<li><p>Plot, on a single graph, four line graphs of the values of <tt>F_u</tt> against x for the values of x specified in exercise 3 when A_greater_than_u = <tt>A_exceed_u</tt>, A = <tt>A_vec</tt> and u = 1, 2, 3 and 4. You should use separate colours to identify each line graph and you should clearly specify which value of u is represented by each of the four line graphs.</p></li>
+<li><p>Comment on the graph produced in exercise (4. .</p></li>
 </ol>
 </div>
 </div>
@@ -4761,19 +4770,18 @@ Before answering this question, the ‘survival’ package should be loaded into
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the Kaplan–Meier survival function estimate for all patients, together with its two-sided 99.5% confidence interval.</p></li>
-<li><p>Determine, using the estimated survival function from part (i), the probability that a patient survived from the beginning of the investigation to the end of the investigation.</p></li>
-<li><p>Evaluate the appropriateness of the probability value, calculated in exercise (ii), for assessing MediCo’s effectiveness.</p></li>
+<li><p>Determine, using the estimated survival function from part (1. , the probability that a patient survived from the beginning of the investigation to the end of the investigation.</p></li>
+<li><p>Evaluate the appropriateness of the probability value, calculated in exercise (2. , for assessing MediCo’s effectiveness.</p></li>
 <li><p>Plot, on a single graph, four Kaplan–Meier survival function estimates without any confidence intervals, where each estimate represents one of the four possible patient group combinations of drug and gender. You should use separate colours to identify each survival function.<br />
 </p></li>
-<li><p>Comment on the graph produced in exercise (iv).<br />
+<li><p>Comment on the graph produced in exercise (4. .<br />
 </p>
 <p></li>
 <li><p>Estimate a Cox proportional hazards model with death as the event of interest using the two covariates, drug and gender, with no interaction term, pasting your results into your answer script. You should use the Breslow method for tie handling.</p></li>
-<li><p>Comment on the results produced in exercise (vi) with reference to the effects of the two covariates, drug and gender, on the mortality rate.</p></li>
+<li><p>Comment on the results produced in exercise (v1. with reference to the effects of the two covariates, drug and gender, on the mortality rate. (v3. Update the Cox proportional hazards model in exercise (v1. to include an interaction term between drug and gender, pasting your results into your answer script.<br />
+</p></li>
 </ol>
-<ol start="8" style="list-style-type: lower-roman">
-<li>Update the Cox proportional hazards model in exercise (vi) to include an interaction term between drug and gender, pasting your results into your answer script.<br />
-</li>
+<ol start="9" style="list-style-type: lower-roman">
 <li>Analyse the effectiveness of MediCo, commenting on any differences between males and females. [5] [Total 44] END OF PAPER</li>
 </ol>
 </div>
@@ -4814,7 +4822,7 @@ Question 1
 <h4>
 Question 2
 </h4>
-<p>The file “Data.csv” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, calculated from the first transaction date.</p>
+<p>The file “<strong><em>Data.csv</em></strong>” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, calculated from the first transaction date.</p>
 <div id="exercises-43" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
@@ -4845,7 +4853,7 @@ Question 2
 </ol>
 <ul>
 <li>Number of claims follow Poisson distribution with parameter 500</li>
-<li>Individual claim size follows a Gamma distribution with parameters (600,0.3) [use seed = 250 for below 3 questions].</li>
+<li>Individual claim size follows a Gamma distribution with parameters (600,0.3) [use <tt>seed = 250</tt> for below 3 questions].</li>
 </ul>
 <ol start="4" style="list-style-type: decimal">
 <li><p>Generate 1000 observations and calculate the 500th simulated value.</p></li>
@@ -4856,10 +4864,10 @@ Question 2
 </div>
 <div id="question-4-8" class="section level3">
 <h3>Question 4</h3>
-<p>The force of mortality ‘mu(x)’ for a particular group of life can be calculated using the formula as A*B^x; where A=0.00002; B=exp(c); c=0.09; x denotes the age of the life. #### Exercises</p>
+<p>The force of mortality ‘<tt>mu(x)</tt>’ for a particular group of life can be calculated using the formula as A*B^x; where A=0.00002; B=exp(c); c=0.09; x denotes the age of the life. #### Exercises</p>
 <ol style="list-style-type: decimal">
-<li>Write down a formula for mu(x) in R and calculate the value of mu(50).</li>
-<li>If survival probability px can be approximated as [exp(-mu(x+0.5))], calculate the probability that a life aged 50, will remain alive after 10 years.</li>
+<li>Write down a formula for mu(x) in R and calculate the value of <tt>mu(50)</tt>.</li>
+<li>If survival probability px can be approximated as <span class="math inline">\([exp(-mu(x+0.5))]\)</span>, calculate the probability that a life aged 50, will remain alive after 10 years.</li>
 <li>Create a table of mortality rate qx for ages between 40 to 50.</li>
 </ol>
 </div>
@@ -4872,8 +4880,11 @@ Question 2
 <li>Write a code to calculate the generator matrix G(x). Calculate the rate at which a 12 year old student will move from wing B to A and from A to B.</li>
 <li>Over a very small time period h, the transition probability matrix P(t,t+h) can be approximated as <span class="math inline">\(P(t,t+h) = I + h*G(t)\)</span>; where <span class="math inline">\(I\)</span> is the identity matrix.</li>
 </ol>
-<p>Using this, calculate the probability that a 8 year old will move to Wing B in next 5 years in case h=1/365.</p>
+<p>Using this, calculate the probability that a 8 year old will move to Wing B in next 5 years in case <span class="math inline">\(h=1/365\)</span>.</p>
 </div>
+</div>
+<div id="datasets" class="section level3">
+<h3>Datasets</h3>
 </div>
 </div>
 </div>
@@ -5052,12 +5063,15 @@ Question 1
 <p>The Logistic function can be defined by the function:</p>
 <p><span class="math display">\[ f(𝑥) = \frac{1}{(1 + exp(-x))}\]</span></p>
 <ol style="list-style-type: decimal">
-<li><p>Create a function in R to calculate f(x).</p></li>
-<li><p>Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add appropriate x and y-axis labels.</p></li>
+<li><p>Create a function in R to calculate <span class="math inline">\(f(x)\)</span>.</p></li>
+<li><p>Create a plot of this function and evaluate it at values for <span class="math inline">\(x\)</span> ranging from -10 to 10. Add appropriate x and y-axis labels.</p></li>
 </ol>
 </div>
 <div id="question-2-17" class="section level3">
 <h3>Question 2</h3>
+<h4>
+Question 2
+</h4>
 A random variable follows a Weibull distribution with parameters for the shape and scale as follows:
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
@@ -5074,23 +5088,26 @@ Run the following code in R before beginning your answer:
 <h4>Exercises</h4>
 <p>Use the in-build functions in R to:</p>
 <ol style="list-style-type: decimal">
-<li>Simulate 1,000 values from a Weibull distribution with parameters given above, assign this to a vector variable called ‘WeibullSim’.</li>
+<li>Simulate 1,000 values from a Weibull distribution with parameters given above, assign this to a vector variable called ‘<tt>WeibullSim</tt>’.</li>
 <li>Calculate the mean and standard deviation of the simulated values.
 <p></li>
-<li>Using the mean and standard deviation estimated from (ii), estimate the 𝜇 and 𝜎 parameters of a LogNormal distribution following the method of moments approach.</li>
-<li>Simulate 1,000 values from the LogNormal distribution using the parameter estimates in (3. above and assign this to a vector variable called ‘LognormalSim’ and calculate the mean and standard deviation of the simulated values.</li>
-<li>Plot a histogram of ‘WeibullSim’ and ‘LognormalSim’ showing the frequencies and paste the plot into your answer.
+<li>Using the mean and standard deviation estimated from part 2, estimate the 𝜇 and 𝜎 parameters of a LogNormal distribution following the method of moments approach.</li>
+<li>Simulate 1,000 values from the LogNormal distribution using the parameter estimates in part 3 above and assign this to a vector variable called ‘LognormalSim’ and calculate the mean and standard deviation of the simulated values.</li>
+<li>Plot a histogram of ‘<tt>WeibullSim</tt>’ and ‘LognormalSim’ showing the frequencies and paste the plot into your answer.
 <p></li>
-<li>Plot the probability density function for ‘WeibullSim’ and ‘LognormalSim’ as a line plot.</li>
+<li>Plot the probability density function for ‘<tt><tt>WeibullSim</tt></tt>’ and ‘LognormalSim’ as a line plot.</li>
 </ol>
 <ul>
-<li>Set the WeibullSim line to color ‘red’ and the LognormalSim line to color ‘green’.</li>
+<li>Set the <tt><tt>WeibullSim</tt></tt> line to color ‘red’ and the LognormalSim line to color ‘green’.</li>
 <li>Set the y-axis limits from 0 to 0.00001. Hint: Use the density function in R to estimate densities of your simulated values.</li>
 </ul>
 </div>
 </div>
 <div id="question-3-13" class="section level3">
 <h3>Question 3</h3>
+<h4>
+Question 3
+</h4>
 <p>An Actuary in the country of Actuaria believes the actions of a football player while playing a football match, can be modelled on a ball-by-ball action basis using a Markov Chain. The Actuary has considered 3 states for a player to model the ball-by-ball action – Pass, Shoot and Dribble. Library required – ‘markovchain’</p>
 <p>The following probabilities have been defined based on past data for each state: 1. There is a 50% chance of a Pass being made, 10% chance of Shooting and 40% chance of Dribbling in the next state of play, if the player had Passed the ball in the previous play. 2. There is a 70% chance of a Pass being made, 20% chance of Shooting and 10% chance of Dribbling in the next state of play, if the player had Shot the ball in the previous play. 3. There is a 40% chance of a Pass being made, 30% chance of Shooting and 30% chance of Dribbling in the next state of play, if the player had Dribbled the ball in the previous play.</p>
 <div id="exercises-50" class="section level4">
@@ -5116,14 +5133,21 @@ Run the following code in R before beginning your answer:
 </div>
 <div id="question-4-9" class="section level3">
 <h3>Question 4</h3>
-<p>The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory. Please import this dataset from the ‘datasets’ package in R. Libraries required: ‘tseries’ ‘forecast’</p>
+<p>The ‘<strong><em>sunspot</em></strong>’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory. Please import this dataset from the ‘datasets’ package in R.</p>
+<div id="libraries-required" class="section level4">
+<h4>Libraries required:</h4>
+<ul>
+<li>‘tseries’</li>
+<li>‘forecast’</li>
+</ul>
+</div>
 <div id="exercises-51" class="section level4">
 <h4>Exercises</h4>
 <ol style="list-style-type: decimal">
 <li><p>Plot the timeseries with frequency = 12, giving appropriate labels for each axis and paste the chart into your answer sheet.</p></li>
 <li><p>Plot the sample Auto-correlation Function (ACF) and the sample Partial Auto-Correlation Function (PACF) of the data, giving appropriate labels for the x and y axes.</p></li>
 <li><p>Estimate the ACF and PACF values at each lag.</p></li>
-<li><p>Comment on the ACF based on the charts and values computed in (2. and (iii).</p></li>
+<li><p>Comment on the ACF based on the charts and values computed in (2. and (3. .</p></li>
 <li><p>Calculate the simple seasonal difference with period 12. Print the top 12 values of the seasonal difference.</p></li>
 <li><p>Decompose the trend, seasonality and randomness of the data. Plot the decomposed values.</p></li>
 <li><p>Comment on the general features of your chart.</p></li>

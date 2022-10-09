@@ -25,10 +25,10 @@ Column {.tabset}
             width: 80%">
             
 |  <b> <strong><u>Contents</u> </strong></b>       |   
-|:------------------:|
+|:------------------|
 |   |    
 | * <b> <strong><a href="actuarialexams.html">R for actuarial students</a>  -  CS1B and CS2B </strong></b>|        
-      
+| * <b> <strong><a href="distributions.html">Probability Distributions</a> </strong></b>|        
 |   | 
 </div>
 

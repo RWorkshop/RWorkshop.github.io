@@ -4,6 +4,12 @@ Weibull Distribution {data-navmenu="Continuous Distributions"}
 Column {.tabset}
 --------------------------------
 
+### Introduction
+
+The Weibull distribution is a continuous probability distribution that can fit an extensive range of distribution shapes. Like the normal distribution, the Weibull distribution describes the probabilities associated with continuous data. However, unlike the normal distribution, it can also model skewed data. In fact, its extreme flexibility allows it to model both left- and right-skewed data.
+
+Weibull probability distribution plot.This distribution is an unusually versatile probability density function because it can fit a variety of shapes. It can even approximate the normal distribution and other distributions. Because of its flexibility, analysts use it in a broad range of settings, such as quality control, capability analysis, medical studies, and engineering. It’s frequently used in life data, reliability analysis, and warranty analysis to assess time to failure for systems and parts.
+
 ### Worked Example
 
 <h4>Worked Example</h4>

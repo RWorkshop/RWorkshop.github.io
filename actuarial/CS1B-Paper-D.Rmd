@@ -57,41 +57,41 @@ Refer to the data file “Indices_Returns.csv” and answer the following questi
 Indices_Returns.csv file is provided in the system.
 
 #### Exercises 
-i) Express the number of months with negative Sensex returns as a proportion of total 
+1.  Express the number of months with negative Sensex returns as a proportion of total 
 number of months. 
-ii) Test whether the proportion of months with negative Sensex returns is less than 50% at 
+2.   Test whether the proportion of months with negative Sensex returns is less than 50% at 
 95% confidence level as well as at 99% confidence level. of $Y$
-iii) Classify the monthly returns of FI and IT sectors as follows and prepare a contingency 
+3.  Classify the monthly returns of FI and IT sectors as follows and prepare a contingency 
 table of counts. 
 
 Monthly Return Classification
 ≤ First Quartile value Low
 > Third Quartile value High
 All others Medium
-iv) Use the contingency table provided in 4(iii) above and test for the independence of 
+4.  Use the contingency table provided in 4(3.  above and test for the independence of 
 monthly returns between FI and IT sector returns using an appropriate test and provide an 
 interpretation of the test results. 
-v) Test whether the returns of FI sector are significantly higher compared to that of IT Sector 
+5.  Test whether the returns of FI sector are significantly higher compared to that of IT Sector 
 at 95% confidence level using appropriate test. of $Y$
 
 ### Question 5
 Q. 5) Refer to the data file “Indices_Returns.csv” and answer the following questions:
 Indices_Returns.csv file is provided in the system.
 #### Exercise 
-i) Load the csv file into R and create a new column called “Sensex_Direction”. 
+1.  Load the csv file into R and create a new column called “Sensex_Direction”. 
 The value of this column will be “Positive” when the Sensex returns are positive and “Negative” when they are negative and convert the variable as a factor variable. 
-ii) Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “Sensex_Direction” with the returns of 10 sectors as a multivariate model and display 
+2.   Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “Sensex_Direction” with the returns of 10 sectors as a multivariate model and display 
 the summary of the model. 
-iii) Identify which sectors have significantly impacted the direction of Sensex returns at 95% and 99% confidence level of $Y$
+3.  Identify which sectors have significantly impacted the direction of Sensex returns at 95% and 99% confidence level of $Y$
 
-iv) Verify the relationship between residual deviance of the model and the Akaike 
+4.  Verify the relationship between residual deviance of the model and the Akaike 
 Information Criteria (AIC). 
-v) Plot the residuals of the fitted model and identify which month is the most significant outlier in the residuals of $Y$
-vi) Comment on the appropriateness of the model fitted. 
+5.  Plot the residuals of the fitted model and identify which month is the most significant outlier in the residuals of $Y$
+v1.  Comment on the appropriateness of the model fitted. 
 Your actuarial friend has suggested that the current model can be improved by removing the 
 variables which do not impact the direction of Sensex returns at 95% confidence level and 
 refitting the GLM with ‘logit’ link function.
-vii) Update the model fitted in (ii) above, as suggested by your friend and display the summary 
+v2.   Update the model fitted in (2.   above, as suggested by your friend and display the summary 
 of the model. of $Y$
-viii) Compare the models in (ii) and (vii) using an appropriate test and comment on the 
+v3.  Compare the models in (2.   and (v2.   using an appropriate test and comment on the 
 difference in the residual deviances between the two models. 

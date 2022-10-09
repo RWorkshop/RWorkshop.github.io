@@ -35,7 +35,7 @@ derived in exercise 4. ? Also state the reason for the same.
 
 ### Question 3
 Data is provided for ‘***BMIClaims***’ of 150 policyholders and corresponding claim count. 
-(BMIClaims.csv).
+(BMIClaims.cs5. .
  
 1. Obtain 95% confidence interval for the standard deviation of BMI (using ***qchisq()***). 
 2. Further test the standard deviation of BMI to be equal to 4 by obtaining p value. State your conclusion of the test. 

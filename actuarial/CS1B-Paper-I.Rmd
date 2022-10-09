@@ -221,14 +221,14 @@ populations are that the populations:
 * (A2) have equal variances. 
 The analyst suspects that those assumptions may not be satisfied, and they are therefore interested in learning about the true significance level for such tests when 
 assumptions (A1) and (A2) do not necessarily hold. 
-With two independent samples, given a particular choice of the significance level, α, 
+With two independent samples, given a particular choice of the significance level, \alpha, 
 the true significance level for a two-sided test of the hypothesis of equal means can be calculated as 
-αtrue ൌ 𝑃ሺ|test statistic| ൒ critical pointሻ,
-where the critical point is the α/2 quantile of an appropriate distribution. 
+\alphatrue ൌ 𝑃ሺ|test statistic| ൒ critical pointሻ,
+where the critical point is the \alpha/2 quantile of an appropriate distribution. 
 
 
 An estimate of the true significance level for this two-sided test, when the chosen 
-level of significance is α = 0.1, can be computed using the R Monte Carlo simulation 
+level of significance is \alpha = 0.1, can be computed using the R Monte Carlo simulation 
 code provided below: 
 ```{r eval=FALSE}
 set.seed(123) # 

@@ -70,7 +70,7 @@ Page 3 of 3
 mean of the two sample data assuming equal & unknown variance. (8)
 3.  Test whether the variances are equal at 5% level and comment on the results. 
 4. Calculate the 95% confidence interval for the difference in means. (3)
-5. Comment on your findings in part (2.   and part (4.. 
+5. Comment on your findings in part 2.   and part (4.. 
 ### Question 4
 
 
@@ -104,7 +104,7 @@ v1.  State the proportion of the total variability of the responses explained by
 on your output in (4.. 
 v2.   Plot a graph of the residuals of the model fitted in (4. against the explanatory variable. 
 v3.  Obtain a 99% confidence interval for parameter sigma. 
-ix) Comment on the validity of the model based on results in part (v2.   and part (v3. . 
+ix) Comment on the validity of the model based on results in part v2.   and part (v3. . 
 x) Calculate the p-value of a hypothesis test for this suggestion (slope equal to 10), by 
 creating a suitable test statistic. (7)
 x1.  Comment on the suggestion in point (x). 

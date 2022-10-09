@@ -108,7 +108,7 @@ function for data and zi, where data is as used in part 2.   to arrive at the â€
 which represents the estimated claim payment for each insurer in Year 5. 
 
 b) Comment on change in expected claim payment for insurer A, B, C, D and E in year 
-5 in part (3.    compared to part 2.  . 
+5 in part 3.    compared to part 2.  . 
 
 ### Exercise 6
 <h4> Qurstion 6</h4>

@@ -34,11 +34,11 @@ The columns carry the following explanation
 
 With reference to the dataset "***AutoClaims.csv***", answer the following questions.
 
-1. Prepare a table with mean, standard deviation and coefficient of variance (CV) of the claims paid
+1. Prepare a table with mean, standard deviation and coefficient of variance (C5.  of the claims paid
 a. for each STATE and identify the one with the least and the highest CV
 b. for each CLASS and sort the table in the ascending order of the CV
 
-*Hint: Coefficient of Variance (CV) can be computed as the ratio of standard deviation 
+*Hint: Coefficient of Variance (C5.  can be computed as the ratio of standard deviation 
 to the mean. *
 <p>
 2. By using a box plot, identify the STATE(s) and CLASS(es) which have no outlier
@@ -55,7 +55,7 @@ amounts paid is uniform between males and females.
 
 <h4> Question 2 </h4>
 Refer to the dataset "***AutoClaims.csv***" and answer the following questions.
-You were asked to fit an appropriate distribution to the “PAID” data. 
+You were asked to fit an appropriate distribution to the “***PAID***” data. 
 You decided to fit Normal distribution, Lognormal distribution, Exponential distribution and Gamma Distribution based on the method of moments.
 
 #### Exercises
@@ -81,6 +81,6 @@ Mark each plot distinctly using an appropriate legend.
 * Fit a linear regression model to predict the “PAID” claim amount based on other variables (*Consider the AGE as a numerical variable and all others as categorical*).
 
 * Provide your interpretation of the model by explaining R-Squared, Adjusted R-Squared, p-value of the model and p-value of each of the coefficients. 
-Identify the significant variables in the prediction of “PAID” claims. 
+Identify the significant variables in the prediction of “***PAID***” claims. 
 
 * Comment on the applicability of the linear regression model by plotting “Residuals vs. Fitted Values” and “QQ Plot of the residuals”. 

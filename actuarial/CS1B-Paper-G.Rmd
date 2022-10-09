@@ -124,7 +124,7 @@ by the prior distribution.
 6.  Determine the exact posterior probability that p exceeds 0.25. 
 7. (a) Generate 10,000 samples from the posterior distribution of p. 
 (b) Calculate the proportion of sampled values of p that exceed 0.25. 
-(c) Compare your answer in exercise  (vii)(b) with your answer in exercise  6. . 
+(c) Compare your answer in exercise  (v2.  (b) with your answer in exercise  6. . 
 
 ### Question 4
 

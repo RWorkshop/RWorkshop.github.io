@@ -36,7 +36,7 @@ Import the time series data file “ARIMA.csv” and answer the below questions.
 ### Question 2
 <h4> Question 2</h4>
 
-The file “Data.csv” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, 
+The file “***Data.csv***” contains records of premium received and claim paid between certain time period. The ‘Day’ information represents the date on which the transaction occurred, 
 calculated from the first transaction date. 
 
 #### Exercises
@@ -69,7 +69,7 @@ The aggregate claim follows a compound distribution with below parameters:
 
 * Number of claims follow Poisson distribution with parameter 500 
 * Individual claim size follows a Gamma distribution with parameters (600,0.3) 
-[use seed = 250 for below 3 questions]. 
+[use <tt>seed = 250</tt> for below 3 questions]. 
 4.   Generate 1000 observations and calculate the 500th simulated value. 
  
 5.  The insurer wants to limit its claim liability and hence has modified the terms of the 
@@ -77,17 +77,17 @@ policy. It would now only pay for any amount in excess of an amount 500 on each
 claim. Calculate the 500th simulated value for the insurer under the revised condition. 
 
 6.  The insurer wants to analyze another claim sharing option. Under this, insurer will pay 
-75% of the claim amount and the rest 25% will be borne by the policyholder. Calculate 
-the 500th simulated value for the insurer under this option. 
+75% of the claim amount and the rest 25% will be borne by the policyholder. 
+Calculate the 500th simulated value for the insurer under this option. 
 
 ### Question 4
 
-The force of mortality ‘mu(x)’ for a particular group of life can be calculated using the 
+The force of mortality ‘<tt>mu(x)</tt>’ for a particular group of life can be calculated using the 
 formula as A*B^x; where A=0.00002; B=exp(c); c=0.09; x denotes the age of the life. 
 #### Exercises
 
-1. Write down a formula for mu(x) in R and calculate the value of mu(50). 
-2.  If survival probability px can be approximated as [exp(-mu(x+0.5))], calculate the 
+1. Write down a formula for mu(x) in R and calculate the value of <tt>mu(50)</tt>. 
+2.  If survival probability px can be approximated as $[exp(-mu(x+0.5))]$, calculate the 
 probability that a life aged 50, will remain alive after 10 years. 
 3.   Create a table of mortality rate qx for ages between 40 to 50. 
 
@@ -106,4 +106,6 @@ year old student will move from wing B to A and from A to B.
 2.  Over a very small time period h, the transition probability matrix P(t,t+h) can be 
 approximated as $P(t,t+h) = I + h*G(t)$; where $I$ is the identity matrix. 
 
-Using this, calculate the probability that a 8 year old will move to Wing B in next 5 years in case h=1/365. 
+Using this, calculate the probability that a 8 year old will move to Wing B in next 5 years in case $h=1/365$. 
+
+### Datasets

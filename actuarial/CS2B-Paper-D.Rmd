@@ -18,7 +18,7 @@ Monthly totals of airline passengers are given in time series data ‘AirPasseng
 2.   Plot the acf function. 
 
 3.    Decompose the trend, seasonality and randomness for the data.
-(Hint: use ***decompose()*** function.) 
+(Hint: use <tt?decompose()</tt> function.) 
 
 4.  Fit Arima model.
 
@@ -38,7 +38,7 @@ with legends.
 2. Draw the graph of hazard function for the gamma distribution with parameters $\alpha  = 1$ and $\lambda = 0.5$. 
 3. Draw the graph of hazard function for the gamma distribution with parameters $\alpha  = 1.5$ and $\lambda = 0.5$. 
 4. Comment on the thickness of the tails of the distribution of 2.   with the tails of exercises 1 and 3
-(For the graphs, the value of x varies from 0 to 10).
+(For the graphs, the value of $x$ varies from 0 to 10).
 
 ### Question 3
 <h4> Question 3 </h4>
@@ -67,7 +67,7 @@ from Unit Linked products. The sum assured ranges between 30000 to 200000 with m
 of 5000. 
 
 The sum assured are normally distributed with below parameters 
-*  Endowment (mean 50000, standard deviation 10000), 
+* Endowment (mean 50000, standard deviation 10000), 
 * Pure Term (mean 100000, standard deviation 25000), 
 * Unit Linked (mean 60000, standard deviation 5000). 
 
@@ -85,13 +85,13 @@ portfolio.
 <h4> Question 5 </h4>
 Signals are mathematically represented by a function that takes into account the magnitude 
 and frequency.
-$$xt = A cos(2π\omega t + \phi) + wt,$$ where $\omega$  is equal to 1/50 and wt is the white noise with mean 
+$$xt = A cos(2π\omega t + \ph1.  + wt,$$ where $\omega$  is equal to 1/50 and wt is the white noise with mean 
 zero and SD of 5. $A$ and $\phi$ need to be estimated.
 In this case the parameters appear in a nonlinear way, so we use a trigonometric identity 
 and write
 
 $$
-A cos(2π\omega t + \phi) = A cos(\phi) cos(2π\omega t) - A sin(\phi) sin(2π\omega t),\\
+A cos(2π\omega t + \ph1.  = A cos(\ph1.  cos(2π\omega t) - A sin(\ph1.  sin(2π\omega t),\\
 = β1 cos(2π\omega t) + β2 sin(2π\omega t),\\
 = β1*z1 + β2*z2\\
 $$
@@ -100,11 +100,11 @@ If we can estimate β1 and β2, then A and $\phi$ can be estimated.
 Therefore, $xt = β1 cos(2π\omega t) + β2 sin(2π\omega t) + wt $
 
 #### Exercises
-1.  Simulate and plot a series xt, using A=2, \phi = 0.6π and SD of white noise as 5 (for t= 1 
+1. Simulate and plot a series xt, using A=2, \phi = 0.6π and SD of white noise as 5 (for t= 1 
 to 1000). 
-2.   Generate two series z1 and z2 (for t= 1 to 1000). 
-3.    Fit a Linear model to between xt, z1 and z2 and estimate parameters β1, β2 , A and \phi. 
-4.  Plot x, fitted line. 
+2. Generate two series z1 and z2 (for t= 1 to 1000). 
+3.  Fit a Linear model to between xt, z1 and z2 and estimate parameters β1, β2 , A and \phi. 
+4.  Plot $x$, fitted line. 
 
 ### Question 6
 <h4> Question 6 </h4>

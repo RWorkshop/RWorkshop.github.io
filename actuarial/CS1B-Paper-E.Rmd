@@ -145,7 +145,7 @@ alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
 ```
 
-7. Perform a simple linear regression analysis on the new data using a model of the form y = α + βx + ε (cigarette consumption, y, on alcohol 
+7. Perform a simple linear regression analysis on the new data using a model of the form y = \alpha + βx + ε (cigarette consumption, y, on alcohol 
 consumption, x), where the error terms ε independently follow a N(0, s2) distribution.
 Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. 
 8. State the proportion of the total variability of the responses explained by the model, based on your output in exercise 7. 
@@ -162,9 +162,9 @@ parameterised as f(x) = le–lx
 The rate l has a Gamma prior distribution with parameters a and s. 
 A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as
 Z 3x + (1– Z)3 s
-α – 1, where Z = 
+\alpha – 1, where Z = 
 n
-α + n – 1
+\alpha + n – 1
 with n being the number of past waiting times observed.
 Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
 

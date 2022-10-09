@@ -20,12 +20,12 @@ The Logistic function can be defined by the function:
 
 $$ f(𝑥) = \frac{1}{(1 + exp(-x))}$$
 
-1. Create a function in R to calculate f(x). 
+1. Create a function in R to calculate $f(x)$. 
 
-2.  Create a plot of this function and evaluate it at values for x ranging from -10 to 10. Add appropriate x and y-axis labels. 
+2.  Create a plot of this function and evaluate it at values for $x$ ranging from -10 to 10. Add appropriate x and y-axis labels. 
 
 ### Question 2
-
+<h4>Question 2</h4>
 A random variable follows a Weibull distribution with parameters for the shape and scale as 
 follows:
 ```{r}
@@ -44,24 +44,23 @@ Use the in-build functions in R to:
 
 
 1. Simulate 1,000 values from a Weibull distribution with parameters given above, assign 
-this to a vector variable called ‘WeibullSim’. 
+this to a vector variable called ‘<tt>WeibullSim</tt>’. 
 2.  Calculate the mean and standard deviation of the simulated values. 
 <p>
-3.   Using the mean and standard deviation estimated from (ii), estimate the 𝜇 and 𝜎 parameters 
+3.   Using the mean and standard deviation estimated from part 2, estimate the 𝜇 and 𝜎 parameters 
 of a LogNormal distribution following the method of moments approach. 
-4.   Simulate 1,000 values from the LogNormal distribution using the parameter estimates in 
-(3.   above and assign this to a vector variable called ‘LognormalSim’ and calculate the 
+4.   Simulate 1,000 values from the LogNormal distribution using the parameter estimates in part 3 above and assign this to a vector variable called ‘LognormalSim’ and calculate the 
 mean and standard deviation of the simulated values. 
-5.  Plot a histogram of ‘WeibullSim’ and ‘LognormalSim’ showing the frequencies and paste 
+5.  Plot a histogram of ‘<tt>WeibullSim</tt>’ and ‘LognormalSim’ showing the frequencies and paste 
 the plot into your answer. 
 <p>
-6.  Plot the probability density function for ‘WeibullSim’ and ‘LognormalSim’ as a line plot.
-* Set the WeibullSim line to color ‘red’ and the LognormalSim line to color ‘green’.
+6.  Plot the probability density function for ‘<tt><tt>WeibullSim</tt></tt>’ and ‘LognormalSim’ as a line plot.
+* Set the <tt><tt>WeibullSim</tt></tt> line to color ‘red’ and the LognormalSim line to color ‘green’.
 * Set the y-axis limits from 0 to 0.00001.
 Hint: Use the density function in R to estimate densities of your simulated values. 
 
 ### Question 3
-
+<h4>Question 3</h4>
 An Actuary in the country of Actuaria believes the actions of a football player while playing 
 a football match, can be modelled on a ball-by-ball action basis using a Markov Chain. The 
 Actuary has considered 3 states for a player to model the ball-by-ball action – Pass, Shoot and 
@@ -97,12 +96,13 @@ obtained in exercise 4.
 
 ### Question 4
 
-The ‘sunspot’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. 
+The ‘***sunspot***’ dataset contains the monthly mean relative sunspot numbers from 1749 to 1983. 
 Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical 
 Observatory. Please import this dataset from the ‘datasets’ package in R.
-Libraries required:
-‘tseries’
-‘forecast’
+
+#### Libraries required:
+* ‘tseries’
+* ‘forecast’
 
 
 #### Exercises 
@@ -114,7 +114,7 @@ Function (PACF) of the data, giving appropriate labels for the x and y axes.
 
 3.   Estimate the ACF and PACF values at each lag. 
 
-4.   Comment on the ACF based on the charts and values computed in (2.  and (iii). 
+4.   Comment on the ACF based on the charts and values computed in (2.  and (3. . 
 
 5.  Calculate the simple seasonal difference with period 12. Print the top 12 values of the 
 seasonal difference. 
@@ -127,7 +127,8 @@ seasonal difference.
 
 The ‘***DTData.csv***’ file that has been provided contains details of individuals who made insurance claims in the country of **Actuaria**. 
 
-A ‘Yes’ in the ‘type’ column indicates a claim was made. The data, additionally contains details on the age and BMI of the individuals at the time of claim. Use a decision tree approach to classify the type of claims based on BMI and 
+A ‘Yes’ in the ‘type’ column indicates a claim was made. The data, additionally contains details on the age and BMI of the individuals at the time of claim. 
+Use a decision tree approach to classify the type of claims based on BMI and 
 age. 
 
 #### Library required 

@@ -25,7 +25,7 @@ parameter β1= 0.4, assigning the simulated values to a vector called YMA.
 
 2.  Generate, using a random number generator seed of 967, a simulated sequence 
 of n = 200 observations for a first-order autoregressive model with parameter 
-α1= 0.45, assigning the simulated values to a vector called YAR.  
+\alpha1= 0.45, assigning the simulated values to a vector called YAR.  
 
 3.  Plot, on four separate graphs, the sample autocorrelation function (sample 
 ACF) and sample partial autocorrelation function (sample PACF) for each of 
@@ -58,7 +58,7 @@ generated in exercise  6.
 8. Plot, on two separate graphs, the histograms of the two vectors, ACF2MA and 
 ACF2AR, generated in exercise  6.  
 
-9. Comment on the results in exercise s (vii) and (viii), including whether they agree 
+9. Comment on the results in exercise s (v2.   and (v3. , including whether they agree 
 with the expected asymptotic behaviour.  
 
 ### Question 2
@@ -128,7 +128,7 @@ exercises 3 and 4 .
 containing the updated policyholder cluster labels, defined above.  
 6. Generate a 2x2 matrix showing the number of policyholders with each possible combination of values of ***group_label_stage1*** and 
 ***group_label_stage2***.  
-7. Comment on the matrix generated in exercise  (vi) with reference to how the cluster labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
+7. Comment on the matrix generated in exercise  (v1.  with reference to how the cluster labels have changed between ***group_label_stage1*** and ***group_label_stage2***.  
 8. Plot the column, x1, of data set, portfolio, against column, x2, (with x1 on the x-axis and x2 on the y-axis), using two distinct colours to identify clusters A and B according to the label, ***group_label_stage2***.  
 The analyst decides to stop at this stage and to report ***group_label_stage2*** as the final 
 set of cluster labels. Comment on this decision.  

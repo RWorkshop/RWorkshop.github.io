@@ -1,0 +1,51 @@
+CS2B Paper G {data-navmenu="R for Risk Modelling and Survival Analysis"}
+==============================================================
+
+
+```{css, echo=FALSE}
+pre {
+  background: #ADD8E6;
+  max-width: 100%;
+  overflow-x: scroll;
+}
+```
+
+
+Column {.tabset}
+--------------------------------
+
+### Question 1
+
+<h4>Question 1</h4>
+
+
+1 The annual aggregate claim amount of an insurer follows a compound Poisson 
+distribution with parameter 1,000. Individual claim amounts follow a Gamma 
+distribution with shape parameter \alpha = 750 and rate parameter \lambda = 0.25. 
+(1.  Generate 20,000 simulated aggregate claim values for this insurer, using a 
+random number generator seed of 914. Use the R function, <tt>head()</tt>, to 
+display the first seven simulated claim values in your answer script. 
+(2.   Determine the mean and the standard deviation of the simulated aggregate 
+claim values from part (1. . 
+---
+(3.  Plot the empirical density function of the simulated aggregate claim values 
+from part (1. , setting the x-axis range from 2,600,000 to 3,300,000 and the 
+y-axis range from 0 to 0.0000045. 
+(4.  Suggest a suitable distribution, including its parameters, that approximates the 
+simulated aggregate claim values from part 1.  
+(5.  Generate 20,000 values from your suggested distribution in part 4 using a 
+random number generator seed of 914. Use the R function, <tt>head()</tt>, to 
+display the first seven generated values in your answer script. 
+(v1.  Plot the empirical density function of the simulated values in part 5 as a 
+different coloured line in the chart that was produced in part 3. .  
+
+
+### Question 2
+
+<h4>Question 2</h4>
+
+
+
+### Question 3
+
+<h4>Question 3</h4>

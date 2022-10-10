@@ -11,10 +11,11 @@ Column {.tabset}
 
 Before answering this question, the data file must be generated in R using the 
 following code: 
-```{r}
+
+<pre><code>
 set.seed(121118); 
 y <- arima.sim(list(order=c(1,1,0),ar=0.7), n=300)
-```
+</code></pre>
 
 
 #### Exercises
@@ -28,8 +29,7 @@ that a zero mean stationary distribution is appropriate for the residuals.
 Autocorrelation function (PACF) of the original data, giving 
 appropriate labels for each axis and paste the charts into your answer.
 <p>
-Comment, by visually inspecting these plots, on the possible modelling 
-strategy which could be adopted. 
+Comment, by visually inspecting these plots, on the possible modelling strategy which could be adopted. 
 <p>
 4. Perform an appropriate transformation to the data such that a stationary 
 model is possible, pasting any relevant charts into your answer. Comment on your answer. 

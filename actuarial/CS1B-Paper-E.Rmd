@@ -36,11 +36,14 @@ A researcher has collected the following data on a group of students, regarding
 whether they passed or failed an exam and whether or not they attended tutorials:
 
 
-| Number of students  | Exam Passed | Exam Failed |  
-|---|---|---|---|---|
-| Attended tutorials  | 132 | 27 |  
-| Did not attend tutorials  | 120 | 51 |  
-|  |  |  |  |  |
+$$
+\begin{array}{|l||c|c|}
+ \hline
+\mbox{Number of students}  &  \mbox{Exam Passed} &  \mbox{Exam Failed} \\ \hline  \hline
+\mbox{Attended tutorials  }&  132 &  27 \\   \hline
+\mbox{Did not attend tutorials}  &  120 &  51 \\   \hline
+\end{array}
+$$
 
 
 #### Exercises
@@ -56,9 +59,9 @@ in part 1.
 
 
 The data can be entered into R using the following code:
-```{ eval= FALSE}
-exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2) 
-```
+<pre><code>
+exam.success <- matrix(c(132,120,27,51),ncol=2,nrow=2) 
+</code></pre>
 
 
 #### Video
@@ -68,7 +71,7 @@ exam.success = matrix(c(132,120,27,51),ncol=2,nrow=2)
 
 ### Question 3
 
-
+<h4> Question 3</h3>
 
 A machine in a sweet factory fills bags of sweets to weigh 500 grams. The actual weight of the sweet bags is known to follow a Normal distribution. 
 
@@ -94,11 +97,10 @@ used in the test.
 
 The data can be entered into R using the following code:
 
-
-```{ eval= FALSE}
+<pre><code>
 weight<-c(474.11,512.01,493.64,495.03,518.13,486.03,
 494.48,501.76,498.83,503.02)
-```
+</code><pre>
 
 
 #### Video
@@ -110,13 +112,14 @@ weight<-c(474.11,512.01,493.64,495.03,518.13,486.03,
 <h4> Question 4 Part (a)</h4>
 
 Data were collected on average alcohol and cigarette consumption per adult per year for a number of countries.
-The data are given in the file smoking_data.RData and contain the following information:
+The data are given in the file <tt>smoking_data.RData</tt> and contain the following information:
 
 * ***country*** the country concerned;
 * ***alcohol***: alcohol consumption per adult per year (litres/year);
 * ***cigarettes***: number of cigarettes consumed per adult per year.
 
 #### Exercises
+
 1. Construct a scatterplot of the data with alcohol consumption on the 
 x axis. Comment on the relationship between the data on alcohol and cigarette 
 consumption based on your plot.
@@ -124,11 +127,12 @@ consumption based on your plot.
 2.  Calculate Pearson’s correlation coefficient between the data on alcohol and 
 cigarette consumption. 
 An analyst suggests using the following R code to modify the data:
+
 3.  Explain what the above code does and give a justification for its use. 
 For the remainder of the question, use the modified data (alcohol.2, cigarettes.2), as produced by applying the R code above.
 4.  (a) Construct a scatterplot with alcohol consumption on the x axis.
 (b) Calculate Pearson’s correlation coefficient between the new data on alcohol and cigarette consumption.
-(c) Comment on your answers in parts 2.  and 4. (b). 
+(c) Comment on your answers in parts 2 and 4 (b). 
 
 5.  Perform a hypothesis test for the null hypothesis that Pearson’s population 
 correlation coefficient is equal to zero, against the alternative that it is positive. 
@@ -140,31 +144,39 @@ You should report the p-value of the test and a clear conclusion.
 A media bulletin has reported that ‘'h‘igher alcohol consumption causes higher cigarette consumption .
 6.  Comment on whether this report is justified based on your analysis in exercises 4 and 5.
 
-```{r eval=FALSE}
+<pre><code>
 alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
-```
+</code></pre>
 
-7. Perform a simple linear regression analysis on the new data using a model of the form y = \alpha + βx + ε (cigarette consumption, y, on alcohol 
-consumption, x), where the error terms ε independently follow a N(0, s2) distribution.
+7. Perform a simple linear regression analysis on the new data using a model of the form $$y = \alpha + βx + ε$$ (i.e. with cigarette consumption, y, on alcohol 
+consumption, x), where the error terms ε independently follow a $N(0, s^2)$ distribution.
+<p>
 Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. 
 8. State the proportion of the total variability of the responses explained by the model, based on your output in exercise 7. 
 
 9. Plot a graph of the residuals of the model fitted in exercise 7 against the explanatory variable. 
-10. Comment on the validity of the model, based on your output in 
-part (ix) . 
+10. Comment on the validity of the model, based on your output in part 9.
 
 ### Question 5
 <h4> Question 5</h4>
 A waiting time random variable X follows an Exponential distribution with rate l
-parameterised as f(x) = le–lx
- (x > 0, l > 0).
+parameterised as $$\begin{eqnarray}
+f(x) &=& le–lx
+\end{eqnarray}
+$$
+
+with (x > 0, l > 0).
 The rate l has a Gamma prior distribution with parameters a and s. 
+<p>
 A Bayesian credibility model provides that the posterior mean of 1/l can be expressed as
+$$\begin{eqnarray}
 Z 3x + (1– Z)3 s
 \alpha – 1, where Z = 
 n
 \alpha + n – 1
+\end{eqnarray}
+$$
 with n being the number of past waiting times observed.
 Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
 

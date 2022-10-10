@@ -17,6 +17,7 @@ x <- c(0.22,0.38,1.28,0.54,0.56,1.36,0.55,0.37,0.43,0.46,0.62,
 ```
 
 #### Exercises 
+
 1. Estimate the expected value of $X$. 
 
 2. Calculate a 95% confidence interval for the expected value of $X$ assuming that $X$ is Normally distributed. 
@@ -29,41 +30,50 @@ method with 10,000 bootstrap replications.
 ### Question 2
 
 <h4>Question 2</h4>
-The dataset “***Interest_rates.csv***” contains a series of returns on bonds of maturities 
-1 year, 5 years, 10 years, 15 years, 20 years and 30 years (i.e. bonds that provide a 
+
+The dataset “***Interest_rates.csv***” contains a series of returns on bonds of maturities 1 year, 5 years, 10 years, 15 years, 20 years and 30 years (i.e. bonds that provide a 
 return of the principal investment after 1, 5, 10, 15, 20 and 30 years respectively).
 
 
 #### Exercises
+
 1.  Calculate the Pearson correlation coefficient matrix for this data. Comment on the correlations between the data using the matrix.
 
 2.  Perform a reduction of the dimension of the data using principal component analysis with the method of singular value decomposition. 
-Your answer should include a summary of the principal component analysis. Suggest with reasons, using the output of the R analysis, how many 
-components of the transformed data should be retained.
+<p>
+Your answer should include a summary of the principal component analysis. Suggest with reasons, using the output of the R analysis, how many components of the transformed data should be retained.
 
 ### Question 3
 
 <h4>Question 3</h4>
-Use the command ***set.seed(2021)*** to initialise the random number generator. 
+
+Use the command <tt>set.seed(2021)</tt> to initialise the random number generator. 
 When you execute any R code, make sure you run the entire R script including the 
-line set.seed(2019).
+line <tt>set.seed(2019)</tt>.
+
 Consider a random sample $X1, \ldots, Xn$ from an Exponential distribution with parameter
-l and define $$Y = \sum^{n}_{i=1} Xi$$
+$\lambda$ and define $$Y = \sum^{n}_{i=1} Xi$$
+
 #### Exercises
+
 1.  State the distribution of $Y$, giving all the parameters of the distribution. 
 2.  Perform simulation of a sample $x1, \ldots, xn$ with sample size $n = 15$ from an 
 exponential distribution with parameter l = 2. 
 3.  Calculate the value of $Y$ for the sample in exercise 2.
 4.  Perform 1,000 repetitions of exercises 2 and 3 to obtain a Bootstrap sample 
-y1, …, yB from the random variable $Y$ with $B = 1,000$. 
+$y_1,\ldots, y_B$ from the random variable $Y$ with $B = 1,000$. 
 5.  Plot a histogram showing the relative frequencies of the sample $y_1,\ldots, y_B$ from 
 part 4. . 
+
 6.  Compare graphically the histogram in exercise 5 to the density of a 
 suitable Normal distribution. You might find the following R command 
 useful: 
-```{r eval=FALSE}
+
+
+<pre><code>
 curve(dnorm(x,mean=, sd=, add=TRUE, lwd=2,col="red"))
-```
+</code></pre>
+
 7. Comment on your findings in exercise 6 in the context of the Central 
 Limit Theorem.
 
@@ -75,14 +85,19 @@ years, is given by the equation:
 $$Max Rate = 220 – Age$$
 Suppose this is to be empirically proven and 15 people of varying ages are tested for 
 their maximum heart rate. The following data are collected:
-Age (years) 18 23 25 35 65 54 34 56 72 19 23 42 18 39 37
-Max Rate 202 186 187 180 156 169 174 172 153 199 193 174 198 183 178
+$$
+\begin{array}{|l||c|c|c|c|c|c|c|c|c|c|} \hline
+\mbox{Age (years)} & 18 & 23 & 25 & 35 & 65 & 54 & 34 & 56 & 72 & 19 & 23 & 42 & 18 & 39 & 37 \\ \hline
+\mbox{Max Rate} & 202  &  186  &  187  &  180  &  156  &  169  &  174  &  172  &  153  &  199  &  193  &  174  &  198  &  183  &  178 \\ \hline
+\end{array}
+$$
 The data can be entered into R using the following commands:
-```{r eval=FALSE}
+
+<pre><code>
 x <- c(18,23,25,35,65,54,34,56,72,19,23,42,18,39,37)
 y <- c(202,186,187,180,156,169,174,172,153,199,193,174,
 198,183,178)
-```
+</code></pre>
 
 #### Exercises 
 
@@ -99,12 +114,15 @@ suitable test statistic.
 ### Question 5
 
 <h4>Question  1</h4>
-5 The data given in the file policies_data.RData show the numbers of policies 
+
+The data given in the file policies_data.RData show the numbers of policies 
 (n.policies) by sex of policyholder (sex.code; 1 for male, 2 for female) 
 and class of business (class.code; 5 different classes) from a certain insurance 
 portfolio. 
-1.  Construct a plot of the logarithm of the number of policies (on the y
-axis) against the class of business. Comment on the relationship in the data based on your plot.
+
+
+### # Exercises 
+Construct a plot of the logarithm of the number of policies (on the yaxis) against the class of business. Comment on the relationship in the data based on your plot.
 <p>
 In the plot produced in exercise  1.  we can distinguish between male and female policyholders. 
 The plot is shown below, with “M” and “F” showing male and female policyholders respectively: 
@@ -117,6 +135,7 @@ sex.code = as.factor(sex.code)
 ```
 3.  Fit a generalised linear model analysis to the data, using a Poisson distribution, with the numbers of policies as the response variable and the class of business 
 as the only factor. Your answer should include estimates of the parameters, corresponding p-values and a brief interpretation of their effect. 
+<p>
 4.  Fit a second Poisson generalised linear model analysis to the data, using the numbers of policies as the response variable and both the class of business and 
 the sex of the policyholders as factors. Your answer should include estimates of the parameters, corresponding p-values and a brief interpretation of their 
 effect. 
@@ -124,3 +143,4 @@ effect.
 Your answer should include the null hypothesis, the p-value of the relevant test and a clear conclusion. 
 
 6.  Calculate the predicted number of policies for male policyholders when the class of business is 2, based on the model chosen in exercise 5. 
+<p>

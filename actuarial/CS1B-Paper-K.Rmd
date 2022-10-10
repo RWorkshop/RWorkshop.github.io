@@ -10,7 +10,7 @@ Column {.tabset}
 ### Question 1
 
 <h4>Question 1</h4>
- An engineer is considering the maximum number of people who can occupy a lift. In 
+An engineer is considering the maximum number of people who can occupy a lift. In 
 particular, the engineer wants to assess the probability of exceeding a maximum 
 weight when eight people are allowed to use the lift at the same time, compared to 
 nine people. 
@@ -28,8 +28,9 @@ with a mean of 630 kg and standard deviation of 61 kg.
   
 2. Calculate the probability that the total weight of nine people exceeds 650 kg.
   
-(iii) Comment on your answers to parts (i) and (ii).  
-(iv) Calculate the interval for the central region containing 80% of the distribution 
+3. Comment on your answers to parts (i) and (ii).  
+
+4. Calculate the interval for the central region containing 80% of the distribution 
 of the total weight of eight people.
 Assume now that the total weight of eight people chosen at random follows a gamma 
 distribution with parameters α = 96.5220 and λ = 0.1724. 
@@ -45,12 +46,13 @@ distribution of the total weight of eight people in this case.
 
 <h4>Question 2</h4>
 
-CS1B A2022–3 
-2 (i) (a) 
-
 Simulate a sample of 100 values from a Beta distribution with 
 parameters $a = 3$, $b = 1$. Use the command <tt>set.seed(12345)</tt> to 
 initialise the random number generator, before you start the simulation. 
+
+
+
+#### Exercises 
 (b) Plot a histogram of the sample simulated in part (i)(a). 
 (c) Comment on the shape of the histogram produced in part (i)(b). 
 
@@ -73,9 +75,9 @@ For the remaining parts of the question consider the following small sample of d
 <pre><code>
 y <- c(4.9, 3.3, 2.2, 2.3, 1.6, 2.4, 4.7, 1.4, 1.7, 5.1) 
 </code></pre>
-(iii) Determine a 90% confidence interval for the population mean of these data, 
+3. Determine a 90% confidence interval for the population mean of these data, 
 stating any assumptions that you make. [3] 
-(iv) Determine an estimate of the standard error of the sample mean using these 
+4. Determine an estimate of the standard error of the sample mean using these 
 data.  
 
 

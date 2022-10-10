@@ -20,7 +20,7 @@ between 1-Jan-2016 and 31-Dec-2018.
 calculate the proportion of the total sample died, survived and withdrew from the 
 observation period.
 
-2.  Compute two new columns ‘Age_At_Entry’ and ‘Age_At_Exit’ for each person (you 
+2.  Compute two new columns ‘***Age_At_Entry***’ and ‘***Age_At_Exit***’ for each person (you 
 can assume a completed year as 365.25 days and you can compute the age as difference 
 between the dates in decimals like 35.234 years) and print the last 6 rows of the newly 
 formed table. 
@@ -35,20 +35,21 @@ central exposed to risk £37
 <p>
 6.  Total number of years of contribution to £37
 𝑐
-by all the lives together (Round your 
-answer to 2 digits after the decimal).
+by all the lives together (Round your answer to 2 digits after the decimal).
 
 
 
 ### Question 2
 <h4> Question 2</h4>
 
+
+#### Exercises
 1. Simulate a time series of length 200 observations in a line chart using the following R 
 function and comment on stationarity. (Set a seed value of 100)
 
-```{r}
+<pre><code>
 arima.sim(list(order = c(1,1,1), ar = 0.7, ma = 0.3), n = 200) 
-```
+</code></pre>
 
 
 2.  Plot the auto correlation function and partial auto correlation function of the data if (1. 

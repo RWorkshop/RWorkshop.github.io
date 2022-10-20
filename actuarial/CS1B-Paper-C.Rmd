@@ -124,9 +124,10 @@ portfolio.
 ### # Exercises 
 Construct a plot of the logarithm of the number of policies (on the yaxis) against the class of business. Comment on the relationship in the data based on your plot.
 <p>
-In the plot produced in exercise  1.  we can distinguish between male and female policyholders. 
+In the plot produced in part 1 we can distinguish between male and female policyholders. 
 The plot is shown below, with “M” and “F” showing male and female policyholders respectively: 
 2.  Comment on the relationship in the data based on this plot. 
+<p>
 For the remainder of the question you will need to ensure that the sex and class variables are treated as categorical variables (factors). 
 You can use the following R code:
 ```{r eval=FALSE}

@@ -11,9 +11,11 @@ Column {.tabset}
 
 <h4>Question 1</h4>
 
-
-Q. 1) Identify the probability distribution that best fits the below questions. Calculate the 
+Identify the probability distribution that best fits the below questions. Calculate the 
 following using R functions:
+
+#### Exercises 
+
 1.  Assume golf balls from the driving range next door lands in your yard at an average 
 rate of 3 balls per hour during the day. What is the probability that 10 or fewer golf 
 balls will land in your yard during the afternoon, assuming the afternoon is 5 hours 
@@ -22,7 +24,7 @@ long?
 independently. The probability that a person voted independently is 20%. What is 
 the probability that 70 people must be asked before you can find 5 people who voted 
 independently? 
-
+<p>
 
 3.  Assume you flip a fair coin 100 times. What is the number N such that, 90% of the 
 time, the number of heads is less than or equal to N?
@@ -32,7 +34,7 @@ probability that the fourth person the researcher talks to is the first person t
 the law?
 5.  Assume that a light bulb has a mean lifetime of 1000 hours. What is the probability 
 that the light bulb survives to 2000 hours?
-v1.  Assume a random variable Z is distributed according to the normal distribution with 
+6.  Assume a random variable Z is distributed according to the normal distribution with 
 mean 6 and standard deviation 4. What is the probability that Z takes on a value 
 between -1 and 3?
 

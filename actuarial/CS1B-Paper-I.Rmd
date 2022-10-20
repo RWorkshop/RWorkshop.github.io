@@ -57,13 +57,11 @@ thisTable_t %>% kable( col.names = NULL) %>%
 
 The values can be entered in R using: 
 
-```{ eval= FALSE}
-
-approval_before <- c(8, 6, 8, 7, 7, 4, 2, 10, 8, 7, 10, 
-8, 8, 9, 6) 
-approval_after <- c(5, 6, 2, 3, 4, 1, 4, 7, 4, 2, 10, 1, 
-5, 3, 7) 
-```
+<pre><code>
+approval_before <- c(8, 6, 8, 7, 7, 4, 2, 10, 8, 7, 10, 8, 8, 9, 6)
+ 
+approval_after <- c(5, 6, 2, 3, 4, 1, 4, 7, 4, 2, 10, 1,  5, 3, 7) 
+</code></pre>
 
 ---
 
@@ -83,7 +81,7 @@ Approval after results.
 
 ### Question 2
 <h4> Question 2</h4>
-Use the command ***set.seed(1234)*** to initialise the random number generator. 
+Use the command <tt>set.seed(1234)</tt> to initialise the random number generator. 
 
 
 #### Exercises
@@ -100,7 +98,7 @@ with parameter $\lambda  = 5$.
 mean. Estimate the parameter $\lambda$  using the maximum likelihood estimator and 
 the sample in part 1
 
-6. Generate another sample of size n = 180 from an Exponential 
+6. Generate another sample of size $n = 180$ from an Exponential 
 distribution with parameter $\lambda  = 5$ and estimate the parameter $\lambda$  using 
 the maximum likelihood estimator and the new sample. 
 
@@ -117,14 +115,15 @@ win with probability 0.36 independently of all other customers.
 Let $Y$ denote the number of winners in a random sample of 900 new customers. 
 
 #### Exercises
+
 1.  State a suitable distribution for the random variable Y. 
 2. Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for all 
-values $k = 220, 240, 260, …, 400$.
+values $k = 220, 240, 260,\ldots, 400$.
 
 3. It is suggested that the true distribution of $Y$ can be approximated with a Normal 
 distribution with expectation EሾYሿ = 324 and a standard deviation of 14.4. 
 Calculate, to four decimal places, the probabilities $P[k < Y \leq k + 20]$ for all 
-values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution. 
+values $k = 220, 240, 260,\ldots, 400$ based on the suggested Normal distribution. 
 
 4. Plot the values calculated in parts 2. and 3. on the same graph. 
 [Hint: you may find the R command ***lines(…)*** useful.] 
@@ -133,19 +132,19 @@ values $k = 220, 240, 260, …, 400$ based on the suggested Normal distribution.
 
 ### Question 4
 <h4> Question 4</h4>
-4 An actuarial modeller in a health insurance company is constructing a Generalised 
+
+An actuarial modeller in a health insurance company is constructing a Generalised 
 Linear Model (GLM) to analyse claim numbers for its critical illness policies. For 
 every policy over the past year, the company has collected the number of reported 
-claims (Claim_number) and data on the following covariates:
+claims (***Claim_number***) and data on the following covariates:
 
-* Age: Age of policyholder, a  number between 18 and 80 
-* Gender: Gender of the policyholder (Male or Female) 
-* Region: A description of the region where the policyholder lives 
-* Pre_existing_health_condition: A categorical valuerepresenting whether the 
+* ***Age***: Age of policyholder, a  number between 18 and 80 
+* ***Gender***: Gender of the policyholder (Male or Female) 
+* ***Region***: A description of the region where the policyholder lives 
+* ***Pre_existing_health_condition***: A categorical valuerepresenting whether the 
 policyholder has a pre-existing health condition, 0 = no and 1 = yes
 <p>
-The data given in the file named Claims_Experience.RData show the past 
-year’s reported claims for this company’s critical illness policies. After loading the 
+The data given in the file named ***Claims_Experience.RData*** show the past year’s reported claims for this company’s critical illness policies. After loading the 
 data into R, using the command load("Claims_Experience.RData"), the 
 data frame ***data_claims*** with its variables listed above will be available. 
 
@@ -154,24 +153,22 @@ and is deciding whether to fit the GLM using a Poisson or Normal distribution.
 
 #### Exercises
 
-1.  Fit a GLM, using a Normal distribution, that treats age as a numerical variable 
+1.  Fit a GLM, using a Normal distribution, that treats age as a numerical variable and the remaining three covariates as factors, calling this model_g. Your 
+answer should include the estimated value, standard error and p-value of each parameter in the model. 
+2. 
 
 
-and the remaining three covariates as factors, calling this model_g. Your 
-answer should include the estimated value, standard error and p-value of each 
-parameter in the model. 
-2. (a) Fit a GLM, using the Poisson distribution, that treats age as a 
-numerical variable and the remaining three covariates as factors, 
-calling this ***model_p***. 
-
-Your answer should include the estimated value, standard error and 
-p-value of each parameter in the model. 
-(b) Justify which model the modeller should use, using your answers to 
-parts 1.  and 2.(a). 
-(c) Comment on the dependence of the number of reported claims on 
+<ol type="a">
+<li> Fit a GLM, using the Poisson distribution, that treats age as a numerical variable and the remaining three covariates as factors, 
+calling this ***model_p***. Your answer should include the estimated value, standard error and 
+p-value of each parameter in the model.  </li>
+<li> Justify which model the modeller should use, using your answers to 
+parts 1.  and 2.(a) </li>
+<li> standard deviation of premium </li>
+<li> Comment on the dependence of the number of reported claims on 
 Pre_existing_health_condition based on your answers to 
-parts 2.(a) and 2.(b). 
-
+parts 2.(a) and 2.(b).  </li>
+</ol>
 
 The modeller has fitted the GLM using a Poisson distribution and now wants to 
 investigate which of the three factors should be selected in the model, by using a 
@@ -182,7 +179,7 @@ considered:
 * model_p4: removes Gender, Pre_exisiting_health_condition and  Region from model_p 
 
 3.  Compare the values of the Akaike’s Information Criterion for the four models 
-model_p, model_p2, model_p3 and model_p4. [6] 
+model_p, model_p2, model_p3 and model_p4. 
 4.  (a) Comment on your answer to part 3. . 
 (b) Comment on the differences between the process in part 3.  and the full backward selection method. 
 
@@ -211,7 +208,8 @@ It is assumed that the two samples come from Normal populations with equal
 variances. 
 
 #### Exercises
-1.  Calculate an appropriate test statistic for the hypothesis of equal means in the two corresponding populations using these data.  
+
+1. Calculate an appropriate test statistic for the hypothesis of equal means in the two corresponding populations using these data.  
 2. Test at a 1% significance level whether the mean flat prices are the same in the two cities, against the alternative that they are different, based on your answer 
 to part 1. . 
 The standard assumptions for a two-sided test of the hypothesis of equal means in two 
@@ -228,9 +226,9 @@ where the critical point is the \alpha/2 quantile of an appropriate distribution
 
 
 An estimate of the true significance level for this two-sided test, when the chosen 
-level of significance is \alpha = 0.1, can be computed using the R Monte Carlo simulation 
+level of significance is $\alpha = 0.1$, can be computed using the R Monte Carlo simulation 
 code provided below: 
-```{r eval=FALSE}
+<pre><code>
 set.seed(123) # 
 alpha = 0.1 
 m=20 
@@ -245,7 +243,7 @@ if (abs(ts)>=qt(1-alpha/2, df)) #
 nrej=nrej+1 # 
 } 
 alpha_est=nrej/N # 
-```
+</code></pre>
 Note that the code provided above lacks best practice of including appropriate 
 comments. 
 3.  Explain the provided code by placing comments after each ‘#’ sign in 
@@ -253,10 +251,14 @@ the code.
 
 4.  Estimate the true significance level, by using the code provided above, when the two populations are from a standard Normal distribution. 
 5.  Estimate the true significance level, by adjusting the code provided above to reflect the following pairs of populations: 
-(a) The first population is from a standard Normal distribution and the 
-second population is from a Normal distribution with mean 0 and standard deviation 10. 
-(b) The first population is from a Normal distribution with mean 10 and standard deviation 2 and the second population is from an Exponential 
-distribution with mean 10. 
- 
+
+<ol type="a">
+<li> The first population is from a standard Normal distribution and the 
+second population is from a Normal distribution with mean 0 and standard deviation 10.</li>
+<li> The first population is from a Normal distribution with mean 10 and standard deviation 2 and the second population is from an Exponential 
+distribution with mean 10.  </li>
+</ol>
+
+
 6.  Compare your estimates of the true significance level under all scenarios in 
 parts 4. , 5. (a) and 5. (b), stating your conclusions. 

@@ -43,9 +43,14 @@ They both marked the same 150 exam papers, with 10 questions and total possible 
 100 for each exam paper. The data were collected and arranged into 10 equally spaced groups, with marks rounded to the nearest whole number. 
 
 Below are the frequencies of the marks given by each of the exam markers: 
-Exam marks 0–10 11–20 21–30 31–40 41–50 51–60 61–70 71–80 81–90 91–100
-Marker 1 1 8 14 22 33 34 21 9 6 2 
-Marker 2 0 4 16 25 27 42 23 4 9 0 
+
+$$
+\begin{array}{|c||c|c|c|c|c|c|c|c|c|c|}
+Exam marks & 0–10 & 11–20 & 21–30 & 31–40 & 41–50 & 51–60 & 61–70 & 71–80 & 81–90 & 91–100 \\ \hline
+Marker & 1 & 1 & 8 & 14 & 22 & 33 & 34 & 21 & 9 & 6 & 2 \\ \hline
+Marker & 2 & 0 & 4 & 16 & 25 & 27 & 42 & 23 & 4 & 9 & 0 \\ \hline
+\end{array}
+$$
  
 You can enter the exam marks for Marker 1 and Marker 2 into R using: 
 ```{r eval=FALSE}
@@ -70,8 +75,8 @@ Marker 2 3 2 4 0 3 4 2 3 3 6
 You can enter the scores for Marker 1 and Marker 2 into R using: 
 
 ```{r eval=FALSE}
-marker_1 = c(4,1,5,1,4,6,4,5,3,6) 
-marker_2 = c(3,2,4,0,3,4,2,3,3,6) 
+marker_1 <- c(4,1,5,1,4,6,4,5,3,6) 
+marker_2 <- c(3,2,4,0,3,4,2,3,3,6) 
 ```
 
 #### Exercises
@@ -96,25 +101,36 @@ Alice assumed a discrete prior distribution g(p) given in the following table:
 p 0.1 0.2 0.3 0.4 0.5 
 g(p) 0.5 0.2 0.2 0.05 0.05 
 Norman chose to use a beta prior distribution for p, with parameters 3 and 12. 
-1.  (a) Calculate the mean and the standard deviation for Alice’s prior
-distribution. 
+1.  (a) Calculate the mean and the standard deviation for Alice’s prior distribution. 
 (b) Generate 10,000 random values from Norman’s prior distribution. 
 (c) Calculate the mean and standard deviation of the values generated in
-part 1. (b). 
+part 1 (b). 
 (d) Comment on whether or not Alice and Norman have similar prior 
 beliefs for p. 
+<p>
 Norman’s beta prior distribution for p is adopted for the remainder of the question. 
 The likelihood of the model in the study is given by: 
-Lሺpሻ ∝ p∑ yi ሺ1 – pሻn – ∑ yi . 
-The posterior density of p is given by: 
-f(p|y) ∝ p2 + ∑ yiሺ1 – pሻ11 + n – ∑yi ,
-where ∑ yi is the total sum of all the binary data. 
-2.  Plot the shape of the posterior density of p without identifying it. 
+$$Lሺpሻ ∝ p\sum  yi ሺ1 – pሻn – \sum  yi . $$
+The posterior density of $p$  is given by: 
+$$f(p|y) ∝ p2 + \sum  yiሺ1 – pሻ11 + n – \sum yi ,$$
+where \sum  yi is the total sum of all the binary data. 
+2.  Plot the shape of the posterior density of $p$ without identifying it. 
 3.  Plot the density of Norman’s prior distribution by setting ylim = c(0,14). 
  
-The posterior distribution of p is beta with parameters 3 + ∑ yi and 12 + n – ∑ yi
+The posterior distribution of $p$  is beta with parameters 3 + \sum  yi and 12 + n – \sum  yi
 . 
-4.  (a) Plot the posterior density of p by adding it to the plot in exercise  3. . 
+4.  
+
+<ol type="a">
+<li>  Plot the posterior density of $p$  by adding it to the plot in exercise  3. .</li>
+<li>  Compare the two densities using your answer in exercise  4. (a). </li>
+<li>  Comment on the extent to which the posterior distribution is affected 
+by the prior distribution. 
+ </li>
+</ol>
+
+
+(a) Plot the posterior density of $p$  by adding it to the plot in exercise  3. . 
 (b) Compare the two densities using your answer in exercise  4. (a). 
 (c) Comment on the extent to which the posterior distribution is affected 
 by the prior distribution. 
@@ -122,17 +138,23 @@ by the prior distribution.
 5.  Determine a 90% interval estimate for p based on its posterior distribution. 
  
 6.  Determine the exact posterior probability that p exceeds 0.25. 
-7. (a) Generate 10,000 samples from the posterior distribution of p. 
-(b) Calculate the proportion of sampled values of p that exceed 0.25. 
-(c) Compare your answer in exercise  (v2.  (b) with your answer in exercise  6. . 
+7.
 
+
+<ol type="a">
+<li> Generate 10,000 samples from the posterior distribution of p. </li>
+<li> Calculate the proportion of sampled values of $p$  that exceed 0.25.  </li>
+<li> Compare your answer in part 7. b) with your answer from part6. . 
+</li>
+</ol>
+ 
 ### Question 4
 
 <h4>Question  4</h4>
 A statistician wants to model the number of passengers boarding a bus from a bus stop close to a student residential area. They can think of three explanatory variables: 
 which route it is (at 8 am or 9 am), if it is during the semester or not, and the temperature (temp) in degrees Celsius. 
 <p>
-The statistician has data for 20 days, given in the file named CS1passenger.RData, and believes that the response variable (Passengers) follows a Poisson distribution. 
+The statistician has data for 20 days, given in the file named ***CS1passenger.RData***, and believes that the response variable (Passengers) follows a Poisson distribution. 
 After loading the data into R, the data frame data_passenger with all variables (Passengers, route, 
 semester, temp) will be available. 
 

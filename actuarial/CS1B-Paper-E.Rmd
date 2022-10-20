@@ -130,9 +130,15 @@ An analyst suggests using the following R code to modify the data:
 
 3.  Explain what the above code does and give a justification for its use. 
 For the remainder of the question, use the modified data (alcohol.2, cigarettes.2), as produced by applying the R code above.
-4.  (a) Construct a scatterplot with alcohol consumption on the x axis.
-(b) Calculate Pearson’s correlation coefficient between the new data on alcohol and cigarette consumption.
-(c) Comment on your answers in parts 2 and 4 (b). 
+4. 
+
+
+<ol type="a">
+<li> Construct a scatterplot with alcohol consumption on the x axis.</li>
+<li> Calculate Pearson’s correlation coefficient between the new data on alcohol and cigarette consumption. </li>
+<li> Comment on your answers in parts 2 and 4 (b). </li>
+</ol>
+
 
 5.  Perform a hypothesis test for the null hypothesis that Pearson’s population 
 correlation coefficient is equal to zero, against the alternative that it is positive. 
@@ -149,18 +155,18 @@ alcohol.2 = alcohol[-c(6,16)]
 cigarettes.2 = cigarettes[-c(6,16)]
 </code></pre>
 
-7. Perform a simple linear regression analysis on the new data using a model of the form $$y = \alpha + βx + ε$$ (i.e. with cigarette consumption, y, on alcohol 
+7. Perform a simple linear regression analysis on the new data using a model of the form $$y = \alpha + \beta x + \epsilon$$ (i.e. with cigarette consumption, y, on alcohol 
 consumption, x), where the error terms ε independently follow a $N(0, s^2)$ distribution.
 <p>
 Your answer should show the fitted line plotted on the data scatterplot and report the estimate of parameter s. 
-8. State the proportion of the total variability of the responses explained by the model, based on your output in exercise 7. 
+8. State the proportion of the total variability of the responses explained by the model, based on your output in part 7. 
 
-9. Plot a graph of the residuals of the model fitted in exercise 7 against the explanatory variable. 
+9. Plot a graph of the residuals of the model fitted in part 7 against the explanatory variable. 
 10. Comment on the validity of the model, based on your output in part 9.
 
 ### Question 5
 <h4> Question 5</h4>
-A waiting time random variable X follows an Exponential distribution with rate l
+A waiting time random variable X follows an Exponential distribution with rate $\lambda$
 parameterised as $$\begin{eqnarray}
 f(x) &=& le–lx
 \end{eqnarray}
@@ -178,10 +184,10 @@ n
 \end{eqnarray}
 $$
 with n being the number of past waiting times observed.
-Assume that the parameters of the prior Gamma distribution are a = 5 and s = 1.
+Assume that the parameters of the prior Gamma distribution are $a = 5$ and $s = 1$.
 
 #### Exercises
-1.  Determine an estimate of the posterior mean of 1/l assuming n = 10 by 
+1.  Determine an estimate of the posterior mean of 1/l assuming $n = 10$ by 
 implementing M = 3,000 Monte Carlo repetitions. 
 2.  Determine an estimate of the posterior mean of 1/l and the value of $X$ when 
 n = 1,000, by implementing M = 3,000 Monte Carlo repetitions. 

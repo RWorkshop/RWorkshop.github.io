@@ -95,7 +95,7 @@ using only the claim amounts recorded in vector $Y$.
 
 ### Question 3 Part (a)
 <h4> Question 3</h4>
- An analyst is investigating a life insurance portfolio data set that comprises two variables, x1 and x2, for 200 policyholders. 
+ An analyst is investigating a life insurance portfolio data set that comprises two variables, $x_1$ and $x_2$, for 200 policyholders. 
  The analyst is exploring whether the 200 policyholders can be divided into two clusters (labelled A and B) based on the two 
 variables, $x_1$ and $x_2$. 
 
@@ -114,7 +114,7 @@ policyholders in the data set to cluster A, and the remaining policyholders to c
 containing the policyholder cluster labels, defined above.  
 2.  Determine the coordinates (x1A, x2A) of the centre of cluster A and the coordinates (x1B, x2B) of the centre of cluster B.  
 3.  Construct a new column in the data set, portfolio, called ***dist_A*** containing the Euclidean distances between the policyholders and the centre of cluster A.  
-4.  Construct a new column in the data set, portfolio, called dist_B containing the Euclidean distances between the policyholders and the centre of cluster B.  
+4.  Construct a new column in the data set, portfolio, called ***dist_B*** containing the Euclidean distances between the policyholders and the centre of cluster B.  
 
 ### Question 3 Part (b)
 <h4> Question 3</h4>

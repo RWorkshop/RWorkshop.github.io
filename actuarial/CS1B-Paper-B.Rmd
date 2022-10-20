@@ -45,8 +45,7 @@ to the mean. *
 values in terms of the claims paid. 
 <p>
 3.  Prepare a contingency table identifying the proportion of insured across different CLASS(es) for each gender. 
-Test the null hypothesis “**There is no relationship between the GENDER and the CLASS of the insured**” against an alternate hypothesis of
-existence of significant relation at 95% confidence level. Perform an appropriate test and comment. 
+Test the null hypothesis “**There is no relationship between the GENDER and the CLASS of the insured**” against an alternate hypothesis of existence of significant relation at 95% confidence level. Perform an appropriate test and comment. 
 <p>
 4. Use an appropriate test to test if the mean claim amount paid and variance of claim
 amounts paid is uniform between males and females. 

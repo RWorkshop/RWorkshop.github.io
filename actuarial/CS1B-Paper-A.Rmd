@@ -52,7 +52,7 @@ f (\theta | y 1 , y 2 ,..., y n ) \propto \theta i=1 i e –(n + \alpha) \theta
 \]
 We can observe that the posterior distribution of $\theta$ is Gamma with parameters
 n
-∑ i=1 y i – 1 and n + a.
+\sum  i=1 y i – 1 and n + a.
 
 
 

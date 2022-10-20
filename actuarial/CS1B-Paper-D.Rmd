@@ -13,17 +13,17 @@ Column {.tabset}
 
 The probability that India will win a cricket match against South Africa is 0.7
 
-#### Exercise 1
-Prepare a probability distribution table of number of wins if Indians are going to play 10
+#### Exercises
+
+1. Prepare a probability distribution table of number of wins if Indians are going to play 10
 matches against the South Africans. 
 
-#### Exercise 2
-Plot a bar chart of the probabilities of number of wins from 0 to 10. 
+2. Plot a bar chart of the probabilities of number of wins from 0 to 10. 
 
-#### Exercise 3
-Find the mean and median number of wins for India against South Africa.
+3. Find the mean and median number of wins for India against South Africa.
 
 ----------------
+#### Video
 
 
 ### Question 3
@@ -32,14 +32,11 @@ Find the mean and median number of wins for India against South Africa.
 
 Refer to the data file ***Indices_Returns.csv*** and answer the following questions:
 
-
-
-```{r eval=FALSE}
+<pre><code>
 # Load the data file
 
 indices<-read.csv("Indices_Returns.csv")
-```
-
+</code></pre>
 
 
 ---
@@ -52,11 +49,12 @@ Compute the pairwise Pearson correlation coefficient between the returns of 10 s
 Display the correlation matrix in the output. 
 
 ### Question 4
-
+<h4> Question 4</h4>
 Refer to the data file “Indices_Returns.csv” and answer the following questions:
 Indices_Returns.csv file is provided in the system.
 
 #### Exercises 
+
 1.  Express the number of months with negative Sensex returns as a proportion of total 
 number of months. 
 2.   Test whether the proportion of months with negative Sensex returns is less than 50% at 
@@ -64,34 +62,41 @@ number of months.
 3.  Classify the monthly returns of FI and IT sectors as follows and prepare a contingency 
 table of counts. 
 
-Monthly Return Classification
-≤ First Quartile value Low
-> Third Quartile value High
-All others Medium
-4.  Use the contingency table provided in 4(3.  above and test for the independence of 
+$$
+\begin{array}{|c||c|}
+\hline
+\mbox{Monthly Return} & Classification \\ \hline
+$\leq$ \mbox{First Quartile value} &  Low\\ \hline
+$\geq$  \mbox{Third Quartile value}&  High\\ \hline
+\mbox{All others} &  \mbox{Medium} \\ \hline
+\end{array}
+$$
+
+4.  Use the contingency table provided in part 3 above and test for the independence of 
 monthly returns between FI and IT sector returns using an appropriate test and provide an 
 interpretation of the test results. 
 5.  Test whether the returns of FI sector are significantly higher compared to that of IT Sector 
 at 95% confidence level using appropriate test. of $Y$
 
 ### Question 5
-Q. 5) Refer to the data file “Indices_Returns.csv” and answer the following questions:
+<h4> Question 5</h4>
+Refer to the data file “***Indices_Returns.csv***” and answer the following questions:
 Indices_Returns.csv file is provided in the system.
-#### Exercise 
-1.  Load the csv file into R and create a new column called “Sensex_Direction”. 
+#### Exercises 
+1.  Load the csv file into R and create a new column called “***Sensex_Direction***”. 
 The value of this column will be “Positive” when the Sensex returns are positive and “Negative” when they are negative and convert the variable as a factor variable. 
-2.   Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “Sensex_Direction” with the returns of 10 sectors as a multivariate model and display 
+2.   Fit an appropriate generalized linear model (GLM) to with a ‘logit’ link function to relate the “***Sensex_Direction***” with the returns of 10 sectors as a multivariate model and display 
 the summary of the model. 
 3.  Identify which sectors have significantly impacted the direction of Sensex returns at 95% and 99% confidence level of $Y$
 
 4.  Verify the relationship between residual deviance of the model and the Akaike 
 Information Criteria (AIC). 
 5.  Plot the residuals of the fitted model and identify which month is the most significant outlier in the residuals of $Y$
-v1.  Comment on the appropriateness of the model fitted. 
+6.  Comment on the appropriateness of the model fitted. 
 Your actuarial friend has suggested that the current model can be improved by removing the 
 variables which do not impact the direction of Sensex returns at 95% confidence level and 
 refitting the GLM with ‘logit’ link function.
-v2.   Update the model fitted in (2.   above, as suggested by your friend and display the summary 
+7.    Update the model fitted in part 2 above, as suggested by your friend and display the summary 
 of the model. of $Y$
-v3.  Compare the models in (2.   and (v2.   using an appropriate test and comment on the 
+8.   Compare the models in parts 2 and 7 using an appropriate test and comment on the 
 difference in the residual deviances between the two models. 

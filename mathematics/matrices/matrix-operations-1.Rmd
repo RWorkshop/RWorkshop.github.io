@@ -49,12 +49,3 @@ det(C)
 
 dim(C) # number of rows and columns.
 
-t(C)
-     [,1] [,2] [,3]
-[1,]    1  0.6    1
-[2,]    6  0.5    2
-[3,]    7  0.3    1
-
-</code>
-</pre>
- To compute the transpose of matrix A, we use the command t().

@@ -1,3 +1,12 @@
+library(tidyverse)
+library(sf)
+mySF <- sf::st_read("S:/KOB_data_warehouse/AdminData/Shapefiles/inputs")
+mySFgps <- mySF %>% st_transform( 4326)
+
+#> Linking to GEOS 3.7.1, GDAL 2.4.0, PROJ 5.2.0
+
+
+
 fname = system.file("shape/nc.shp", package = "sf")
 nc = read_sf(fname)
 nc_points = st_centroid(nc) %>% 

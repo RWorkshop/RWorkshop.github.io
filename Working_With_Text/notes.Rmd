@@ -2,3 +2,15 @@
 * <tt>grep()</tt> and <tt>grepl()</tt>
 * <tt>gsub()</tt>
 * <tt>nchar()</tt>
+
+------------------------------
+
+<pre><code>
+nchar()
+</code></pre>
+
+--------------------
+
+<pre><code>
+gsub("old","new",myText)
+</code></pre>

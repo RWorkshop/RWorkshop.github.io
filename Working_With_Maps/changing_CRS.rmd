@@ -1,0 +1,2 @@
+
+mySFgps <- mySF %>% filter(CU_NO == ThisForest) %>% st_transform( 4326)

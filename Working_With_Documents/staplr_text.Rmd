@@ -20,9 +20,11 @@ remove_pages(
 )
 
 
-#####################
 
-library(pdftools)
+#########################
 
-pagetext <- pdftools::pdf_text(ThisFileName)
-grep("Appendix 2: Map",pagetext)
+staple_pdf(
+#input_directory = "S:/KOB_data_warehouse/03_HB_TESTS/staplr/input_files/",
+input_files = c("S:/KOB_data_warehouse/03_HB_TESTS/staplr/input_files/Newcoverpage.pdf",ThisFileName),
+output_filepath = "S:/KOB_data_warehouse/03_HB_TESTS/staplr/combined_files/newfile.pdf"
+)

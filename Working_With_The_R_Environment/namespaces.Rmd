@@ -1,0 +1,10 @@
+
+##########################
+
+dplyr::select()
+
+{conflicted}
+
+namespace clashes
+
+require() vs library()

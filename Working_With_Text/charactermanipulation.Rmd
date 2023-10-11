@@ -1,5 +1,6 @@
 ﻿DMR Section 7 Character Manipulation
-Basics of Character Data (7.1)
+
+### Basics of Character Data (7.1)
 The names of the fifty states are found in the data set state.name, which is embedded in R base installation.
 nchar(state.name)
 
@@ -25,18 +26,19 @@ $              anchors expression to end of target
 {n,m}      matches between n and m occurrences
 
 
+--------------------------------------------
 
-
-Substituting and Tagging (7.8)
+### Substituting and Tagging (7.8)
 
 R provides two functions sub() and gsub().
 Each of these functions accepts a regular expression, a string containing what will be substituted for the regular expressions, and the string or strings to operate on.
 
+<pre><code>
 values =c('$11,317.35' , '$11,234.51', '$11,275.89',
           '$11,278.93', '$11,294.94')
+</code></pre>
 
-
-To use these values as numbers , the commas and dollar signs need to be removed before as.numeric() can be used.
+To use these values as numbers , the commas and dollar signs need to be removed before <tt>as.numeric()</tt> can be used.
 values = c('75.99','(20.30)','55.20')
 
 

@@ -1,0 +1,30 @@
+fname = system.file("shape/nc.shp", package = "sf")
+nc = read_sf(fname)
+nc_points = st_centroid(nc) %>% 
+  transmute(point_id = row_number())
+
+nc_point_in_poly <- st_join(nc_points, nc, join = st_within)
+#> although coordinates are longitude/latitude, st_within assumes that they are planar
+
+head(nc_point_in_poly)
+#> Simple feature collection with 6 features and 15 fields
+#> geometry type:  POINT
+#> dimension:      XY
+#> bbox:           xmin: -81.49826 ymin: 36.36145 xmax: -76.0275 ymax: 36.49101
+#> epsg (SRID):    4267
+#> proj4string:    +proj=longlat +datum=NAD27 +no_defs
+#> # A tibble: 6 x 16
+#>   point_id  AREA PERIMETER CNTY_ CNTY_ID NAME  FIPS  FIPSNO CRESS_ID BIR74
+#>      <int> <dbl>     <dbl> <dbl>   <dbl> <chr> <chr>  <dbl>    <int> <dbl>
+#> 1        1 0.114      1.44  1825    1825 Ashe  37009  37009        5  1091
+#> 2        2 0.061      1.23  1827    1827 Alle… 37005  37005        3   487
+#> 3        3 0.143      1.63  1828    1828 Surry 37171  37171       86  3188
+#> 4        4 0.07       2.97  1831    1831 Curr… 37053  37053       27   508
+#> 5        5 0.153      2.21  1832    1832 Nort… 37131  37131       66  1421
+#> 6        6 0.097      1.67  1833    1833 Hert… 37091  37091       46  1452
+#> # … with 6 more variables: SID74 <dbl>, NWBIR74 <dbl>, BIR79 <dbl>,
+#> #   SID79 <dbl>, NWBIR79 <dbl>, geometry <POINT [°]>
+#> 
+#> 
+#> 
+

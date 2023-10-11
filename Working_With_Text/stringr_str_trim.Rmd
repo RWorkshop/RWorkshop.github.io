@@ -1,0 +1,6 @@
+
+require(stringr)
+myText <- " white space "
+nchar(myText)
+myText <- stringr::str_trim(myText)
+nchar(myText)

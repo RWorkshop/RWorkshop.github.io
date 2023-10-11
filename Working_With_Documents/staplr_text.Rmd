@@ -1,0 +1,28 @@
+
+
+
+
+library(staplr)
+
+setwd("S:/KOB_data_warehouse/03_HB_TESTS/staplr/input_files/")
+
+mypdffilelist <- list.files()
+
+ThisFileName <- paste0("S:/KOB_data_warehouse/03_HB_TESTS/staplr/input_files/",mypdffilelist[1])
+outputfilename <- paste0("S:/KOB_data_warehouse/03_HB_TESTS/staplr/output_files/",mypdffilelist[1])
+
+
+remove_pages(
+  rmpages=1,
+  input_filepath = ThisFileName,
+  output_filepath = outputfilename,
+  overwrite = TRUE
+)
+
+
+#####################
+
+library(pdftools)
+
+pagetext <- pdftools::pdf_text(ThisFileName)
+grep("Appendix 2: Map",pagetext)

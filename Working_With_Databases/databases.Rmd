@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
           
           <h1 id="project_title">RWorkshop.GitHub.io</h1>
         </header>
@@ -26,13 +9,14 @@
       <section id="main_content" class="inner">
        
        DMR Section 3: Databases
-Contents
+
+### Contents
 DMR Section 3: Databases	1
 SQL  Basics (3.1)	1
 ODBC (3.2)	1
 Using RODBC Package (3.3)	1
 
-Connecting to a database
+### Connecting to a database
 There are two principal ways to connect with databases in R. 
 •	The first uses the ODBC (Open DataBase Connectivity) facility available on many computers.
 •	The second uses the DBI package of R along with a specialized packagefor the particular database needed to be accessed.
@@ -44,7 +28,8 @@ SQL  Basics (3.1)
 5.	Subqueries
 6.	Modifying Database records
 3.1.2 Basics of SQL
-SELECT
+
+#### SELECT
 The most important SQL command is SELECT. Since queries are performed using single statements, the syntax of the SELECT command can be quite daunting:
 
 SELECT columns or computations
@@ -56,7 +41,7 @@ ORDER BY column [ASC | DESC]
 LIMIT offset,count;
 
 
-WHERE
+#### WHERE
 
 To limit the rows which are returned, the WHERE clause can be used. Most common operators can be used to define expressions for the WHERE clause, along with the keywords AND and OR.
 
@@ -73,9 +58,10 @@ Data Source Name (DSN)
 The first step in using RODBC is to set up a DSN or data source name. In order to do this, you need to know the name that your computer uses for a particular data source.
 Using RODBC Package (3.3)	
 
+<pre><code>
 library(RODBC)
 con=odbcConnect(‘myODBC;password=xxxxxx’)
-
+</code></pre>
 MySQL: server, users, password, port and database
 PostgreSQL : substitute username for user
 Once you have a connection from an ODBC source, the sqlQuery function allows any valid SQL query to be sent to the connection. This will be the case even if SQL is not the native language of the database.
@@ -83,7 +69,8 @@ The DBI package(3.4)
 
 One of the most popular databases used with R is MySQL (http://mysql.com). This freely available database runs on a variety of platforms and is relatively easy to configure and operate.
 
-Accessing a MySQL database(3.5)
+---------------------------------------------
+### Accessing a MySQL database(3.5)
 
 library(RMySQL)
 drv=dbDriver(“MySQL”)
@@ -97,7 +84,7 @@ Mydata = dbGetQuery(com,)
 Any valid SQL query can be passed to a database by this method.
  
 
-Normalized Tables (3.7)
+### Normalized Tables (3.7)
 The principle of normalization is central to database design. The goal is to eliminate redundancy in the information stored.in the database tables. To achieve this goal, what might be a single data frame in R might be broken into several tables in a database.
 Getting Data into MySQL (3.8)
 We can generate “CREATE TABLE” statements in R as follows:
@@ -109,7 +96,8 @@ CREATE TABLE mydata
 
 CREATE TABLE newtable LIKE oldtable;
 
+---------------------------------
 
-More Complex Aggregation (3.9)
+### More Complex Aggregation (3.9)
 dbApply():  The dbApply() function can be used to apply a user-specified R function to
 groups of data extracted from a database.

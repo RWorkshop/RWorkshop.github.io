@@ -1,0 +1,4 @@
+magicK Rpackage
+
+The magick package: Advanced Image-Processing in R • magick (ropensci.org)
+Colour palettes

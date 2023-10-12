@@ -1,0 +1,100 @@
+
+### The Assignment operator
+The assignment operator is used to assign names to particular values. Historically the assign-
+ment operator was ) a "<-". 
+The assignment operator can also be =. This is valid as of R
+version 1.4.0.
+Both will be used, although, you should learn one and stick with it. Many long term R
+users prefer the arrow approach. You can also use -> as an assignment operator, reversing the
+usual assignment positions. (This is actually really useful). Commands are separated either by
+a semi colon or by a newline.
+\begin{framed}
+\begin{verbatim}
+> a <- 6
+> b = 5
+> a + b -> d
+> # dont use "c" as a variable name.
+> d
+[1] 11
+>e=7;f<-4  # two commands on one line.
+\end{verbatim}
+\end{framed}
+
+
+%------------------------------------------------------%
+Before we continue, try using the up and down keys, and see what happens. Previously
+typed commands are re-presented, and can be re-executed.
+R stores both data and output from data analysis (as well as everything else) in objects.
+The variables we have created so far are objects. A list of all objects in the current session can
+be obtained with ls().
+%==========================================================================%
+\subsection*{Reserved Words}
+Some names are used by the system, e.g.T, F,q,c etc . Avoid using these as names when you create objects..
+
+\subsection*{ The \texttt{c()} command}
+To create a simple data set, known as a vector, we use the c() command to create the vector.
+\begin{verbatim}
+> Y=c(1,2,4,8,16 ) #create a data vector with specified elements
+> Y
+[1] 1 2 4 8 16
+\end{verbatim}
+\subsection*{ Vector of Numeric Values}
+Numvec = c(10,13,15,19,25);
+
+\subsection*{ Vector of Character Values}
+Charvec = c("LouLou","Oscar","Rasher");
+
+
+\subsection*{Vector of Logical Values}
+Charvec = c(TRUE,TRUE,FALSE,TRUE);
+Vectors can be bound together either by row or by column.
+\begin{verbatim}
+> X=1:3; Y=4:6
+> cbind(X,Y)
+X Y
+[1,] 1 4
+[2,] 2 5
+[3,] 3 6
+>
+> rbind(X,Y)
+[,1] [,2] [,3]
+X 1 2 3
+Y 4 5 6
+\end{verbatim}
+
+
+\subsection*{Using the \texttt{scan()} command to input character data}
+Previously we have seen the \texttt{scan()} command used to quickly input numeric data. The command can also be used to input character data. The addition argument , \texttt{what=" "}, must be used.  
+Create a variable “grouping” that comprises, in order,  five “A”s and then six “B”s.
+
+\begin{verbatim}
+# inputting character data
+
+grouping = scan(what=" ")
+
+# Enter values
+# Hit return again when you have finished.
+
+\end{verbatim}
+
+
+
+
+
+\subsection*{Creating a Data Frame}
+\begin{framed}
+\begin{verbatim}
+A <- data.frame(
+         name=c("a","b","c"),
+         ownership=c("Case 1","Case 1","Case 2"),
+         listed.at=c("NSE",NA,"BSE"),
+              # Firm "b" is unlisted.
+         is.listed=c(TRUE,FALSE,TRUE),
+              # R convention
+              # boolean variables are named "is.something"
+         x=c(2.2,3.3,4.4),
+         date=as.Date(c("2004-04-04","2005-05-05","2006-06-06"))
+         )
+\end{verbatim}
+\end{framed}
+%====================================================================================%

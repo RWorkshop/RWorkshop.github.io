@@ -1,0 +1,25 @@
+Rsconnect
+Shiny App
+Deployment
+
+--------------------------------
+
+### Deplying Your Shiny App
+
+* Account on ShinyApps.io
+* {rsconnect} R package
+* Log Files
+
+
+Now deploying a shiny hap is very straightforward. The thing is that I just recommend
+
+Going straight to this targeted, Miss immediately. 
+
+Set yourself a target of a Deployable shiny app - and maintain it continuously
+ 
+And one that you can update and revert to, I just continuously improve rather than having something stuck on your desktop ad infinitum, that you just put a periodically just essentially, there's a couple reasons it Does.
+
+The hazard is that you actually start to get used to the difference in requirements for working on cloud - a different programming environment. 
+Best to get used to this environment from the get-go.
+
+

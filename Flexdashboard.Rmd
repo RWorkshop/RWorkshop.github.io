@@ -1,0 +1,32 @@
+
+#### Using Flexdashboard
+
+Flex dashboard is essentially a framework that uses our markdown files. I'm provides various choices for layouts.
+
+
+* Layouts: I had my own sort of personal favorite form of layout and I usually stick with that, but other ones are possible.
+
+* Organization accounts on github
+* deployment on github.io is straigthforward
+
+---------------------------------
+
+* CSS Layouts for FlexDashboards
+* Build a consistent brand identity
+
+---------------------------------
+
+#### Shiny Integrations with Flexdashboard
+
+It is actually possible to integrate shiny Widgets, and HTML interfaces into a Flexdashboard. 
+If that level of complexity is required - just build a shiny app
+
+--------------------------------
+
+#### HTML and RMarkdown Modules 
+
+* Preformatted Text as a function
+* Equivalents of Standard HTML tags
+* There is one exception to this rule is that you can using WithHTML. 
+--------------------------------
+

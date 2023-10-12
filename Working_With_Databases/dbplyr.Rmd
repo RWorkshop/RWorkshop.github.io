@@ -1,0 +1,41 @@
+------------------------------------
+{dblyr} 
+
+this R package allows the user to Create an SQL query.
+
+By interpreting a Conventional piece of a rcode.
+This queryThat would be then passed to the database As standard SQL.
+
+The results of this query can then be collected by our and retrieved into the our environment for further processing.
+
+This is very useful because it allows Data analysis Without downloading the entire contents of the database.
+
+We are mindful that The data can bE Many millions of rows.
+
+I basically not possible to download into the R environment at all.
+
+This approach is very convenient and very cost efficient in terms of memoryAnd computational time.
+
+The overall structure of the package is very simple If you are already familiar with tidy verse,
+
+
+#### Level of Sophistication of the SQL Query
+
+I recommend a straightforward SQL query - with minimal complications - that contains "enough" information
+Once the Query is collected into the R environment, further elaborations can be carried out
+
+
+
+### DBA knowledge
+
+The most complex part of This approach is actually creating the Database connection.
+
+What is required here is knowledge of the Database permissions 
+
+In a corporate setting, It is best to contact. The DBA connection string will have the following sort of formats. 
+<pre><code>
+
+</code></pre>
+
+These permissions are commercially sensitive and must be kept secure and secret for cyber-security purposes.
+

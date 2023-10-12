@@ -1,0 +1,9 @@
+------------------------------------------------
+
+scales
+
+there are two very useful commands on the {scales} R package
+
+scales:comma
+scales::percent
+

@@ -1,0 +1,310 @@
+Unzip
+Download zip files
+
+Connection to db
+DBI
+
+Paste collapse
+
+Str evaluation
+
+File string
+
+
+Web scraping
+Rest
+Divs
+
+Dates and times
+As.date
+Sys.date
+
+Lubridate
+Stringr
+Rebus
+
+
+Grep
+Grepl
+Gsub
+Nchar
+
+
+Loading data objects
+Load data
+
+Fileinfo
+
+Paste
+Regex
+
+
+
+Shapefile
+
+Joins
+
+----------------------------------------------
+
+https://www.sqlitetutorial.net/sqlite-sample-database/
+
+https://towardsdatascience.com/if-marie-kondo-did-sql-be86374b7cd8
+
+
+
+
+Kevin O'Brien <kobriendublin@gmail.com>
+Fri, 16 Jun, 14:28
+to me
+
+magicK Rpackage
+
+The magick package: Advanced Image-Processing in R • magick (ropensci.org)
+Colour palettes
+
+
+
+Everything is an object in R. What exactly is an object in R? As in real life, it can be difficult to give a definition, but easier to give examples. 
+
+
+
+---------------------------------------------------
+
+
+## Managing Files
+
+An important skill set is our is to be able to efficiently manage files and directories in the System.
+
+There are several base, our packages, that allow files to be created, or checks to see if they exist.
+
+Likewise with directories.
+
+Additional functionality is provided by the {ff} R package.
+
+Files can be transferred from one location to another.
+
+
+
+
+
+
+------------------------------
+
+radio_button_choices = list(                          
+  "YTGen Forecasts"=1, 
+  "Yield Insights" = 2,
+  "PSM2i Insights" = 3,
+  "Products"=4,
+  "Maps" = 5, 
+  "Time Series" = 6,
+  "Additional Information" = 7)
+
+
+
+  observeEvent(input$controller, {
+    #req(credentials()$user_auth)
+    updateTabsetPanel(session, "hidden_tabs", selected =  paste0("Panel ", input$controller))
+  })
+  
+  Region = reactive({input$Region})
+  
+  #  output$Deadwood_Volume <- renderUI({Deadwood_Volume})
+  #  output$Environmental_Stats_Intro <- renderUI({Environmental_Stats_Intro})
+  #   output$Env_Matrix_ft <- renderUI({
+  #    ThisRegion = Region()
+  #    ThisMatrix = paste0("Matrix_",ThisRegion,".html")
+  #    
+  #    })
+  
+------------------------------
+#### Task Scheduler
+
+* https://cran.r-project.org/web/packages/taskscheduleR/vignettes/taskscheduleR.html
+
+------------------------------
+### Scope
+
+This talk is about the R programming language and Association or packages and features.
+
+A workflow for developing shiny apps and flex.
+
+
+-----------------------------------
+
+### Audience
+
+I go to assume that everyone has a certain reasonable knowledge of Open Source tools such as leaflet.
+ * However I'll talk about them briefly and introduce them briefly needless to say that most
+
+Open source, GIS tools, have some sort of interface or implementation with our so,
+
+They are, you probably know them already are. That's worth. Let's talk in its own right?
+
+-----------------------------------
+
+### R packages
+
+ggplot and plotlt
+
+Leaflet.js
+
+-----------------------------------
+
+### Dashboards
+
+So, the two main tools, I will be using for dashboards are Flex dashboard. Which a very simple system.
+
+And shiny dashboards? 
+
+Supposition: Medium level of complexity.
+Can not divert a lot of time and/or resource to developing it
+
+---------------------------
+
+#### Complexity Requirements
+
+I just got to make a few observations about how to get the most out of them. Also, I've been taking the point of view that
+
+Coming at it, from the perspective of somebody who needs a reason to be integrated and Technical dashboard boss, who not to the extent that they would need to have a very elaborate implementation. That requires a specialist, shiny developer. So the middle ground but nothing too simple. That essentially, a novice should be able to pick up very easily.
+
+
+
+----------------------------------
+
+#### Construction
+
+The core pieces of information are straightforward. Leaflet provides the map.
+
+And I am able to source of locations of
+
+Interesting, venues myself as a hobby.
+
+
+--------------------------------
+
+#### HTML and RMarkdown Modules 
+
+* Preformatted Text as a function
+* Equivalents of Standard HTML tags
+* There is one exception to this rule is that you can using WithHTML. 
+
+------------------------------
+
+radio_button_choices = list(                          
+  "YTGen Forecasts"=1, 
+  "Yield Insights" = 2,
+  "PSM2i Insights" = 3,
+  "Products"=4,
+  "Maps" = 5, 
+  "Time Series" = 6,
+  "Additional Information" = 7)
+
+
+
+  observeEvent(input$controller, {
+    #req(credentials()$user_auth)
+    updateTabsetPanel(session, "hidden_tabs", selected =  paste0("Panel ", input$controller))
+  })
+  
+  Region = reactive({input$Region})
+  
+  #  output$Deadwood_Volume <- renderUI({Deadwood_Volume})
+  #  output$Environmental_Stats_Intro <- renderUI({Environmental_Stats_Intro})
+  #   output$Env_Matrix_ft <- renderUI({
+  #    ThisRegion = Region()
+  #    ThisMatrix = paste0("Matrix_",ThisRegion,".html")
+  #    
+  #    })
+  
+
+------------------------------
+
+Tidyverse vs Base R
+
+Base R making a comeback
+
+Expert Beginner Problem
+
+Maturity
+
+* https://news.ycombinator.com/item?id=19467367#:~:text=The%20problem%20with%20the%20expert,to%20fall%20into%20the%20trap.
+
+------------------------------
+Shiny Conference 
+ - 15th March to 17th March - Online
+ - Run by Appsilon
+ - https://shinyconf.appsilon.com/
+ - Future Forests - https://connect.appsilon.com/future-forests/
+------------------------------
+
+Coursera Specialization Courses
+ - Tidyverse
+ - Shiny and Dashboards
+
+Kevin O'Brien <kobriendublin@gmail.com>
+Wed, 6 Sept, 21:24
+to me
+
+Version 3
+
+
+-----------------------------------
+
+### R packages
+
+ggplot and plotlt
+
+Leaflet.js
+
+
+---------------------------
+
+#### Complexity Requirements
+
+I just got to make a few observations about how to get the most out of them. Also, I've been taking the point of view that
+
+Coming at it, from the perspective of somebody who needs a reason to be integrated and Technical dashboard boss, who not to the extent that they would need to have a very elaborate implementation. That requires a specialist, shiny developer. So the middle ground but nothing too simple. That essentially, a novice should be able to pick up very easily.
+
+
+
+
+------------------------------
+
+radio_button_choices = list(                          
+  "YTGen Forecasts"=1, 
+  "Yield Insights" = 2,
+  "PSM2i Insights" = 3,
+  "Products"=4,
+  "Maps" = 5, 
+  "Time Series" = 6,
+  "Additional Information" = 7)
+
+
+
+  observeEvent(input$controller, {
+    #req(credentials()$user_auth)
+    updateTabsetPanel(session, "hidden_tabs", selected =  paste0("Panel ", input$controller))
+  })
+  
+  Region = reactive({input$Region})
+  
+  #  output$Deadwood_Volume <- renderUI({Deadwood_Volume})
+  #  output$Environmental_Stats_Intro <- renderUI({Environmental_Stats_Intro})
+  #   output$Env_Matrix_ft <- renderUI({
+  #    ThisRegion = Region()
+  #    ThisMatrix = paste0("Matrix_",ThisRegion,".html")
+  #    
+  #    })
+  
+
+------------------------------
+
+Tidyverse vs Base R
+
+Base R making a comeback
+
+Expert Beginner Problem
+
+Maturity
+
+* https://news.ycombinator.com/item?id=19467367#:~:text=The%20problem%20with%20the%20expert,to%20fall%20into%20the%20trap.

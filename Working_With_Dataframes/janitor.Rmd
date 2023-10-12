@@ -1,0 +1,7 @@
+
+------------------------------------------------
+janitor
+
+# https://search.r-project.org/CRAN/refmans/RcmdrMisc/html/colPercents.html
+# https://cran.r-project.org/web/packages/janitor/vignettes/tabyls.html
+# https://cran.r-project.org/web/packages/splitstackshape/splitstackshape.pdf

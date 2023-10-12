@@ -1,0 +1,15 @@
+
+Working directory
+Getwd
+Setwd
+Here
+
+Rm
+Ls
+Rm(list=ls())
+
+Listing files
+Creating files
+Moving files
+Copying files
+

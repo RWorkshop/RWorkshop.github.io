@@ -1,0 +1,22 @@
+------------------------------------------------------------
+
+Two Base R functions specifically to do this: str2lang() and str2expression(). 
+These are variants of parse(), but seem to return the expression more cleanly:
+
+eval(str2lang("5+5"))
+
+# > 10
+  
+eval(str2expression("5+5"))
+
+# > 10
+
+Nowadays you can also use lazy_eval function from lazyeval package.
+
+> lazyeval::lazy_eval("5+5")
+[1] 10
+
+
+eval() expr() --------------------- filesstrings: Handy File and String Manipulation This started out as a package for file and string manipulation. Since then,
+
+brew

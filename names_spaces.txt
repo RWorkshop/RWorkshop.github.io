@@ -1,0 +1,18 @@
+
+
+dplyr::select()
+
+{conflicted}
+
+namespace clashes
+
+require() vs library()
+--------------------------------------
+<pre><code>
+
+package_name::function_name()
+
+</code></pre>
+
+
+Remark: the <tt>package_name::function_name()</tt> will often be used to clarify which R package is being used

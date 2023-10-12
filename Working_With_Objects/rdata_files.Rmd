@@ -1,0 +1,74 @@
+-----------------------------
+
+Talamh_A_1 <- runif(50)
+Talamh_A_2 <- iris %>% head(20)
+Talamh_A_3 <- mtcars %>% select(1:drat)
+Talamh_A_4 <- "Kevin"
+
+#  collect everything in the environment with the name "Talamh"
+grep("Talamh",ls(),value=TRUE)
+myObjectList <- grep("Talamh",ls(),value=TRUE)
+
+# Save these objects in an RDS file
+saveRDS(  eval(str2expression(myObjectList)), "Talamh.rds")
+
+# Remove the objects for the environment
+# This is analogous to working in a new environment i.e. a deployed Shiny app
+
+rm(list = myObjectList)
+grep("Talamh",ls(),value=TRUE)
+
+# We are in the deployed shiny app now
+# Talamh.rds is located in the app folder
+
+readRDS("Talamh.rds")
+
+-----------------------------
+
+Talamh_A_1 <- runif(50)
+Talamh_A_2 <- iris %>% head(20)
+Talamh_A_3 <- mtcars %>% select(1:drat)
+Talamh_A_4 <- "Kevin"
+
+#  collect everything in the environment with the name "Talamh"
+grep("Talamh",ls(),value=TRUE)
+myObjectList <- grep("Talamh",ls(),value=TRUE)
+
+# Save these objects in an RDS file
+saveRDS(  eval(str2expression(myObjectList)), "Talamh.rds")
+
+# Remove the objects for the environment
+# This is analogous to working in a new environment i.e. a deployed Shiny app
+
+rm(list = myObjectList)
+grep("Talamh",ls(),value=TRUE)
+
+# We are in the deployed shiny app now
+# Talamh.rds is located in the app folder
+
+readRDS("Talamh.rds")
+
+-----------------------------
+
+Talamh_A_1 <- runif(50)
+Talamh_A_2 <- iris %>% head(20)
+Talamh_A_3 <- mtcars %>% select(1:drat)
+Talamh_A_4 <- "Kevin"
+
+#  collect everything in the environment with the name "Talamh"
+grep("Talamh",ls(),value=TRUE)
+myObjectList <- grep("Talamh",ls(),value=TRUE)
+
+# Save these objects in an RDS file
+saveRDS(  eval(str2expression(myObjectList)), "Talamh.rds")
+
+# Remove the objects for the environment
+# This is analogous to working in a new environment i.e. a deployed Shiny app
+
+rm(list = myObjectList)
+grep("Talamh",ls(),value=TRUE)
+
+# We are in the deployed shiny app now
+# Talamh.rds is located in the app folder
+
+readRDS("Talamh.rds")

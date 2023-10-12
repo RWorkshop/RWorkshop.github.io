@@ -1,0 +1,31 @@
+------------------------------------------------
+
+Creating ".rdata" files.
+
+
+#### Arguments 
+
+There are two key arguments that must be specified. 
+For this command to run effectively first, it was specified. The list of objects that you want to have stored in this ".rdata" file.
+
+If you forget to include the "list=" argument, we'll just past the object name that you have provided as a string contained in an unnamed object. 
+So, it's very important to include "list=" argument.
+
+Likewise, it is important that you include "file=" when naming the object. 
+
+
+------------------------------
+
+#### Loading R data files
+
+load("storedobjects/Plots.rdata")
+load("storedobjects/Maps.rdata")
+load("storedobjects/Reports.rdata")
+
+------------------------------
+
+#### Loading R data files
+
+load("storedobjects/Plots.rdata")
+load("storedobjects/Maps.rdata")
+load("storedobjects/Reports.rdata")

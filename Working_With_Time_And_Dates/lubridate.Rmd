@@ -1,6 +1,5 @@
 %-----------------------------------------------%
-\begin{framed}
-\begin{verbatim}
+
 install.packages("lubridate")
 library(lubridate)
 # Create an object

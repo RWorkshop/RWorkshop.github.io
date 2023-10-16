@@ -2,7 +2,8 @@ Date-time Conversion Functions
 Description
 Functions to manipulate objects of classes "POSIXlt" and "POSIXct" representing calendar dates and times. 
 
-Usage
+### Usage
+<pre><code>
 as.POSIXct(x, tz = "", ...)
 as.POSIXlt(x, tz = "", ...)
 
@@ -26,8 +27,8 @@ format character string giving a date-time format as used by strptime.
  
 origin a date-time object, or something which can be coerced by as.POSIXct(tz = "GMT") to such an object.
  
-
-Details
+---------------------------------------------------------------------------------------
+#### Details
 The as.POSIX      functions convert an object to one of the two classes used to represent date/times (calendar dates plus time to the nearest second). They can convert a wide variety of objects, including objects of the other class and of classes "Date", "date" (from package date), "chron" and "dates" (from package chron) to these classes. Dates without times are treated as being at midnight UTC. 
 
 They can also convert character strings of the formats "2001-02-03" and "2001/02/03" optionally followed by white space and a time in the format "14:52" or "14:52:03". (Formats such as "01/02/03" are ambiguous but can be converted via a format specification by strptime.) Fractional seconds are allowed. Alternatively, format can be specified for character vectors or factors: if it is not specified and no standard format works for all non-NA inputs an error is thrown. 

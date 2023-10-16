@@ -1,0 +1,13 @@
+
+
+Staplr Pdf documents
+Doconv
+PDF tools
+OCR
+
+
+Item 4
+Demonstrate how the Doconv R package can Transform Word Documents into PDF documents systematically.
+
+Item 5
+We can use the PDF tools are package to extract text from PDF documents or documents that are saved from PDF towards the process is very effective. 

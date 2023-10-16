@@ -1,0 +1,109 @@
+
+The apply family functions.
+
+Many years. However, they were very idiomatic.
+
+And,
+
+It is possible.
+
+It's carry out the same sort of calculations.
+
+Without using it. So therefore, it will not be featured in this course.
+
+NYCGlighrs
+For the purposes of this exercise, we can use the NYC. Flights are packaged and temporarily constructed as a database that we may be interested.
+
+In working with.
+
+This data says, comprises flight information. From New York City in 2013.
+
+The first step is to open the database connection.
+
+As this is information data coming from. And internally stored our package, it is found in memory, so we will just specify as memory.
+
+When working with more realistic examples, The connection string is more complicated and also presumes. That you have.
+
+It is advisable to confer with the database administrator at your company.
+
+The collect command. Query to the database where it will get processed. Then the results will be returned.
+
+To the our environment.
+
+There's is important to notice the Dust.
+
+This is not. Necessarily evaluation.
+
+For a DVD player query. By default the SQL query is not evaluated until the collection step.
+
+What is lazy evaluation? What is tidy evaluation?
+
+Once the collect statement has beEN RUN, I did a friendshipexist in the our environment that we can process as normal.
+
+She'll query the show query command can.
+
+Give us the equivalent SQL code for the all code that we have generated.
+
+It's not absolutely necessary step.
+
+But,
+
+Having the equivalent SQL code. Maybe very useful for various purposes.
+Before carrying out an SQL query, it is worth checking to see which columns Special command that will return all of Interest, there's a special command that will return all of the ins of all the columns.
+
+
+------------------------
+Set from The David says we're going to use is a data set from the open data portal and if concerns ground water quality,
+
+Openstreetmap.
+
+The city says it is provided by the Geological Survey of Ireland.
+
+Focus on a subset of counties.
+
+Shapefiles
+CRS
+
+Irish Travsrse Mercator
+
+The SF package.
+- simple features
+
+DBF Files.
+
+Plotly. Interact graphics
+
+Leaflet.js.
+
+
+
+
+Heat Maps.
+
+
+
+r graphics in interactive mode.
+
+One must consider the effectiveness of the graphic, the aesthetic.
+
+Of the graphic.
+
+Size  large object.
+
+Can hinder the performance of shiny apps.
+
+So, there is a trade-off.
+
+Tidy verse and DB player.
+
+These are core skills.
+
+We require full Workshop in their own right
+
+In this Workshop, we will give you a very brief introduction.
+
+It's conventional. To record. G.p.s. coordinates in terms of a distinct x coordinate and the symptom or recorded e, longitude and latitude.
+
+Geocoding R
+
+https://x.com/gloverstweets/status/1708148119756481002?s=20

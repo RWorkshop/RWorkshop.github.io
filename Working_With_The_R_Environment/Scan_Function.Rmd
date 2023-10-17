@@ -1,6 +1,5 @@
 
- %==============================================================================================%
- 
+
 ### {5.2 The scan() command}
  
 *  The texttt{scan()} function is a useful method of inputting data quickly. 
@@ -12,9 +11,8 @@
 *  Type in a value, and then press return. Once you have entered all the values, press
  return again to return to normal operation.
  
- 
- %==============================================================================================%
- 
+-----------------------
+
  begin{figure}
  centering
  includegraphics[width=0.8linewidth]{images/scannumbers}
@@ -22,16 +20,16 @@
  %label{fig:scannumbers}
  end{figure}
  
- Remark: Try the texttt{edit()} command on object X.
+ Remark: Try the <tt>edit()</tt> command on object X.
  
- %==============================================================================================%
- 
-### {5.2.1 Characters with the scan() command}
+-----------------------
+
+### Characters with the scan() command
  The scan() command can also be used forinputting character data.
- begin{figure}
- centering
- includegraphics[width=0.7linewidth]{images/scandognames}
- %caption{}
- %label{fig:scandognames}
- end{figure}
+
+<pre><code>
+scan(what="")
+</code></pre> 
+ 
+
  

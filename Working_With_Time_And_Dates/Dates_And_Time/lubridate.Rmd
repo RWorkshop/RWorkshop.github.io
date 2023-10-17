@@ -20,7 +20,7 @@ yday(bday)  # day of the year
 
 
 \textbf{lubridate} also makes it easy to calculate with dates
-\begin{framed}
+
 \begin{verbatim}
 wday(bday + years(1), label=T)  # day of week one year later
 

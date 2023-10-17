@@ -1,7 +1,7 @@
 ### The \textbf{lubridate} package
 =============================================
 
-\begin{framed}
+
 \begin{verbatim}
 install.packages("lubridate")
 library(lubridate)
@@ -14,7 +14,7 @@ This could also have been achieved with any combination of d(ay)m(onth)y(ear), i
 Several options are provided to work with the bday object:
 
 
-\begin{framed}
+
 \begin{verbatim}
 wday(bday)  # day of the week
 wday(bday, label=T)  # day of the week, abreviated

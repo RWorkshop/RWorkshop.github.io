@@ -1,0 +1,62 @@
+
+\section{Date-Time Classes}
+
+
+Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing calendar dates and times (to the nearest second).
+
+\subsection{A subsection}
+
+\begin{framed}
+\begin{verbatim}
+> (z <- Sys.time())             # the current date, as class "POSIXct"
+[1] "2014-06-17 10:54:24 BST"
+> 
+> Sys.time() - 3600             # an hour ago
+[1] "2014-06-17 09:54:25 BST"
+> 
+> as.POSIXlt(Sys.time(), "GMT") # the current time in GMT
+[1] "2014-06-17 09:54:25 GMT"
+\end{verbatim}
+\end{framed}
+\newpage
+\begin{framed}
+\begin{verbatim}
+> format(.leap.seconds)         # all 24 leap seconds in your timezone
+ [1] "1972-07-01 01:00:00" "1973-01-01 00:00:00" "1974-01-01 00:00:00"
+ [4] "1975-01-01 00:00:00" "1976-01-01 00:00:00" "1977-01-01 00:00:00"
+ [7] "1978-01-01 00:00:00" "1979-01-01 00:00:00" "1980-01-01 00:00:00"
+[10] "1981-07-01 01:00:00" "1982-07-01 01:00:00" "1983-07-01 01:00:00"
+[13] "1985-07-01 01:00:00" "1988-01-01 00:00:00" "1990-01-01 00:00:00"
+[16] "1991-01-01 00:00:00" "1992-07-01 01:00:00" "1993-07-01 01:00:00"
+[19] "1994-07-01 01:00:00" "1996-01-01 00:00:00" "1997-07-01 01:00:00"
+[22] "1999-01-01 00:00:00" "2006-01-01 00:00:00" "2009-01-01 00:00:00"
+\end{verbatim}
+\end{framed}
+
+\begin{framed}
+\begin{verbatim}
+> print(.leap.seconds, tz="PST8PDT")  # and in Seattle's
+ [1] "1972-07-01 01:00:00 BST" "1973-01-01 00:00:00 GMT"
+ [3] "1974-01-01 00:00:00 GMT" "1975-01-01 00:00:00 GMT"
+ [5] "1976-01-01 00:00:00 GMT" "1977-01-01 00:00:00 GMT"
+ [7] "1978-01-01 00:00:00 GMT" "1979-01-01 00:00:00 GMT"
+ [9] "1980-01-01 00:00:00 GMT" "1981-07-01 01:00:00 BST"
+[11] "1982-07-01 01:00:00 BST" "1983-07-01 01:00:00 BST"
+[13] "1985-07-01 01:00:00 BST" "1988-01-01 00:00:00 GMT"
+[15] "1990-01-01 00:00:00 GMT" "1991-01-01 00:00:00 GMT"
+[17] "1992-07-01 01:00:00 BST" "1993-07-01 01:00:00 BST"
+[19] "1994-07-01 01:00:00 BST" "1996-01-01 00:00:00 GMT"
+[21] "1997-07-01 01:00:00 BST" "1999-01-01 00:00:00 GMT"
+[23] "2006-01-01 00:00:00 GMT" "2009-01-01 00:00:00 GMT"
+> 
+> ## look at *internal* representation of "POSIXlt" :
+> leapS <- as.POSIXlt(.leap.seconds)
+> names(leapS) ; is.list(leapS)
+NULL
+[1] TRUE
+> utils::str(unclass(leapS), vec.len = 7)
+\end{verbatim}
+\end{framed}
+
+
+\end{document}

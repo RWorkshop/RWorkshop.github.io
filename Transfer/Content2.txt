@@ -7,21 +7,14 @@ DBI
 Paste collapse
 Glue
 
-
-
-
 File string
-
 
 Web scraping
 Rvest
 Divs
 
-
 Stringr
 Rebus
-
-
 
 Grep
 Grepl

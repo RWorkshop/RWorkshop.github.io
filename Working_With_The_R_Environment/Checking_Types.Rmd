@@ -1,24 +1,18 @@
- 
- 
-
- 
 ### Checking and Transforming Types
 
-(Section 3.3 approx)
  
 * The \texttt{is} family of commands can check if an object is of a certain type.
 * The \texttt{as} family of commands can (often) convert an object to a specified type (in some cases not feasible). 
 
- 
-{Checking and Transforming Types}
- % % SLIDE 1 - COVER SLIDE
+---------------------------------
+
  \begin{figure}
  \centering
  \includegraphics[width=1.2\linewidth]{images/numerictypes}    
  \end{figure}
  
-{Checking and Transforming Types}
- % % SLIDE 1 - COVER SLIDE
+#### Checking and Transforming Types
+
  \begin{figure}
  \centering
  \includegraphics[width=1.2\linewidth]{images/typeconversion} 

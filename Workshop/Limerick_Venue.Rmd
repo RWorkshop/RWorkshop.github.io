@@ -1,11 +1,18 @@
+Workshop {data-navmenu="Workshop"}
+==========================================
+
+Column {.tabset}
+--------------------
+
 ### UL Pavilion
 
 * Address: The Pavilion. North Campus University of Limerick, Limerick V94 F7XW. 
 * Website: www.pavilion.ie
+
 ```{r}
-Location,X,Y
-UL Pavilion,52.6762442,-8.5738424
-Main Bridge,52.67805256546161, -8.576352949537121
-Living Brige,52.67662148185925, -8.570323343761297
-Main Campus Bus stop,52.67273129954312, -8.570752497200047
+#Location,X,Y
+#UL Pavilion,52.6762442,-8.5738424
+#Main Bridge,52.67805256546161, -8.576352949537121
+#Living Brige,52.67662148185925, -8.570323343761297
+#Main Campus Bus stop,52.67273129954312, -8.570752497200047
 ```

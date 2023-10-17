@@ -52,3 +52,22 @@ In a study of cheddar cheese from the LaTrobe Valley of Victoria, Australia, sam
 * **H2S** - concentration of hydrogen sulfice (log scale)
 
 * **Lactic** - concentration of lactic acid
+
+---------------------------------------
+
+
+```{r child= "Workshop/Limerick_Venue.Rmd"}
+```
+
+```{r child= "Working_With_Objects/String_Evaluation.Rmd"}
+```
+
+```{r child= "Working_With_Documents/Creating_Word_Documents_With_R.Rmd"}
+```
+
+```{r child = "Working_With_Documents/doconv.Rmd"}
+```
+
+```{r child = "Working_With_Databases/dbplyr.Rmd"}
+```
+

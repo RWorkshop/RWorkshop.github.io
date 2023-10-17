@@ -8,9 +8,9 @@
 
 
 
-<title>R Workshop</title>
+<title>Working with Text, Time and Dates</title>
 
-<meta property="og:title" content="R Workshop" />
+<meta property="og:title" content="Working with Text, Time and Dates" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -826,7 +826,7 @@ html, body {
   
 </span>
 <span class="navbar-brand">
-  R Workshop
+  Working with Text, Time and Dates
   <span class="navbar-author">
         </span>
 </span>
@@ -2639,172 +2639,23 @@ window.FlexDashboardComponents.push({
 <h2>Column</h2>
 <div id="introduction-1" class="section level3">
 <h3>Introduction</h3>
-<div style="margin-left: auto;
-            margin-right: auto;
-            width: 80%">
-<table>
-<thead>
-<tr class="header">
-<th align="left"><b> <strong><u>Contents</u> </strong></b></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">* <b> <strong><a href="actuarialexams.html">R for actuarial students</a> - CS1B and CS2B </strong></b></td>
-</tr>
-<tr class="odd">
-<td align="left">* <b> <strong><a href="distributions.html">Probability Distributions</a> </strong></b></td>
-</tr>
-<tr class="even">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="data-sets" class="section level3">
-<h3>Data Sets</h3>
-<div id="cheddar-taste-of-cheddar-cheese" class="section level4">
-<h4>cheddar: Taste of Cheddar cheese</h4>
-<p>In <strong>{faraway}</strong>: Functions and Datasets for Books by Julian Faraway</p>
-</div>
-<div id="description" class="section level4">
-<h4>Description</h4>
-<p>In a study of cheddar cheese from the LaTrobe Valley of Victoria, Australia, samples of cheese were analyzed for their chemical composition and were subjected to taste tests. Overall taste scores were obtained by combining the scores from several tasters.</p>
-<ul>
-<li><p><strong>taste</strong> - a subjective taste score</p></li>
-<li><p><strong>Acetic</strong> - concentration of acetic acid (log scale)</p></li>
-<li><p><strong>H2S</strong> - concentration of hydrogen sulfice (log scale)</p></li>
-<li><p><strong>Lactic</strong> - concentration of lactic acid</p></li>
-</ul>
-<hr />
-</div>
-</div>
-</div>
-</div>
-<div id="workshop" class="section level1" data-navmenu="Workshop">
-<h1>Workshop</h1>
-<div id="column-1" class="section level2 tabset">
-<h2>Column</h2>
-<div id="ul-pavilion" class="section level3">
-<h3>UL Pavilion</h3>
-<ul>
-<li>Address: The Pavilion. North Campus University of Limerick, Limerick V94 F7XW.</li>
-<li>Website: www.pavilion.ie</li>
-</ul>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#Location,X,Y</span>
-<span class="co">#UL Pavilion,52.6762442,-8.5738424</span>
-<span class="co">#Main Bridge,52.67805256546161, -8.576352949537121</span>
-<span class="co">#Living Brige,52.67662148185925, -8.570323343761297</span>
-<span class="co">#Main Campus Bus stop,52.67273129954312, -8.570752497200047</span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="string-evaluation" class="section level1" data-navmenu="Workshop">
-<h1>String Evaluation</h1>
-<div id="column-2" class="section level2 tabset">
-<h2>Column</h2>
-<div id="string-evaluation-1" class="section level3">
-<h3>String Evaluation</h3>
-<p>Two Base R functions specifically to do this: <tt>str2lang()</tt> and <tt>str2expression()</tt>. These are variants of <tt>parse()</tt>, but seem to return the expression more cleanly:</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">eval</span>(<span class="kw">str2lang</span>(<span class="st">&quot;5+5&quot;</span>))</code></pre></div>
-<pre><code>[1] 10</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">eval</span>(<span class="kw">str2expression</span>(<span class="st">&quot;5+5&quot;</span>))</code></pre></div>
-<pre><code>[1] 10</code></pre>
-<p>Nowadays you can also use lazy_eval function from lazyeval package.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lazyeval<span class="op">::</span><span class="kw">lazy_eval</span>(<span class="st">&quot;5+5&quot;</span>)</code></pre></div>
-<pre><code>[1] 10</code></pre>
-</div>
-</div>
-</div>
-<div id="creating-word-documents" class="section level1" navmenu="Workshop">
-<h1>Creating Word Documents</h1>
-<div id="column-3" class="section level2 tabset">
-<h2>Column</h2>
-<div id="officer" class="section level3">
-<h3>{officer}</h3>
-</div>
-<div id="flextable" class="section level3">
-<h3>{flextable}</h3>
-</div>
-<div id="officer-down" class="section level3">
-<h3>Officer down</h3>
-<p>The package is to be used when you want to use R Markdown documents to produce Microsoft Word documents but also want options for landscape orientation, with narrow margins, with formatted text, when some paragraphs have to be centered.</p>
-<p>Documentation: <a href="https://www.rdocumentation.org/packages/officedown/versions/0.0.5.002" class="uri">https://www.rdocumentation.org/packages/officedown/versions/0.0.5.002</a></p>
-</div>
-</div>
-</div>
-<div id="working-with-documents" class="section level1" data-navmenu="Workshop">
-<h1>Working With Documents</h1>
-<div id="column-4" class="section level2 tabset">
-<h2>Column</h2>
-<div id="doconv" class="section level3">
-<h3>doconv:</h3>
 <h4>
-doconv: Document Conversion to 'PDF' or 'PNG'
+Working with Text, Time and Dates
 </h4>
-<p>It provides the ability to generate images from documents of different types.</p>
-<p>Three main features are provided: functions for generating document thumbnails, functions for performing visual tests of documents and a function for updating fields and table of contents of a 'Microsoft Word' or 'RTF' document. In order to work, 'LibreOffice' must be installed on the machine and or 'Microsoft Word'.</p>
+<h6>
 <ul>
-<li>If the latter is available, it can be used to produce PDF documents or images identical to the originals; otherwise, 'LibreOffice' is used and the rendering can be sometimes different from the original documents.</li>
+<li>
+<strong><a href="charactermanipulation.html">Character Manipulation</a></strong>
+<li>
+<strong><a href="timesanddates.html">Times and Dates</a></strong>
 </ul>
-</div>
-</div>
-</div>
-<div id="dblyr" class="section level1" data-navmenu="Workshop">
-<h1>{dblyr}</h1>
-<div id="column-5" class="section level2 tabset">
-<h2>Column</h2>
-<div id="dblyr-1" class="section level3">
-<h3>{dblyr}</h3>
-<p>this R package allows the user to Create an SQL query.</p>
-<p>By interpreting a Conventional piece of a rcode. This queryThat would be then passed to the database As standard SQL.</p>
-<p>The results of this query can then be collected by our and retrieved into the our environment for further processing.</p>
-<p>This is very useful because it allows Data analysis Without downloading the entire contents of the database.</p>
-<p>We are mindful that The data can bE Many millions of rows.</p>
-<p>I basically not possible to download into the R environment at all.</p>
-<p>This approach is very convenient and very cost efficient in terms of memoryAnd computational time.</p>
-<p>The overall structure of the package is very simple If you are already familiar with tidy verse,</p>
-<div id="level-of-sophistication-of-the-sql-query" class="section level4">
-<h4>Level of Sophistication of the SQL Query</h4>
-<p>I recommend a straightforward SQL query - with minimal complications - that contains &quot;enough&quot; information Once the Query is collected into the R environment, further elaborations can be carried out</p>
-</div>
-<div id="dba-knowledge" class="section level4">
-<h4>DBA knowledge</h4>
-<p>The most complex part of This approach is actually creating the Database connection.</p>
-<p>What is required here is knowledge of the Database permissions</p>
-In a corporate setting, It is best to contact. The DBA connection string will have the following sort of formats.
-<pre><code>
-CODE
-</code></pre>
-<p>These permissions are commercially sensitive and must be kept secure and secret for cyber-security purposes.</p>
-</div>
-</div>
-<div id="northwind" class="section level3">
-<h3>Northwind</h3>
-<p><a href="https://en.wikiversity.org/wiki/Database_Examples/Northwind" class="uri">https://en.wikiversity.org/wiki/Database_Examples/Northwind</a></p>
-<p>About the Northwind sample database The Northwind database is a sample database that was originally created by Microsoft and used as the basis for their tutorials in a variety of database products for decades. The Northwind database contains the sales data for a fictitious company called “Northwind Traders,” which imports and exports specialty foods from around the world. The Northwind database is an excellent tutorial schema for a small-business ERP, with customers, orders, inventory, purchasing, suppliers, shipping, employees, and single-entry accounting. The Northwind database has since been ported to a variety of non-Microsoft databases, including PostgreSQL.</p>
-<p>The Northwind dataset includes sample data for the following.</p>
-<p>Suppliers: Suppliers and vendors of Northwind Customers: Customers who buy products from Northwind Employees: Employee details of Northwind traders Products: Product information Shippers: The details of the shippers who ship the products from the traders to the end-customers Orders and Order_Details: Sales Order transactions taking place between the customers &amp; the company The Northwind sample database includes 14 tables and the table relationships are showcased in the following entity relationship diagram.</p>
-<p><a href="https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite" class="uri">https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite</a></p>
+</h5>
 </div>
 </div>
 </div>
 <div id="woking-with-dates-and-times-with-lubridate-in-r" class="section level1" data-navmenu="Workshop">
 <h1>Woking with Dates and Times with lubridate in R</h1>
-<div id="column-6" class="section level2 tabset">
+<div id="column-1" class="section level2 tabset">
 <h2>Column</h2>
 <div id="lubridate" class="section level3">
 <h3>lubridate</h3>
@@ -3172,7 +3023,7 @@ table(sapply(1:100, function(x) wday(bday + years(x), label=T)))  # days of the 
 </div>
 <div id="times-and-dates" class="section level1" data-navmenu="Workshop">
 <h1>Times and Dates</h1>
-<div id="column-7" class="section level2 tabset">
+<div id="column-2" class="section level2 tabset">
 <h2>Column</h2>
 <div id="system-time-and-date" class="section level3">
 <h3>{System Time and Date}</h3>
@@ -3250,6 +3101,8 @@ NULL
 </code>
 </pre>
 <p>
+</body>
+</html>
 </div>
 </div>
 </div>

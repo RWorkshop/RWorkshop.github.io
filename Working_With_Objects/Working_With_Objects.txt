@@ -1,0 +1,9 @@
+
+Str2expreas eval
+Rm
+Ls
+Rm(list=ls())
+
+
+Objects and object classes.
+Object sizes.

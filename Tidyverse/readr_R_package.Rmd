@@ -1,24 +1,21 @@
 
-%- http://blog.revolutionanalytics.com/2015/04/new-packages-for-reading-data-into-r-fast.html
-
-%==
 
 {Importing Data}
+=======================
 
 
 New packages for reading data into R — fast
 Hadley Wickham and the RStudio team have created some new packages for R, which will be very useful for anyone who needs to read data into R (that is, everyone). The readr package provides functions for reading text data into R, and the readxl package provides functions for reading Excel spreadsheet data into R. Both are much faster than the functions you're probably using now.
 
-%==
-
-{Importing Data}
 
 
 The readr package provides several functions for reading tabular text data into R. This is a task normally accomplished with the read.table family of functions in R, and readr provides a number of replacement functions that provide additional functionality and are much faster.
 
-%==
 
-{Importing Data}
+%- http://blog.revolutionanalytics.com/2015/04/new-packages-for-reading-data-into-r-fast.html
+
+
+
 
 
 First, there's read_table which provides a near-replacement for read.table. Here's a comparison of using both functions on a file with 4 million rows of data (which I created by stacking copies of this file):
@@ -51,9 +48,7 @@ dat2 <- read.fwf("biggerfile.txt", c(3,15,16,12),
 \end{verbatim}
 \end{framed}
 
-%==
-
-{Importing Data}
+----------------------------
 
 
 While readr's read_fwf again accomplished the task in about a second, the standard read.fwf took over 3 minutes — almost 200 times as long.
@@ -61,9 +56,7 @@ While readr's read_fwf again accomplished the task in about a second, the standa
 Other functions in the package include read_csv (and a European-friendly variant read_csv2) for comma-separated data, read_tsv for tab-separated data, and read_lines for line-by-line file extraction (great for complicated post-processing). The package also makes it much easier to read columns of dates in various formats, and sensibly always handles text data as strings (no more strings.as.factors=FALSE). 
 
 
-%==
-
-{Importing Data}
+----------------------------
 
 
 For data in Excel format, there's also the new readxl package. This package provides function to read Excel worksheets in both .xls and .xlsx formats. I haven't benchmarked the read_excel function myself, but like the readr functions it's based on a C++ library so should be quite snappy. And best of all, it has no external dependencies, so you can use it to read Excel data on just about any platform — there's no requirement that Excel itself be installed.

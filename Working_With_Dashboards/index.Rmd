@@ -36,6 +36,19 @@ Rsconnect
 Shiny App
 Deployment
 
+Deployment strategies
+Dashboards
+Flexdashboard
+shiny.
+
+Deployment on Rsconnect
+
+
+### Flex Dashboards
+
+Simple in Construction
+Uses RMD files to build a HTML page
+
 --------------------------------
 
 ### Deplying Your Shiny App

@@ -97,18 +97,7 @@ library(RODBC) channel <- odbcConnectExcel("bdr.xls") ## list the spreadsheets >
 TABLE_CAT TABLE_SCHEM TABLE_NAME TABLE_TYPE REMARKS 1 C:\\bdr NA Sheet1$ SYSTEM TABLE NA 2 C:\\bdr NA Sheet2$ SYSTEM TABLE NA 3 C:\\bdr NA Sheet3$ SYSTEM TABLE NA 4 C:\\bdr NA Sheet1$Print_Area TABLE NA
 sh1 <- sqlFetch(channel, "Sheet1") sh1 <- sqlQuery(channel, "select * from [Sheet1$]")
 
-#### Reading and Writing Data
 
-Connections
-Connections provide a flexible way for R to read data from a variety of sources, providing more complete control over the nature of the connection than simply specifying a file name as input to functions like read.table and scan.
-file: files on the local file system
-pipe: output from a command
-textConnection: treats text as a file
-gzfile: local gzipped file
-unz: local zip archive (with single file; read-only)
-bzfile: local bzipped file
-url: remote file read via http
-socketConnection: socket for client/server programs
 
 ##### Examples
 Skip last lines of a data file (e.g. last two lines):

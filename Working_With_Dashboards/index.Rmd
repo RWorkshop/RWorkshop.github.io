@@ -1,3 +1,37 @@
+---
+title: "R Workshop - Working with Dashbaords"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: united
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+Introduction
+==================================
+Column {.tabset}
+--------------------
+
+### Introduction 
+
+
+
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 80%">
+            
+|  <b> <strong><u>Contents</u> </strong></b>       |   
+|:------------------|
+|   |    
+| * <b> <strong><a href="actuarialexams.html">R for actuarial students</a>  -  CS1B and CS2B </strong></b>|        
+| * <b> <strong><a href="distributions.html">Probability Distributions</a> </strong></b>|        
+|   | 
+</div>
+
 Rsconnect
 Shiny App
 Deployment
@@ -22,4 +56,8 @@ And one that you can update and revert to, I just continuously improve rather th
 The hazard is that you actually start to get used to the difference in requirements for working on cloud - a different programming environment. 
 Best to get used to this environment from the get-go.
 
+
+
+
+---------------------------------------
 

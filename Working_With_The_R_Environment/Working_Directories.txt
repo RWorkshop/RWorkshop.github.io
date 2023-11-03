@@ -8,8 +8,4 @@ Rm
 Ls
 Rm(list=ls())
 
-Listing files
-Creating files
-Moving files
-Copying files
 

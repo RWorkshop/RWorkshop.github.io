@@ -20,6 +20,10 @@ Column {.tabset}
 
 <h3> Working with Files and Folders <h3>
 
+Listing files
+Creating files
+Moving files
+Copying files
 
 
 This section will be looking at working with files and directories in particular. You want to see if files and directories actually exist the network. One, very useful command is file.it exist. This is a logical test to see if the file exists according to the specified. You may use this to check if the actual path to the file is correctly. Specified. Or if there's a spelling mistake.

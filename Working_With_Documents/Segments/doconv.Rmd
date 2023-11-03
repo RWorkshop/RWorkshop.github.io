@@ -1,0 +1,69 @@
+Other R Packages {data-navmenu="Working With PDFs"}
+==========================================
+
+Column {.tabset}
+--------------------
+
+
+### Introduction
+
+
+* Demonstrate how the Doconv R package can Transform Word Documents into PDF documents systematically.
+
+* Splitting and Combining PDF documents
+
+-----------------------------------------
+
+### doconv: 
+
+<h3>{doconv}</h3>
+
+<h4> doconv: Document Conversion to 'PDF' or 'PNG'</h4>
+
+
+
+It provides the ability to generate images from documents of different types. 
+
+Three main features are provided: functions for generating document thumbnails, functions for performing visual tests of documents and a function for updating fields and table of contents of a 'Microsoft Word' or 'RTF' document. In order to work, 'LibreOffice' must be installed on the machine and or 'Microsoft Word'. 
+
+* If the latter is available, it can be used to produce PDF documents or images identical to the originals; otherwise, 'LibreOffice' is used and the rendering can be sometimes different from the original documents.
+
+
+------------------------
+
+### staplr
+
+<h3>{staplr}</h3>
+
+#### Examples
+
+<pre><code>
+
+# setwd("C:/Workarea/03_HB_TESTS/staplr/input_files/")
+
+library(staplr)
+mypdffilelist <- list.files()
+
+ThisFileName <- paste0("C:/Workarea/03_HB_TESTS/staplr/input_files/",mypdffilelist[1])
+outputfilename <- paste0("C:/Workarea/03_HB_TESTS/staplr/output_files/",mypdffilelist[1])
+
+
+remove_pages(
+  rmpages=1,
+  input_filepath = ThisFileName,
+  output_filepath = outputfilename,
+  overwrite = TRUE
+)
+
+</code></pre>
+
+#### Combiding PDF documents
+
+<pre><code>
+staple_pdf(
+#input_directory = "C:/Workarea/03_HB_TESTS/staplr/input_files/",
+input_files = c("C:/Workarea/03_HB_TESTS/staplr/input_files/Newcoverpage.pdf",ThisFileName),
+output_filepath = "C:/Workarea/03_HB_TESTS/staplr/combined_files/newfile.pdf"
+)
+
+</code></pre>

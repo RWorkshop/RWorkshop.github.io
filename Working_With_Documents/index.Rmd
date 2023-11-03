@@ -27,47 +27,25 @@ Column {.tabset}
 |  <b> <strong><u>Contents</u> </strong></b>       |   
 |:------------------|
 |   |    
-| * <b> <strong><a href="actuarialexams.html">R for actuarial students</a>  -  CS1B and CS2B </strong></b>|        
-| * <b> <strong><a href="distributions.html">Probability Distributions</a> </strong></b>|        
+| * <b> <strong><a href="https://rworkshop.github.io/">R Workshop Main Page</a>   </strong></b>|       
+|   | 
+| * <b> <a href="https://rworkshop.github.io/Working_with_Text/">Working with Text</a> </b>|  
+| * <b> <a href="https://rworkshop.github.io/Working_with_Databases/">Working with Databases</a> </b>|  
+| * <b> <a href="https://rworkshop.github.io/Working_with_Documents/">Working with Documents</a> </b>|  
 |   | 
 </div>
 
 
-### Data Sets
 
 
 
-#### cheddar: Taste of Cheddar cheese
-
-In **{faraway}**: Functions and Datasets for Books by Julian Faraway
-
-#### Description
-In a study of cheddar cheese from the LaTrobe Valley of Victoria, Australia, samples of cheese were analyzed for their chemical composition and were subjected to taste tests. Overall taste scores were obtained by combining the scores from several tasters.
-
-
-* **taste** - a subjective taste score
-
-* **Acetic** - concentration of acetic acid (log scale)
-
-* **H2S** - concentration of hydrogen sulfice (log scale)
-
-* **Lactic** - concentration of lactic acid
-
----------------------------------------
-
-
-```{r child= "Workshop/Limerick_Venue.Rmd"}
+```{r child= "Segments/Creating_Word_Documents_With_R.Rmd"}
 ```
 
-```{r child= "Working_With_Objects/String_Evaluation.Rmd"}
+```{r child = "Segments/pdftools.Rmd"}
 ```
 
-```{r child= "Working_With_Documents/Creating_Word_Documents_With_R.Rmd"}
+```{r child = "Segments/doconv.Rmd"}
 ```
 
-```{r child = "Working_With_Documents/doconv.Rmd"}
-```
-
-```{r child = "Working_With_Databases/dbplyr.Rmd"}
-```
 

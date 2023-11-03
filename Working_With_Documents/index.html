@@ -8,9 +8,9 @@
 
 
 
-<title>Working with Text, Time and Dates</title>
+<title>R Workshop</title>
 
-<meta property="og:title" content="Working with Text, Time and Dates" />
+<meta property="og:title" content="R Workshop" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -275,7 +275,7 @@ height: 100%;
   
 </span>
 <span class="navbar-brand">
-  Working with Text, Time and Dates
+  R Workshop
   <span class="navbar-author">
         </span>
 </span>
@@ -1983,641 +1983,189 @@ window.FlexDashboardComponents.push({
 <h2 class="tabset">Column</h2>
 <div id="introduction-1" class="section level3">
 <h3>Introduction</h3>
-<h4>
-Working with Text, Time and Dates
-</h4>
-<h6>
-<ul>
-<li>
-<strong><a href="charactermanipulation.html">Character
-Manipulation</a></strong>
-<li>
-<strong><a href="timesanddates.html">Times and Dates</a></strong>
-</ul>
-</h5>
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 80%">
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><b> <strong><u>Contents</u> </strong></b></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* <b> <strong><a href="https://rworkshop.github.io/">R
+Workshop Main Page</a> </strong></b></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">* <b>
+<a href="https://rworkshop.github.io/Working_with_Text/">Working with
+Text</a> </b></td>
+</tr>
+<tr class="odd">
+<td align="left">* <b>
+<a href="https://rworkshop.github.io/Working_with_Databases/">Working
+with Databases</a> </b></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
-<div id="times-and-dates" class="section level1" data-navmenu="Workshop">
-<h1>Times and Dates</h1>
+</div>
+<div id="creating-word-documents" class="section level1" navmenu="Workshop">
+<h1>Creating Word Documents</h1>
 <div id="column-1" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="system-time-and-date" class="section level3">
-<h3>{System Time and Date}</h3>
-<pre>
-<code>
-&gt; Sys.time()
-[1] &quot;2014-06-17 11:04:46 BST&quot;
-&gt; ## print with possibly greater accuracy:
-&gt; op &lt;- options(digits.secs=6)
-&gt; Sys.time()
-[1] &quot;2014-06-17 11:04:46.641917 BST&quot;
-&gt; options(op)
-&gt; 
-&gt; ## locale-specific version of date()
-&gt; format(Sys.time(), &quot;%a %b %d %X %Y&quot;)
-[1] &quot;Tue Jun 17 11:04:46 2014&quot;
-&gt; 
-&gt; Sys.Date()
-[1] &quot;2014-06-17&quot;
-&gt; Sys.time()
-[1] &quot;2014-06-17 11:05:06 BST&quot;
-</code>
-</pre>
+<div id="officer" class="section level3">
+<h3>{officer}</h3>
+<h4>
+Offcer
+</h4>
+<ul>
+<li>Tidy Formatrting</li>
+<li>Fon Standards</li>
+<li>Adding Documents</li>
+<li>Find and Replaces</li>
+</ul>
 </div>
-<div id="date-time-classes" class="section level3">
-<h3>{Date-Time Classes}</h3>
-<p>Description of the classes texttt{POSIXlt} and texttt{POSIXct}
-representing calendar dates and times (to the nearest second).</p>
-<p>
-<pre><code>
-&gt; (z &lt;- Sys.time())             # the current date, as class &quot;POSIXct&quot;
-[1] &quot;2014-06-17 10:54:24 BST&quot;
-&gt; 
-&gt; Sys.time() - 3600             # an hour ago
-[1] &quot;2014-06-17 09:54:25 BST&quot;
-&gt; 
-&gt; as.POSIXlt(Sys.time(), &quot;GMT&quot;) # the current time in GMT
-[1] &quot;2014-06-17 09:54:25 GMT&quot;
-
-</code></pre>
-<pre><code>
-&gt; format(.leap.seconds)         # all 24 leap seconds in your timezone
- [1] &quot;1972-07-01 01:00:00&quot; &quot;1973-01-01 00:00:00&quot; &quot;1974-01-01 00:00:00&quot;
- [4] &quot;1975-01-01 00:00:00&quot; &quot;1976-01-01 00:00:00&quot; &quot;1977-01-01 00:00:00&quot;
- [7] &quot;1978-01-01 00:00:00&quot; &quot;1979-01-01 00:00:00&quot; &quot;1980-01-01 00:00:00&quot;
-[10] &quot;1981-07-01 01:00:00&quot; &quot;1982-07-01 01:00:00&quot; &quot;1983-07-01 01:00:00&quot;
-[13] &quot;1985-07-01 01:00:00&quot; &quot;1988-01-01 00:00:00&quot; &quot;1990-01-01 00:00:00&quot;
-[16] &quot;1991-01-01 00:00:00&quot; &quot;1992-07-01 01:00:00&quot; &quot;1993-07-01 01:00:00&quot;
-[19] &quot;1994-07-01 01:00:00&quot; &quot;1996-01-01 00:00:00&quot; &quot;1997-07-01 01:00:00&quot;
-[22] &quot;1999-01-01 00:00:00&quot; &quot;2006-01-01 00:00:00&quot; &quot;2009-01-01 00:00:00&quot;
-
-</code></pre>
-<p>
-<pre>
-<code>
-&gt; print(.leap.seconds, tz=&quot;PST8PDT&quot;)  # and in Seattle&#39;s
- [1] &quot;1972-07-01 01:00:00 BST&quot; &quot;1973-01-01 00:00:00 GMT&quot;
- [3] &quot;1974-01-01 00:00:00 GMT&quot; &quot;1975-01-01 00:00:00 GMT&quot;
- [5] &quot;1976-01-01 00:00:00 GMT&quot; &quot;1977-01-01 00:00:00 GMT&quot;
- [7] &quot;1978-01-01 00:00:00 GMT&quot; &quot;1979-01-01 00:00:00 GMT&quot;
- [9] &quot;1980-01-01 00:00:00 GMT&quot; &quot;1981-07-01 01:00:00 BST&quot;
-[11] &quot;1982-07-01 01:00:00 BST&quot; &quot;1983-07-01 01:00:00 BST&quot;
-[13] &quot;1985-07-01 01:00:00 BST&quot; &quot;1988-01-01 00:00:00 GMT&quot;
-[15] &quot;1990-01-01 00:00:00 GMT&quot; &quot;1991-01-01 00:00:00 GMT&quot;
-[17] &quot;1992-07-01 01:00:00 BST&quot; &quot;1993-07-01 01:00:00 BST&quot;
-[19] &quot;1994-07-01 01:00:00 BST&quot; &quot;1996-01-01 00:00:00 GMT&quot;
-[21] &quot;1997-07-01 01:00:00 BST&quot; &quot;1999-01-01 00:00:00 GMT&quot;
-[23] &quot;2006-01-01 00:00:00 GMT&quot; &quot;2009-01-01 00:00:00 GMT&quot;
-&gt; 
-&gt; ## look at      internal      representation of &quot;POSIXlt&quot; :
-&gt; leapS &lt;- as.POSIXlt(.leap.seconds)
-&gt; names(leapS) ; is.list(leapS)
-NULL
-[1] TRUE
-&gt; utils::str(unclass(leapS), vec.len = 7)
-</code>
-</pre>
-<p>
+<div id="flextable" class="section level3">
+<h3>{flextable}</h3>
+</div>
+<div id="officer-down" class="section level3">
+<h3>Officer down</h3>
+<p>The package is to be used when you want to use R Markdown documents
+to produce Microsoft Word documents but also want options for landscape
+orientation, with narrow margins, with formatted text, when some
+paragraphs have to be centered.</p>
+<p>Documentation: <a href="https://www.rdocumentation.org/packages/officedown/versions/0.0.5.002" class="uri">https://www.rdocumentation.org/packages/officedown/versions/0.0.5.002</a></p>
 </div>
 </div>
 </div>
-<div id="the-lubridate-r-package" class="section level1" data-navmenu="lubdridate">
-<h1>The Lubridate R package</h1>
+<div id="pdftools" class="section level1" data-navmenu="Working With PDFs">
+<h1>{pdftools}</h1>
 <div id="column-2" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="lubridate" class="section level3">
-<h3>lubridate</h3>
-<div id="woking-with-dates-and-times-with-lubridate-in-r" class="section level4">
-<h4>Woking with Dates and Times with lubridate in R</h4>
-<p>In this lesson, we’ll explore the lubridate R package, by Garrett
-Grolemund and Hadley Wickham. According to the package authors,
-“lubridate has a consistent, memorable syntax, that makes working with
-dates fun instead of frustrating.” If you’ve ever worked with dates in
-R, that statement probably has your attention.</p>
-<p>There are different date and time representations, in order to view
-our locale:</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
+<div id="pdftools-introduction" class="section level3">
+<h3>pdftools: Introduction</h3>
+<p>Part A. Working with PDFs</p>
+<p>Downloading PDF documents from the internet. (Same approach for ZIP
+Files)</p>
+<p>PDF Info Useful for information about how PDF was created Was it a
+word document saved as a PDF in Microsoft Office (relevant to OCR - this
+has higher fidelity compared to a Photocopy Pdf documents</p>
+<p>PDF tools OCR</p>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">Sys.getlocale</span>(<span class="st">&quot;LC_TIME&quot;</span>)</span></code></pre></div>
-<pre><code>[1] &quot;English_Ireland.utf8&quot;</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="do">## [1] &quot;en_CA.UTF-8&quot;</span></span></code></pre></div>
-<p>‘C’</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Create an object</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>bday <span class="ot">&lt;-</span> <span class="fu">dmy</span>(<span class="st">&quot;23121984&quot;</span>)</span></code></pre></div>
+<div id="extracting-text" class="section level3">
+<h3>Extracting Text</h3>
+<p>We can use the PDF tools are package to extract text from PDF
+documents or documents that are saved from PDF towards the process is
+very effective.</p>
+<h3>
+Extracting Text
+<h3>
+<div id="optical-character-recognition" class="section level4">
+<h4>Optical Character Recognition</h4>
 <ul>
-<li>This could also have been achieved with any combination of
-d(ay)m(onth)y(ear), i.e. <code>ymd()</code> or <code>dym()</code>.</li>
-<li>Several options are provided to work with the bday object :</li>
+<li>OCR “reads” the text and created a text file.</li>
 </ul>
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">wday</span>(bday) <span class="co"># day of the week</span></span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">wday</span>(bday, <span class="at">label=</span>T) <span class="co"># day of the week, abreviated</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="fu">yday</span>(bday) <span class="co"># day of the year</span></span></code></pre></div>
-<p>1</p>
-Sun &lt;details&gt;
-<summary style="display: list-item; cursor: pointer;">
-<strong>Levels</strong>:
-</summary>
-<pre><code>&lt;ol class=&quot;list-inline&quot;&gt;
-    &lt;li&gt;&#39;Sun&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Mon&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Tues&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Wed&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Thurs&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Fri&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Sat&#39;&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-<p>&lt;/details&gt;</p>
-<p>358</p>
-<p>lubridate contains many useful functions. We’ll only be covering the
-basics here. Type <code>help(package = lubridate)</code> to bring up an
-overview of the package, including the package DESCRIPTION, a list of
-available functions, and a link to the official package vignette.</p>
-<p>The <code>today()</code> function returns today’s date. Lets store
-the result in a new variable called
-<strong><em>this_day</em></strong>.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>this_day <span class="ot">&lt;-</span> <span class="fu">today</span>()</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>this_day</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-09&quot;</span></span></code></pre></div>
-<p><time>2017-05-13</time></p>
-</div>
-</div>
-<div id="extract-information-from-date" class="section level3">
-<h3>Extract information from date</h3>
-<p>There are three components to this date. In order, they are year,
-month, and day. We can extract any of these components using the
-<code>year()</code>, <code>month()</code>, or <code>day()</code>
-function, respectively. We try them on this_day now.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">year</span>(this_day)</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">month</span>(this_day)</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>d <span class="ot">&lt;-</span><span class="fu">day</span>(this_day)</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="fu">rbind</span>(y,m,d)</span></code></pre></div>
-<table>
-<tbody>
-<tr>
-<th>
-y
-</th>
-<td>
-2017
-</td>
-</tr>
-<tr>
-<th>
-m
-</th>
-<td>
-5
-</td>
-</tr>
-<tr>
-<th>
-d
-</th>
-<td>
-13
-</td>
-</tr>
-</tbody>
-</table>
-<p>We can also get the day of the week from this_day using the
-<code>wday()</code> function. It will be represented as a number, such
-that 1 = Sunday, 2 = Monday, 3 = Tuesday, etc. Similarly we can extract
-day of month and day of year.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>w <span class="ot">&lt;-</span> <span class="fu">wday</span>(this_day)</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">mday</span>(this_day)</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">yday</span>(this_day)</span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="fu">rbind</span>(w,m,y)</span></code></pre></div>
-<table>
-<tbody>
-<tr>
-<th>
-w
-</th>
-<td>
-7
-</td>
-</tr>
-<tr>
-<th>
-m
-</th>
-<td>
-13
-</td>
-</tr>
-<tr>
-<th>
-y
-</th>
-<td>
-133
-</td>
-</tr>
-</tbody>
-</table>
-<p>We can add a second argument, label = TRUE, to display the name of
-the weekday (represented as an ordered factor).</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">wday</span>(this_day, <span class="at">label =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="do">## [1] Sun</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="do">## Levels: Sun &lt; Mon &lt; Tues &lt; Wed &lt; Thurs &lt; Fri &lt; Sat</span></span></code></pre></div>
-Sat &lt;details&gt;
-<summary style="display: list-item; cursor: pointer;">
-<strong>Levels</strong>:
-</summary>
-<pre><code>&lt;ol class=&quot;list-inline&quot;&gt;
-    &lt;li&gt;&#39;Sun&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Mon&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Tues&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Wed&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Thurs&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Fri&#39;&lt;/li&gt;
-    &lt;li&gt;&#39;Sat&#39;&lt;/li&gt;
-&lt;/ol&gt;</code></pre>
-<p>&lt;/details&gt;</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(pdftools)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>pagetext <span class="ot">&lt;-</span> pdftools<span class="sc">::</span><span class="fu">pdf_text</span>(ThisFileName)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">grep</span>(<span class="st">&quot;Appendix 2: Map&quot;</span>,pagetext)</span></code></pre></div>
 </div>
 </div>
 </div>
-<div id="date-time-objects" class="section level1" data-navmenu="lubdridate">
-<h1>Date-time objects</h1>
+</div>
+<div id="other-r-packages" class="section level1" data-navmenu="Working With PDFs">
+<h1>Other R Packages</h1>
 <div id="column-3" class="section level2 tabset">
 <h2 class="tabset">Column</h2>
-<div id="date-time" class="section level3">
-<h3>Date-time</h3>
-<p>In addition to handling dates, lubridate is great for working with
-date and time combinations, referred to as date-times. The
-<code>now()</code> function returns the date-time representing this
-exact moment in time. We store the result in a variable called
-this_moment.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>this_moment <span class="ot">&lt;-</span> <span class="fu">now</span>()</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>this_moment</span></code></pre></div>
-<p>Just like with dates, we can extract the year, month, day, or day of
-week. However, we can also use hour(), minute(), and second() to extract
-specific time information.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>hr <span class="ot">&lt;-</span> <span class="fu">hour</span>(this_moment)</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>minu <span class="ot">&lt;-</span> <span class="fu">minute</span>(this_moment)</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>sec <span class="ot">&lt;-</span> <span class="fu">second</span>(this_moment)</span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="fu">rbind</span>(hr,minu,sec)</span></code></pre></div>
-<table>
-<tbody>
-<tr>
-<th>
-hr
-</th>
-<td>
-9.00000
-</td>
-</tr>
-<tr>
-<th>
-minu
-</th>
-<td>
-48.00000
-</td>
-</tr>
-<tr>
-<th>
-sec
-</th>
-<td>
-10.62079
-</td>
-</tr>
-</tbody>
-</table>
-<p><code>today()</code> and <code>now()</code> provide neatly formatted
-date-time information.</p>
-<p>When working with dates and times ‘in the wild’, this won’t always
-(and perhaps rarely will) be the case.</p>
-<p>Fortunately, lubridate offers a variety of functions for parsing
-date-times.</p>
-<p>These functions take the form of ymd(), dmy(), hms(), ymd_hms(),
-etc., where each letter in the name of the function stands for the
-location of years (y), months (m), days (d), hours (h), minutes (m),
-and/or seconds (s) in the date-time being read in.</p>
-<p>To see how these functions work, we try
-<code>ymd(&quot;1989-05-17&quot;)</code>. We must surround the date with
-quotes.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>my_date <span class="ot">&lt;-</span> <span class="fu">ymd</span>(<span class="st">&quot;1989-05-17&quot;</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>my_date</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="do">## [1] &quot;1989-05-17 UTC&quot;</span></span></code></pre></div>
-<p><time>1989-05-17</time></p>
-<p>It looks almost the same, except for the addition of a time zone,
-which we’ll discuss later in the lesson. Below the surface, there’s
-another important change that takes place when lubridate parses a
-date.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">class</span>(my_date)</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="do">## [1] &quot;POSIXct&quot; &quot;POSIXt&quot;</span></span></code></pre></div>
-</div>
-<div id="date" class="section level3">
-<h3>‘Date’</h3>
-<p>So ymd() took a character string as input and returned an object of
-class POSIXct. It’s not necessary that you understand what POSIXct is,
-but just know that it is one way that R stores date-time information
-internally.</p>
-<p>“1989-05-17” is a fairly standard format, but lubridate is smart
-enough to figure out many different date-time formats. We use ymd() to
-parse “1989 May 17”.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">&quot;1989 May 17&quot;</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="do">## [1] &quot;1989-05-17 UTC&quot;</span></span></code></pre></div>
-<p><time>1989-05-17</time></p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>Despite being formatted differently, the last two dates had the year first, then the month, then the day. Hence, we used <span class="fu">ymd</span>() to parse them. What about the appropriate <span class="cf">function</span> is <span class="cf">for</span> parsing <span class="st">&quot;March 12, 1975&quot;</span> ?</span></code></pre></div>
-<pre><code>Error in parse(text = x, srcfile = src): &lt;text&gt;:1:9: unexpected symbol
-1: Despite being
-            ^
-Traceback:</code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">mdy</span>(<span class="st">&quot;March 12, 1975&quot;</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="do">## [1] &quot;1975-03-12 UTC&quot;</span></span></code></pre></div>
-<p><time>1975-03-12</time></p>
-<p>We can even throw something funky at it and lubridate will often know
-the right thing to do. Lets parse 25081985, which is supposed to
-represent the 25th day of August 1985. Note that we are actually parsing
-a numeric value here - not a character string - so leave off the
-quotes.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="fu">dmy</span>(<span class="dv">25081985</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="do">## [1] &quot;1985-08-25 UTC&quot;</span></span></code></pre></div>
-<p><time>1985-08-25</time></p>
-<p>But be careful, it’s not magic. Lets try <code>ymd(&quot;192012&quot;)</code>
-to see what happens when we give it something more ambiguous. We
-surround the number with quotes again, just to be consistent with the
-way most dates are represented (as character strings).</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">&quot;192012&quot;</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="do">## Warning: All formats failed to parse. No formats found.</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="do">## [1] NA</span></span></code></pre></div>
-<p><time>&lt;NA&gt;</time></p>
-<p>We got a warning message because it was unclear what date you wanted.
-When in doubt, it’s best to be more explicit. Lets repeat the same
-command, but add two dashes OR two forward slashes to “192012” so that
-it’s clear we want January 2, 1920.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># or ymd(&quot;1920-1-2&quot;)</span></span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="fu">ymd</span>(<span class="st">&quot;1920/1/2&quot;</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="do">## [1] &quot;1920-01-02 UTC&quot;</span></span></code></pre></div>
-<p><time>1920-01-02</time></p>
-</div>
-<div id="parsing-date-times" class="section level3">
-<h3>Parsing date-times</h3>
-<p>In addition to dates, we can parse date-times. Lets created a
-date-time object called dt1 and we parse it with ymd_hms().</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>dt1 <span class="ot">&lt;-</span> <span class="st">&#39;2014-08-23 17:23:02&#39;</span></span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="fu">ymd_hms</span>(dt1)</span>
-<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a><span class="do">## [1] &quot;2014-08-23 17:23:02 UTC&quot;</span></span></code></pre></div>
-<pre><code>[1] &quot;2014-08-23 17:23:02 UTC&quot;</code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>What <span class="cf">if</span> we have a time, but no date? Lets use the appropriate lubridate <span class="cf">function</span> to parse <span class="st">&quot;03:22:14&quot;</span> (hh<span class="sc">:</span>mm<span class="sc">:</span>ss).</span></code></pre></div>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">hms</span>(<span class="st">&quot;03:22:14&quot;</span>)</span></code></pre></div>
-<pre><code>[1] &quot;3H 22M 14S&quot;</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="do">## [1] &quot;3H 22M 14S&quot;</span></span></code></pre></div>
-<pre><code>
-
-&lt;div class=&quot;knitr-options&quot; data-fig-width=&quot;576&quot; data-fig-height=&quot;460&quot;&gt;&lt;/div&gt;
-
-```r
-lubridate is also capable of handling vectors of dates, which is particularly helpful when you need to parse an entire column of data.</code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>dt2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;2014-05-14&#39;</span>, <span class="st">&#39;2014-09-22&#39;</span>, <span class="st">&#39;2014-07-11&#39;</span>)</span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a><span class="fu">ymd</span>(dt2)</span></code></pre></div>
-<pre><code>[1] &quot;2014-05-14&quot; &quot;2014-09-22&quot; &quot;2014-07-11&quot;</code></pre>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="do">## [1] &quot;2014-05-14 UTC&quot; &quot;2014-09-22 UTC&quot; &quot;2014-07-11 UTC&quot;</span></span></code></pre></div>
-</div>
-<div id="update-date-time" class="section level3">
-<h3>Update date-time</h3>
-<p>The <code>update()</code> function allows us to update one or more
-components of a date-time. For example, let’s say the current time is
-08:34:55 (hh:mm:ss). Lets update this_moment to the new time using
-update(this_moment, hours = 8, minutes = 34, seconds = 55).</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="fu">update</span>(this_moment, <span class="at">hours =</span> <span class="dv">8</span>, <span class="at">minutes =</span> <span class="dv">34</span>, <span class="at">seconds =</span> <span class="dv">55</span>)</span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-09 08:34:55 EDT&quot;</span></span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>Lets <span class="fu">update</span>() this_moment, so that it contain the new time.</span></code></pre></div>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>this_moment <span class="ot">&lt;-</span> <span class="fu">update</span>(this_moment, <span class="at">hours =</span> <span class="dv">11</span>, <span class="at">minutes =</span> <span class="dv">55</span>, <span class="at">seconds =</span> <span class="dv">0</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>this_moment</span>
-<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-09 11:55:00 EDT&quot;</span></span></code></pre></div>
-<hr />
-<div id="dst-and-time-zones-and-arithmetic-operations" class="section level4">
-<h4>DST and time zones and arithmetic operations</h4>
-<p>Now, lets pretend you are in New York City and you are planning to
-visit a friend in Hong Kong. You seem to have misplaced your itinerary,
-but you know that your flight departs New York at 17:34 (5:34pm) the day
-after tomorrow. You also know that your flight is scheduled to arrive in
-Hong Kong exactly 15 hours and 50 minutes after departure.</p>
-<p>Let’s reconstruct your itinerary from what you can remember, starting
-with the full date and time of your departure. We will approach this by
-finding the current date in New York, adding 2 full days, then setting
-the time to 17:34.</p>
-<p>To find the current date in New York, we’’ll use the now() function
-again. This time, however, we’ll specify the time zone that we want:
-“America/New_York”. “For a complete list of valid time zones for use
-with lubridate, check out the following Wikipedia <a href="http://en.wikipedia.org/wiki/List_of_tz_database_time_zones" class="uri">http://en.wikipedia.org/wiki/List_of_tz_database_time_zones</a>.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>nyc <span class="ot">&lt;-</span> <span class="fu">now</span>(<span class="st">&quot;America/New_York&quot;</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>nyc</span>
-<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-09 11:19:08 EDT&quot;</span></span></code></pre></div>
-<p>Your flight is the day after tomorrow (in New York time), so we want
-to add two days to nyc. One nice aspect of lubridate is that it allows
-you to use arithmetic operators on dates and times. In this case, we’d
-like to add two days to nyc, so we can use the following expression: nyc
-+ days(2)</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a>depart <span class="ot">&lt;-</span> nyc <span class="sc">+</span> <span class="fu">days</span>(<span class="dv">2</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" tabindex="-1"></a>depart</span>
-<span id="cb36-3"><a href="#cb36-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-11 11:19:08 EDT&quot;</span></span></code></pre></div>
-<p>So now depart contains the date of the day after tomorrow. We use
-update() to add the correct hours (17) and minutes (34) to depart.
-Reassign the result to depart.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>depart <span class="ot">&lt;-</span> <span class="fu">update</span>(depart, <span class="at">hours =</span> <span class="dv">17</span>, <span class="at">minutes =</span> <span class="dv">34</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a>depart</span>
-<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-11 17:34:08 EDT&quot;</span></span></code></pre></div>
-<pre><code>[1] &quot;2017-05-15 17:34:44 EDT&quot;</code></pre>
-<p>Your friend wants to know what time she should pick you up from the
-airport in Hong Kong. Now that we have the exact date and time of your
-departure from New York, we can figure out the exact time of your
-arrival in Hong Kong.</p>
-<p>The first step is to add 15 hours and 50 minutes to your departure
-time. Recall that <strong><em>nyc + days(2)</em></strong> added two days
-to the current time in New York. Use the same approach to add 15 hours
-and 50 minutes to the date-time stored in depart.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>arrive <span class="ot">&lt;-</span> depart <span class="sc">+</span> <span class="fu">hours</span>(<span class="dv">15</span>) <span class="sc">+</span> <span class="fu">minutes</span>(<span class="dv">50</span>)</span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>arrive</span>
-<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-12 09:24:08 EDT&quot;</span></span></code></pre></div>
-<pre><code>[1] &quot;2017-05-16 09:24:44 EDT&quot;</code></pre>
-<p>The arrive variable contains the time that it will be in New York
-when you arrive in Hong Kong. What we really want to know is what time
-is will be in Hong Kong when you arrive, so that your friend knows when
-to meet you.</p>
-<p>The <code>with_tz()</code> function returns a date-time as it would
-appear in another time zone. We use <code>with_tz()</code> to convert
-arrive to the “Asia/Hong_Kong” time zone.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>arrive <span class="ot">&lt;-</span> <span class="fu">with_tz</span>(arrive, <span class="st">&quot;Asia/Hong_Kong&quot;</span>)</span>
-<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>arrive</span>
-<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a><span class="do">## [1] &quot;2015-08-12 21:24:08 HKT&quot;</span></span></code></pre></div>
-<pre><code>[1] &quot;2017-05-16 21:24:44 HKT&quot;</code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>last_time <span class="ot">&lt;-</span> <span class="fu">mdy</span>(<span class="st">&quot;June 17, 2008&quot;</span>, <span class="at">tz =</span> <span class="st">&quot;Singapore&quot;</span>)</span>
-<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>last_time</span>
-<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a><span class="do">## [1] &quot;2008-06-17 SGT&quot;</span></span></code></pre></div>
-<pre><code>[1] &quot;2008-06-17 SGT&quot;</code></pre>
-<p>We can create a <code>new_interval()</code> that spans from last_time
-to arrive</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a>how_long <span class="ot">&lt;-</span> <span class="fu">interval</span>(last_time, arrive)</span>
-<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>how_long</span>
-<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a><span class="do">## [1] 2008-06-17 SGT--2015-08-12 21:24:08 SGT</span></span></code></pre></div>
-<p>2008-06-17 SGT–2017-05-16 21:24:44 SGT</p>
-<p>Now use as.period() to see how long it’s been.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="fu">as.period</span>(how_long)</span>
-<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a></span>
-<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a><span class="do">## Warning in Ops.factor(left, right): &#39;-&#39; not meaningful for factors</span></span>
-<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a><span class="do">## [1] &quot;7y 1m 26d 21H 24M 8.27182102203369S&quot;</span></span></code></pre></div>
-<p>This is where things get a little tricky. Because of things like leap
-years, leap seconds, and daylight savings time, the length of any given
-minute, day, month, week, or year is relative to when it occurs. In
-contrast, the length of a second is always the same, regardless of when
-it occurs.</p>
-<p>To address these complexities, the authors of lubridate introduce
-four classes of time related objects: instants, intervals, durations,
-and periods. These topics are beyond the scope of this lesson, but you
-can find a complete discussion in the 2011 Journal of Statistical
-Software paper titled ‘Dates and Times Made Easy with lubridate’</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code></pre></div>
-<p>lubridate also makes it easy to calculate with dates</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="co"># day of week one year later</span></span>
-<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a><span class="fu">wday</span>(bday <span class="sc">+</span> <span class="fu">years</span>(<span class="dv">1</span>), <span class="at">label=</span>T)</span>
-<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a><span class="co"># days of the week for next 100 years.</span></span>
-<span id="cb48-4"><a href="#cb48-4" tabindex="-1"></a><span class="fu">table</span>(<span class="fu">sapply</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="cf">function</span>(x) <span class="fu">wday</span>(bday <span class="sc">+</span> <span class="fu">years</span>(x), <span class="at">label=</span>T)))</span>
-<span id="cb48-5"><a href="#cb48-5" tabindex="-1"></a><span class="dv">1</span></span></code></pre></div>
+<div id="introduction-2" class="section level3">
+<h3>Introduction</h3>
+<ul>
+<li><p>Demonstrate how the Doconv R package can Transform Word Documents
+into PDF documents systematically.</p></li>
+<li><p>Splitting and Combining PDF documents</p></li>
+</ul>
 <hr />
 </div>
+<div id="doconv" class="section level3">
+<h3>doconv:</h3>
+<h3>
+{doconv}
+</h3>
+<h4>
+doconv: Document Conversion to ‘PDF’ or ‘PNG’
+</h4>
+<p>It provides the ability to generate images from documents of
+different types.</p>
+<p>Three main features are provided: functions for generating document
+thumbnails, functions for performing visual tests of documents and a
+function for updating fields and table of contents of a ‘Microsoft Word’
+or ‘RTF’ document. In order to work, ‘LibreOffice’ must be installed on
+the machine and or ‘Microsoft Word’.</p>
+<ul>
+<li>If the latter is available, it can be used to produce PDF documents
+or images identical to the originals; otherwise, ‘LibreOffice’ is used
+and the rendering can be sometimes different from the original
+documents.</li>
+</ul>
+<hr />
 </div>
-<div id="lubdridate-r-package" class="section level3 tabset tabset-dropdown">
-<h3 class="tabset tabset-dropdown">lubdridate R package</h3>
+<div id="staplr" class="section level3">
+<h3>staplr</h3>
+<h3>
+{staplr}
+</h3>
+<div id="examples" class="section level4">
+<h4>Examples</h4>
 <pre><code>
-install.packages(&quot;lubridate&quot;)
-library(lubridate)
-# Create an object
-bday &lt;- dmy(&quot;23121984&quot;)
-</code></pre>
-<p>
-<p>This could also have been achieved with any combination of
-d(ay)m(onth)y(ear), i.e. ymd() or dym().</p>
-<p>Several options are provided to work with the bday object:</p>
-<p>
-<pre><code>
-wday(bday)  # day of the week
-wday(bday, label=T)  # day of the week, abreviated
-yday(bday)  # day of the year
-</code></pre>
-<p>
-<p> also makes it easy to calculate with dates</p>
-<pre><code>
-wday(bday + years(1), label=T)  # day of week one year later
 
-table(sapply(1:100, function(x) wday(bday + years(x), label=T)))  # days of the week for next 100 years.
+# setwd(&quot;C:/Workarea/03_HB_TESTS/staplr/input_files/&quot;)
+
+library(staplr)
+mypdffilelist &lt;- list.files()
+
+ThisFileName &lt;- paste0(&quot;C:/Workarea/03_HB_TESTS/staplr/input_files/&quot;,mypdffilelist[1])
+outputfilename &lt;- paste0(&quot;C:/Workarea/03_HB_TESTS/staplr/output_files/&quot;,mypdffilelist[1])
+
+
+remove_pages(
+  rmpages=1,
+  input_filepath = ThisFileName,
+  output_filepath = outputfilename,
+  overwrite = TRUE
+)
+
 </code></pre>
-<p>
-</body>
-</html>
+</div>
+<div id="combiding-pdf-documents" class="section level4">
+<h4>Combiding PDF documents</h4>
+<pre><code>
+staple_pdf(
+#input_directory = &quot;C:/Workarea/03_HB_TESTS/staplr/input_files/&quot;,
+input_files = c(&quot;C:/Workarea/03_HB_TESTS/staplr/input_files/Newcoverpage.pdf&quot;,ThisFileName),
+output_filepath = &quot;C:/Workarea/03_HB_TESTS/staplr/combined_files/newfile.pdf&quot;
+)
+
+</code></pre>
+</div>
 </div>
 </div>
 </div>

@@ -1,0 +1,39 @@
+Creating Word Documents {navmenu="Workshop"}
+==========================================
+
+Column {.tabset}
+--------------------
+
+### {officer}
+
+<h4>Offcer</h4>
+
+#### officer: Manipulation of Microsoft Word and PowerPoint Documents
+
+Access and manipulate 'Microsoft Word' and 'Microsoft PowerPoint' documents from R. 
+The package focuses on tabular and graphical reporting from R; it also provides two functions that let users get document content into data objects. 
+A set of functions lets add and remove images, tables and paragraphs of text in new or existing documents. 
+The package does not require any installation of Microsoft products to be able to write Microsoft files.
+
+* Tidy Formatrting
+* Fon Standards
+* Adding Documents
+* Find and Replaces
+
+-------------------------------------------
+
+### {flextable}
+
+#### flextable
+
+* The flextable package provides a framework for easily create tables for reporting and publications. 
+* Tables can be embedded within: R Markdown documents with support for HTML, Word and PowerPoint documents. 
+* Microsoft Word or PowerPoint documents with package officer. Tables can also be rendered as R plots or graphic files (png, pdf and jpeg).
+
+### Officer down
+
+#### {officerdown}
+
+The package is to be used when you want to use R Markdown documents to produce Microsoft Word documents but also want options for landscape orientation, with narrow margins, with formatted text, when some paragraphs have to be centered.
+
+Documentation: https://www.rdocumentation.org/packages/officedown/versions/0.0.5.002

@@ -1,4 +1,4 @@
-Woking with Dates and Times with lubridate in R {data-navmenu="Workshop"}
+The Lubridate R package {data-navmenu="lubdridate"}
 ==========================================
 
 Column {.tabset}
@@ -6,6 +6,8 @@ Column {.tabset}
 
 
 ### lubridate
+
+#### Woking with Dates and Times with lubridate in R
 
 In this lesson, we'll explore the lubridate R package, by Garrett Grolemund and Hadley Wickham. According to the package authors, "lubridate has a consistent, memorable syntax, that makes working with dates fun instead of frustrating." If you've ever worked with dates in R, that statement probably has your attention.
 
@@ -170,12 +172,19 @@ Sat
 
 
 
-```{r eval=FALSE}
+Date-time objects {data-navmenu="lubdridate"}
+==========================================
+
+Column {.tabset}
+--------------------
+
+
 ### Date-time
 
-In addition to handling dates, lubridate is great for working with date and time combinations, referred to as date-times. The `now()` function returns the date-time representing this exact moment in time. We store the result in a variable called this_moment.
+In addition to handling dates, lubridate is great for working with date and time combinations, referred to as date-times. 
+The `now()` function returns the date-time representing this exact moment in time. 
+We store the result in a variable called this_moment.
 
-```
 
 
 ```{r eval=FALSE}
@@ -185,11 +194,8 @@ this_moment
 
 ```
 
-
-    [1] "2017-05-13 09:48:10 UTC"
-
-
-Just like with dates, we can extract the year, month, day, or day of week. However, we can also use hour(), minute(), and second() to extract specific time information.
+Just like with dates, we can extract the year, month, day, or day of week. 
+However, we can also use hour(), minute(), and second() to extract specific time information.
 
 
 
@@ -213,9 +219,13 @@ rbind(hr,minu,sec)
 
 
 
-`today()` and `now()` provide neatly formatted date-time information. When working with dates and times 'in the wild', this won't always (and perhaps rarely will) be the case.
+`today()` and `now()` provide neatly formatted date-time information. 
 
-Fortunately, lubridate offers a variety of functions for parsing date-times. These functions take the form of ymd(), dmy(), hms(), ymd_hms(), etc., where each letter in the name of the function stands for the location of years (y), months (m), days (d), hours (h), minutes (m), and/or seconds (s) in the date-time being read in.
+When working with dates and times 'in the wild', this won't always (and perhaps rarely will) be the case.
+
+Fortunately, lubridate offers a variety of functions for parsing date-times. 
+
+These functions take the form of ymd(), dmy(), hms(), ymd_hms(), etc., where each letter in the name of the function stands for the location of years (y), months (m), days (d), hours (h), minutes (m), and/or seconds (s) in the date-time being read in.
 
 To see how these functions work, we try `ymd("1989-05-17")`. We must surround the date with quotes.
 
@@ -412,7 +422,14 @@ this_moment
 
 ```
 
-----------
+
+Time-zone Data  {data-navmenu="lubdridate"}
+==========================================
+
+Column {.tabset}
+--------------------
+
+
 
 #### DST and time zones and arithmetic operations
 
@@ -435,7 +452,9 @@ nyc
 
 
 
-Your flight is the day after tomorrow (in New York time), so we want to add two days to nyc. One nice aspect of lubridate is that it allows you to use arithmetic operators on dates and times. In this case, we'd like to add two days to nyc, so we can use the following expression: nyc + days(2)
+Your flight is the day after tomorrow (in New York time), so we want to add two days to nyc. 
+One nice aspect of lubridate is that it allows you to use arithmetic operators on dates and times. 
+In this case, we'd like to add two days to nyc, so we can use the following expression: nyc + days(2)
 
 
 
@@ -450,7 +469,8 @@ depart
 
 
 
-So now depart contains the date of the day after tomorrow. We use update() to add the correct hours (17) and minutes (34) to depart. Reassign the result to depart.
+So now depart contains the date of the day after tomorrow. We use update() to add the correct hours (17) and minutes (34) to depart. 
+Reassign the result to depart.
 
 
 
@@ -566,8 +586,11 @@ table(sapply(1:100, function(x) wday(bday + years(x), label=T)))
 1
 ```
 
-------------------------
+Exercises {data-navmenu="lubdridate"}
+==========================================
 
+Column {.tabset}
+--------------------
 
 ### lubdridate R package {.tabset .tabset-dropdown}
 

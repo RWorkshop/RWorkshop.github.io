@@ -1,0 +1,46 @@
+{pdftools} {data-navmenu="Working With PDFs"}
+==========================================
+
+Column {.tabset}
+--------------------
+
+### pdftools: Introduction 
+
+Part A. Working with PDFs
+
+
+
+Downloading PDF documents from the internet.
+(Same approach for ZIP Files)
+
+PDF Info
+Useful for information about how PDF was created
+Was it a word document saved as a PDF in Microsoft Office
+(relevant to OCR - this has higher fidelity compared to a Photocopy
+Pdf documents
+
+PDF tools
+OCR
+
+
+### Extracting Text
+
+We can use the PDF tools are package to extract text from PDF documents or documents that are saved from PDF towards the process is very effective. 
+
+<h3> Extracting Text <h3>
+
+#### Optical Character Recognition
+
+* OCR "reads" the text and created a text file.
+
+
+
+
+```{r eval=FALSE}
+
+library(pdftools)
+
+pagetext <- pdftools::pdf_text(ThisFileName)
+grep("Appendix 2: Map",pagetext)
+
+```

@@ -1,0 +1,64 @@
+---
+title: "R Workshop"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: united
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+Introduction
+==================================
+Column {.tabset}
+--------------------
+
+### Introduction 
+
+<h3> Working with Files and Folders <h3>
+
+
+
+This section will be looking at working with files and directories in particular. You want to see if files and directories actually exist the network. One, very useful command is file.it exist. This is a logical test to see if the file exists according to the specified. You may use this to check if the actual path to the file is correctly. Specified. Or if there's a spelling mistake.
+
+Of folders and directories this command is a similar function to test the existence of folders and directories this command is called dir exists.
+
+This plant is also very useful, because there's can programmatically create directories and given specific knowledge name.
+
+The intended name is Pye says a strength that's for sure.
+
+Files and folders can be deleted and removed using the file dot, remove and file copy functions.
+
+The ffr package is also very useful for working files and folders. Likewise the five-string package.
+
+-------------------------------------
+
+<div style="margin-left: auto;
+            margin-right: auto;
+            width: 80%">
+            
+|  <b> <strong><u>Contents</u> </strong></b>       |   
+|:------------------|
+|   |    
+| * <b> <strong><a href="https://rworkshop.github.io/">R Workshop Main Page</a>   </strong></b>|       
+|   | 
+| * <b> <a href="https://rworkshop.github.io/Working_with_Text/">Working with Text</a> </b>|  
+| * <b> <a href="https://rworkshop.github.io/Working_with_Databases/">Working with Databases</a> </b>|  
+| * <b> <a href="https://rworkshop.github.io/Working_with_Documents/">Working with Documents</a> </b>|  
+|   | 
+</div>
+
+
+
+### Working with Files
+
+#### Working with files
+
+Base R Commands
+
+
+```{r child = "Segments/filesstring.Rmd"}
+```

@@ -37,6 +37,8 @@ Working with Text, Time and Dates
 
 
 
+```{r child = "Segments/DatesandTimeswithR.Rmd"}
+```
 
 
 
@@ -44,8 +46,6 @@ Working with Text, Time and Dates
 ```{r child= "Segments/lubridate.Rmd"}
 ```
 
-```{r child = "Segments/DatesandTimeswithR.Rmd"}
-```
 
 
 

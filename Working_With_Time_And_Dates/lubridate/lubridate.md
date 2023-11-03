@@ -5,7 +5,9 @@ Woking with Dates and Times with lubridate in R
 
 ### lubridate
 
-In this lesson, we’ll explore the lubridate R package, by Garrett Grolemund and Hadley Wickham. According to the package authors, “lubridate has a consistent, memorable syntax, that makes working with dates fun instead of frustrating.” If you’ve ever worked with dates in R, that statement probably has your attention.
+In this lesson, we’ll explore the lubridate R package, by Garrett Grolemund and Hadley Wickham. 
+According to the package authors, “lubridate has a consistent, memorable syntax, that makes working with dates fun instead of frustrating.” 
+If you’ve ever worked with dates in R, that statement probably has your attention.
 
 There are different date and time representations, in order to view our locale:
 

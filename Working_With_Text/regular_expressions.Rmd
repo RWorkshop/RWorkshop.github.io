@@ -7,14 +7,14 @@ The backslash operator is used in regular expressions to signal that certain cha
 By default
 You can use the readline() function to enter regular expressions into R.
 
-To create a regular expression that would match file names with an extension “.txt”
+To create a regular expression that would match file names with an extension â€œ.txtâ€
 
 expr=readline()
 
 <h3>Regular Expressions in R (7.5)</h3>
 <pre><code>
-strs = c(‘chicken’,’dog’,’cat’)
-expr =paste(strs,collapse=’’)
+strs = c(â€˜chickenâ€™,â€™dogâ€™,â€™catâ€™)
+expr =paste(strs,collapse=â€™â€™)
 expr
 </code></pre>
 The variable expr could now be used as a regular expression to match any of the words in the original vector.
@@ -25,8 +25,8 @@ The strsplit() function can use a character string or regular expression to divi
 The first argument to strsplit() is the character string to break up, and the second argument is the character value or regular expression which should be used to break up the string into parts.
 
 <pre><code>
-sentence=‘R is a free software environment for statistical computing’
-parts = strsplit(sentence,’ ’)
+sentence=â€˜R is a free software environment for statistical computingâ€™
+parts = strsplit(sentence,â€™ â€™)
 length(parts)
 length(parts[[1]])
 </code></pre>
@@ -35,5 +35,5 @@ length(parts[[1]])
 The grep() function accepts a regular expression and a character string or vector of character strings, and returns the indices of those elements if the string that are matched by regular expression
 
 <pre><code>
-head(LifeCycleSavings[,greg(‘^pop’,names(LifeCycleSavings))])
+head(LifeCycleSavings[,greg(â€˜^popâ€™,names(LifeCycleSavings))])
 </code></pre>

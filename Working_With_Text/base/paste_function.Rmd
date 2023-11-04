@@ -1,0 +1,12 @@
+
+### The `paste()` command
+
+```{r}
+
+part1 <- rep( c("WH","LD"),5)
+part2 <- sprintf("%02.0f", 1:10)
+
+paste(part1,part2)
+paste(part1,part2,sep="-") # hyphen seperator
+paste(part1,part2,sep="")  # no white space, i.e. no gap
+```

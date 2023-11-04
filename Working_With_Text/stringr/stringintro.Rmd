@@ -150,6 +150,7 @@ phone <- "([2-9][0-9]{2})[- .]([0-9]{3})[- .]([0-9]{4})"
 
 `str_detect()` detects the presence or absence of a pattern and returns a logical vector (similar to grepl()). str_subset() returns the elements of a character vector that match a regular expression (similar to grep() with value = TRUE)`.
 
+```{r}                                                                                                                                                                       
 # Which strings contain phone numbers?
 str_detect(strings, phone)
 #> [1] FALSE  TRUE  TRUE  TRUE
@@ -165,6 +166,7 @@ str_count(strings, phone)
 #> [1] 0 1 1 2
 str_locate() locates the first position of a pattern and returns a numeric matrix with columns start and end. str_locate_all() locates all matches, returning a list of numeric matrices. Similar to regexpr() and gregexpr().
 
+```{r}                                                                                                                                                                  
 # Where in the string is the phone number located?
 (loc <- str_locate(strings, phone))
 #>      start end
@@ -172,8 +174,9 @@ str_locate() locates the first position of a pattern and returns a numeric matri
 #> [2,]     1  12
 #> [3,]     1  12
 #> [4,]     7  18
+```
 
-
+```{r}
 str_locate_all(strings, phone)
 #> [[1]]
 #>      start end
@@ -202,7 +205,9 @@ str_locate_all(strings, phone)
 str_extract(strings, phone)
 #> [1] NA             "219 733 8965" "329-293-8753" "579-499-7527"
 str_extract_all(strings, phone)
+```
 
+```{r}
 
 
 #> [[1]]
@@ -233,7 +238,9 @@ str_match(strings, phone)
 #> [2,] "219 733 8965" "219" "733" "8965"
 #> [3,] "329-293-8753" "329" "293" "8753"
 #> [4,] "579-499-7527" "579" "499" "7527"
+```
 
+```{r}
 
 str_match_all(strings, phone)
 #> [[1]]

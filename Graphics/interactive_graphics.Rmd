@@ -1,0 +1,17 @@
+
+------------------------------
+
+plotly and highcharter
+
+
+### Highcharter
+
+Highcharter is a R wrapper for Highcharts javascript library and its modules. Highcharts is very flexible and customizable javascript charting library and it has a great and powerful API.
+
+The main features of highcharter are:
+
+* Chart various R objects with one function: with hchart(x) you can chart data.frames, numeric or character vectors, ts, xts, forecast, survfit objects.
+* Support Highstock You can create a candlestick charts in 2 lines of code. Support xts class from the {quantmod} package.
+* Support Highmaps Create choropleth charts or add information in geojson format.
+* Themes: you configure your chart in multiples ways. There are implemented themes like economist, financial times, google, 538 among others.
+* A lot of features and plugins: motion, draggable points, font-awesome, tooltips, annotations.

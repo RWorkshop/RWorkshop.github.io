@@ -1,5 +1,5 @@
 
-### `sprintf()`
+### sprintf()`
 
 ```{r}
 

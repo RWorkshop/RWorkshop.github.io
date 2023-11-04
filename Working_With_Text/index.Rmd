@@ -32,8 +32,16 @@ Column {.tabset}
 |   | 
 </div>
 
-```{r child = "stringr/"}
+```{r child = "stringr/stringintro.Rmd"}
 ```
+```{r child = "stringr/stringr_Textprocessing.Rmd"}
+```
+
+```{r child = "stringr/stringr_str_trim.Rmd"}
+```
+```{r child = "stringr/stringr_Exercises.Rmd"}
+```
+
 
 
 ### Data Sets

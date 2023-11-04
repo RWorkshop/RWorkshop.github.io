@@ -1,0 +1,10 @@
+### The ``rep() `` command
+
+```{r}
+rep( "WH", 10)
+rep( c("WH","LD"), 5)
+rep( c("WH","LD"), times = 5)
+rep( c("WH","LD"), each = 5)
+rep( c("WH","LD"), each = 2, times = 3)
+rep( c("WH","LD"), times=c(3,7) ) 
+```

@@ -1,0 +1,25 @@
+
+### `sprintf()`
+
+```{r}
+
+
+## various formats of pi :
+
+sprintf("%f", pi)
+sprintf("%.3f", pi)
+sprintf("%1.0f", pi)
+sprintf("%5.1f", pi)
+sprintf("%05.1f", pi)
+sprintf("%+f", pi)
+sprintf("% f", pi)
+sprintf("%-10f", pi) # left justified
+sprintf("%e", pi)
+sprintf("%E", pi)
+sprintf("%g", pi)
+sprintf("%g",   1e6 * pi)    # -> exponential
+sprintf("%.9g", 1e6 * pi)    # -> "fixed"
+sprintf("%G", 1e-6 * pi)
+
+```
+

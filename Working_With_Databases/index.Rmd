@@ -37,3 +37,18 @@ Column {.tabset}
 ```{r child = "Segments/dbplyr.Rmd"}
 ```
 
+
+```{r child = "Segments/using_dbplyr.Rmd"}
+
+```
+
+```{r child = "Segments/databases.Rmd"}
+```
+
+
+
+```{r child = "Segments/DBI_R_PACKAGE.Rmd"}
+```
+
+```{r child = "Segments/Tutorials.Rmd"}
+```

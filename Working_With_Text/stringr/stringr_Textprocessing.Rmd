@@ -1,5 +1,6 @@
-%- https://www.kdnuggets.com/2018/03/text-processing-r.html
-
+```{r echo=FALSE}
+# - https://www.kdnuggets.com/2018/03/text-processing-r.html
+```
 
 ### Overview
  
@@ -18,27 +19,29 @@ MALLET does a whole bunch of useful statistical analysis of text, including an e
 ### Regular Expressions
  
 Regular expressions are a way of specifying rules that describe a class of strings (for example -- every word that starts with the letter "a") that are more succinct and general than simply generating a dictionary and checking against every possible value that meets some rule. 
-										    They are foundational to lots of different text processing tasks where we want to count types of terms (for example), or identify things like email addresses in documents. If you want build your competency with text analysis in R, they are definitely a necessary tool. You can start by checking out this link to an overview of regular expressions, and then take a look at this primer on using regular expressions in R. What is important to understand is that they can be far more powerful than simple string matching.
+They are foundational to lots of different text processing tasks where we want to count types of terms (for example), or identify things like email addresses in documents. If you want build your competency with text analysis in R, they are definitely a necessary tool. You can start by checking out this link to an overview of regular expressions, and then take a look at this primer on using regular expressions in R. What is important to understand is that they can be far more powerful than simple string matching.
 
 If you want to get started using regular expressions, you can check out the tutorials posted above, but I have also found it very helpful to just start trying out examples and seeing how they work. One simple way to do this is to use an online app with a graphical interface that highlights matches, such as the one provided here. 
-																																															      I personally prefer the RegExRx app, which should work on OSX and Windows and is available either as a shareware version or as a paid app on the Apple App Store. This program includes support for Perl style Regular Expressions which are quite common and are used by some R packages. Whichever program you choose, I would suggest just messing around and reading random articles on the internet for a few hours before you get started using Regular Expressions in R. I also tend to use one of these programs to prototype any complex RegEx I want to use in production code.
+  I personally prefer the RegExRx app, which should work on OSX and Windows and is available either as a shareware version or as a paid app on the Apple App Store. This program includes support for Perl style Regular Expressions which are quite common and are used by some R packages. Whichever program you choose, I would suggest just messing around and reading random articles on the internet for a few hours before you get started using Regular Expressions in R. I also tend to use one of these programs to prototype any complex RegEx I want to use in production code.
 
  
 
 Example Commands
  
 Lets start with an example string.
-																			    <pre><code>
+
+```{r}
 
 my_string <- "Example STRING, with example numbers (12, 15 and also 10.2)?!"
-</code></pre>
+```
 
 First we can lowercase the entire string -- often a good starting place. 
-																							    This will prevent any future string matching from treating "Example" and "example" as distinct words, for example, just because one came at the beginning of a sentence:
+This will prevent any future string matching from treating "Example" and "example" as distinct words, for example, just because one came at the beginning of a sentence:
 
-																																															      
+
+```{r}  
 lower_string <- tolower(my_string)
-
+```
 
 We can also take a second string and paste it on the end of the first string:
 
@@ -47,13 +50,13 @@ my_string <- paste(my_string,second_string,sep = " ")
 
 
 Now we might want to split our string up into a number of strings, we can do this by using the str_split() function, available as part of the stringr R package. 
-																							    The following line will split the combined string from above on exclamation points:
+The following line will split the combined string from above on exclamation points:
 
 my_string_vector <- str_split(my_string, "!")[[1]]
 
 
 Notice that the splitting character gets deleted, but we are now left with essentially two sentences, each stored as a separate string. 
-																							    Furthermore, note that a list object is returned the str_split() function, so to access the actual vector containing the split strings, we need to use the [[ ]] list operator and get the first entry.
+Furthermore, note that a list object is returned the str_split() function, so to access the actual vector containing the split strings, we need to use the [[ ]] list operator and get the first entry.
 
 Now, let's imagine we are interested in sentences that contain questions marks. We can search for the string in the resulting my_string_vector that contains a "?" by using the grep() command. This command will return the index in the input vector that contains what we are looking for, or nothing if it could not find a match.
 
@@ -83,84 +86,88 @@ note here that we used out first real regex -- [0-9]+ which translates to "match
  
 One of the most common things we might want to do is read in, clean, and "tokenize" (split into individual words) a raw input text file. There are a number of packages that make this quite easy to do in R (I recommend and use quanteda). Later in this tutorial (and more generally in your own work), you will find it much easier to use built-in functions like those in quanteda to do these tasks, but I think it is valuable and instructive to learn a bit about what goes on behind the curtain when we talk about cleaning or tokenizing text. To do this ourselves, we will want to make use of two functions, the first of these will clean an individual string, removing any characters that are not letters, lowercasing everything, and getting rid of additional spaces between words before tokenizing the resulting text and returning a vector of individual words:
 
-Clean_String <- function(string){
-    # Lowercase
-    temp <- tolower(string)
-    # Remove everything that is not a number or letter (may want to keep more 
-    # stuff in your actual analyses). 
-    temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
-    # Shrink down to just one white space
-    temp <- stringr::str_replace_all(temp,"[\\s]+", " ")
-    # Split it
-    temp <- stringr::str_split(temp, " ")[[1]]
-    # Get rid of trailing "" if necessary
-    indexes <- which(temp == "")
-    if(length(indexes) > 0){
-      temp <- temp[-indexes]
-    } 
-    return(temp)
-}
 
+```{r}
+Clean_String <- function(string){
+# Lowercase
+temp <- tolower(string)
+# Remove everything that is not a number or letter (may want to keep more 
+# stuff in your actual analyses). 
+temp <- stringr::str_replace_all(temp,"[^a-zA-Z\\s]", " ")
+# Shrink down to just one white space
+temp <- stringr::str_replace_all(temp,"[\\s]+", " ")
+# Split it
+temp <- stringr::str_split(temp, " ")[[1]]
+# Get rid of trailing "" if necessary
+indexes <- which(temp == "")
+if(length(indexes) > 0){
+  temp <- temp[-indexes]
+} 
+return(temp)
+}
+```
 
 Lets give this function a try by entering the bit of code above in the console (thus defining the function), and then cleaning and tokenizing the following sentence:
 
 sentence <- "The term 'data science' (originally used interchangeably with 'datalogy') has existed for over thirty years and was used initially as a substitute for computer science by Peter Naur in 1960."
 clean_sentence <- Clean_String(sentence)
 > print(clean_sentence) 
- [1] "the"             "term"            "data"           
- [4] "science"         "originally"      "used"           
- [7] "interchangeably" "with"            "datalogy"       
-[10] "has"             "existed"         "for"            
-[13] "over"            "thirty"          "years"          
-[16] "and"             "was"             "used"           
-[19] "initially"       "as"              "a"              
-[22] "substitute"      "for"             "computer"       
-[25] "science"         "by"              "peter"          
-[28] "naur"            "in"
+ [1] "the" "term""data"   
+ [4] "science" "originally"  "used"   
+ [7] "interchangeably" "with""datalogy"   
+[10] "has" "existed" "for"
+[13] "over""thirty"  "years"  
+[16] "and" "was" "used"   
+[19] "initially"   "as"  "a"  
+[22] "substitute"  "for" "computer"   
+[25] "science" "by"  "peter"  
+[28] "naur""in"
 
 
 As we can see, all of the special characters have been removed and we are left with a well-behaved vector of individual words. Now we will want to scale this up to working on an entire input document, to do so, we will want to loop over the input lines of that document and in addition to returning the cleaned text itself, we may also want to return some useful metadata like the total number of tokens, or the set of unique tokens. We can do so using the following function:
 
+```{r}
 # function to clean text
 Clean_Text_Block <- function(text){
-    # Get rid of blank lines
-    indexes <- which(text == "")
-    if (length(indexes) > 0) {
-        text <- text[-indexes]
-    }
-	# See if we are left with any valid text:
-    if (length(text) == 0) {
-        cat("There was no text in this document! \n")
-        to_return <- list(num_tokens = 0, 
-		                     unique_tokens = 0, 
-							 text = "")
-    } else {
-        # If there is valid text, process it.
-        # Loop through the lines in the text and combine them:
-        clean_text <- NULL
-        for (i in 1:length(text)) {
-            # add them to a vector 
-            clean_text <- c(clean_text, Clean_String(text[i]))
-        }
-        # Calculate the number of tokens and unique tokens and return them in a 
-        # named list object.
-        num_tok <- length(clean_text)
-        num_uniq <- length(unique(clean_text))
-        to_return <- list(num_tokens = num_tok, 
-		                     unique_tokens = num_uniq, 
-							 text = clean_text)
-    }
-	
-    return(to_return)
+# Get rid of blank lines
+indexes <- which(text == "")
+if (length(indexes) > 0) {
+text <- text[-indexes]
+}
+# See if we are left with any valid text:
+if (length(text) == 0) {
+cat("There was no text in this document! \n")
+to_return <- list(num_tokens = 0, 
+ unique_tokens = 0, 
+ text = "")
+} else {
+# If there is valid text, process it.
+# Loop through the lines in the text and combine them:
+clean_text <- NULL
+for (i in 1:length(text)) {
+# add them to a vector 
+clean_text <- c(clean_text, Clean_String(text[i]))
+}
+# Calculate the number of tokens and unique tokens and return them in a 
+# named list object.
+num_tok <- length(clean_text)
+num_uniq <- length(unique(clean_text))
+to_return <- list(num_tokens = num_tok, 
+ unique_tokens = num_uniq, 
+ text = clean_text)
 }
 
+return(to_return)
+}
 
+```
 Now let's give it a try. You can download the plain text of a speech given by Barak Obama on February 24, 2009 to a joint session of Congress from the University of Virginia Miller Center Presidential Speech Archive by clicking the link here. Once you have save this file, you will want to set your working directory in R to the folder where you saved it and then read it in to R using the following lines of code:
 
+```{r}
 con <- file("Obama_Speech_2-24-09.txt", "r", blocking = FALSE)
 text <- readLines(con)
 close(con) 
-
+```
 
 You can now run it through the Clean_Text_Block() function and then take a look at the output:
 
@@ -169,65 +176,72 @@ clean_speech <- Clean_Text_Block(text)
 List of 3
  $ num_tokens   : int 6146
  $ unique_tokens: int 1460
- $ text         : chr [1:6146] "madam" "speaker" "mr" "vice" ...
+ $ text : chr [1:6146] "madam" "speaker" "mr" "vice" ...
 
 
-We can see that there are a total of 6146 words in the document, with 1460 of them being unique. You are now past one of the biggest hurdles in text analysis, getting your data into R and in a reasonable format.
+We can see that there are a total of 6146 words in the document, with 1460 of them being unique. 
+You are now past one of the biggest hurdles in text analysis, getting your data into R and in a reasonable format.
 
  
+-------------------------------------------------------
 
-Generating A Document-Term Matrix by Hand
+### Generating A Document-Term Matrix by Hand
  
-One of the things we will want to do most often for social science analyses of text data is generate a document-term matrix. This can be done very easily (and robustly) using existing software, and I detail how to do this in the next section. Again, the goal here is just to reveal some of what is going on behind the scenes when we form a document-term matrix. This is actually a relatively challenging programming task, and it is also usually very computationally intensive, so I will be using functions written in C++ in order to accomplish this task. You do not need to fully understand the rest of this section in order to be able to use a package like quanteda to form a document-term matrix, so if you are pressed for time, feel free to just skim this section. Before going any further, I suggest you check out my tutorial Using C++ and R Code Together with Rcpp to get the basics of C++ programming under your belt. You may also need to follow some of the steps at the beginning of this tutorial before you will even be able to install the Rcpp package and get it working, especially if you are using Windows or a certain versions of Mac OS X. Before you go any further, you will want to make sure you have the following packages installed:
+One of the things we will want to do most often for social science analyses of text data is generate a document-term matrix. 
+This can be done very easily (and robustly) using existing software, and I detail how to do this in the next section. Again, the goal here is just to reveal some of what is going on behind the scenes when we form a document-term matrix. This is actually a relatively challenging programming task, and it is also usually very computationally intensive, so I will be using functions written in C++ in order to accomplish this task. You do not need to fully understand the rest of this section in order to be able to use a package like quanteda to form a document-term matrix, so if you are pressed for time, feel free to just skim this section. Before going any further, I suggest you check out my tutorial Using C++ and R Code Together with Rcpp to get the basics of C++ programming under your belt. You may also need to follow some of the steps at the beginning of this tutorial before you will even be able to install the Rcpp package and get it working, especially if you are using Windows or a certain versions of Mac OS X. Before you go any further, you will want to make sure you have the following packages installed:
 
 install.packages("Rcpp",dependencies = T)
 install.packages("RcppArmadillo",dependencies = T)
 install.packages("BH",dependencies = T)
 
 
-The BH package is not essential for sourcing the function below, but it is a good idea to have installed for use with future C++ functions. Now, let's take a look at a C++ function that will help us generate a document term matrix:
+The BH package is not essential for sourcing the function below, but it is a good idea to have installed for use with future C++ functions. 
+Now, let's take a look at a C++ function that will help us generate a document term matrix:
 
+```{r eval=FALSE
 #include <RcppArmadillo.h>
 //[[Rcpp::depends(RcppArmadillo)]]
 using namespace Rcpp;  
 
 // [[Rcpp::export]]  
 arma::mat Generate_Document_Word_Matrix(int number_of_docs,
-                                        int number_of_unique_words,
-                                        std::vector<std::string> unique_words,
-                                        List Document_Words,
-                                        arma::vec Document_Lengths
-                                        ){
-    arma::mat document_word_matrix = arma::zeros(number_of_docs, number_of_unique_words);  
+int number_of_unique_words,
+std::vector<std::string> unique_words,
+List Document_Words,
+arma::vec Document_Lengths
+){
+arma::mat document_word_matrix = arma::zeros(number_of_docs, number_of_unique_words);  
 
-    for(int n = 0; n < number_of_docs; ++n){
-        Rcpp::Rcout << "Current Document: " << n << std::endl;
-        std::vector<std::string> current = Document_Words[n];
-        int length = Document_Lengths[n];
-        for(int i = 0; i < length; ++i){
-            int already = 0;
-            int counter = 0;
-            while(already == 0){
-                if(counter == number_of_unique_words ){
-                    already = 1;
-                }else{
-                    if(unique_words[counter] == current[i]){
-                        document_word_matrix(n,counter) += 1;
-                        already = 1;
-                    } 
-                    counter +=1;
-                }
-            }
-        }
-    }    
-    return document_word_matrix;     
+for(int n = 0; n < number_of_docs; ++n){
+Rcpp::Rcout << "Current Document: " << n << std::endl;
+std::vector<std::string> current = Document_Words[n];
+int length = Document_Lengths[n];
+for(int i = 0; i < length; ++i){
+int already = 0;
+int counter = 0;
+while(already == 0){
+if(counter == number_of_unique_words ){
+already = 1;
+}else{
+if(unique_words[counter] == current[i]){
+document_word_matrix(n,counter) += 1;
+already = 1;
+} 
+counter +=1;
+}
+}
+}
+}
+return document_word_matrix; 
 }
 
+```
 
 You can download the source file for the C++ code you see above by clicking the link here. Once you have saved the file somewhere where you can access it (the example code below assumes it is in your working directory), you can now Rcpp::sourceCpp() the code which will give you access to an R function that has C++ code under the hood.
 
+```{r eval=FALSE}
 Rcpp::sourceCpp('Generate_Document_Word_Matrix.cpp')
-
+```
 
 You can now use the function, so let's try it out on a toy example. The first thing we will want to do is get a second document so we can make a document-term matrix that contains more than just one document. You can download another Obama Speech (this time his 2010 state of the union) by clicking the link here. We can now read in and tokenize this piece of text as follows:
 
@@ -242,10 +256,11 @@ clean_speech2 <- Clean_Text_Block(text2)
 
 Now we are ready to set things up and use our document word matrix generator function:
 
+```{r eval=FALSE}
 # Create a list containing a vector of tokens in each document for each
 # document. These can be extracted from the cleaned text objects as follows:
 doc_list <- list(speech_1 = clean_speech$text, 
-                    speech_2 = clean_speech2$text)  
+speech_2 = clean_speech2$text)  
 
 # Create a vector of document lengths (in tokens):
 doc_lengths <- c(clean_speech$num_tokens,clean_speech2$num_tokens)  
@@ -261,14 +276,15 @@ ndoc <- 2
 
 # Now feed all of this information to the function as follows:
 Doc_Term_Matrix <- Generate_Document_Word_Matrix(
-                       number_of_docs = ndoc,
-                       number_of_unique_words = n_unique_words,
-                       unique_words = unique_words,
-                       Document_Words = doc_list,
-                       Document_Lengths = doc_lengths)  
+   number_of_docs = ndoc,
+   number_of_unique_words = n_unique_words,
+   unique_words = unique_words,
+   Document_Words = doc_list,
+   Document_Lengths = doc_lengths)  
 
 # Make sure to add column names to Doc_Term_Matrix, then take a look:
 colnames(Doc_Term_Matrix) <- unique_words
+```
 
 
 Once we have generated this matrix, we can use it for all sorts of analyses from statistical topic models like LDA (using the topicmodels package, for example) to just including the counts of them in a regression model. It is important to note that while the approach outlined above technically works, it is both much slower and less full featured than some of the functionality included in some of the R packages for text analysis. In general, you should just use one of these packages in your own research, but hopefully now with a bit more understanding of the kinds of things that are going on under the hood.

@@ -1,3 +1,14 @@
+
+
+### Exercises
+
+```{r}
+##############################
+# Package Demo
+library(stringr)
+```
+
+```{r}
 substring("kevin",1,1)
 nchar("Kevin")
 
@@ -5,10 +16,10 @@ substring("kevin",nchar("kevin"))
 
 
 substring("kevin",c(1,nchar("kevin")))
+```
 
-##############################
-# Package Demo
-library(stringr)
+```{r}
+
 x <- c("abcdef", "ghifjk")
 # The 3rd letter
 str_sub(x, 3, 3)
@@ -19,7 +30,11 @@ str_sub(x, 2, -2)
 str_sub(x, -2, -1)
 str_sub("Kevin", -2, -1)
 str_sub("Kevin", -1, -1)
-library(magrittr) %>% toupper
+```
+
+```{r}
+#library(magrittr) %>% toupper
 library(magrittr) 
 str_sub("Kevin", -1, -1) %>% toupper
-history(30)
+#history(30)
+```

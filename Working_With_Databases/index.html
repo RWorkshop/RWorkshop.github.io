@@ -8,79 +8,14 @@
 
 
 
-<title>R Workshop - Working With Text</title>
+<title>R Workshop</title>
 
-<meta property="og:title" content="R Workshop - Working With Text" />
+<meta property="og:title" content="R Workshop" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 <link href="data:image/x-icon;" rel="icon" type="image/x-icon">
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-{ counter-reset: source-line 0; }
-pre.numberSource code > span
-{ position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-{ content: counter(source-line);
-position: relative; left: -1em; text-align: right; vertical-align: baseline;
-border: none; display: inline-block;
--webkit-touch-callout: none; -webkit-user-select: none;
--khtml-user-select: none; -moz-user-select: none;
--ms-user-select: none; user-select: none;
-padding: 0 4px; width: 4em;
-color: #aaaaaa;
-}
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
-div.sourceCode
-{ }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } 
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.at { color: #7d9029; } 
-code span.bn { color: #40a070; } 
-code span.bu { color: #008000; } 
-code span.cf { color: #007020; font-weight: bold; } 
-code span.ch { color: #4070a0; } 
-code span.cn { color: #880000; } 
-code span.co { color: #60a0b0; font-style: italic; } 
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.do { color: #ba2121; font-style: italic; } 
-code span.dt { color: #902000; } 
-code span.dv { color: #40a070; } 
-code span.er { color: #ff0000; font-weight: bold; } 
-code span.ex { } 
-code span.fl { color: #40a070; } 
-code span.fu { color: #06287e; } 
-code span.im { color: #008000; font-weight: bold; } 
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
-code span.kw { color: #007020; font-weight: bold; } 
-code span.op { color: #666666; } 
-code span.ot { color: #007020; } 
-code span.pp { color: #bc7a00; } 
-code span.sc { color: #4070a0; } 
-code span.ss { color: #bb6688; } 
-code span.st { color: #4070a0; } 
-code span.va { color: #19177c; } 
-code span.vs { color: #4070a0; } 
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
-</style>
 
 <script type="text/javascript">
 window.FlexDashboardComponents = [];
@@ -275,7 +210,7 @@ height: 100%;
   
 </span>
 <span class="navbar-brand">
-  R Workshop - Working With Text
+  R Workshop
   <span class="navbar-author">
         </span>
 </span>
@@ -2014,173 +1949,298 @@ Distributions</a> </strong></b></td>
 </table>
 </div>
 </div>
-<div id="introduction-to-stringr" class="section level3">
-<h3>Introduction to Stringr</h3>
 </div>
-<div id="tidyverse-tweets" class="section level3">
-<h3>tidyverse tweets</h3>
-<p>tidyweb is a part of the tidyverse, an ecosystem of packages designed
-with common APIs and a shared philosophy. Learn more at
-tidyverse.org.</p>
-<p>You can get the length of the string with str_length():</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+</div>
+<div id="dblyr" class="section level1" data-navmenu="dbplyr">
+<h1>{dblyr}</h1>
+<div id="column-1" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="dblyr-1" class="section level3">
+<h3>{dblyr}</h3>
+<p>this R package allows the user to Create an SQL query.</p>
+<p>By interpreting a Conventional piece of a rcode. This queryThat would
+be then passed to the database As standard SQL.</p>
+<p>The results of this query can then be collected by our and retrieved
+into the our environment for further processing.</p>
+<p>This is very useful because it allows Data analysis Without
+downloading the entire contents of the database.</p>
+<p>We are mindful that The data can bE Many millions of rows.</p>
+<p>I basically not possible to download into the R environment at
+all.</p>
+<p>This approach is very convenient and very cost efficient in terms of
+memoryAnd computational time.</p>
+<p>The overall structure of the package is very simple If you are
+already familiar with tidy verse,</p>
+<div id="level-of-sophistication-of-the-sql-query" class="section level4">
+<h4>Level of Sophistication of the SQL Query</h4>
+<p>I recommend a straightforward SQL query - with minimal complications
+- that contains “enough” information Once the Query is collected into
+the R environment, further elaborations can be carried out</p>
+</div>
+<div id="dba-knowledge" class="section level4">
+<h4>DBA knowledge</h4>
+<p>The most complex part of This approach is actually creating the
+Database connection.</p>
+<p>What is required here is knowledge of the Database permissions</p>
+In a corporate setting, It is best to contact. The DBA connection string
+will have the following sort of formats.
+<pre><code>
+CODE
+</code></pre>
+<p>These permissions are commercially sensitive and must be kept secure
+and secret for cyber-security purposes.</p>
+</div>
+</div>
+<div id="northwind" class="section level3">
+<h3>Northwind</h3>
+<p><a href="https://en.wikiversity.org/wiki/Database_Examples/Northwind" class="uri">https://en.wikiversity.org/wiki/Database_Examples/Northwind</a></p>
+<p>About the Northwind sample database The Northwind database is a
+sample database that was originally created by Microsoft and used as the
+basis for their tutorials in a variety of database products for decades.
+The Northwind database contains the sales data for a fictitious company
+called “Northwind Traders,” which imports and exports specialty foods
+from around the world. The Northwind database is an excellent tutorial
+schema for a small-business ERP, with customers, orders, inventory,
+purchasing, suppliers, shipping, employees, and single-entry accounting.
+The Northwind database has since been ported to a variety of
+non-Microsoft databases, including PostgreSQL.</p>
+<p>The Northwind dataset includes sample data for the following.</p>
+<p>Suppliers: Suppliers and vendors of Northwind Customers: Customers
+who buy products from Northwind Employees: Employee details of Northwind
+traders Products: Product information Shippers: The details of the
+shippers who ship the products from the traders to the end-customers
+Orders and Order_Details: Sales Order transactions taking place between
+the customers &amp; the company The Northwind sample database includes
+14 tables and the table relationships are showcased in the following
+entity relationship diagram.</p>
+<p><a href="https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite" class="uri">https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite</a></p>
+</div>
+</div>
+</div>
+<div id="using-dblyr" class="section level1" data-navmenu="dbplyr">
+<h1>Using {dblyr}</h1>
+<div id="column-2" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="complex-query" class="section level4">
+<h4>Complex Query</h4>
+<p>The R program converts Tidyverse statements into their equivalent
+forms in SQL.</p>
+<p>For the sake of Simplicity is better to use a relatively
+straightforward statement.</p>
+<p>Any subsequent transformations can be carried out when the data is
+transferred to the our environment.</p>
+<p>Relatively simple means just using a combination of select filter
+summarise and group by.</p>
+<hr />
+</div>
+<div id="compatible-object-classes" class="section level4">
+<h4>Compatible Object Classes</h4>
+<p>In addition to the classes.</p>
+<p>Is important to note that SQL databases May support a greater variety
+of object types, compared to our and that or may not be able to support
+some object types. This will impede the ability of our to download.
+Certain object classes.</p>
+<p>Other approaches may be required such as postgresql.</p>
+<p>If an analysis requires these more complex object classes than
+probably DB plier entire diverse and not the correct tool kit.</p>
+<p>And one should consider other approaches all together.</p>
+<pre><code>      &lt;h1 id=&quot;project_title&quot;&gt;RWorkshop.GitHub.io&lt;/h1&gt;
+    &lt;/header&gt;
+&lt;/div&gt;
 
+&lt;!-- MAIN CONTENT --&gt;
+&lt;div id=&quot;main_content_wrap&quot; class=&quot;outer&quot;&gt;
+  &lt;section id=&quot;main_content&quot; class=&quot;inner&quot;&gt;
+   
+   DMR Section 3: Databases</code></pre>
 </div>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">str_length</span>(<span class="st">&quot;abc&quot;</span>)</span></code></pre></div>
-<pre><code>[1] 3</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co">#&gt; [1] 3</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
-<p>This is now equivalent to the base R function <tt>nchar()</tt>.
-Previously it was needed to work around issues with nchar() such as the
-fact that it returned 2 for nchar(NA). This has been fixed as of R
-3.3.0, so it is no longer so important.</p>
-<p>You can access individual character using sub_str(). It takes three
-arguments: a character vector, a starting position and an end position.
-Either position can either be a positive integer, which counts from the
-length, or a negative integer which counts from the right. The positions
-are inclusive, and if longer than the string, will be silently
-truncated.</p>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
+<div id="contents" class="section level3">
+<h3>Contents</h3>
+<p>DMR Section 3: Databases 1 SQL Basics (3.1) 1 ODBC (3.2) 1 Using
+RODBC Package (3.3) 1</p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;abcdef&quot;</span>, <span class="st">&quot;ghifjk&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="co"># The 3rd letter</span></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>[1] &quot;c&quot; &quot;i&quot;</code></pre>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="co">#&gt; [1] &quot;c&quot; &quot;i&quot;</span></span></code></pre></div>
+<div id="connecting-to-a-database" class="section level3">
+<h3>Connecting to a database</h3>
+<p>There are two principal ways to connect with databases in R. • The
+first uses the ODBC (Open DataBase Connectivity) facility available on
+many computers. • The second uses the DBI package of R along with a
+specialized packagefor the particular database needed to be accessed.
+SQL Basics (3.1) 1. Navigation Commands 2. Basics of SQL 3. Aggregation
+4. Joining two data bases 5. Subqueries 6. Modifying Database records
+3.1.2 Basics of SQL</p>
+<div id="select" class="section level4">
+<h4>SELECT</h4>
+<p>The most important SQL command is SELECT. Since queries are performed
+using single statements, the syntax of the SELECT command can be quite
+daunting:</p>
+<p>SELECT columns or computations FROM table WHERE condition GROUP BY
+columns HAVING condition ORDER BY column [ASC | DESC] LIMIT
+offset,count;</p>
+</div>
+<div id="where" class="section level4">
+<h4>WHERE</h4>
+<p>To limit the rows which are returned, the WHERE clause can be used.
+Most common operators can be used to define expressions for the WHERE
+clause, along with the keywords AND and OR.</p>
+<p>3.1.2 Joining Two Databases One of the strengths of database servers
+is that they can effectively join together multiple database tables,
+based on common values of columns within the tables. Of course, the same
+capability is available within R through the merge() function.</p>
+<p>The most common way of joining two tables is through an inner join;
+only those observations that have common values of the variable used for
+the merge will be retained in the output table.</p>
+<p>ODBC (3.2)</p>
+<p>Open Database Connectivity facility that allows access to a variety
+of databases through a common interface. In R, the RODBC package , which
+is available through CRAN, is used to access this capability. Data
+Source Name (DSN) The first step in using RODBC is to set up a DSN or
+data source name. In order to do this, you need to know the name that
+your computer uses for a particular data source. Using RODBC Package
+(3.3)</p>
+<pre><code>
+library(RODBC)
+con=odbcConnect(‘myODBC;password=xxxxxx’)
+</code></pre>
+<p>MySQL: server, users, password, port and database PostgreSQL :
+substitute username for user Once you have a connection from an ODBC
+source, the sqlQuery function allows any valid SQL query to be sent to
+the connection. This will be the case even if SQL is not the native
+language of the database. The DBI package(3.4)</p>
+<p>One of the most popular databases used with R is MySQL (<a href="http://mysql.com" class="uri">http://mysql.com</a>). This freely
+available database runs on a variety of platforms and is relatively easy
+to configure and operate.</p>
+<table style="width:64%;">
+<colgroup>
+<col width="63%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">### Accessing a MySQL database(3.5)</td>
+</tr>
+<tr class="even">
+<td align="left">library(RMySQL) drv=dbDriver(“MySQL”)</td>
+</tr>
+<tr class="odd">
+<td align="left">Performing Queries (3.6)</td>
+</tr>
+<tr class="even">
+<td align="left">SQL queries make requests for some or all of the
+variables in one or more database table, so a natural way to look at
+these results within R is in a data frame. A single call to dbGetQuery
+can be used to send a query to the database. Mydata =
+dbGetQuery(com,)</td>
+</tr>
+<tr class="odd">
+<td align="left">Any valid SQL query can be passed to a database by this
+method.</td>
+</tr>
+<tr class="even">
+<td align="left">### Normalized Tables (3.7) The principle of
+normalization is central to database design. The goal is to eliminate
+redundancy in the information stored.in the database tables. To achieve
+this goal, what might be a single data frame in R might be broken into
+several tables in a database. Getting Data into MySQL (3.8) We can
+generate “CREATE TABLE” statements in R as follows: CREATE TABLE mydata
+( row_names text, name text, number double )</td>
+</tr>
+<tr class="odd">
+<td align="left">CREATE TABLE newtable LIKE oldtable;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="more-complex-aggregation-3.9" class="section level3">
+<h3>More Complex Aggregation (3.9)</h3>
+<p>dbApply(): The dbApply() function can be used to apply a
+user-specified R function to groups of data extracted from a
+database.</p>
 </div>
 </div>
 </div>
-<div id="the-2nd-to-2nd-to-last-character" class="section level1">
-<h1>The 2nd to 2nd-to-last character</h1>
-<p>str_sub(x, 2, -2) #&gt; [1] “bcde” “hifj”</p>
-<p>You can also use str_sub() to modify strings:</p>
-<p>str_sub(x, 3, 3) &lt;- “X” x #&gt; [1] “abXdef” “ghXfjk”</p>
-<p>To duplicate individual strings, you can use str_dup():</p>
-<p>str_dup(x, c(2, 3)) #&gt; [1] “abXdefabXdef” “ghXfjkghXfjkghXfjk”
-Whitespace</p>
-<p>Three functions add, remove, or modify whitespace:</p>
-<p>str_pad() pads a string to a fixed length by adding extra whitespace
-on the left, right, or both sides.</p>
-<p>x &lt;- c(“abc”, “defghi”) str_pad(x, 10) #&gt; [1] ” abc” “defghi”
-str_pad(x, 10, “both”) #&gt; [1] ” abc” ” defghi ”</p>
-<p>(You can pad with other characters by using the pad argument.)</p>
-<p>str_pad() will never make a string shorter:</p>
-<p>str_pad(x, 4) #&gt; [1] ” abc” “defghi”</p>
-<p>So if you want to ensure that all strings are the same length (often
-useful for print methods), combine str_pad() and str_trunc():</p>
-<p>x &lt;- c(“Short”, “This is a long string”)</p>
-<p>x %&gt;% str_trunc(10) %&gt;% str_pad(10, “right”) #&gt; [1] “Short”
-“This is…”</p>
-<p>The opposite of str_pad() is str_trim(), which removes leading and
-trailing whitespace:</p>
-<p>x &lt;- c(” a “,”b “,” c”) str_trim(x) #&gt; [1] “a” “b” “c”
-str_trim(x, “left”) #&gt; [1] “a” “b” “c” You can use str_wrap() to
-modify existing whitespace in order to wrap a paragraph of text so that
-the length of each line as a similar as possible.</p>
-<p>jabberwocky &lt;- str_c( “`Twas brillig, and the slithy toves”, “did
-gyre and gimble in the wabe:”, “All mimsy were the borogoves,”, “and the
-mome raths outgrabe.” )</p>
-<p>cat(str_wrap(jabberwocky, width = 40)) #&gt; `Twas brillig, and the
-slithy toves did #&gt; gyre and gimble in the wabe: All mimsy #&gt; were
-the borogoves, and the mome raths #&gt; outgrabe. Locale sensitive</p>
-<p>A handful of stringr are functions are locale-sensitive: they will
-perform differently in different regions of the world. These functions
-case transformation functions:</p>
-<p>x &lt;- “I like horses.” str_to_upper(x) #&gt; [1] “I LIKE HORSES.”
-str_to_title(x) #&gt; [1] “I Like Horses.”</p>
-<p>str_to_lower(x) #&gt; [1] “i like horses.” # Turkish has two sorts of
-i: with and without the dot str_to_lower(x, “tr”) #&gt; [1] “Ä± like
-horses.”</p>
-And string ordering and sorting:
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;i&quot;</span>, <span class="st">&quot;k&quot;</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="fu">str_order</span>(x)</span></code></pre></div>
-<pre><code>[1] 2 3 1</code></pre>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co">#&gt; [1] 2 3 1</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="fu">str_sort</span>(x)</span></code></pre></div>
-<pre><code>[1] &quot;i&quot; &quot;k&quot; &quot;y&quot;</code></pre>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co">#&gt; [1] &quot;i&quot; &quot;k&quot; &quot;y&quot;</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="co"># In Lithuanian, y comes between i and k</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="fu">str_sort</span>(x, <span class="at">locale =</span> <span class="st">&quot;lt&quot;</span>)</span></code></pre></div>
-<pre><code>[1] &quot;i&quot; &quot;y&quot; &quot;k&quot;</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co">#&gt; [1] &quot;i&quot; &quot;y&quot; &quot;k&quot;</span></span></code></pre></div>
-<p>The locale always defaults to English to ensure that the default
-behaviour is identically across systems. Locales always include a two
-letter ISO-639-1 language code (like âenâ for English or âzhâ for
-Chinese), and optionally a ISO-3166 country code (like âen_UKâ vs
-âen_USâ). You can see a complete list of available locales by running
-stringi::stri_locale_list().</p>
-<p>require(stringr) myText &lt;- ” white space ” nchar(myText) myText
-&lt;- stringr::str_trim(myText) nchar(myText)</p>
-<div id="exercises" class="section level3">
-<h3>Exercises</h3>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="do">##############################</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="co"># Package Demo</span></span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a><span class="fu">library</span>(stringr)</span></code></pre></div>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">substring</span>(<span class="st">&quot;kevin&quot;</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span></code></pre></div>
-<pre><code>[1] &quot;k&quot;</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">nchar</span>(<span class="st">&quot;Kevin&quot;</span>)</span></code></pre></div>
-<pre><code>[1] 5</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="fu">substring</span>(<span class="st">&quot;kevin&quot;</span>,<span class="fu">nchar</span>(<span class="st">&quot;kevin&quot;</span>))</span></code></pre></div>
-<pre><code>[1] &quot;n&quot;</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="fu">substring</span>(<span class="st">&quot;kevin&quot;</span>,<span class="fu">c</span>(<span class="dv">1</span>,<span class="fu">nchar</span>(<span class="st">&quot;kevin&quot;</span>)))</span></code></pre></div>
-<pre><code>[1] &quot;kevin&quot; &quot;n&quot;    </code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;abcdef&quot;</span>, <span class="st">&quot;ghifjk&quot;</span>)</span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="co"># The 3rd letter</span></span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
-<pre><code>[1] &quot;c&quot; &quot;i&quot;</code></pre>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co">#&gt; [1] &quot;c&quot; &quot;i&quot;</span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="co"># The 2nd to 2nd-to-last character</span></span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="dv">2</span>, <span class="sc">-</span><span class="dv">2</span>)</span></code></pre></div>
-<pre><code>[1] &quot;bcde&quot; &quot;hifj&quot;</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co">#&gt; [1] &quot;bcde&quot; &quot;hifj&quot;</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">str_sub</span>(x, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
-<pre><code>[1] &quot;ef&quot; &quot;jk&quot;</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">&quot;Kevin&quot;</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
-<pre><code>[1] &quot;in&quot;</code></pre>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">&quot;Kevin&quot;</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
-<pre><code>[1] &quot;n&quot;</code></pre>
-<div class="knitr-options" data-fig-width="576" data-fig-height="460">
-
-</div>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="co">#library(magrittr) %&gt;% toupper</span></span>
-<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="fu">library</span>(magrittr) </span>
-<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a><span class="fu">str_sub</span>(<span class="st">&quot;Kevin&quot;</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> toupper</span></code></pre></div>
-<pre><code>[1] &quot;N&quot;</code></pre>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="co">#history(30)</span></span></code></pre></div>
-</div>
-<div id="data-sets" class="section level3">
-<h3>Data Sets</h3>
-<div id="cheddar-taste-of-cheddar-cheese" class="section level4">
-<h4>cheddar: Taste of Cheddar cheese</h4>
+<div id="dblyr-2" class="section level1" data-navmenu="R packages">
+<h1>{dblyr}</h1>
+<div id="column-3" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="dbi" class="section level3">
+<h3>DBI</h3>
+<p>The DBI package helps connecting R to database management systems
+(DBMS). DBI separates the connectivity to the DBMS into a “front-end”
+and a “back-end”. The package defines an interface that is implemented
+by DBI backends such as:</p>
+<p>RPostgres, RMariaDB, RSQLite, odbc, bigrquery, and many more, see the
+list of backends. R scripts and packages use DBI to access various
+databases through their DBI backends.</p>
+<p>The interface defines a small set of classes and methods similar in
+spirit to Perl’s DBI, Java’s JDBC, Python’s DB-API, and Microsoft’s
+ODBC. It supports the following operations:</p>
 <ul>
-<li><tt>grep()</tt> and <tt>grepl()</tt></li>
-<li><tt>gsub()</tt></li>
-<li><tt>nchar()</tt></li>
+<li>connect/disconnect to the DBMS</li>
+<li>create and execute statements in the DBMS</li>
+<li>extract results/output from statements</li>
+<li>error/exception handling</li>
+<li>information (meta-data) from database objects</li>
+<li>transaction management (optional)</li>
 </ul>
-<hr />
+<div id="installation" class="section level4">
+<h4>Installation</h4>
+<p>Most users who want to access a database do not need to install DBI
+directly. It will be installed automatically when you install one of the
+database backends:</p>
+<ul>
+<li>RPostgres for PostgreSQL,</li>
+<li>RMariaDB for MariaDB or MySQL,</li>
+<li>RSQLite for SQLite,</li>
+<li>odbc for databases that you can access via ODBC,</li>
+<li>bigrquery,</li>
+<li>… .</li>
+</ul>
+<p>You can install the released version of DBI from CRAN with:</p>
 <pre><code>
-nchar()
+install.packages(&quot;DBI&quot;)
 </code></pre>
-<hr />
-<pre><code>
-gsub(&quot;old&quot;,&quot;new&quot;,myText)
-</code></pre>
-<hr />
+</div>
+</div>
+</div>
+</div>
+<div id="using-dblyr-1" class="section level1" data-navmenu="Exercises">
+<h1>Using {dblyr}</h1>
+<div id="column-4" class="section level2 tabset">
+<h2 class="tabset">Column</h2>
+<div id="northwind-1" class="section level3">
+<h3>Northwind</h3>
+<h3>
+The Northwind Databases
+</h3>
+<p><a href="https://en.wikiversity.org/wiki/Database_Examples/Northwind" class="uri">https://en.wikiversity.org/wiki/Database_Examples/Northwind</a></p>
+<div id="about-the-northwind-sample-database" class="section level4">
+<h4>About the Northwind sample database</h4>
+<p>The Northwind database is a sample database that was originally
+created by Microsoft and used as the basis for their tutorials in a
+variety of database products for decades. The Northwind database
+contains the sales data for a fictitious company called “Northwind
+Traders,” which imports and exports specialty foods from around the
+world. The Northwind database is an excellent tutorial schema for a
+small-business ERP, with customers, orders, inventory, purchasing,
+suppliers, shipping, employees, and single-entry accounting. The
+Northwind database has since been ported to a variety of non-Microsoft
+databases, including PostgreSQL.</p>
+<p>The Northwind dataset includes sample data for the following.</p>
+<ul>
+<li>Suppliers: Suppliers and vendors of Northwind</li>
+<li>Customers: Customers who buy products from Northwind</li>
+<li>Employees: Employee details of Northwind traders</li>
+<li>Products: Product information</li>
+<li>Shippers: The details of the shippers who ship the products from the
+traders to the end-customers</li>
+<li>Orders and Order_Details: Sales Order transactions taking place
+between the customers &amp; the company</li>
+</ul>
+<p>The Northwind sample database includes 14 tables and the table
+relationships are showcased in the following entity relationship
+diagram.</p>
+<p><a href="https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite" class="uri">https://stackoverflow.com/questions/58458761/where-can-i-download-the-northwind-sample-database-for-sqlite</a></p>
+</div>
 </div>
 </div>
 </div>

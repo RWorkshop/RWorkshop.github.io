@@ -1,5 +1,10 @@
+{dblyr} {data-navmenu="R packages"}
+==========================================
 
-DBI
+Column {.tabset}
+--------------------
+
+### DBI
 The DBI package helps connecting R to database management systems (DBMS). DBI separates the connectivity to the DBMS into a “front-end” and a “back-end”. The package defines an interface that is implemented by DBI backends such as:
 
 RPostgres,
@@ -11,21 +16,26 @@ and many more, see the list of backends. R scripts and packages use DBI to acces
 
 The interface defines a small set of classes and methods similar in spirit to Perl’s DBI, Java’s JDBC, Python’s DB-API, and Microsoft’s ODBC. It supports the following operations:
 
-connect/disconnect to the DBMS
-create and execute statements in the DBMS
-extract results/output from statements
-error/exception handling
-information (meta-data) from database objects
-transaction management (optional)
-Installation
+* connect/disconnect to the DBMS
+* create and execute statements in the DBMS
+* extract results/output from statements
+* error/exception handling
+* information (meta-data) from database objects
+* transaction management (optional)
+
+#### Installation
 Most users who want to access a database do not need to install DBI directly. It will be installed automatically when you install one of the database backends:
 
-RPostgres for PostgreSQL,
-RMariaDB for MariaDB or MySQL,
-RSQLite for SQLite,
-odbc for databases that you can access via ODBC,
-bigrquery,
-… .
+* RPostgres for PostgreSQL,
+* RMariaDB for MariaDB or MySQL,
+* RSQLite for SQLite,
+* odbc for databases that you can access via ODBC,
+* bigrquery,
+* … .
+
+
 You can install the released version of DBI from CRAN with:
 
+<pre><code>
 install.packages("DBI")
+</code></pre>

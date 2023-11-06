@@ -1,14 +1,35 @@
 ---
-title: "R Workshop  - Woking with Objects"
-output: 
-  flexdashboard::flex_dashboard:
-    theme: united
-    css: style.css
+title: "R Workshop"
+author: "dragonflystats"
+#date: "Last updated: `r format(Sys.time(), '%B %d, %Y')`"
+output: rmdformats::readthedown
+editor: source
+execute:
+  message: false
+  warning: false
+  error: false
+format:
+  html:
+    theme:
+      light: sandstone
+      dark: darkly
+    anchor-sections: true
+    embed-resources: true
+    number-sections: true
+    smooth-scroll: true
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    code-fold: true
+    code-summary: "Show code"
+    fig-width: 11
+    fig-height: 8
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
+require(tidyverse)
 ```
 
 Introduction
@@ -70,3 +91,39 @@ Object sizes.
 
 ```{r child= "Segments/String_Evaluation.Rmd"}
 ```
+
+
+Chapter Name
+======================
+
+## Section 1
+
+### Test
+
+
+#### Subtest
+
+### Definitions
+
+Chapter 2 Name
+======================
+
+## Section A
+
+### Test
+
+### System Content 1
+
+#### Subtest
+
+### Content 2
+
+Chapter 3 Name
+======================
+
+## Section B
+
+## Section C Test
+
+
+#### Subtest

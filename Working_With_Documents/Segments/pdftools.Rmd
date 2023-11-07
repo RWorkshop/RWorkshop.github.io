@@ -44,3 +44,67 @@ pagetext <- pdftools::pdf_text(ThisFileName)
 grep("Appendix 2: Map",pagetext)
 
 ```
+
+### pdftools
+
+Import a "IpsumLorum_1.pdf"
+
+-------------------------
+
+
+<pre><code>
+library(pdftools)
+
+</code></pre>
+
+-------------------------
+
+!! For Loop All The Things
+
+
+Code , but not to
+
+FOR Loops worked fine.
+Everyone was already familar with them, and there was no need to give anyone additional guidance.
+Efficiencies may be obtained by using other approaches, but the benefit did not exceed overhead about explaining other approaches.
+
+-------------------------
+
+If the pdf document is a direct conversion of a MS Word Document, there should be very high accuracy.
+If the pdf document is a good quality photocopy scan, the accuracy levels should still be reasonably high.
+
+If the pdf document is a poor quality photocopy scan - using pdftools may not work in the first instance, and additional steps would be required.
+-------------------------
+
+Visual Inspection would be a long and tedious process, but far less labour intensive than writing out documents.
+Quality Control can be parallelized.
+
+------------------------
+
+The same errors tent to crop up again and again.
+For example "l" (Small L) and "1" (the number one) get mistaken for each other.
+
+Very uncomplicated, but effective approach
+
+<pre><code>
+my_Text <- gsub("This is Wrong","This is Right",my_Text)
+my_Text <- gsub("That is Wrong","That is Right",my_Text)
+......
+</code></pre>
+
+
+
+-------------------------
+Hard Scans
+
+tesseract
+
+ocr
+
+-------------------------
+
+Resizing the document
+
+
+
+-------------------------

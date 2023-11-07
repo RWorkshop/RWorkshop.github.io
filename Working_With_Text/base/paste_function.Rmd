@@ -1,5 +1,5 @@
 
-### The `paste()` command
+## The `paste()` command
 
 ```{r}
 

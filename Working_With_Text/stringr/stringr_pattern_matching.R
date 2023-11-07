@@ -22,13 +22,13 @@ phone <- "([2-9][0-9]{2})[- .]([0-9]{3})[- .]([0-9]{4})"
 <tt>str_detect()</tt> detects the presence or absence of a pattern and returns a logical vector (similar to grepl()). str_subset() returns the elements of a character vector that match a regular expression (similar to grep() with value = TRUE)`.
 
 
-```{r}                                                                                                                                                                       
+```{r}   
 # Which strings contain phone numbers?
 str_detect(strings, phone)
 #> [1] FALSE  TRUE  TRUE  TRUE
 str_subset(strings, phone)
-#> [1] "219 733 8965"                          
-#> [2] "329-293-8753"                          
+#> [1] "219 733 8965"  
+#> [2] "329-293-8753"  
 #> [3] "Work: 579-499-7527; Home: 543.355.3679"
 str_count() counts the number of matches:
 
@@ -42,33 +42,33 @@ str_count(strings, phone)
 
 str_locate() locates the first position of a pattern and returns a numeric matrix with columns start and end. str_locate_all() locates all matches, returning a list of numeric matrices. Similar to regexpr() and gregexpr().
 
-```{r}                                                                                                                                                                  
+```{r}  
 # Where in the string is the phone number located?
 (loc <- str_locate(strings, phone))
-#>      start end
-#> [1,]    NA  NA
-#> [2,]     1  12
-#> [3,]     1  12
-#> [4,]     7  18
+#>  start end
+#> [1,]NA  NA
+#> [2,] 1  12
+#> [3,] 1  12
+#> [4,] 7  18
 ```
 
 ```{r}
 str_locate_all(strings, phone)
 #> [[1]]
-#>      start end
+#>  start end
 #> 
 #> [[2]]
-#>      start end
-#> [1,]     1  12
+#>  start end
+#> [1,] 1  12
 #> 
 #> [[3]]
-#>      start end
-#> [1,]     1  12
+#>  start end
+#> [1,] 1  12
 #> 
 #> [[4]]
-#>      start end
-#> [1,]     7  18
-#> [2,]    27  38
+#>  start end
+#> [1,] 7  18
+#> [2,]27  38
 ```
 
 
@@ -79,7 +79,7 @@ str_locate_all(strings, phone)
 ```{r}
 # What are the phone numbers?
 str_extract(strings, phone)
-#> [1] NA             "219 733 8965" "329-293-8753" "579-499-7527"
+#> [1] NA "219 733 8965" "329-293-8753" "579-499-7527"
 str_extract_all(strings, phone)
 ```
 
@@ -98,10 +98,10 @@ str_extract_all(strings, phone)
 #> [[4]]
 #> [1] "579-499-7527" "543.355.3679"
 str_extract_all(strings, phone, simplify = TRUE)
-#>      [,1]           [,2]          
-#> [1,] ""             ""            
-#> [2,] "219 733 8965" ""            
-#> [3,] "329-293-8753" ""            
+#>  [,1]   [,2]  
+#> [1,] "" ""
+#> [2,] "219 733 8965" ""
+#> [3,] "329-293-8753" ""
 #> [4,] "579-499-7527" "543.355.3679"
 ```
 
@@ -110,8 +110,8 @@ str_match() extracts capture groups formed by () from the first match. It return
 # Pull out the three components of the match
 ```{r}
 str_match(strings, phone)
-#>      [,1]           [,2]  [,3]  [,4]  
-#> [1,] NA             NA    NA    NA    
+#>  [,1]   [,2]  [,3]  [,4]  
+#> [1,] NA NANANA
 #> [2,] "219 733 8965" "219" "733" "8965"
 #> [3,] "329-293-8753" "329" "293" "8753"
 #> [4,] "579-499-7527" "579" "499" "7527"
@@ -121,18 +121,18 @@ str_match(strings, phone)
 
 str_match_all(strings, phone)
 #> [[1]]
-#>      [,1] [,2] [,3] [,4]
+#>  [,1] [,2] [,3] [,4]
 #> 
 #> [[2]]
-#>      [,1]           [,2]  [,3]  [,4]  
+#>  [,1]   [,2]  [,3]  [,4]  
 #> [1,] "219 733 8965" "219" "733" "8965"
 #> 
 #> [[3]]
-#>      [,1]           [,2]  [,3]  [,4]  
+#>  [,1]   [,2]  [,3]  [,4]  
 #> [1,] "329-293-8753" "329" "293" "8753"
 #> 
 #> [[4]]
-#>      [,1]           [,2]  [,3]  [,4]  
+#>  [,1]   [,2]  [,3]  [,4]  
 #> [1,] "579-499-7527" "579" "499" "7527"
 #> [2,] "543.355.3679" "543" "355" "3679"
 ```
@@ -142,14 +142,14 @@ str_replace() replaces the first matched pattern and returns a character vector.
 
 
 str_replace(strings, phone, "XXX-XXX-XXXX")
-#> [1] "apple"                                 
-#> [2] "XXX-XXX-XXXX"                          
-#> [3] "XXX-XXX-XXXX"                          
+#> [1] "apple" 
+#> [2] "XXX-XXX-XXXX"  
+#> [3] "XXX-XXX-XXXX"  
 #> [4] "Work: XXX-XXX-XXXX; Home: 543.355.3679"
 str_replace_all(strings, phone, "XXX-XXX-XXXX")
-#> [1] "apple"                                 
-#> [2] "XXX-XXX-XXXX"                          
-#> [3] "XXX-XXX-XXXX"                          
+#> [1] "apple" 
+#> [2] "XXX-XXX-XXXX"  
+#> [3] "XXX-XXX-XXXX"  
 #> [4] "Work: XXX-XXX-XXXX; Home: XXX-XXX-XXXX"
 
 
@@ -159,7 +159,7 @@ str_split("a-b-c", "-")
 #> [[1]]
 #> [1] "a" "b" "c"
 str_split_fixed("a-b-c", "-", n = 2)
-#>      [,1] [,2] 
+#>  [,1] [,2] 
 #> [1,] "a"  "b-c"
 ```
 
@@ -216,12 +216,12 @@ The downside of coll() is speed; because the rules for recognising which charact
 x <- "This is a sentence."
 str_split(x, boundary("word"))
 #> [[1]]
-#> [1] "This"     "is"       "a"        "sentence"
+#> [1] "This" "is"   "a""sentence"
 str_count(x, boundary("word"))
 #> [1] 4
 str_extract_all(x, boundary("word"))
 #> [[1]]
-#> [1] "This"     "is"       "a"        "sentence"
+#> [1] "This" "is"   "a""sentence"
 
 ```
 

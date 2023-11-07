@@ -1,5 +1,7 @@
 
-### sprintf()`
+## sprintf()`
+
+<h3> The <tt>sprintf() </tt> function
 
 ```{r}
 

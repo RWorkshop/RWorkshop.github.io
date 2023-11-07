@@ -1,0 +1,76 @@
+---
+title: "Working with databases in R"
+author: "R Workshop"
+date: "Last updated: `r format(Sys.time(), '%B %d, %Y')`"
+output:
+  rmdformats::readthedown:
+    toc_depth: 3
+    use_bookdown: TRUE
+    #code_folding: hide
+    fig_caption: TRUE
+
+
+html_document:
+  fig_caption: yes
+  theme: spacelab #flatly #sandstone #
+  highlight: pygments
+  number_sections: TRUE
+  toc: TRUE
+  toc_depth: 2
+  toc_float:
+    smooth_scroll: FALSE
+
+
+---
+  
+  
+```{r import_libraries, echo=FALSE, message=FALSE}
+# library(conflicted)
+library(tidyverse)
+# library(scales)
+# library(cowplot)
+# library(magrittr)
+
+# library(rlang)
+# library(stringr)
+# library(glue)
+# library(purrr)
+# library(furrr)
+# library(arules)
+# library(arulesViz)
+# library(DT)
+# library(tidygraph)
+# library(rfm)
+#source("lib_utils.R")
+# resolve_conflicts(
+#   c("magrittr", "rlang", "dplyr", "readr", "purrr", "ggplot2", "arules",
+#     "Matrix", "DT")
+# )
+
+knitr::opts_chunk$set(
+  tidy       = FALSE,
+  cache      = FALSE,
+  warning    = FALSE,
+  message    = FALSE,
+  fig.height =     8,
+  fig.width  =    11
+)
+
+options(
+  width = 80L,
+  warn  = 1
+)
+
+#theme_set(theme_cowplot())
+set.seed(42)
+#plan(multisession)
+```
+
+
+```{r child="Segments/using_dbplyr.Rmd"}
+```
+
+```{r child="Segments/northwind.Rmd"}
+```
+
+

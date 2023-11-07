@@ -34,8 +34,7 @@ require(tidyverse)
 
 Introduction
 ==================================
-Column {.tabset}
---------------------
+
 
 ### Introduction 
 
@@ -57,25 +56,6 @@ Column {.tabset}
 ### Data Sets
 
 
-
-#### cheddar: Taste of Cheddar cheese
-
-In **{faraway}**: Functions and Datasets for Books by Julian Faraway
-
-#### Description
-In a study of cheddar cheese from the LaTrobe Valley of Victoria, Australia, samples of cheese were analyzed for their chemical composition and were subjected to taste tests. Overall taste scores were obtained by combining the scores from several tasters.
-
-
-* **taste** - a subjective taste score
-
-* **Acetic** - concentration of acetic acid (log scale)
-
-* **H2S** - concentration of hydrogen sulfice (log scale)
-
-* **Lactic** - concentration of lactic acid
-
----------------------------------------
-
 <pre><code>
 
 Str2expreas eval
@@ -87,7 +67,9 @@ Rm(list=ls())
 Objects and object classes.
 Object sizes.
 </code></pre>
+
 -------------------------------------------
+
 
 ```{r child= "Segments/String_Evaluation.Rmd"}
 ```

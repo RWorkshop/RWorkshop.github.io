@@ -1,4 +1,4 @@
-### The ``rep() `` command
+## The ``rep() `` command
 
 ```{r}
 rep( "WH", 10)

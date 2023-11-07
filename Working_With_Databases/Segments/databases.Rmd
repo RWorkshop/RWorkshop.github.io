@@ -1,14 +1,14 @@
 
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
+  
+  <h1 id="project_title">RWorkshop.GitHub.io</h1>
+</header>
+</div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-       
-       DMR Section 3: Databases
+<!-- MAIN CONTENT -->
+<div id="main_content_wrap" class="outer">
+  <section id="main_content" class="inner">
+   
+   DMR Section 3: Databases
 
 ### Contents
 DMR Section 3: Databases	1
@@ -50,24 +50,12 @@ One of the strengths of database servers is that they can effectively join toget
 
 The most common way of joining two tables is through an inner join; only those observations that have common values of the variable used for the merge will be retained in the output table.
 
-ODBC (3.2)
 
-Open Database Connectivity facility that allows access to a variety of databases through a common interface.
-In R, the RODBC package , which is available through CRAN, is used to access this capability.
-Data Source Name (DSN)
-The first step in using RODBC is to set up a DSN or data source name. In order to do this, you need to know the name that your computer uses for a particular data source.
-Using RODBC Package (3.3)	
 
-<pre><code>
-library(RODBC)
-con=odbcConnect(‘myODBC;password=xxxxxx’)
-</code></pre>
-MySQL: server, users, password, port and database
-PostgreSQL : substitute username for user
-Once you have a connection from an ODBC source, the sqlQuery function allows any valid SQL query to be sent to the connection. This will be the case even if SQL is not the native language of the database.
 The DBI package(3.4)
 
-One of the most popular databases used with R is MySQL (http://mysql.com). This freely available database runs on a variety of platforms and is relatively easy to configure and operate.
+One of the most popular databases used with R is MySQL (http://mysql.com). 
+This freely available database runs on a variety of platforms and is relatively easy to configure and operate.
 
 ---------------------------------------------
 ### Accessing a MySQL database(3.5)
@@ -90,8 +78,8 @@ Getting Data into MySQL (3.8)
 We can generate “CREATE TABLE” statements in R as follows:
 CREATE TABLE mydata
 ( row_names text, 
-           name text,
-           number double
+   name text,
+   number double
 )   
 
 CREATE TABLE newtable LIKE oldtable;

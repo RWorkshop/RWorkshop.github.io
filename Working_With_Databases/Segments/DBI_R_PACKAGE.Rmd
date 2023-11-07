@@ -39,3 +39,37 @@ You can install the released version of DBI from CRAN with:
 <pre><code>
 install.packages("DBI")
 </code></pre>
+
+-----------------------------------------------------------
+
+### Connection
+
+<pre><code>
+> con
+<OdbcConnection> MY_COMPANY\MY_NAME@THISDB
+  Database: MY_DB_NAME
+  Microsoft SQL Server Version: 14.00.3451
+>
+> class(con)
+[1] "Microsoft SQL Server"
+attr(,"package")
+[1] ".GlobalEnv"
+
+</code></pre>
+
+
+### <tt>dbListTables()</tt>
+
+* dbListTables() returns a character vector that enumerates all tables and views in the database. 
+* Tables added with dbWriteTable() are part of the list. 
+* As soon a table is removed from the database, it is also removed from the list of database tables.
+
+<pre><code>
+dbListTables(con)
+</code><pre>
+
+### <tt>dbColumnInfo()</tt>
+
+<pre><code>
+dbColumnInfo(dbSendQuery(con, "SELECT * from tblProductionStems"))
+</code></pre>

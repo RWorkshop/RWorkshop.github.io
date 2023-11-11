@@ -1,16 +1,22 @@
 
-ODBC (3.2)
+## ODBC (3.2)
 
-Open Database Connectivity facility that allows access to a variety of databases through a common interface.
-In R, the RODBC package , which is available through CRAN, is used to access this capability.
-Data Source Name (DSN)
-The first step in using RODBC is to set up a DSN or data source name. In order to do this, you need to know the name that your computer uses for a particular data source.
-Using RODBC Package (3.3)	
+* Open Database Connectivity facility that allows access to a variety of databases through a common interface.
+* In R, the RODBC package , which is available through CRAN, is used to access this capability.
+
+#### Data Source Name (DSN)
+* The first step in using RODBC is to set up a DSN or data source name. 
+* In order to do this, you need to know the name that your computer uses for a particular data source.
+
+#### Using RODBC Package (3.3)	
 
 <pre><code>
 library(RODBC)
 con=odbcConnect(‘myODBC;password=xxxxxx’)
 </code></pre>
+
 MySQL: server, users, password, port and database
 PostgreSQL : substitute username for user
-Once you have a connection from an ODBC source, the sqlQuery function allows any valid SQL query to be sent to the connection. This will be the case even if SQL is not the native language of the database.
+
+Once you have a connection from an ODBC source, the sqlQuery function allows any valid SQL query to be sent to the connection. 
+This will be the case even if SQL is not the native language of the database.

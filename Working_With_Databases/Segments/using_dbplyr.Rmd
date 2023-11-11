@@ -3,25 +3,20 @@
 
 #### Complex Query 
 
-The R program converts Tidyverse statements into their equivalent forms in SQL.
+* This R package converts Tidyverse statements into their equivalent forms in SQL.
 
-For the sake of Simplicity is better to use a relatively straightforward statement.
+* For the sake of simplicity, it is better to use a relatively straightforward statement when creating a query, i.e. just using <tt>group_by</tt>, <tt>filter()</tt>, <tt>select()</tt> and <tt>summarize()</tt> commands.
 
-Any subsequent transformations can be carried out when the data is transferred to the our environment.
-
-Relatively simple means just using a combination of select filter summarise and group by.
+* Any subsequent transformations can be carried out when the data is transferred to the R environment.
 
 
 -----------------------
 
 #### Compatible Object Classes
 
-In addition to the classes.
 
-Is important to note that SQL databases May support a greater variety of object types, compared to our and that or may not be able to support some object types. This will impede the ability of our to download. Certain object classes.
+* It is important to note that SQL databases support a greater variety of object types, compared to R, and may not be able to support some object types. 
+* This will impede the ability of R to download certain object classes.
+* Other approaches may be required approaches such as postgresql.
 
-Other approaches may be required such as postgresql.
-
-If an analysis requires these more complex object classes than probably DB plier entire diverse and not the correct tool kit.
-
-And one should consider other approaches all together.
+* If an analysis specifically requires these more complex object classes, then probably {dbplyr} and {tidyverse} are not the correct toolkit. In this case, one should consider other approaches.

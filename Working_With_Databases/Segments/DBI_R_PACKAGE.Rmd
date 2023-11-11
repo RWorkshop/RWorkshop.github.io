@@ -1,10 +1,7 @@
 {dblyr} {data-navmenu="R packages"}
 ==========================================
 
-Column {.tabset}
---------------------
-
-### DBI
+## DBI
 The DBI package helps connecting R to database management systems (DBMS). DBI separates the connectivity to the DBMS into a “front-end” and a “back-end”. The package defines an interface that is implemented by DBI backends such as:
 
 RPostgres,
@@ -41,6 +38,8 @@ install.packages("DBI")
 </code></pre>
 
 -----------------------------------------------------------
+
+## Using {DBI}
 
 ### Connection
 

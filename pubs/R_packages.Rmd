@@ -1,0 +1,174 @@
+Packages
+===============
+### Using and Installing packages
+Many packages come with R. To use them in an R session, you need to load the package. 
+For example to load the MASS package which contains functions and datasets that accompany Venables and Ripley, Modern Applied Statistics with S, you use the command:
+
+### Installing additional packages
+Some packages are not automatically installed when you install R but they need to be downloaded and installed individually. 
+An important example is the 'evd' package that accompanies Fox, Applied Regression. 
+
+Working with R Pacakges
+====================================
+
+
+*  Type `library()` onto the command line to find out what packages were installed on your computer
+when you put in `R`. 
+*  Now type `search()` to get a list of the packages from that list that are
+already loaded in (installed packages are not necessarily loaded in). 
+
+
+Installing R Pacakges
+====================================
+
+```{r}
+install.package("packagename")
+download.package("packagename")
+```
+
+----------------------------------
+	
+<h5> Base packages </h5>
+Base packages are considered part of the R source code. These packages contain the basic functions that allow <code>R</code> to 
+work, and include many commonly used datasets and standard statistical and graphical functions. They should be automatically 
+available in any <code>R</code> installation.
+To see which packages are installed on your computer, use the <code>library()</code> command, with no arguments.
+ 
+<h5> Contributed packages </h5>
+Hundreds of contributed packages covering a wide array of modern statistical methods are available from the 
+Comprehensive R Archive Network (CRAN; http: //cran.r-project.org).
+ 
+ To access all of the functions and data sets in a particular package, it must be loaded into the workspace. 
+ For example, to load the lattice package:
+ <pre><code>
+ > library(lattice) 
+ </code></pre>
+ 
+ To remove a package from a session, use the detach command
+ >detach(package:lattice)
+ 
+ Packages must be reloaded at the start of each new session.
+ 
+ 
+<pre><code>
+ library(MASS)							  #loads the MASS package
+ 
+ install.packages("evir")			#install the "evir" package (select the Irish CRAN Mirror)
+ library(evir)
+</code></pre>
+
+ 
+<h5>Packages</h5>
+
+Type \texttt{library()} onto the command line to find out what packages were installed on your computer
+when you put in <tt>R</tt>. Now type <code>search()</code> to get a list of the packages from that list that are
+already loaded in (installed packages are not necessarily loaded in). 
+
+<h5>Packages</h5>
+
+<pre><code>
+install.package("packagename")
+download.package("packagename")
+</code></pre>
+
+--------------------------------------------------------------------
+
+
+
+ 
+R Packages {data-navmenu="Introduction to R"}
+===============================================
+
+Column{.tabset}
+---------------------------------------
+
+### Packages 
+ 
+*  A Package in <tt>R</tt> is a file containing a collection of objects which have some common purpose.
+*  Packages enhance the capabilties and scope for research in a certain field. 
+*  For example, the
+ package MASS contains objects associated with the Venables and Ripleys ``\textit{Modern Applied
+ Statistics with S}”. 
+
+ p>
+  
+ \begin{figure}
+ \centering
+ \includegraphics[width=0.97\linewidth]{CRAN}
+ \caption{Comprehensive R Archive Network}
+ 
+ \end{figure}
+ 
+ 
+### R Packages
+ 
+ 
+ *  ``10 R packages I wish I knew about earlier" - Drew Conway (Yhat.com, February 2013)
+<p> *  ``The HadleyVerse" - Hadley Wickham
+ 
+ 
+ *   ggplot2, dplyr, reshape, lubridate, stringr
+ 
+ *   With Romain Francois, Dianne Cook and Garret Grolemund.
+
+<p>
+ *  Dr Brendan Haplin (UL): lme4 ,TraMineR, Gelman's arm, MASS, foreign. 
+<p>
+ *  Shiny - Web Applications with <tt>R</tt>
+
+### R Packages
+ 
+Some examples of packages are Actuar, written for actuarial science, and QRMlib, which complements the Quantitative Risk Management The command library()
+ lists all the available packages. 
+ 
+ To load a particular package, for example MASS, we would
+ write
+ library(MASS)
+ 
+ 
+ <p>
+ 
+ 
+### Packages
+ 
+ *  The CRAN package repository features 6107 available packages. 
+ *  Packages contain
+ various functions and data sets for numerous purposes, e.g. {ggplot2} package, {AER} package, {survival} package, etc.
+ *  Some packages are part of the basic installation. Others can be downloaded from CRAN.
+ *  To access all of the functions and data sets in a particular package, it must be loaded into the workspace. 
+ *  For example, to load the {ggplot2} package:
+
+
+<pre><code>
+ install.packages(ggplot2)
+ library(ggplot2)
+ </code></pre>
+ 
+ 
+<p>
+ 
+### Using and Installing packages
+ 
+ *  Many packages come with R. To use them in an R session, you need to load the package, as
+ previously demonstrated.
+ *  Some packages are not automatically installed when you install R but they need to be downloaded
+ and installed individually. 
+ *  We must first install them using the install.packages()
+ function, which typically downloads the package from CRAN and installs it for use. (follow the
+ instructions as indicated).
+
+ 
+<p>
+ 
+
+<pre><code>
+ install.packages("ggplot2")
+ install.packages("qcc")
+ install.packages("sqldf")
+ install.packages("RMongo")
+ install.packages("randomforest")
+ </code></pre>
+ 
+ 
+ 
+<p>

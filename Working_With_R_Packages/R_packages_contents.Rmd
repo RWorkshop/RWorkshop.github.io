@@ -1,3 +1,49 @@
+
+%%
+
+#### Introducton to R: Packages}
+ \textbf{ The command \texttt{library()}
+lists all the available packages. To load a particular package, for example MASS, we would
+write
+
+\begin{verbatim}
+library(MASS)
+\end{verbatim}
+
+
+
+%%
+
+#### Introducton to R: Packages}
+ \textbf{ Using and Installing Packages }
+Many packages come with R. To use them in an R session, you need to load the package, as
+previously demonstrated.
+%--------------------------------------------------- %
+Some packages are not automatically installed when you install R but they need to be down-
+loaded and installed individually. We must first install them using the \texttt{install.packages()}
+function, which typically downloads the package from CRAN and installs it for use. (follow the
+instructions as indicated).
+
+\begin{verbatim}
+install.packages("ggplot2")
+install.packages("qcc")
+install.packages("sqldf")
+install.packages("RMongo")
+install.packages("randomforest")
+\end{verbatim}
+
+
+%%
+
+#### Introducton to R: Packages}
+
+ \textbf{ Version of R }\\
+Many packages will require you to have the most recent version of R and also other packages.
+It is a good idea to update regularly.
+
+------------------------------------------------------------
+
+
 \[\mbox{ Section 4 : Packages } \]
 
 
@@ -58,9 +104,9 @@ lists all the available packages.
 
 * To load a particular package, for example MASS, we would
 write
-\begin{framed}
+
 ``library(MASS)}
-\end{framed}
+
 
 %= %
 
@@ -79,11 +125,11 @@ it must be loaded into the workspace.
 \textbf{\textit{ggplot2}} package:
 
 
-\begin{framed}
+
 ``install.packages(ggplot2)}
 
 ``library(ggplot2)}
-\end{framed}
+
 
 %===
 

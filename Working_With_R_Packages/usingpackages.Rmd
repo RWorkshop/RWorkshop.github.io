@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html>
+Packages
+===============
+### Using and Installing packages
+Many packages come with R. To use them in an R session, you need to load the package. For example to load the MASS package which contains functions and datasets that accompany Venables and Ripley, Modern Applied Statistics with S, you use the command:
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="RWorkshop.GitHub.io : Website">
+### Installing additional packages
+Some packages are not automatically installed when you install R but they need to be downloaded and installed individually. An important example is the 'evd' package that accompanies Fox, Applied Regression. 
+
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>RWorkshop.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          
-          <h1 id="project_title">RWorkshop.GitHub.io</h1>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-
-       
 
   <h3>Packages</h3>
 R contains one or more libraries of packages. Packages contain various functions and data sets for numerous purposes, e.g. the “ggplot2” graphics package, the “actuar” financial package, the “nlme” statistical methods package, etc. 

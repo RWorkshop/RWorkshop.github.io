@@ -1,10 +1,18 @@
 ---
-title: "forcats"
-output: html_document
+title: "Working With Factors in R"
+subtitle: "The {forcats} R package"
+author: "R workshop"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+require(prettydoc)
+require(tidyverse)
+require(forcats)
 ```
 
 

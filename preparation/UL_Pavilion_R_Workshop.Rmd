@@ -1,0 +1,78 @@
+---
+title: "UL Pavilion "
+subtitle: "Limerick R Workshop Venue"
+author: "R Workshop"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(prettydoc)
+require(leaflet)
+```
+
+### Venue 
+* This R Workshop will take place on the UL campus at the UL Pavilion on the Clare campus side of the University of Limerick.
+* Please take careful note of the Eircode and plan your journey accordingly.
+
+```{r echo=FALSE, warning=FALSE,message=FALSE}
+
+ULlocations <- data.frame(
+  Name = c("UL Pavilion","UL Stables Bus stop","Feeney Way Bus stop","EV Charging Point"),
+  long =  c( -8.569646785395351,-8.570751855859147,-8.575987527808632, -8.57382030249169),
+  lat =  c(52.67923672830164,52.67280316309208,52.67166466816456,52.67511909550905),
+  Type = c("Venue","Bus Stop","Bus Stop","Charging Point"),
+  Colour = c("red","orange","orange","green")
+)
+
+
+
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = ULlocations$Colour
+)
+
+leaflet(ULlocations) %>% addTiles() %>%
+  addAwesomeMarkers(~long, ~lat, icon=icons, label=~as.character(Name))
+```
+
+
+### Getting there
+
+* Dublin Coach has regulare Services to the UL Campus. However, the busstop is on the opposite side of the campus, and a 10-15 minute walk is required.
+
+### Parking 
+
+* Parking is free on the UL campus on the weekends at the UL Pavilion.
+* The UL Pavilion has ramp access. If you require any assistance, please advise the workshop organizers.
+
+### WIFI
+
+* Wi-Fi, can be accessed through the UL guest Wi-Fi network.
+* You may require to login with your Email address.
+
+### Catering
+
+* Teas and coffees are not provided, but you may be purchased at the adjoining  Bar/Restaurant.
+* Likewise, Lunch may be purchased on site between 12 noon and 3pm.
+* Snacks may be purchased on an ongoing basis throughout the day.
+
+
+#### Preparation
+
+* Please have R, RStudio and relevant R packages installed.
+* If advised, materials for the workshop can be downloaded from a code repository.
+* This Repository would contain R code segements and data files. It is best to download this repository in advance of the workshop.
+* More precise instructions specific to this workshop will be provided seperately.
+
+
+
+### Code of Conduction 
+* Please note that the R consortium code of conduct will apply.
+* Behavior consistent with the modern professional Workplace is expected.
+

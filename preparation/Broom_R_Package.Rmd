@@ -339,3 +339,19 @@ glance(KMmodel)
 	<tr><td>681.3706</td><td>78.85144</td><td>602.5192</td><td>2       </td></tr>
 </tbody>
 </table>
+
+
+
+-------------------------------------------
+
+## {broomExtra}
+
+The goal of {broomExtra} is to provide helper functions that assist in data analysis workflows involving regression analyses. The goal is to combine the functionality offered by different set of packages through a common syntax to return tidy tibbles containing model parameters and summaries.
+
+It combines functionality from {broom} and {easystats} ecosystems, and this package has the following advantages over the underlying individual packages (see examples below for concrete instantiations of these benefits):
+
+Covers more number of regression models than these individual packages.
+If possible to compute, the output tibbles contains a p-value column.
+More robust to extraneous input arguments that might sometimes cause problems for the underlying methods.
+Follows consistent {tidymodels} column-naming schema.
+Returns a more comprehensive model performance measure summary.

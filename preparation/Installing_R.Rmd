@@ -1,0 +1,61 @@
+---
+title: "R Workshop"
+subtitle: "Installation Instructions"
+author: "Irish EO Symposium"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(prettydoc)
+```
+
+Installation
+===================================================
+
+Thanks for your interest in the ***GIS with R*** Workshop 
+
+* In order to prepare for the workshop, we ask you to try out the following three steps before the workshop. 
+* If you are not able to, please attend the online preparation sessions, and we can help you with the process.
+
+### Step 1 - Download R
+In advance of the workshop, it would be great if you could install R.
+R can be installed for this website.
+
+http://ftp.heanet.ie/mirrors/cran.r-project.org/
+
+The process is very simple, and should only take two or three minutes. Select the default options when necessary.
+
+### Step 2 - Rstudio
+
+Best practice among data science professionals is to write, review and manage their code using an ***Integrated Development Environment (IDE)***. For R programmers, the most popular IDE is ***RStudio***.
+
+For this workshop, we ask you to download and install ***Rstudio*** from this website.
+
+http://www.rstudio.com/products/rstudio/download/
+
+Again the process should be very quick. Select the default options when downloading and installing R.
+
+### Step 3 - Important R packages
+
+* In advance of the workshop install some <tt>R</tt> packages that we will use on the day.
+
+* All you have to do is to open <tt>R</tt> (making sure that you are connected to the internet), and run the following piece of code in RStudio. 
+
+```{r eval = FALSE}
+
+install.packages("tidyverse")
+install.packages("sf")
+install.packages("terra")
+
+```
+
+* This process can take about 10 to 15 minutes, as there are many background processes being run sequentially.
+
+* R packages can also be installed from R Studio by clicking on the ***Tools*** menu and selecting install packages. A dialogue box will appear.
+
+![Downloading R packages with RStudio](https://impaulchung.files.wordpress.com/2013/01/packageinstall.png?w=625&h=431)
+

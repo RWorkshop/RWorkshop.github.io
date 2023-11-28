@@ -1,0 +1,78 @@
+---
+title: Importing Data into R
+author: DragonflyStats.github.io
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### The \textbf{lubridate} package
+=============================================
+
+
+<pre><code>
+install.packages("lubridate")
+library(lubridate)
+# Create an object
+bday <- dmy("23121984")
+<code></pre>
+
+This could also have been achieved with any combination of d(ay)m(onth)y(ear), i.e. ``ymd()`` or ``dym()``.
+
+Several options are provided to work with the bday object:
+
+
+
+<pre><code>
+wday(bday)  # day of the week
+wday(bday, label=T)  # day of the week, abreviated
+yday(bday)  # day of the year
+<code></pre>
+
+
+<pre><code>
+install.packages("lubridate")
+library(lubridate)
+# Create an object
+bday <- dmy("23121984")
+<code></pre>
+
+
+This could also have been achieved with any combination of d(ay)m(onth)y(ear), i.e. ymd() or dym().
+
+Several options are provided to work with the bday object:
+
+
+<pre><code>
+wday(bday)  # day of the week
+wday(bday, label=T)  # day of the week, abreviated
+yday(bday)  # day of the year
+<code></pre>
+
+
+\textbf{lubridate} also makes it easy to calculate with dates
+
+<pre><code>
+wday(bday + years(1), label=T)  # day of week one year later
+
+table(sapply(1:100, function(x) wday(bday + years(x), label=T)))  # days of the week for next 100 years.
+<code></pre>
+
+
+
+
+\textbf{lubridate} also makes it easy to calculate with dates
+
+<pre><code>
+# day of week one year later
+wday(bday + years(1), label=T)  
+
+ # days of the week for next 100 years.
+table(sapply(1:100, function(x) wday(bday + years(x), label=T))) 
+<code></pre>

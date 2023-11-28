@@ -21,11 +21,10 @@ already loaded in (installed packages are not necessarily loaded in).
 Installing R Pacakges
 ====================================
 
-```{r}
+<pre><code>
 install.package("packagename")
 download.package("packagename")
-```
-
+</code></pre>
 ----------------------------------
 	
 <h5> Base packages </h5>

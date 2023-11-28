@@ -1,0 +1,88 @@
+<html>
+
+
+<head>
+<title>Quantile Statistics</title>
+</head>
+
+<body>
+
+<h1>Quantile Statistics</h1>
+
+<ul>
+<li> median
+<li> quartiles
+<li> percentiles
+<li> Tukey Five Number summary
+<li> quantile()
+</ul>
+
+<h2>Using the quantile function</h2>
+
+The `quantile` function  produces sample quantiles corresponding to the given probabilities. The smallest observation corresponds to a probability of 0 and the largest to a probability of 1.
+
+### Creating a vector 
+
+First we will create two vectors that we will use later.
+The semi-colon operator is used to create a sequence of integers.
+
+
+
+<!--begin.rcode
+deciles = 0:10/10
+quintiles = 0:5/5
+deciles
+quintiles
+end.rcode-->
+
+<!--begin.rcode
+quantile(iris$Sepal.Length,0.10)
+quantile(iris$Sepal.Length,0.90)
+quantile(iris$Sepal.Length,c(0.10,0.90))
+quantile(iris$Sepal.Length,deciles)
+quantile(iris$Sepal.Length,quintiles)
+
+end.rcode-->
+
+<!------------------------------------------>
+
+<h3> Tukey Five Number Summary</h3>
+
+<!--begin.rcode
+
+quantile(iris$Sepal.Length,c(0.25,0.50,0.75))
+fivenum(iris$Sepal.Length)
+
+end.rcode-->
+
+There are several different methods of determining a quantile. You can specify an alternative approach to the default method using the <code>type=</code> argument. Often the resulting value will still be the same.
+
+<!--begin.rcode
+attach(iris)
+quantile(Sepal.Length, 0.5 , type=1:3)
+detach(iris)
+end.rcode-->
+
+<code>
+### Example
+have to specify the percentile
+
+P( < ) = 075
+
+Top five percent earn more than ???90000.
+Two percentage earn more than 
+</code>
+
+
+<!--begin.rcode
+summary(cars)
+end.rcode-->
+
+<p>You can also embed plots, for example:</p>
+
+<!--begin.rcode fig.width=7, fig.height=6
+plot(cars)
+end.rcode-->
+
+</body>
+</html>

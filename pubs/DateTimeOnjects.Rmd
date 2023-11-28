@@ -1,5 +1,18 @@
+---
+title: Date-Time Classes
+author: DragonflyStats.github.io
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
 
-\section{Date-Time Classes}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Date-Time Classes
 
 
 Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing calendar dates and times (to the nearest second).

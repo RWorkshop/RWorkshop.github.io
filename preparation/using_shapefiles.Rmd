@@ -1,4 +1,18 @@
 
 ### What are Shapefiles
 
-A shapefile is a simple, nontopological format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (areas). 
+A shapefile is a simple commonly used file format for storing the geometric location and attribute information of geographic features. Geographic features in a shapefile can be represented by points, lines, or polygons (i.e. geographical areas such as countries, islands, states and counties). 
+
+### Sourcing Shapefiles
+
+### loading Shapfiles into R
+
+* As the R Workshop programme commonly uses {sf} as the main R package for working with shapefile, we will use it to load a shapefile into the R environment.
+<pre><code>
+library(sf)
+</code></pre>
+
+### The North carolina SIDS data
+
+
+

@@ -20,7 +20,7 @@ Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing ca
 \subsection{A subsection}
 
 \begin{framed}
-\begin{verbatim}
+<pre><code>
 > (z <- Sys.time())             # the current date, as class "POSIXct"
 [1] "2014-06-17 10:54:24 BST"
 > 
@@ -29,11 +29,11 @@ Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing ca
 > 
 > as.POSIXlt(Sys.time(), "GMT") # the current time in GMT
 [1] "2014-06-17 09:54:25 GMT"
-\end{verbatim}
+<code></pre>
 \end{framed}
 \newpage
 \begin{framed}
-\begin{verbatim}
+<pre><code>
 > format(.leap.seconds)         # all 24 leap seconds in your timezone
  [1] "1972-07-01 01:00:00" "1973-01-01 00:00:00" "1974-01-01 00:00:00"
  [4] "1975-01-01 00:00:00" "1976-01-01 00:00:00" "1977-01-01 00:00:00"
@@ -43,11 +43,11 @@ Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing ca
 [16] "1991-01-01 00:00:00" "1992-07-01 01:00:00" "1993-07-01 01:00:00"
 [19] "1994-07-01 01:00:00" "1996-01-01 00:00:00" "1997-07-01 01:00:00"
 [22] "1999-01-01 00:00:00" "2006-01-01 00:00:00" "2009-01-01 00:00:00"
-\end{verbatim}
+<code></pre>
 \end{framed}
 
 \begin{framed}
-\begin{verbatim}
+<pre><code>
 > print(.leap.seconds, tz="PST8PDT")  # and in Seattle's
  [1] "1972-07-01 01:00:00 BST" "1973-01-01 00:00:00 GMT"
  [3] "1974-01-01 00:00:00 GMT" "1975-01-01 00:00:00 GMT"
@@ -68,7 +68,7 @@ Description of the classes \texttt{POSIXlt} and \texttt{POSIXct} representing ca
 NULL
 [1] TRUE
 > utils::str(unclass(leapS), vec.len = 7)
-\end{verbatim}
+<code></pre>
 \end{framed}
 
 

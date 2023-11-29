@@ -49,7 +49,7 @@ While we will be covering very little material relevant to graphics, it is worth
  More are available once packages are loaded.
  
  
- %==============================================================================================%
+ -----------------------------------===========================================================================================%
  
  % % SLIDE 1 - COVER SLIDE
  begin{figure}
@@ -57,7 +57,7 @@ While we will be covering very little material relevant to graphics, it is worth
  includegraphics[width=1.2linewidth]{images/Rdatasets}
  end{figure}
 
- %==============================================================================================%
+ -----------------------------------===========================================================================================%
  
  % % SLIDE 1 - COVER SLIDE
  begin{figure}
@@ -82,7 +82,7 @@ While we will be covering very little material relevant to graphics, it is worth
  
  
  
- %==============================================================================================%
+ -----------------------------------===========================================================================================%
  
 ### {2.3 Colours}
  
@@ -95,7 +95,7 @@ While we will be covering very little material relevant to graphics, it is worth
  
 # MS4024 Data Sets
 
-%==============================================================================%
+-----------------------------------===========================================================================%
 \begin{frame}
 \frametitle{Inbuilt Data Sets}
 \Large
@@ -110,7 +110,7 @@ ToothGrowth
 USArrests
 WorldPhones
  
-%==============================================================================%
+-----------------------------------===========================================================================%
 \begin{frame}
 \frametitle{Inbuilt Data Sets}
 \Large
@@ -119,7 +119,7 @@ diff.am = diff(airmiles)
 hist(diff.am)
 shapiro.test(diff.am)
  
- %==============================================================================%
+ -----------------------------------===========================================================================%
 \begin{frame}
 \frametitle{Inbuilt Data Sets}
 \Large

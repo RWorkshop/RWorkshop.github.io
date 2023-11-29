@@ -1,17 +1,19 @@
 ---
 title: "The Poisson Distribution "
-output: html_document
+subtitle: "Statistics With R"
+author: "R Workshop"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+require(prettydoc)
+require(tidyverse)
+require(janitor)
 ```
-
-The Poisson Distribution {data-navmenu="Maths"}
-===================================
-
-Column
------------------------------
 
 ### Poisson
 

@@ -145,7 +145,7 @@ tbl                 # the contingency table
 
 # Notice the small cell sizes
 
-````
+```
 
 ```{r}
 class(survey$Smoke)

@@ -1,0 +1,84 @@
+---
+title: "Testing the Assumption of Normality"
+subtitle: "Statistics with R"
+author: DragonflyStats.github.io
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(digits=3)
+```
+
+Testing The Assumption of Normality
+========================================
+
+For example, a fundamental assumption of linear models (i.e. regression models) is that the residuals (differences between observed and predicted value) are normally distributed with mean zero.
+
+
+The null hypothesis of both the `Anderson-Darling' and `Shapiro-Wilk' tests is that the population is normally distributed, and the alternative hypothesis is that the data is not normally distributed.
+
+For both tests, the null and alternative hypothesis are :
+\qquad $H_0 : $ The data set is normally distributed.
+\qquad $H_1 : $ The data set is \textbf{not} normally distributed.
+
+### Anderson-Darling Test
+To implement the Anderson-Darling Test for Normality, one must first install the ***nortest*** package.
+
+
+```{r}
+library(nortest)
+#Generate 100 normally distributed random numbers
+NormDat = rnorm(100)
+ad.test(NormDat)
+```
+
+### Shapiro-Wilk Test
+The Shapiro-Wilk test is directly implementable, without loading any additional packages.
+
+
+```{r}
+#Generate 100 normally distributed random numbers
+
+NormDat = rnorm(100)
+
+shapiro.test(NormDat)
+```
+
+Sample output, using the randomly generated \texttt{NormDat} data set, is as follows:
+```{r}
+shapiro.test(NormDat)
+
+```
+Here, the p-value is well above the 0.05 threshold. Hence we \textbf{fail to reject} the null hypothesis, and may proceed to treat the \texttt{NormDat} data set as normally distributed.
+
+### Graphical Procedures for Assessing Normality}
+
+There are two useful graphical methods for determining whether a data set was normally distributed. The first is the histogram, which we have seen previously. If the histogram is reasonably bell-shaped, then the data can be assumed to be normally distributed. The relevant R command is ***hist()***.
+
+
+The second is the ***quantile-quantile plot*** (or QQ-plot).
+For assessing normality, we implement a qq-plot  using the ***qqnorm()*** function.
+
+Additionally the command ***qqline()*** function adds a trendline to a normal quantile-quantile plot. If the data is normally distributed, then the points on the plot follow the trendline.
+
+
+```{r}
+#Generate 100 normally distributed random numbers
+
+NormDat = rnorm(100)
+
+qqnorm(NormDat)
+qqline(NormDat)
+```
+
+
+
+### Transforming the Data
+
+Sometimes when we get non-normal data, we can change the scale of our data i.e. transform it to get a normal distribution. One transformation that often works for positively skewed data is the natural logarithm (ln) transformation.
+
+In such a case, we work with the natural logarithms of the data set, rather than the data itself.

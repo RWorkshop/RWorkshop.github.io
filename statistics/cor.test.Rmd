@@ -1,6 +1,6 @@
 ---
-title: "Logistic Regression: Model Fit Diagnostics"
-subtitle: "Logistic Regression Models"
+title: "Testing Correlation"
+subtitle: "Statistics With R"
 author: DragonflyStats.github.io
 output:
   prettydoc::html_pretty:
@@ -13,13 +13,16 @@ We can test correlation in bivariate data using the cor.test() function.
 This test can be applied to all correlation coefficients.\\ We will only consider the default type, Pearson's product moment correlation coefficient.\\
 The default null hypothesis for cor.test() is that the correlation coefficient is zero.
 The default alternative is that the correlation coefficient is not zero.
-<pre><code>
-> A<-c(4,5,6,2,5,1,2,7,9)
-> B<-c(4,7,5,3,6,4,2,7,2)
-> cor(A,B)
-[1] 0.2415396
->cor.test(A,B)
-</code></pre>
+
+```{r}
+A <- c(4,5,6,2,5,1,2,7,9)
+B <- c(4,7,5,3,6,4,2,7,2)
+cor(A,B)
+```
+
+```{r}
+cor.test(A,B)
+```
 
 --------------------------------------------------
 

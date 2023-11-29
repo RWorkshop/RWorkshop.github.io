@@ -16,9 +16,6 @@ require(janitor)
 ```
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 ## Correlation
 
 A correlation coefficient is a number between -1 and 1 which measures the degree to which two variables are linearly related. 
